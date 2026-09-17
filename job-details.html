@@ -2,89 +2,526 @@
 <html lang="hi">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0f172a">
 <title>Job Details | Sarkariiichij</title>
+<meta name="description" content="Government Job की eligibility, vacancy, salary, dates और official links की जानकारी।">
+
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f5f7fb;color:#172033}
-header{background:#111827;color:#fff;padding:16px 5%;display:flex;justify-content:space-between;align-items:center}
-.logo{font-size:23px;font-weight:800}.home{color:#fff;text-decoration:none}
-main{max-width:950px;margin:25px auto;padding:0 15px}
-.card{background:#fff;border-radius:16px;padding:22px;margin-bottom:18px;box-shadow:0 5px 20px #0000000d}
-.badge{display:inline-block;background:#e8f7ee;color:#16803c;padding:7px 12px;border-radius:20px;font-size:13px;font-weight:bold}
-h1{font-size:28px;margin:14px 0 6px}.org{color:#667085;margin-bottom:20px}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-.item{background:#f8fafc;padding:14px;border-radius:10px}
-.item b{display:block;font-size:12px;color:#667085;margin-bottom:5px}.item span{font-weight:600}
-.actions{display:flex;gap:10px;flex-wrap:wrap}.btn{padding:13px 20px;border-radius:9px;text-decoration:none;font-weight:bold;display:inline-block}
-.apply{background:#16a34a;color:#fff}.notify{background:#2563eb;color:#fff}.official{background:#111827;color:#fff}
-h2{margin-top:0;font-size:20px}
-@media(max-width:600px){h1{font-size:23px}.grid{grid-template-columns:1fr}.actions .btn{width:100%;text-align:center}}
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#f5f7fb;
+  color:#172033;
+  line-height:1.6;
+}
+
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:#0f172a;
+  color:#fff;
+  padding:14px 16px;
+  box-shadow:0 3px 15px rgba(0,0,0,.18);
+}
+
+.header-inner{
+  max-width:1100px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+}
+
+.logo{
+  color:#fff;
+  text-decoration:none;
+  font-size:22px;
+  font-weight:900;
+}
+
+.back{
+  color:#fff;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:700;
+  background:#1e293b;
+  padding:8px 13px;
+  border-radius:9px;
+}
+
+main{
+  max-width:1000px;
+  margin:auto;
+  padding:22px 14px 80px;
+}
+
+.hero{
+  background:linear-gradient(135deg,#0f172a,#1e3a8a);
+  color:#fff;
+  border-radius:18px;
+  padding:25px 18px;
+  margin-bottom:18px;
+}
+
+.badge{
+  display:inline-block;
+  background:rgba(255,255,255,.13);
+  border:1px solid rgba(255,255,255,.2);
+  padding:5px 10px;
+  border-radius:30px;
+  font-size:12px;
+  font-weight:800;
+  margin-bottom:10px;
+}
+
+.hero h1{
+  font-size:27px;
+  line-height:1.25;
+  margin-bottom:8px;
+}
+
+.hero p{
+  color:#dbeafe;
+  font-size:14px;
+}
+
+.status{
+  display:inline-block;
+  margin-top:14px;
+  padding:6px 12px;
+  border-radius:20px;
+  background:#dcfce7;
+  color:#166534;
+  font-size:12px;
+  font-weight:800;
+}
+
+.card{
+  background:#fff;
+  border:1px solid #e5e7eb;
+  border-radius:16px;
+  padding:18px;
+  margin-bottom:16px;
+  box-shadow:0 5px 18px rgba(15,23,42,.05);
+}
+
+.card h2{
+  font-size:19px;
+  margin-bottom:15px;
+}
+
+.info-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+}
+
+.info{
+  background:#f8fafc;
+  border:1px solid #e5e7eb;
+  border-radius:11px;
+  padding:11px;
+}
+
+.info small{
+  display:block;
+  color:#64748b;
+  font-size:11px;
+  margin-bottom:3px;
+}
+
+.info strong{
+  display:block;
+  font-size:14px;
+}
+
+.actions{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+}
+
+.btn{
+  display:block;
+  text-align:center;
+  text-decoration:none;
+  padding:11px 9px;
+  border-radius:10px;
+  background:#2563eb;
+  color:#fff;
+  font-size:13px;
+  font-weight:800;
+}
+
+.btn.secondary{
+  background:#0f172a;
+}
+
+.btn.disabled{
+  background:#e5e7eb;
+  color:#64748b;
+  pointer-events:none;
+}
+
+.links{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:9px;
+}
+
+.link{
+  display:block;
+  text-decoration:none;
+  background:#f8fafc;
+  border:1px solid #e2e8f0;
+  padding:11px;
+  border-radius:10px;
+  color:#1d4ed8;
+  font-size:13px;
+  font-weight:700;
+}
+
+.notice{
+  background:#fff7ed;
+  border:1px solid #fed7aa;
+  color:#9a3412;
+  border-radius:12px;
+  padding:13px;
+  font-size:13px;
+}
+
+.error{
+  text-align:center;
+  background:#fff;
+  padding:35px 20px;
+  border-radius:16px;
+  border:1px solid #e5e7eb;
+}
+
+footer{
+  text-align:center;
+  background:#0f172a;
+  color:#cbd5e1;
+  padding:25px 15px;
+  font-size:12px;
+}
+
+@media(max-width:600px){
+
+  .info-grid,
+  .actions,
+  .links{
+    grid-template-columns:1fr;
+  }
+
+  .hero h1{
+    font-size:23px;
+  }
+
+  main{
+    padding-top:15px;
+  }
+}
 </style>
 </head>
+
 <body>
 
 <header>
-<div class="logo">Sarkariiichij</div>
-<a class="home" href="jobs.html">← Jobs</a>
+  <div class="header-inner">
+    <a class="logo" href="index.html">Sarkariiichij</a>
+    <a class="back" href="jobs.html">← All Jobs</a>
+  </div>
 </header>
 
-<main id="app"></main>
+<main>
+
+  <div id="jobContent"></div>
+
+</main>
+
+<footer>
+  <strong>Sarkariiichij</strong>
+  <br>
+  Government Jobs • Education • Career • Services
+  <br><br>
+  © 2026 Sarkariiichij
+</footer>
 
 <script src="jobs-data.js"></script>
+
 <script>
-const id=new URLSearchParams(location.search).get("id");
-const job=getJob(id),app=document.getElementById("app");
+/* =========================================================
+   JOB DETAILS ENGINE
+   ========================================================= */
 
-if(!job){
- app.innerHTML='<div class="card"><h2>Vacancy नहीं मिली</h2><p>कृपया Jobs page से vacancy खोलें।</p></div>';
-}else{
-app.innerHTML=`
-<div class="card">
-<span class="badge">${job.status}</span>
-<h1>${job.title}</h1>
-<div class="org">${job.org} • ${job.dept}</div>
-<div class="actions">
-<a class="btn apply" href="${job.apply}" target="_blank">Apply Online</a>
-<a class="btn notify" href="${job.notification}" target="_blank">Download Notification</a>
-<a class="btn official" href="${job.official}" target="_blank">Official Website</a>
-</div>
-</div>
+(function(){
 
-<div class="card">
-<h2>Vacancy Details</h2>
-<div class="grid">
-${item("Total Vacancy",job.vacancy)}
-${item("Post Name",job.posts)}
-${item("Qualification",job.qualification)}
-${item("Age Limit",job.age)}
-${item("Salary",job.salary)}
-${item("Application Fee",job.fee)}
-${item("Start Date",job.start)}
-${item("Last Date",job.lastDate)}
-${item("Exam Date",job.examDate)}
-${item("State",job.state)}
-</div>
-</div>
+  const box =
+    document.getElementById("jobContent");
 
-<div class="card">
-<h2>Important Links</h2>
-<div class="actions">
-${link("Admit Card",job.admitCard)}
-${link("Result",job.result)}
-${link("Syllabus",job.syllabus)}
-${link("Cut Off",job.cutoff)}
-${link("Previous Papers",job.papers)}
-</div>
-</div>
+  const params =
+    new URLSearchParams(
+      window.location.search
+    );
 
-<div class="card">
-<h2>About This Recruitment</h2>
-<p>${job.details}</p>
-</div>`;
-}
+  const id =
+    params.get("id");
 
-function item(a,b){return `<div class="item"><b>${a}</b><span>${b||"Not Available"}</span></div>`}
-function link(a,b){return `<a class="btn official" href="${b}" target="_blank">${a}</a>`}
+  function safe(value){
+
+    return String(
+      value || "Official Notification देखें"
+    );
+
+  }
+
+  function link(url,text){
+
+    if(!url || url === "#"){
+      return `
+        <span class="link" style="color:#64748b">
+          ${text} — अभी उपलब्ध नहीं
+        </span>
+      `;
+    }
+
+    return `
+      <a
+        class="link"
+        href="${url}"
+        target="_blank"
+        rel="noopener noreferrer">
+        ${text} →
+      </a>
+    `;
+  }
+
+  if(!id){
+
+    box.innerHTML = `
+      <div class="error">
+        <h2>Job नहीं मिली</h2>
+        <p>कृपया Jobs page से किसी vacancy को खोलें।</p>
+        <br>
+        <a class="btn" href="jobs.html">
+          ← Government Jobs पर जाएँ
+        </a>
+      </div>
+    `;
+
+    return;
+  }
+
+  const job =
+    typeof getJob === "function"
+      ? getJob(id)
+      : null;
+
+  if(!job){
+
+    box.innerHTML = `
+      <div class="error">
+        <h2>Job Details उपलब्ध नहीं</h2>
+        <p>यह vacancy database में नहीं मिली।</p>
+        <br>
+        <a class="btn" href="jobs.html">
+          ← All Government Jobs
+        </a>
+      </div>
+    `;
+
+    return;
+  }
+
+
+  document.title =
+    safe(job.title) +
+    " | Sarkariiichij";
+
+
+  box.innerHTML = `
+
+    <section class="hero">
+
+      <span class="badge">
+        ${safe(job.category)}
+      </span>
+
+      <h1>${safe(job.title)}</h1>
+
+      <p>
+        ${safe(job.org)}
+      </p>
+
+      <span class="status">
+        ${safe(job.status)}
+      </span>
+
+    </section>
+
+
+    <section class="card">
+
+      <h2>📋 Recruitment Details</h2>
+
+      <div class="info-grid">
+
+        <div class="info">
+          <small>Department</small>
+          <strong>${safe(job.dept)}</strong>
+        </div>
+
+        <div class="info">
+          <small>Job Type</small>
+          <strong>${safe(job.type)}</strong>
+        </div>
+
+        <div class="info">
+          <small>Posts</small>
+          <strong>${safe(job.posts)}</strong>
+        </div>
+
+        <div class="info">
+          <small>Vacancy</small>
+          <strong>${safe(job.vacancy)}</strong>
+        </div>
+
+        <div class="info">
+          <small>Qualification</small>
+          <strong>${safe(job.qualification)}</strong>
+        </div>
+
+        <div class="info">
+          <small>Age Limit</small>
+          <strong>${safe(job.age)}</strong>
+        </div>
+
+        <div class="info">
+          <small>Salary</small>
+          <strong>${safe(job.salary)}</strong>
+        </div>
+
+        <div class="info">
+          <small>Application Fee</small>
+          <strong>${safe(job.fee)}</strong>
+        </div>
+
+        <div class="info">
+          <small>Application Start</small>
+          <strong>${safe(job.start)}</strong>
+        </div>
+
+        <div class="info">
+          <small>Last Date</small>
+          <strong>${safe(job.lastDate)}</strong>
+        </div>
+
+        <div class="info">
+          <small>Exam Date</small>
+          <strong>${safe(job.examDate)}</strong>
+        </div>
+
+        <div class="info">
+          <small>State / Area</small>
+          <strong>${safe(job.state)}</strong>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="card">
+
+      <h2>🔗 Important Links</h2>
+
+      <div class="actions">
+
+        <a
+          class="btn"
+          href="${job.apply && job.apply !== "#"
+            ? job.apply
+            : "#"}"
+          ${job.apply && job.apply !== "#"
+            ? 'target="_blank" rel="noopener noreferrer"'
+            : 'class="btn disabled"'}
+        >
+          Apply Online
+        </a>
+
+        <a
+          class="btn secondary"
+          href="${job.official && job.official !== "#"
+            ? job.official
+            : "#"}"
+          ${job.official && job.official !== "#"
+            ? 'target="_blank" rel="noopener noreferrer"'
+            : 'class="btn disabled"'}
+        >
+          Official Website
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <section class="card">
+
+      <h2>📚 Exam Resources</h2>
+
+      <div class="links">
+
+        ${link(job.notification,"Notification")}
+
+        ${link(job.admitCard,"Admit Card")}
+
+        ${link(job.result,"Result")}
+
+        ${link(job.syllabus,"Syllabus")}
+
+        ${link(job.cutoff,"Cut Off")}
+
+        ${link(job.papers,"Previous Year Papers")}
+
+      </div>
+
+    </section>
+
+
+    <section class="card">
+
+      <h2>ℹ️ About Recruitment</h2>
+
+      <p>
+        ${safe(job.details)}
+      </p>
+
+    </section>
+
+
+    <div class="notice">
+
+      ⚠️ <strong>Important:</strong>
+      Vacancy, eligibility, dates, fee और अन्य जानकारी
+      बदल सकती है। आवेदन करने से पहले संबंधित
+      official government notification जरूर देखें।
+
+    </div>
+
+  `;
+
+})();
 </script>
+
 </body>
 </html>
