@@ -2838,389 +2838,308 @@ Reset Filters
 </script>
 
   <!-- PART 9 : JOB DETAILS POPUP -->
-
-<style>
-
-.job-modal{
-  display:none;
-  position:fixed;
-  inset:0;
-  z-index:2000;
-  background:rgba(2,8,23,.72);
-  padding:20px;
-  align-items:center;
-  justify-content:center;
-}
-
-.job-modal.show{
-  display:flex;
-}
-
-.modal-box{
-  width:100%;
-  max-width:620px;
-  max-height:90vh;
-  overflow-y:auto;
-  background:#fff;
-  border-radius:18px;
-  box-shadow:0 25px 70px rgba(0,0,0,.3);
-}
-
-.modal-top{
-  padding:20px;
-  background:#071426;
-  color:#fff;
-  position:relative;
-}
-
-.modal-top small{
-  color:#7dd3fc;
-  font-weight:700;
-}
-
-.modal-top h2{
-  margin-top:7px;
-  font-size:25px;
-}
-
-.modal-close{
-  position:absolute;
-  right:15px;
-  top:13px;
-  width:36px;
-  height:36px;
-  border:0;
-  border-radius:50%;
-  background:rgba(255,255,255,.12);
-  color:#fff;
-  font-size:22px;
-  cursor:pointer;
-}
-
-.modal-body{
-  padding:20px;
-}
-
-.detail-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:10px;
-}
-
-.detail-item{
-  padding:13px;
-  border:1px solid #e2e8f0;
-  border-radius:10px;
-  background:#f8fafc;
-}
-
-.detail-item span{
-  display:block;
-  color:#64748b;
-  font-size:11px;
-  margin-bottom:3px;
-}
-
-.detail-item strong{
-  font-size:13px;
-}
-
-.modal-note{
-  margin-top:16px;
-  padding:13px;
-  background:#eff6ff;
-  border-radius:10px;
-  color:#334155;
-  font-size:13px;
-}
-
-.modal-actions{
-  display:flex;
-  gap:9px;
-  margin-top:18px;
-}
-
-.modal-actions a{
-  flex:1;
-  text-align:center;
-  padding:11px;
-  border-radius:9px;
-  font-size:13px;
-  font-weight:700;
-}
-
-.apply-btn{
-  background:#0f172a;
-  color:#fff;
-}
-
-.source-btn{
-  background:#e0f2fe;
-  color:#0369a1;
-}
-
-@media(max-width:600px){
-
-  .job-modal{
-    padding:12px;
-  }
-
-  .modal-box{
-    max-height:94vh;
-    border-radius:15px;
-  }
-
-  .detail-grid{
-    grid-template-columns:1fr;
-  }
-
-  .modal-top h2{
-    font-size:21px;
-    padding-right:35px;
-  }
-
-  .modal-actions{
-    flex-direction:column;
-  }
-
-}
-
-</style>
-
-
-<div class="job-modal" id="jobModal">
-
-  <div class="modal-box">
-
-    <div class="modal-top">
-
-      <button
-      class="modal-close"
-      id="modalClose"
-      type="button">
-      ×
-      </button>
-
-      <small id="modalDepartment">
-        GOVERNMENT RECRUITMENT
-      </small>
-
-      <h2 id="modalTitle">
-        Government Job
-      </h2>
-
-    </div>
-
-
-    <div class="modal-body">
-
-      <div class="detail-grid">
-
-        <div class="detail-item">
-          <span>Qualification</span>
-          <strong id="modalQualification">
-            Check Notification
-          </strong>
-        </div>
-
-        <div class="detail-item">
-          <span>Department</span>
-          <strong id="modalDeptValue">
-            Government Department
-          </strong>
-        </div>
-
-        <div class="detail-item">
-          <span>Job Type</span>
-          <strong id="modalJobType">
-            Government Job
-          </strong>
-        </div>
-
-        <div class="detail-item">
-          <span>Location</span>
-          <strong id="modalState">
-            India
-          </strong>
-        </div>
-
-      </div>
-
-
-      <div class="modal-note">
-
-        <strong>Important:</strong>
-        Vacancy, age limit, salary, dates और eligibility
-        हर recruitment notification के अनुसार अलग हो सकती है।
-        आवेदन करने से पहले official notification जरूर देखें।
-
-      </div>
-
-
-      <div class="modal-actions">
-
-        <a
-        href="#"
-        class="apply-btn"
-        id="modalApply">
-        Apply / Notification
-        </a>
-
-        <a
-        href="#"
-        class="source-btn"
-        id="modalSource">
-        Official Source
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</div>
-
+  <!-- PART 9 : DIRECT JOB DETAILS + OFFICIAL LINKS -->
 
 <script>
+/* =========================================================
+   PART 9 : DIRECT JOB ACTION SYSTEM
+   ========================================================= */
 
-const jobModal =
-document.getElementById("jobModal");
+(function(){
 
-const modalClose =
-document.getElementById("modalClose");
+  /* -------------------------------------------------------
+     JOB TITLE → DATABASE ID
+     ------------------------------------------------------- */
 
-const modalTitle =
-document.getElementById("modalTitle");
+  const jobIds = {
 
-const modalDepartment =
-document.getElementById("modalDepartment");
+    "Civil Services Examination":"upsc-cse",
+    "NDA & NA":"upsc-nda",
+    "CDS":"upsc-cds",
+    "CAPF Assistant Commandant":"upsc-capf",
+    "Engineering Services":"upsc-ies",
+    "Combined Medical Services":"upsc-cms",
+    "IES / ISS":"upsc-ies-iss",
 
-const modalQualification =
-document.getElementById("modalQualification");
+    "CGL":"ssc-cgl",
+    "CHSL":"ssc-chsl",
+    "MTS / Havaldar":"ssc-mts",
+    "GD Constable":"ssc-gd",
+    "CPO":"ssc-cpo",
+    "Junior Engineer":"ssc-je",
+    "Stenographer C & D":"ssc-steno",
+    "JHT":"ssc-jht",
+    "Selection Post":"ssc-selection-post",
 
-const modalDeptValue =
-document.getElementById("modalDeptValue");
+    "RRB NTPC":"rrb-ntpc",
+    "RRB Group D":"rrb-group-d",
+    "RRB ALP":"rrb-alp",
+    "RRB Technician":"rrb-technician",
+    "RRB Junior Engineer":"rrb-je",
+    "RRB Paramedical":"rrb-paramedical",
+    "Ministerial & Isolated Categories":"rrb-ministerial",
+    "RRC Apprentice":"rrc-apprentice",
 
-const modalJobType =
-document.getElementById("modalJobType");
+    "IBPS PO":"ibps-po",
+    "IBPS Clerk / CSA":"ibps-clerk",
+    "IBPS SO":"ibps-so",
+    "IBPS RRB":"ibps-rrb",
+    "SBI PO":"sbi-po",
+    "SBI Clerk":"sbi-clerk",
+    "RBI Grade B":"rbi-grade-b",
+    "RBI Assistant":"rbi-assistant",
 
-const modalState =
-document.getElementById("modalState");
+    "Indian Army Agniveer":"army-agniveer",
+    "Indian Army Officer Entry":"army-officer",
+    "Indian Navy Agniveer":"indian-navy-agniveer",
+    "Indian Navy Officer Entry":"navy-officer",
+    "Air Force Agniveer Vayu":"agniveer-vayu",
+    "AFCAT":"afcat",
+    "Indian Coast Guard":"coast-guard",
+    "DRDO Recruitment":"drdo",
+
+    "CRPF Recruitment":"crpf",
+    "BSF Recruitment":"bsf",
+    "CISF Recruitment":"cisf",
+    "ITBP Recruitment":"itbp",
+    "SSB Recruitment":"ssb",
+    "Assam Rifles Recruitment":"assam-rifles",
+
+    "CTET":"ctet",
+    "KVS Recruitment":"kvs",
+    "NVS Recruitment":"nvs",
+    "DSSSB Recruitment":"dsssb",
+
+    "ONGC Recruitment":"ongc",
+    "NTPC Recruitment":"ntpc",
+    "BHEL Recruitment":"bhel",
+    "SAIL Recruitment":"sail",
+    "IOCL Recruitment":"iocl",
+
+    "Supreme Court Recruitment":"supreme-court",
+    "Allahabad High Court":"allahabad-high-court",
+
+    "CSIR NET":"csir-net",
+    "UGC NET":"ugc-net",
+
+    "AIIMS Recruitment":"aiims",
+    "ESIC Recruitment":"esic",
+    "NHM Recruitment":"nhm",
+
+    "Agriculture Department Jobs":"agriculture",
+    "ICAR Recruitment":"icar",
+
+    "UPPSC":"uppsc-pcs",
+    "UPSSSC":"upsssc",
+    "UP Police":"up-police",
+    "BPSC":"bpsc",
+    "Bihar Police":"bihar-police",
+    "MPPSC":"mppsc",
+    "RPSC":"rpsc",
+    "JPSC":"jpsc"
+
+  };
 
 
-document.querySelectorAll(".details")
-.forEach(button => {
+  /* -------------------------------------------------------
+     OFFICIAL WEBSITE MAP
+     ------------------------------------------------------- */
 
-  button.addEventListener("click", function(event){
+  const official = {
 
-    event.preventDefault();
+    "Civil Services Examination":"https://www.upsc.gov.in/",
+    "NDA & NA":"https://www.upsc.gov.in/",
+    "CDS":"https://www.upsc.gov.in/",
+    "CAPF Assistant Commandant":"https://www.upsc.gov.in/",
+    "Engineering Services":"https://www.upsc.gov.in/",
+    "Combined Medical Services":"https://www.upsc.gov.in/",
+    "IES / ISS":"https://www.upsc.gov.in/",
 
-    const card =
-    this.closest(".exam-card");
+    "CGL":"https://ssc.gov.in/",
+    "CHSL":"https://ssc.gov.in/",
+    "MTS / Havaldar":"https://ssc.gov.in/",
+    "GD Constable":"https://ssc.gov.in/",
+    "CPO":"https://ssc.gov.in/",
+    "Junior Engineer":"https://ssc.gov.in/",
+    "Stenographer C & D":"https://ssc.gov.in/",
+    "JHT":"https://ssc.gov.in/",
+    "Selection Post":"https://ssc.gov.in/",
 
-    if(!card) return;
+    "RRB NTPC":"https://www.rrbapply.gov.in/",
+    "RRB Group D":"https://www.rrbapply.gov.in/",
+    "RRB ALP":"https://www.rrbapply.gov.in/",
+    "RRB Technician":"https://www.rrbapply.gov.in/",
+    "RRB Junior Engineer":"https://www.rrbapply.gov.in/",
+    "RRB Paramedical":"https://www.rrbapply.gov.in/",
+    "Ministerial & Isolated Categories":"https://www.rrbapply.gov.in/",
+    "RRC Apprentice":"https://indianrailways.gov.in/",
 
+    "IBPS PO":"https://www.ibps.in/",
+    "IBPS Clerk / CSA":"https://www.ibps.in/",
+    "IBPS SO":"https://www.ibps.in/",
+    "IBPS RRB":"https://www.ibps.in/",
+    "SBI PO":"https://sbi.co.in/web/careers/",
+    "SBI Clerk":"https://sbi.co.in/web/careers/",
+    "RBI Grade B":"https://opportunities.rbi.org.in/",
+    "RBI Assistant":"https://opportunities.rbi.org.in/",
+
+    "Indian Army Agniveer":"https://joinindianarmy.nic.in/",
+    "Indian Army Officer Entry":"https://joinindianarmy.nic.in/",
+    "Indian Navy Agniveer":"https://www.joinindiannavy.gov.in/",
+    "Indian Navy Officer Entry":"https://www.joinindiannavy.gov.in/",
+    "Air Force Agniveer Vayu":"https://agnipathvayu.cdac.in/",
+    "AFCAT":"https://afcat.cdac.in/",
+    "Indian Coast Guard":"https://joinindiancoastguard.cdac.in/",
+    "DRDO Recruitment":"https://www.drdo.gov.in/",
+
+    "CRPF Recruitment":"https://rect.crpf.gov.in/",
+    "BSF Recruitment":"https://rectt.bsf.gov.in/",
+    "CISF Recruitment":"https://cisfrectt.cisf.gov.in/",
+    "ITBP Recruitment":"https://recruitment.itbpolice.nic.in/",
+    "SSB Recruitment":"https://recruitment.ssb.gov.in/",
+    "Assam Rifles Recruitment":"https://www.assamrifles.gov.in/",
+
+    "CTET":"https://ctet.nic.in/",
+    "KVS Recruitment":"https://kvsangathan.nic.in/",
+    "NVS Recruitment":"https://exams.nta.ac.in/NVS/",
+    "DSSSB Recruitment":"https://dsssb.delhi.gov.in/",
+
+    "ONGC Recruitment":"https://ongcindia.com/",
+    "NTPC Recruitment":"https://careers.ntpc.co.in/",
+    "BHEL Recruitment":"https://careers.bhel.in/",
+    "SAIL Recruitment":"https://sailcareers.com/",
+    "IOCL Recruitment":"https://iocl.com/careers",
+
+    "Supreme Court Recruitment":"https://www.sci.gov.in/",
+    "Allahabad High Court":"https://www.allahabadhighcourt.in/",
+
+    "CSIR NET":"https://csirnet.nta.ac.in/",
+    "UGC NET":"https://ugcnet.nta.ac.in/",
+
+    "AIIMS Recruitment":"https://aiimsexams.ac.in/",
+    "ESIC Recruitment":"https://www.esic.gov.in/recruitments",
+    "NHM Recruitment":"https://nhm.gov.in/",
+
+    "Agriculture Department Jobs":"https://agriwelfare.gov.in/",
+    "ICAR Recruitment":"https://icar.gov.in/",
+
+    "UPPSC":"https://uppsc.up.nic.in/",
+    "UPSSSC":"https://upsssc.gov.in/",
+    "UP Police":"https://www.uppbpb.gov.in/",
+    "BPSC":"https://www.bpsc.bih.nic.in/",
+    "Bihar Police":"https://police.bihar.gov.in/",
+    "MPPSC":"https://mppsc.mp.gov.in/",
+    "RPSC":"https://rpsc.rajasthan.gov.in/",
+    "JPSC":"https://www.jpsc.gov.in/"
+
+  };
+
+
+  /* -------------------------------------------------------
+     GET JOB TITLE
+     ------------------------------------------------------- */
+
+  function getTitle(card){
 
     const title =
-    card.querySelector("h3")?.textContent
-    || "Government Job";
+      card.querySelector("h3");
 
+    if(!title) return "";
 
-    const tag =
-    card.querySelector(".exam-tag")?.textContent
-    || "GOVERNMENT RECRUITMENT";
-
-
-    const qualification =
-    card.dataset.qualification
-    || "Check Notification";
-
-
-    const department =
-    card.dataset.department
-    || "Government";
-
-
-    const state =
-    card.dataset.state
-    || "India";
-
-
-    const meta =
-    card.querySelector(".meta")?.innerText
-    || "Government Job";
-
-
-    modalTitle.textContent = title;
-
-    modalDepartment.textContent =
-    tag.toUpperCase();
-
-    modalQualification.textContent =
-    qualification.replaceAll(",", " / ");
-
-    modalDeptValue.textContent =
-    department.toUpperCase();
-
-    modalJobType.textContent =
-    meta.split("\n")[1] || "Government Job";
-
-    modalState.textContent =
-    state.toUpperCase();
-
-
-    jobModal.classList.add("show");
-
-    document.body.style.overflow = "hidden";
-
-  });
-
-});
-
-
-function closeJobModal(){
-
-  jobModal.classList.remove("show");
-
-  document.body.style.overflow = "";
-
-}
-
-
-modalClose.addEventListener(
-"click",
-closeJobModal
-);
-
-
-jobModal.addEventListener(
-"click",
-function(event){
-
-  if(event.target === jobModal){
-    closeJobModal();
+    return title.textContent.trim();
   }
 
-});
+
+  /* -------------------------------------------------------
+     VIEW DETAILS
+     ------------------------------------------------------- */
+
+  document
+    .querySelectorAll("#examGrid .details")
+    .forEach(button => {
+
+      button.addEventListener("click",function(e){
+
+        e.preventDefault();
+        e.stopPropagation();
+
+        const card =
+          this.closest(".exam-card");
+
+        if(!card) return;
+
+        const title =
+          getTitle(card);
+
+        const id =
+          jobIds[title];
+
+        if(id){
+
+          window.location.href =
+            "job-details.html?id=" +
+            encodeURIComponent(id);
+
+        }else{
+
+          alert(
+            "इस job की detailed information अभी database में नहीं है।"
+          );
+
+        }
+
+      });
+
+    });
 
 
-document.addEventListener(
-"keydown",
-function(event){
+  /* -------------------------------------------------------
+     OFFICIAL SITE
+     ------------------------------------------------------- */
 
-  if(
-    event.key === "Escape" &&
-    jobModal.classList.contains("show")
-  ){
+  document
+    .querySelectorAll("#examGrid .official")
+    .forEach(button => {
 
-    closeJobModal();
+      button.addEventListener("click",function(e){
 
-  }
+        e.preventDefault();
+        e.stopPropagation();
 
-});
+        const card =
+          this.closest(".exam-card");
 
+        if(!card) return;
+
+        const title =
+          getTitle(card);
+
+        const url =
+          official[title];
+
+        if(url){
+
+          window.location.href = url;
+
+        }else{
+
+          alert(
+            "Official website link अभी उपलब्ध नहीं है।"
+          );
+
+        }
+
+      });
+
+    });
+
+
+})();
 </script>
+
+<!-- PART 10 YAHAN SE CONTINUE HOGA -->
+
+<style
 <!-- PART 10 : GOVERNMENT DIRECTORY -->
 
 <section class="container" id="directory">
