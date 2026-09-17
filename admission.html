@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#07111f">
+<meta name="description" content="Sarkariiichij Admission Portal - Government, University, College, UG, PG, Diploma और Entrance Admission की जानकारी।">
+<title>Admission | Sarkariiichij</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#f5f7fb;
+  color:#172033;
+  line-height:1.5
+}
+a{text-decoration:none;color:inherit}
+button,select,input{font:inherit}
+
+.header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:#07111f;
+  color:#fff;
+  box-shadow:0 2px 15px #0002
+}
+.header-inner{
+  max-width:1150px;
+  margin:auto;
+  padding:13px 16px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px
+}
+.logo{
+  font-size:22px;
+  font-weight:800;
+  letter-spacing:-.5px
+}
+.logo span{color:#4ade80}
+.nav{
+  display:flex;
+  gap:7px;
+  overflow:auto;
+  white-space:nowrap
+}
+.nav a{
+  padding:8px 11px;
+  border-radius:8px;
+  color:#dbe4f0;
+  font-size:13px
+}
+.nav a:hover,.nav a.active{
+  background:#ffffff12;
+  color:#fff
+}
+
+main{
+  max-width:1150px;
+  margin:auto;
+  padding:0 14px 80px
+}
+
+.hero{
+  margin:18px 0;
+  padding:28px 18px;
+  border-radius:18px;
+  background:linear-gradient(135deg,#0b1728,#12345a);
+  color:#fff;
+  position:relative;
+  overflow:hidden
+}
+.hero:after{
+  content:"";
+  position:absolute;
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  right:-70px;
+  top:-70px;
+  background:#ffffff0d
+}
+.badge{
+  display:inline-block;
+  background:#ffffff14;
+  border:1px solid #ffffff20;
+  padding:6px 10px;
+  border-radius:20px;
+  font-size:11px;
+  font-weight:700;
+  margin-bottom:10px
+}
+.hero h1{
+  font-size:30px;
+  line-height:1.15;
+  margin-bottom:9px
+}
+.hero h1 span{color:#4ade80}
+.hero p{
+  color:#d7e2ef;
+  font-size:14px;
+  max-width:700px
+}
+
+.search-box{
+  margin-top:20px;
+  background:#fff;
+  border-radius:13px;
+  padding:7px;
+  display:flex;
+  gap:7px;
+  box-shadow:0 8px 25px #0002
+}
+.search-box input{
+  flex:1;
+  min-width:0;
+  border:0;
+  outline:0;
+  padding:11px 12px;
+  color:#172033
+}
+.search-box button{
+  border:0;
+  background:#16a34a;
+  color:#fff;
+  border-radius:9px;
+  padding:0 16px;
+  font-weight:700;
+  cursor:pointer
+}
+
+.section{
+  margin-top:24px
+}
+.section-title{
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  gap:10px;
+  margin-bottom:12px
+}
+.section-title h2{
+  font-size:20px
+}
+.section-title p{
+  color:#6b7280;
+  font-size:12px
+}
+
+.filters{
+  background:#fff;
+  border:1px solid #e5e9f0;
+  border-radius:15px;
+  padding:14px;
+  box-shadow:0 5px 18px #00000008
+}
+.filter-row{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px
+}
+.filter-group label{
+  display:block;
+  font-size:11px;
+  font-weight:700;
+  color:#64748b;
+  margin-bottom:5px
+}
+.filter-group select{
+  width:100%;
+  padding:10px;
+  border:1px solid #dce2ea;
+  border-radius:9px;
+  background:#fff;
+  outline:0
+}
+.filter-actions{
+  margin-top:10px;
+  display:flex;
+  justify-content:flex-end
+}
+.reset{
+  border:0;
+  background:#eef2f7;
+  color:#334155;
+  padding:9px 14px;
+  border-radius:9px;
+  cursor:pointer;
+  font-weight:600
+}
+
+.admission-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px
+}
+.admission-card{
+  background:#fff;
+  border:1px solid #e6eaf0;
+  border-radius:15px;
+  padding:15px;
+  transition:.2s;
+  box-shadow:0 4px 15px #00000007
+}
+.admission-card:hover{
+  transform:translateY(-2px);
+  box-shadow:0 9px 24px #00000012
+}
+.card-top{
+  display:flex;
+  justify-content:space-between;
+  gap:8px;
+  margin-bottom:9px
+}
+.status{
+  font-size:10px;
+  font-weight:800;
+  color:#15803d;
+  background:#dcfce7;
+  padding:4px 7px;
+  border-radius:20px
+}
+.state{
+  font-size:10px;
+  color:#64748b
+}
+.admission-card h3{
+  font-size:16px;
+  margin-bottom:4px
+}
+.admission-card p{
+  color:#64748b;
+  font-size:12px;
+  margin-bottom:11px
+}
+.info{
+  display:grid;
+  gap:5px;
+  margin-bottom:12px
+}
+.info span{
+  font-size:11px;
+  color:#475569
+}
+.open-btn{
+  display:block;
+  text-align:center;
+  background:#0f172a;
+  color:#fff;
+  padding:9px;
+  border-radius:9px;
+  font-size:12px;
+  font-weight:700
+}
+
+.empty{
+  text-align:center;
+  padding:35px 15px;
+  background:#fff;
+  border-radius:15px;
+  border:1px solid #e5e7eb;
+  color:#64748b
+}
+
+.notice{
+  margin-top:22px;
+  padding:14px;
+  border-radius:13px;
+  background:#fff7ed;
+  border:1px solid #fed7aa;
+  color:#7c2d12;
+  font-size:12px
+}
+
+@media(max-width:800px){
+  .header-inner{
+    align-items:flex-start;
+    flex-direction:column;
+    gap:7px
+  }
+  .nav{width:100%}
+  .filter-row{grid-template-columns:1fr 1fr}
+  .admission-grid{grid-template-columns:repeat(2,1fr)}
+}
+
+@media(max-width:560px){
+  main{padding:0 10px 75px}
+  .hero{
+    padding:23px 15px;
+    border-radius:15px
+  }
+  .hero h1{font-size:25px}
+  .hero p{font-size:13px}
+  .search-box{margin-top:16px}
+  .search-box button{padding:0 13px}
+  .filter-row{grid-template-columns:1fr}
+  .admission-grid{grid-template-columns:1fr}
+  .section-title h2{font-size:18px}
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <a class="logo" href="index.html">Sarkarii<span>ichij</span></a>
+
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="jobs.html">Jobs</a>
+      <a href="admission.html" class="active">Admission</a>
+      <a href="results.html">Results</a>
+      <a href="admit-card.html">Admit Card</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <span class="badge">ADMISSION • COLLEGE • UNIVERSITY • ENTRANCE</span>
+
+  <h1>Admission की पूरी जानकारी<br>
+    <span>एक ही जगह</span>
+  </h1>
+
+  <p>
+    Government College, University, UG, PG, Diploma, ITI और Entrance
+    Admissions को आसानी से खोजें।
+  </p>
+
+  <div class="search-box">
+    <input
+      type="search"
+      id="search"
+      placeholder="Search college, university, course, entrance..."
+    >
+    <button onclick="applySearch()">Search</button>
+  </div>
+</section>
+
+<section class="section">
+
+  <div class="section-title">
+    <div>
+      <h2>Admission Search & Filters</h2>
+      <p>अपनी जरूरत के अनुसार admission खोजें</p>
+    </div>
+  </div>
+
+  <div class="filters">
+
+    <div class="filter-row">
+
+      <div class="filter-group">
+        <label>Admission Type</label>
+        <select id="type">
+          <option value="all">All Admission</option>
+          <option value="ug">UG</option>
+          <option value="pg">PG</option>
+          <option value="diploma">Diploma</option>
+          <option value="iti">ITI</option>
+          <option value="entrance">Entrance</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label>Course Level</label>
+        <select id="level">
+          <option value="all">All Levels</option>
+          <option value="10+2">After 12th</option>
+          <option value="graduate">After Graduation</option>
+          <option value="pg">Post Graduate</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label>State</label>
+        <select id="state">
+          <option value="all">All States</option>
+          <option value="central">Central</option>
+          <option value="up">Uttar Pradesh</option>
+          <option value="bihar">Bihar</option>
+          <option value="mp">Madhya Pradesh</option>
+          <option value="rajasthan">Rajasthan</option>
+          <option value="other">Other States</option>
+        </select>
+      </div>
+
+    </div>
+
+    <div class="filter-actions">
+      <button class="reset" id="reset">Reset Filters</button>
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+
+  <div class="section-title">
+    <div>
+      <h2>Latest Admission</h2>
+      <p id="count">Loading admissions...</p>
+    </div>
+  </div>
+
+  <div class="admission-grid" id="admissionList"></div>
+
+</section>
+
+<section class="notice">
+  <strong>⚠️ Important:</strong>
+  Admission dates, eligibility, fees और application process समय के साथ
+  बदल सकते हैं। आवेदन करने से पहले संबंधित official website और notification
+  जरूर verify करें।
+</section>
+
+<script>
+
+const ADMISSIONS = [
+
+  {
+    title:"CUET UG Admission",
+    org:"Common University Entrance Test",
+    type:"entrance",
+    level:"10+2",
+    state:"central",
+    status:"Active",
+    course:"UG Courses",
+    lastDate:"Check Official Portal",
+    fee:"As per notification",
+    official:"https://cuet.nta.nic.in/"
+  },
+
+  {
+    title:"CUET PG Admission",
+    org:"National Testing Agency",
+    type:"entrance",
+    level:"graduate",
+    state:"central",
+    status:"Upcoming",
+    course:"PG Courses",
+    lastDate:"Check Official Portal",
+    fee:"As per notification",
+    official:"https://exams.nta.ac.in/CUET-PG/"
+  },
+
+  {
+    title:"UP University Admission",
+    org:"Uttar Pradesh Universities",
+    type:"ug",
+    level:"10+2",
+    state:"up",
+    status:"Active",
+    course:"UG Courses",
+    lastDate:"University Wise",
+    fee:"University Wise",
+    official:"#"
+  },
+
+  {
+    title:"UP PG Admission",
+    org:"Uttar Pradesh Universities",
+    type:"pg",
+    level:"graduate",
+    state:"up",
+    status:"Active",
+    course:"PG Courses",
+    lastDate:"University Wise",
+    fee:"University Wise",
+    official:"#"
+  },
+
+  {
+    title:"Bihar University Admission",
+    org:"Bihar Universities",
+    type:"ug",
+    level:"10+2",
+    state:"bihar",
+    status:"Active",
+    course:"UG Courses",
+    lastDate:"University Wise",
+    fee:"University Wise",
+    official:"#"
+  },
+
+  {
+    title:"ITI Admission",
+    org:"Government ITI Admission",
+    type:"iti",
+    level:"10+2",
+    state:"all",
+    status:"Active",
+    course:"ITI Trades",
+    lastDate:"State Wise",
+    fee:"As per portal",
+    official:"#"
+  },
+
+  {
+    title:"Diploma / Polytechnic Admission",
+    org:"Government Polytechnic",
+    type:"diploma",
+    level:"10+2",
+    state:"all",
+    status:"Active",
+    course:"Engineering Diploma",
+    lastDate:"State Wise",
+    fee:"As per portal",
+    official:"#"
+  },
+
+  {
+    title:"NTA Entrance Admissions",
+    org:"National Testing Agency",
+    type:"entrance",
+    level:"other",
+    state:"central",
+    status:"Upcoming",
+    course:"Various Entrance Exams",
+    lastDate:"Exam Wise",
+    fee:"Exam Wise",
+    official:"https://www.nta.ac.in/"
+  }
+
+];
+
+function renderAdmissions(list){
+
+  const box=document.getElementById("admissionList");
+  const count=document.getElementById("count");
+
+  box.innerHTML="";
+  count.textContent=list.length+" admission options found";
+
+  if(!list.length){
+    box.innerHTML=`
+      <div class="empty">
+        <strong>No admission found</strong>
+        <p>Search या filters बदलकर दोबारा देखें।</p>
+      </div>`;
+    return;
+  }
+
+  list.forEach(item=>{
+
+    const card=document.createElement("article");
+    card.className="admission-card";
+
+    card.innerHTML=`
+      <div class="card-top">
+        <span class="status">${item.status}</span>
+        <span class="state">${item.state.toUpperCase()}</span>
+      </div>
+
+      <h3>${item.title}</h3>
+      <p>${item.org}</p>
+
+      <div class="info">
+        <span>🎓 Course: ${item.course}</span>
+        <span>📚 Level: ${item.level}</span>
+        <span>📅 Last Date: ${item.lastDate}</span>
+        <span>💰 Fee: ${item.fee}</span>
+      </div>
+
+      <a class="open-btn"
+         href="${item.official}"
+         ${item.official!=="#" ? 'target="_blank"' : ''}>
+         Official Website →
+      </a>
+    `;
+
+    box.appendChild(card);
+
+  });
+}
+
+function filterAdmissions(){
+
+  const q=document.getElementById("search").value.toLowerCase().trim();
+  const type=document.getElementById("type").value;
+  const level=document.getElementById("level").value;
+  const state=document.getElementById("state").value;
+
+  const list=ADMISSIONS.filter(item=>{
+
+    const text=[
+      item.title,
+      item.org,
+      item.course,
+      item.type,
+      item.level,
+      item.state
+    ].join(" ").toLowerCase();
+
+    return (!q || text.includes(q)) &&
+           (type==="all" || item.type===type) &&
+           (level==="all" || item.level===level) &&
+           (state==="all" || item.state===state || item.state==="all");
+
+  });
+
+  renderAdmissions(list);
+}
+
+function applySearch(){
+  filterAdmissions();
+}
+
+document.getElementById("search")
+.addEventListener("input",filterAdmissions);
+
+document.getElementById("type")
+.addEventListener("change",filterAdmissions);
+
+document.getElementById("level")
+.addEventListener("change",filterAdmissions);
+
+document.getElementById("state")
+.addEventListener("change",filterAdmissions);
+
+document.getElementById("reset")
+.addEventListener("click",function(){
+
+  document.getElementById("search").value="";
+  document.getElementById("type").value="all";
+  document.getElementById("level").value="all";
+  document.getElementById("state").value="all";
+
+  renderAdmissions(ADMISSIONS);
+
+});
+
+renderAdmissions(ADMISSIONS);
+
+</script>
+
+<!-- PART 2 YAHAN SE DIRECT START HOGA -->
+  <!-- PART 2 : ADMISSION CATEGORIES + POPULAR ADMISSIONS -->
+
+<section class="section">
+
+  <div class="section-title">
+    <div>
+      <h2>Admission Categories</h2>
+      <p>अपनी category चुनकर admission देखें</p>
+    </div>
+  </div>
+
+  <div class="category-grid">
+
+    <button class="category-card" data-type="ug">
+      <span>🎓</span>
+      <strong>UG Admission</strong>
+      <small>BA • BSc • BCom • BCA</small>
+    </button>
+
+    <button class="category-card" data-type="pg">
+      <span>📚</span>
+      <strong>PG Admission</strong>
+      <small>MA • MSc • MCom • MCA</small>
+    </button>
+
+    <button class="category-card" data-type="entrance">
+      <span>📝</span>
+      <strong>Entrance Exams</strong>
+      <small>CUET • NTA • Other Exams</small>
+    </button>
+
+    <button class="category-card" data-type="diploma">
+      <span>⚙️</span>
+      <strong>Diploma</strong>
+      <small>Polytechnic & Technical</small>
+    </button>
+
+    <button class="category-card" data-type="iti">
+      <span>🔧</span>
+      <strong>ITI Admission</strong>
+      <small>Government ITI Trades</small>
+    </button>
+
+    <button class="category-card" data-type="all">
+      <span>📖</span>
+      <strong>All Admissions</strong>
+      <small>पूरी Admission Directory</small>
+    </button>
+
+  </div>
+</section>
+
+
+<section class="section">
+
+  <div class="section-title">
+    <div>
+      <h2>Popular Admissions</h2>
+      <p>सबसे ज्यादा खोजे जाने वाले admission</p>
+    </div>
+  </div>
+
+  <div class="popular-grid">
+
+    <button class="popular-card" data-search="CUET UG">
+      <strong>CUET UG</strong>
+      <span>Central Universities</span>
+    </button>
+
+    <button class="popular-card" data-search="CUET PG">
+      <strong>CUET PG</strong>
+      <span>Post Graduate Admission</span>
+    </button>
+
+    <button class="popular-card" data-search="UP University">
+      <strong>UP University</strong>
+      <span>Uttar Pradesh</span>
+    </button>
+
+    <button class="popular-card" data-search="Bihar University">
+      <strong>Bihar University</strong>
+      <span>Bihar Admission</span>
+    </button>
+
+    <button class="popular-card" data-search="ITI Admission">
+      <strong>ITI Admission</strong>
+      <span>Government ITI</span>
+    </button>
+
+    <button class="popular-card" data-search="Polytechnic">
+      <strong>Polytechnic</strong>
+      <span>Diploma Admission</span>
+    </button>
+
+  </div>
+</section>
+
+
+<section class="section">
+
+  <div class="section-title">
+    <div>
+      <h2>Admission Process</h2>
+      <p>Admission लेने का आसान तरीका</p>
+    </div>
+  </div>
+
+  <div class="process-grid">
+
+    <div class="process-card">
+      <b>01</b>
+      <h3>Admission खोजें</h3>
+      <p>Course, state या entrance exam के अनुसार admission खोजें।</p>
+    </div>
+
+    <div class="process-card">
+      <b>02</b>
+      <h3>Eligibility देखें</h3>
+      <p>Qualification, age और जरूरी eligibility check करें।</p>
+    </div>
+
+    <div class="process-card">
+      <b>03</b>
+      <h3>Official Portal खोलें</h3>
+      <p>Official website पर जाकर notification और dates verify करें।</p>
+    </div>
+
+    <div class="process-card">
+      <b>04</b>
+      <h3>Online Apply करें</h3>
+      <p>Application form भरें और जरूरी documents submit करें।</p>
+    </div>
+
+  </div>
+</section>
+
+
+<style>
+
+.category-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px
+}
+
+.category-card{
+  border:1px solid #e5e9f0;
+  background:#fff;
+  border-radius:15px;
+  padding:16px 12px;
+  text-align:left;
+  cursor:pointer;
+  transition:.2s;
+  box-shadow:0 4px 14px #00000007
+}
+
+.category-card:hover{
+  transform:translateY(-2px);
+  border-color:#bbf7d0;
+  box-shadow:0 9px 22px #00000010
+}
+
+.category-card span{
+  display:block;
+  font-size:25px;
+  margin-bottom:8px
+}
+
+.category-card strong{
+  display:block;
+  font-size:14px;
+  margin-bottom:3px
+}
+
+.category-card small{
+  color:#64748b;
+  font-size:11px
+}
+
+.popular-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px
+}
+
+.popular-card{
+  border:1px solid #e5e9f0;
+  background:#fff;
+  border-radius:13px;
+  padding:14px;
+  text-align:left;
+  cursor:pointer;
+  transition:.2s
+}
+
+.popular-card:hover{
+  transform:translateY(-2px);
+  box-shadow:0 7px 18px #0000000d
+}
+
+.popular-card strong{
+  display:block;
+  font-size:14px;
+  margin-bottom:3px
+}
+
+.popular-card span{
+  color:#64748b;
+  font-size:11px
+}
+
+.process-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px
+}
+
+.process-card{
+  background:#fff;
+  border:1px solid #e5e9f0;
+  border-radius:15px;
+  padding:16px;
+  box-shadow:0 4px 14px #00000007
+}
+
+.process-card b{
+  display:inline-flex;
+  width:32px;
+  height:32px;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background:#dcfce7;
+  color:#15803d;
+  font-size:12px;
+  margin-bottom:10px
+}
+
+.process-card h3{
+  font-size:14px;
+  margin-bottom:5px
+}
+
+.process-card p{
+  color:#64748b;
+  font-size:11px
+}
+
+@media(max-width:800px){
+  .category-grid{
+    grid-template-columns:repeat(2,1fr)
+  }
+
+  .popular-grid{
+    grid-template-columns:repeat(2,1fr)
+  }
+
+  .process-grid{
+    grid-template-columns:repeat(2,1fr)
+  }
+}
+
+@media(max-width:560px){
+  .category-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:9px
+  }
+
+  .category-card{
+    padding:13px 10px
+  }
+
+  .category-card span{
+    font-size:22px
+  }
+
+  .popular-grid{
+    grid-template-columns:1fr
+  }
+
+  .process-grid{
+    grid-template-columns:1fr
+  }
+}
+
+</style>
+
+
+<script>
+
+document.querySelectorAll(".category-card").forEach(card=>{
+
+  card.addEventListener("click",()=>{
+
+    const type=card.dataset.type;
+
+    document.getElementById("search").value="";
+
+    document.getElementById("type").value=type;
+
+    document.getElementById("level").value="all";
+
+    document.getElementById("state").value="all";
+
+    filterAdmissions();
+
+    document.getElementById("admissionList")
+      .scrollIntoView({
+        behavior:"smooth",
+        block:"start"
+      });
+
+  });
+
+});
+
+
+document.querySelectorAll(".popular-card").forEach(card=>{
+
+  card.addEventListener("click",()=>{
+
+    document.getElementById("search").value=
+      card.dataset.search;
+
+    document.getElementById("type").value="all";
+
+    document.getElementById("level").value="all";
+
+    document.getElementById("state").value="all";
+
+    filterAdmissions();
+
+    document.getElementById("admissionList")
+      .scrollIntoView({
+        behavior:"smooth",
+        block:"start"
+      });
+
+  });
+
+});
+
+</script>
+
+<!-- PART 3 : FINAL CLOSE YAHAN SE HOGA -->
+  <!-- PART 3 : TRUST + MOBILE NAV + FOOTER + FINAL CLOSE -->
+
+<section class="section">
+
+  <div class="section-title">
+    <div>
+      <h2>Why Use Sarkariiichij?</h2>
+      <p>Admission information को आसान और सुरक्षित तरीके से खोजें</p>
+    </div>
+  </div>
+
+  <div class="trust-grid">
+
+    <div class="trust-card">
+      <span>🔎</span>
+      <strong>Easy Search</strong>
+      <p>Course, state और admission type के अनुसार जानकारी खोजें।</p>
+    </div>
+
+    <div class="trust-card">
+      <span>📱</span>
+      <strong>Mobile Friendly</strong>
+      <p>पूरी admission directory मोबाइल पर आसानी से इस्तेमाल करें।</p>
+    </div>
+
+    <div class="trust-card">
+      <span>🌐</span>
+      <strong>Official Sources</strong>
+      <p>Application करने से पहले official portal से जानकारी verify करें।</p>
+    </div>
+
+    <div class="trust-card">
+      <span>🛡️</span>
+      <strong>Safety First</strong>
+      <p>किसी भी admission के लिए unofficial payment या website से सावधान रहें।</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="section">
+
+  <div class="important-box">
+
+    <h2>📌 Important Admission Information</h2>
+
+    <ul>
+      <li>Application की अंतिम तारीख हमेशा official notification से check करें।</li>
+      <li>Eligibility course और university के अनुसार अलग हो सकती है।</li>
+      <li>Application fee जमा करने से पहले सभी details carefully check करें।</li>
+      <li>Admit card, counselling और merit list की updates official portal पर देखें।</li>
+      <li>Sarkariiichij पर दी गई जानकारी को application से पहले official source से verify करें।</li>
+    </ul>
+
+  </div>
+
+</section>
+
+
+<style>
+
+.trust-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px
+}
+
+.trust-card{
+  background:#fff;
+  border:1px solid #e5e9f0;
+  border-radius:15px;
+  padding:16px;
+  box-shadow:0 4px 14px #00000007
+}
+
+.trust-card span{
+  display:block;
+  font-size:24px;
+  margin-bottom:9px
+}
+
+.trust-card strong{
+  display:block;
+  font-size:14px;
+  margin-bottom:5px
+}
+
+.trust-card p{
+  color:#64748b;
+  font-size:11px
+}
+
+.important-box{
+  background:#fff;
+  border:1px solid #e5e9f0;
+  border-radius:15px;
+  padding:18px;
+  box-shadow:0 4px 14px #00000007
+}
+
+.important-box h2{
+  font-size:17px;
+  margin-bottom:10px
+}
+
+.important-box ul{
+  padding-left:18px
+}
+
+.important-box li{
+  color:#64748b;
+  font-size:12px;
+  margin:6px 0
+}
+
+.footer{
+  background:#07111f;
+  color:#fff;
+  margin-top:30px;
+  padding:28px 15px 90px
+}
+
+.footer-inner{
+  max-width:1150px;
+  margin:auto
+}
+
+.footer-brand{
+  font-size:20px;
+  font-weight:800;
+  margin-bottom:7px
+}
+
+.footer-brand span{
+  color:#4ade80
+}
+
+.footer-text{
+  color:#94a3b8;
+  font-size:11px;
+  max-width:500px;
+  margin-bottom:20px
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px
+}
+
+.footer-col h3{
+  font-size:13px;
+  margin-bottom:8px
+}
+
+.footer-col a{
+  display:block;
+  color:#94a3b8;
+  font-size:11px;
+  margin:6px 0
+}
+
+.footer-bottom{
+  border-top:1px solid #ffffff12;
+  margin-top:22px;
+  padding-top:14px;
+  color:#64748b;
+  font-size:10px;
+  text-align:center
+}
+
+.mobile-nav{
+  display:none
+}
+
+@media(max-width:800px){
+
+  .trust-grid{
+    grid-template-columns:repeat(2,1fr)
+  }
+
+  .footer-grid{
+    grid-template-columns:repeat(2,1fr)
+  }
+
+  .mobile-nav{
+    position:fixed;
+    display:flex;
+    bottom:0;
+    left:0;
+    right:0;
+    z-index:2000;
+    background:#07111f;
+    border-top:1px solid #ffffff15;
+    justify-content:space-around;
+    padding:7px 3px
+  }
+
+  .mobile-nav a{
+    color:#cbd5e1;
+    text-align:center;
+    font-size:10px;
+    padding:3px 8px
+  }
+
+  .mobile-nav span{
+    display:block;
+    font-size:18px;
+    margin-bottom:1px
+  }
+
+}
+
+@media(max-width:560px){
+
+  .trust-grid{
+    grid-template-columns:1fr 1fr;
+    gap:9px
+  }
+
+  .trust-card{
+    padding:13px 10px
+  }
+
+  .important-box{
+    padding:15px
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr 1fr;
+    gap:15px
+  }
+
+}
+
+</style>
+
+
+<footer class="footer">
+
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+      Sarkarii<span>ichij</span>
+    </div>
+
+    <p class="footer-text">
+      Government Jobs, Education, Admission, Results और Citizen Services
+      की जानकारी एक ही जगह उपलब्ध कराने वाला mobile-first portal.
+    </p>
+
+    <div class="footer-grid">
+
+      <div class="footer-col">
+        <h3>Career</h3>
+        <a href="jobs.html">Government Jobs</a>
+        <a href="admission.html">Admission</a>
+        <a href="results.html">Results</a>
+        <a href="admit-card.html">Admit Card</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Education</h3>
+        <a href="admission.html">College Admission</a>
+        <a href="admission.html">Entrance Exams</a>
+        <a href="#">Scholarship</a>
+        <a href="#">Syllabus</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Services</h3>
+        <a href="#">Sarkari Yojana</a>
+        <a href="#">Sarkari Kaam</a>
+        <a href="#">GK</a>
+        <a href="#">Current Affairs</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 Sarkariiichij • Information should be verified from official sources.
+    </div>
+
+  </div>
+
+</footer>
+
+
+<nav class="mobile-nav">
+
+  <a href="index.html">
+    <span>⌂</span>
+    Home
+  </a>
+
+  <a href="jobs.html">
+    <span>💼</span>
+    Jobs
+  </a>
+
+  <a href="admission.html">
+    <span>🎓</span>
+    Admission
+  </a>
+
+  <a href="results.html">
+    <span>📊</span>
+    Results
+  </a>
+
+  <a href="admit-card.html">
+    <span>🎫</span>
+    Admit Card
+  </a>
+
+</nav>
+
+
+<script>
+
+window.addEventListener("scroll",function(){
+
+  const header=document.querySelector(".header");
+
+  if(window.scrollY>10){
+    header.style.boxShadow="0 4px 18px #0004";
+  }else{
+    header.style.boxShadow="0 2px 15px #0002";
+  }
+
+});
+
+document.querySelectorAll('a[href="#"]').forEach(link=>{
+
+  link.addEventListener("click",function(e){
+    e.preventDefault();
+  });
+
+});
+
+</script>
+
+</main>
+</body>
+</html>
