@@ -3868,34 +3868,316 @@ backTop.addEventListener("click", () => {
   });
 });
 </script>
-<!-- PART 16 : FINAL PAGE CLOSE -->
+<!-- PART 16 : PAGE CONTINUE SYSTEM -->
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
+<div id="backTop" class="back-top">↑</div>
 
-  /* Prevent empty # links from jumping unexpectedly */
-  document.querySelectorAll('a[href="#"]').forEach(link => {
-    link.addEventListener("click", event => {
-      event.preventDefault();
-    });
-  });
+<nav class="mobile-nav">
+  <a href="../index.html">⌂<span>Home</span></a>
+  <a href="jobs.html" class="active">▣<span>Jobs</span></a>
+  <a href="#">▤<span>Admission</span></a>
+  <a href="#">◉<span>Results</span></a>
+  <a href="#">☰<span>More</span></a>
+</nav>
 
-  /* Keep mobile navigation visible only on small screens */
-  const mobileNav = document.querySelector(".mobile-nav");
+<style>
+.back-top{
+  position:fixed;
+  right:18px;
+  bottom:82px;
+  width:44px;
+  height:44px;
+  border:0;
+  border-radius:50%;
+  background:#0f172a;
+  color:#fff;
+  font-size:22px;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:999;
+  cursor:pointer;
+}
 
-  function checkMobileNav(){
-    if(window.innerWidth > 700){
-      mobileNav.style.display = "none";
-    }
+.mobile-nav{
+  display:none;
+}
+
+@media(max-width:700px){
+  .mobile-nav{
+    position:fixed;
+    left:0;
+    right:0;
+    bottom:0;
+    height:64px;
+    background:#fff;
+    border-top:1px solid #e5e7eb;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    z-index:998;
   }
 
-  window.addEventListener("resize", checkMobileNav);
-  checkMobileNav();
+  .mobile-nav a{
+    color:#475569;
+    text-decoration:none;
+    font-size:20px;
+    text-align:center;
+    line-height:18px;
+  }
+
+  .mobile-nav a span{
+    display:block;
+    font-size:11px;
+    margin-top:4px;
+  }
+
+  .mobile-nav a.active{
+    color:#2563eb;
+    font-weight:700;
+  }
+
+  body{
+    padding-bottom:70px;
+  }
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+
+  const backTop=document.getElementById("backTop");
+
+  window.addEventListener("scroll",function(){
+    backTop.style.display=window.scrollY>350?"flex":"none";
+  });
+
+  backTop.addEventListener("click",function(){
+    window.scrollTo({
+      top:0,
+      behavior:"smooth"
+    });
+  });
 
 });
 </script>
 
-</main>
+<!-- PART 17 YAHAN SE START HOGA -->
+  <!-- PART 17 : DIRECT OFFICIAL WEBSITE LINKS -->
 
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+
+const officialLinks={
+
+"UPSC":"https://www.upsc.gov.in/",
+"SSC":"https://ssc.gov.in/",
+"RRB NTPC":"https://www.rrbapply.gov.in/",
+"RRB Group D":"https://www.rrbapply.gov.in/",
+"RRB ALP":"https://www.rrbapply.gov.in/",
+"RRB Technician":"https://www.rrbapply.gov.in/",
+"RRB Junior Engineer":"https://www.rrbapply.gov.in/",
+
+"IBPS PO":"https://www.ibps.in/",
+"IBPS Clerk / CSA":"https://www.ibps.in/",
+"IBPS SO":"https://www.ibps.in/",
+"IBPS RRB":"https://www.ibps.in/",
+"SBI PO":"https://sbi.co.in/web/careers",
+"SBI Clerk":"https://sbi.co.in/web/careers",
+"RBI Grade B":"https://opportunities.rbi.org.in/",
+"RBI Assistant":"https://opportunities.rbi.org.in/",
+
+"Indian Army Agniveer":"https://joinindianarmy.nic.in/",
+"Indian Army Officer Entry":"https://joinindianarmy.nic.in/",
+"Indian Navy Agniveer":"https://www.joinindiannavy.gov.in/",
+"Indian Navy Officer Entry":"https://www.joinindiannavy.gov.in/",
+"Air Force Agniveer Vayu":"https://agnipathvayu.cdac.in/",
+"AFCAT":"https://afcat.cdac.in/",
+"Indian Coast Guard":"https://www.indiancoastguard.gov.in/",
+"DRDO Recruitment":"https://www.drdo.gov.in/",
+
+"CRPF Recruitment":"https://rect.crpf.gov.in/",
+"BSF Recruitment":"https://rectt.bsf.gov.in/",
+"CISF Recruitment":"https://cisfrectt.cisf.gov.in/",
+"ITBP Recruitment":"https://recruitment.itbpolice.nic.in/",
+"SSB Recruitment":"https://recruitment.ssb.gov.in/",
+"Assam Rifles Recruitment":"https://www.assamrifles.gov.in/",
+
+"CTET":"https://ctet.nic.in/",
+"KVS Recruitment":"https://kvsangathan.nic.in/",
+"NVS Recruitment":"https://navodaya.gov.in/",
+"DSSSB Recruitment":"https://dsssb.delhi.gov.in/",
+
+"ONGC Recruitment":"https://ongcindia.com/",
+"NTPC Recruitment":"https://careers.ntpc.co.in/",
+"BHEL Recruitment":"https://careers.bhel.in/",
+"SAIL Recruitment":"https://sailcareers.com/",
+"IOCL Recruitment":"https://iocl.com/",
+
+"Supreme Court Recruitment":"https://www.sci.gov.in/",
+"Allahabad High Court":"https://www.allahabadhighcourt.in/",
+"Patna High Court":"https://patnahighcourt.gov.in/",
+
+"CSIR NET":"https://csirnet.nta.ac.in/",
+"UGC NET":"https://ugcnet.nta.ac.in/",
+
+"AIIMS Recruitment":"https://www.aiimsexams.ac.in/",
+"ESIC Recruitment":"https://www.esic.gov.in/",
+"NHM Recruitment":"https://nhm.gov.in/",
+
+"ICAR Recruitment":"https://icar.gov.in/",
+
+"UPPSC":"https://uppsc.up.nic.in/",
+"UPSSSC":"https://upsssc.gov.in/",
+"UP Police":"https://uppbpb.gov.in/",
+"BPSC":"https://www.bpsc.bih.nic.in/",
+"Bihar Police":"https://csbc.bihar.gov.in/",
+"MPPSC":"https://mppsc.mp.gov.in/",
+"RPSC":"https://rpsc.rajasthan.gov.in/",
+"JPSC":"https://www.jpsc.gov.in/",
+
+"Indian Forest Service":"https://www.upsc.gov.in/"
+};
+
+const cards=document.querySelectorAll("#examGrid .exam-card");
+
+cards.forEach(card=>{
+
+const title=card.querySelector("h3,h2,.card-title");
+
+if(!title)return;
+
+const name=title.innerText.trim();
+const url=officialLinks[name];
+
+if(!url)return;
+
+card.style.cursor="pointer";
+
+card.addEventListener("click",function(e){
+
+if(e.target.closest("a"))e.preventDefault();
+
+window.location.href=url;
+
+});
+
+card.querySelectorAll("a").forEach(link=>{
+link.href=url;
+link.target="_self";
+});
+
+});
+
+});
+</script>
+
+<!-- PART 18 YAHAN SE START HOGA -->
+  <!-- PART 18 : FINAL JOBS PAGE STRUCTURE -->
+
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+
+  /* Mobile navigation resize fix */
+  const mobileNav=document.querySelector(".mobile-nav");
+
+  function fixMobileNav(){
+    if(!mobileNav)return;
+
+    if(window.innerWidth<=700){
+      mobileNav.style.display="flex";
+    }else{
+      mobileNav.style.display="none";
+    }
+  }
+
+  fixMobileNav();
+  window.addEventListener("resize",fixMobileNav);
+
+
+  /* Keep directory cards visible */
+  document.querySelectorAll("#directory .exam-card").forEach(card=>{
+    card.style.display="";
+  });
+
+
+  /* Final page check */
+  const examGrid=document.getElementById("examGrid");
+
+  if(examGrid){
+    examGrid.querySelectorAll(".exam-card").forEach(card=>{
+      card.style.cursor="pointer";
+    });
+  }
+
+});
+</script>
+
+<!-- PART 19 YAHAN SE START HOGA -->
+
+<!-- PART 19 : REMAINING OFFICIAL LINKS -->
+
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+
+const links={
+
+"RRB Paramedical":"https://www.rrbapply.gov.in/",
+"Ministerial & Isolated Categories":"https://www.rrb.indianrailways.gov.in/",
+"RRC Apprentice":"https://www.rrcb.gov.in/",
+
+"JHT":"https://ssc.gov.in/",
+"Selection Post":"https://ssc.gov.in/",
+"Stenographer C & D":"https://ssc.gov.in/",
+"Junior Engineer":"https://ssc.gov.in/",
+
+"State TET":"https://education.gov.in/",
+
+"University Recruitment":"https://www.ugc.gov.in/",
+
+"State Police Constable":"https://uppbpb.gov.in/",
+"State Police SI":"https://uppbpb.gov.in/",
+
+"Forest Department Jobs":"https://moef.gov.in/",
+"Electricity Department":"https://powermin.gov.in/",
+"Power Corporation Jobs":"https://powermin.gov.in/",
+"State Transport Jobs":"https://morth.nic.in/"
+
+};
+
+document.querySelectorAll("#examGrid .exam-card").forEach(card=>{
+
+const title=card.querySelector("h3,h2,.card-title");
+if(!title)return;
+
+const name=title.innerText.trim();
+const url=links[name];
+
+if(!url)return;
+
+card.style.cursor="pointer";
+
+card.addEventListener("click",function(e){
+
+if(e.target.closest("a"))e.preventDefault();
+
+window.location.href=url;
+
+});
+
+card.querySelectorAll("a").forEach(a=>{
+a.href=url;
+a.target="_self";
+});
+
+});
+
+});
+</script>
+
+<!-- PART 20 YAHAN SE START HOGA -->
+  <!-- PART 20 : FINAL CLOSE -->
+
+</main>
 </body>
 </html>
