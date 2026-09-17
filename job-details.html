@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Job Details | Sarkariiichij</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f5f7fb;color:#172033}
+header{background:#111827;color:#fff;padding:16px 5%;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:23px;font-weight:800}.home{color:#fff;text-decoration:none}
+main{max-width:950px;margin:25px auto;padding:0 15px}
+.card{background:#fff;border-radius:16px;padding:22px;margin-bottom:18px;box-shadow:0 5px 20px #0000000d}
+.badge{display:inline-block;background:#e8f7ee;color:#16803c;padding:7px 12px;border-radius:20px;font-size:13px;font-weight:bold}
+h1{font-size:28px;margin:14px 0 6px}.org{color:#667085;margin-bottom:20px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.item{background:#f8fafc;padding:14px;border-radius:10px}
+.item b{display:block;font-size:12px;color:#667085;margin-bottom:5px}.item span{font-weight:600}
+.actions{display:flex;gap:10px;flex-wrap:wrap}.btn{padding:13px 20px;border-radius:9px;text-decoration:none;font-weight:bold;display:inline-block}
+.apply{background:#16a34a;color:#fff}.notify{background:#2563eb;color:#fff}.official{background:#111827;color:#fff}
+h2{margin-top:0;font-size:20px}
+@media(max-width:600px){h1{font-size:23px}.grid{grid-template-columns:1fr}.actions .btn{width:100%;text-align:center}}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">Sarkariiichij</div>
+<a class="home" href="jobs.html">← Jobs</a>
+</header>
+
+<main id="app"></main>
+
+<script src="jobs-data.js"></script>
+<script>
+const id=new URLSearchParams(location.search).get("id");
+const job=getJob(id),app=document.getElementById("app");
+
+if(!job){
+ app.innerHTML='<div class="card"><h2>Vacancy नहीं मिली</h2><p>कृपया Jobs page से vacancy खोलें।</p></div>';
+}else{
+app.innerHTML=`
+<div class="card">
+<span class="badge">${job.status}</span>
+<h1>${job.title}</h1>
+<div class="org">${job.org} • ${job.dept}</div>
+<div class="actions">
+<a class="btn apply" href="${job.apply}" target="_blank">Apply Online</a>
+<a class="btn notify" href="${job.notification}" target="_blank">Download Notification</a>
+<a class="btn official" href="${job.official}" target="_blank">Official Website</a>
+</div>
+</div>
+
+<div class="card">
+<h2>Vacancy Details</h2>
+<div class="grid">
+${item("Total Vacancy",job.vacancy)}
+${item("Post Name",job.posts)}
+${item("Qualification",job.qualification)}
+${item("Age Limit",job.age)}
+${item("Salary",job.salary)}
+${item("Application Fee",job.fee)}
+${item("Start Date",job.start)}
+${item("Last Date",job.lastDate)}
+${item("Exam Date",job.examDate)}
+${item("State",job.state)}
+</div>
+</div>
+
+<div class="card">
+<h2>Important Links</h2>
+<div class="actions">
+${link("Admit Card",job.admitCard)}
+${link("Result",job.result)}
+${link("Syllabus",job.syllabus)}
+${link("Cut Off",job.cutoff)}
+${link("Previous Papers",job.papers)}
+</div>
+</div>
+
+<div class="card">
+<h2>About This Recruitment</h2>
+<p>${job.details}</p>
+</div>`;
+}
+
+function item(a,b){return `<div class="item"><b>${a}</b><span>${b||"Not Available"}</span></div>`}
+function link(a,b){return `<a class="btn official" href="${b}" target="_blank">${a}</a>`}
+</script>
+</body>
+</html>
