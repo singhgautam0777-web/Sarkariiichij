@@ -3910,114 +3910,234 @@ document.addEventListener("DOMContentLoaded",function(){
 </script>
 
 <!-- PART 17 YAHAN SE START HOGA -->
-  <!-- PART 17 : DIRECT OFFICIAL WEBSITE LINKS -->
+  <script>
+/* =========================================================
+   PART 17 : VERIFIED OFFICIAL WEBSITE SYSTEM
+   ========================================================= */
 
-<script>
-document.addEventListener("DOMContentLoaded",function(){
+(function(){
 
-const officialLinks={
+  const officialLinks = {
 
-"UPSC":"https://www.upsc.gov.in/",
-"SSC":"https://ssc.gov.in/",
-"RRB NTPC":"https://www.rrbapply.gov.in/",
-"RRB Group D":"https://www.rrbapply.gov.in/",
-"RRB ALP":"https://www.rrbapply.gov.in/",
-"RRB Technician":"https://www.rrbapply.gov.in/",
-"RRB Junior Engineer":"https://www.rrbapply.gov.in/",
+    /* UPSC */
+    "Civil Services Examination":
+      "https://www.upsc.gov.in/",
+    "NDA & NA":
+      "https://www.upsc.gov.in/",
+    "CDS":
+      "https://www.upsc.gov.in/",
+    "CAPF Assistant Commandant":
+      "https://www.upsc.gov.in/",
+    "Engineering Services":
+      "https://www.upsc.gov.in/",
+    "Combined Medical Services":
+      "https://www.upsc.gov.in/",
+    "IES / ISS":
+      "https://www.upsc.gov.in/",
 
-"IBPS PO":"https://www.ibps.in/",
-"IBPS Clerk / CSA":"https://www.ibps.in/",
-"IBPS SO":"https://www.ibps.in/",
-"IBPS RRB":"https://www.ibps.in/",
-"SBI PO":"https://sbi.co.in/web/careers",
-"SBI Clerk":"https://sbi.co.in/web/careers",
-"RBI Grade B":"https://opportunities.rbi.org.in/",
-"RBI Assistant":"https://opportunities.rbi.org.in/",
+    /* SSC */
+    "CGL":
+      "https://ssc.gov.in/",
+    "CHSL":
+      "https://ssc.gov.in/",
+    "MTS / Havaldar":
+      "https://ssc.gov.in/",
+    "GD Constable":
+      "https://ssc.gov.in/",
+    "CPO":
+      "https://ssc.gov.in/",
+    "Junior Engineer":
+      "https://ssc.gov.in/",
+    "Stenographer C & D":
+      "https://ssc.gov.in/",
+    "JHT":
+      "https://ssc.gov.in/",
+    "Selection Post":
+      "https://ssc.gov.in/",
 
-"Indian Army Agniveer":"https://joinindianarmy.nic.in/",
-"Indian Army Officer Entry":"https://joinindianarmy.nic.in/",
-"Indian Navy Agniveer":"https://www.joinindiannavy.gov.in/",
-"Indian Navy Officer Entry":"https://www.joinindiannavy.gov.in/",
-"Air Force Agniveer Vayu":"https://agnipathvayu.cdac.in/",
-"AFCAT":"https://afcat.cdac.in/",
-"Indian Coast Guard":"https://www.indiancoastguard.gov.in/",
-"DRDO Recruitment":"https://www.drdo.gov.in/",
+    /* Railway */
+    "RRB NTPC":
+      "https://www.rrbapply.gov.in/",
+    "RRB Group D":
+      "https://www.rrbapply.gov.in/",
+    "RRB ALP":
+      "https://www.rrbapply.gov.in/",
+    "RRB Technician":
+      "https://www.rrbapply.gov.in/",
+    "RRB Junior Engineer":
+      "https://www.rrbapply.gov.in/",
+    "RRB Paramedical":
+      "https://www.rrbapply.gov.in/",
+    "Ministerial & Isolated Categories":
+      "https://www.rrbapply.gov.in/",
+    "RRC Apprentice":
+      "https://indianrailways.gov.in/",
 
-"CRPF Recruitment":"https://rect.crpf.gov.in/",
-"BSF Recruitment":"https://rectt.bsf.gov.in/",
-"CISF Recruitment":"https://cisfrectt.cisf.gov.in/",
-"ITBP Recruitment":"https://recruitment.itbpolice.nic.in/",
-"SSB Recruitment":"https://recruitment.ssb.gov.in/",
-"Assam Rifles Recruitment":"https://www.assamrifles.gov.in/",
+    /* Banking */
+    "IBPS PO":
+      "https://www.ibps.in/",
+    "IBPS Clerk / CSA":
+      "https://www.ibps.in/",
+    "IBPS SO":
+      "https://www.ibps.in/",
+    "IBPS RRB":
+      "https://www.ibps.in/",
+    "SBI PO":
+      "https://sbi.co.in/web/careers/",
+    "SBI Clerk":
+      "https://sbi.co.in/web/careers/",
+    "RBI Grade B":
+      "https://opportunities.rbi.org.in/",
+    "RBI Assistant":
+      "https://opportunities.rbi.org.in/",
 
-"CTET":"https://ctet.nic.in/",
-"KVS Recruitment":"https://kvsangathan.nic.in/",
-"NVS Recruitment":"https://navodaya.gov.in/",
-"DSSSB Recruitment":"https://dsssb.delhi.gov.in/",
+    /* Defence */
+    "Indian Army Agniveer":
+      "https://joinindianarmy.nic.in/",
+    "Indian Army Officer Entry":
+      "https://joinindianarmy.nic.in/",
+    "Indian Navy Agniveer":
+      "https://www.joinindiannavy.gov.in/",
+    "Indian Navy Officer Entry":
+      "https://www.joinindiannavy.gov.in/",
+    "Air Force Agniveer Vayu":
+      "https://agnipathvayu.cdac.in/",
+    "AFCAT":
+      "https://afcat.cdac.in/",
+    "Indian Coast Guard":
+      "https://joinindiancoastguard.cdac.in/",
+    "DRDO Recruitment":
+      "https://www.drdo.gov.in/",
 
-"ONGC Recruitment":"https://ongcindia.com/",
-"NTPC Recruitment":"https://careers.ntpc.co.in/",
-"BHEL Recruitment":"https://careers.bhel.in/",
-"SAIL Recruitment":"https://sailcareers.com/",
-"IOCL Recruitment":"https://iocl.com/",
+    /* Police / CAPF */
+    "CRPF Recruitment":
+      "https://rect.crpf.gov.in/",
+    "BSF Recruitment":
+      "https://rectt.bsf.gov.in/",
+    "CISF Recruitment":
+      "https://cisfrectt.cisf.gov.in/",
+    "ITBP Recruitment":
+      "https://recruitment.itbpolice.nic.in/",
+    "SSB Recruitment":
+      "https://recruitment.ssb.gov.in/",
+    "Assam Rifles Recruitment":
+      "https://www.assamrifles.gov.in/",
 
-"Supreme Court Recruitment":"https://www.sci.gov.in/",
-"Allahabad High Court":"https://www.allahabadhighcourt.in/",
-"Patna High Court":"https://patnahighcourt.gov.in/",
+    /* Teaching */
+    "CTET":
+      "https://ctet.nic.in/",
+    "KVS Recruitment":
+      "https://kvsangathan.nic.in/",
+    "NVS Recruitment":
+      "https://exams.nta.ac.in/NVS/",
+    "State TET":
+      "#",
+    "DSSSB Recruitment":
+      "https://dsssb.delhi.gov.in/",
 
-"CSIR NET":"https://csirnet.nta.ac.in/",
-"UGC NET":"https://ugcnet.nta.ac.in/",
+    /* PSU */
+    "ONGC Recruitment":
+      "https://ongcindia.com/",
+    "NTPC Recruitment":
+      "https://careers.ntpc.co.in/",
+    "BHEL Recruitment":
+      "https://careers.bhel.in/",
+    "SAIL Recruitment":
+      "https://sailcareers.com/",
+    "IOCL Recruitment":
+      "https://iocl.com/careers",
 
-"AIIMS Recruitment":"https://www.aiimsexams.ac.in/",
-"ESIC Recruitment":"https://www.esic.gov.in/",
-"NHM Recruitment":"https://nhm.gov.in/",
+    /* Court */
+    "Supreme Court Recruitment":
+      "https://www.sci.gov.in/",
+    "Allahabad High Court":
+      "https://www.allahabadhighcourt.in/",
 
-"ICAR Recruitment":"https://icar.gov.in/",
+    /* University / Research */
+    "University Recruitment":
+      "#",
+    "CSIR NET":
+      "https://csirnet.nta.ac.in/",
+    "UGC NET":
+      "https://ugcnet.nta.ac.in/",
 
-"UPPSC":"https://uppsc.up.nic.in/",
-"UPSSSC":"https://upsssc.gov.in/",
-"UP Police":"https://uppbpb.gov.in/",
-"BPSC":"https://www.bpsc.bih.nic.in/",
-"Bihar Police":"https://csbc.bihar.gov.in/",
-"MPPSC":"https://mppsc.mp.gov.in/",
-"RPSC":"https://rpsc.rajasthan.gov.in/",
-"JPSC":"https://www.jpsc.gov.in/",
+    /* Health */
+    "AIIMS Recruitment":
+      "https://aiimsexams.ac.in/",
+    "ESIC Recruitment":
+      "https://www.esic.gov.in/recruitments",
+    "NHM Recruitment":
+      "https://nhm.gov.in/",
 
-"Indian Forest Service":"https://www.upsc.gov.in/"
-};
+    /* Agriculture */
+    "Agriculture Department Jobs":
+      "https://agriwelfare.gov.in/",
+    "ICAR Recruitment":
+      "https://icar.gov.in/",
 
-const cards=document.querySelectorAll("#examGrid .exam-card");
+    /* State */
+    "UPPSC":
+      "https://uppsc.up.nic.in/",
+    "UPSSSC":
+      "https://upsssc.gov.in/",
+    "UP Police":
+      "https://www.uppbpb.gov.in/",
+    "BPSC":
+      "https://www.bpsc.bih.nic.in/",
+    "Bihar Police":
+      "https://police.bihar.gov.in/",
+    "MPPSC":
+      "https://mppsc.mp.gov.in/",
+    "RPSC":
+      "https://rpsc.rajasthan.gov.in/",
+    "JPSC":
+      "https://www.jpsc.gov.in/"
 
-cards.forEach(card=>{
+  };
 
-const title=card.querySelector("h3,h2,.card-title");
 
-if(!title)return;
+  /* ---------------------------------------------------------
+     Direct Official Website
+     --------------------------------------------------------- */
 
-const name=title.innerText.trim();
-const url=officialLinks[name];
+  document
+    .querySelectorAll("#examGrid .exam-card")
+    .forEach(card => {
 
-if(!url)return;
+      const titleElement =
+        card.querySelector("h3");
 
-card.style.cursor="pointer";
+      if(!titleElement) return;
 
-card.addEventListener("click",function(e){
+      const title =
+        titleElement.textContent.trim();
 
-if(e.target.closest("a"))e.preventDefault();
+      const url =
+        officialLinks[title];
 
-window.location.href=url;
+      if(!url || url === "#") return;
 
-});
+      card.style.cursor = "pointer";
 
-card.querySelectorAll("a").forEach(link=>{
-link.href=url;
-link.target="_self";
-});
+      card.addEventListener("click", function(e){
 
-});
+        /* Buttons/links को अलग से handle होने दें */
+        if(
+          e.target.closest("a") ||
+          e.target.closest("button")
+        ){
+          return;
+        }
 
-});
-</script>
+        window.location.href = url;
+
+      });
+
+    });
+
+
+})();
+  </script>
 
 <!-- PART 18 YAHAN SE START HOGA -->
   <!-- PART 18 : FINAL JOBS PAGE STRUCTURE -->
