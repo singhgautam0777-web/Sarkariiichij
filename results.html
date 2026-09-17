@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0f172a">
+<meta name="description" content="Sarkariiichij Results - Government Exam, Board and University Results">
+<title>Results | Sarkariiichij</title>
+
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#f5f7fb;color:#172033;font-family:Arial,sans-serif}
+a{text-decoration:none}
+header{position:sticky;top:0;z-index:20;background:#0f172a;color:#fff;padding:14px 5%;display:flex;align-items:center;justify-content:space-between;box-shadow:0 3px 15px #0002}
+.logo{font-size:22px;font-weight:800}
+.nav{display:flex;gap:18px}
+.nav a{color:#fff;font-size:14px}
+.hero{background:linear-gradient(135deg,#0f172a,#263b64);color:#fff;text-align:center;padding:42px 15px}
+.tag{display:inline-block;background:#ffffff18;border:1px solid #ffffff30;padding:7px 13px;border-radius:20px;font-size:12px}
+.hero h1{font-size:31px;margin:14px 0 8px}
+.hero p{margin:0;color:#d7deea}
+main{max-width:1050px;margin:auto;padding:25px 15px}
+.searchbox{background:#fff;padding:15px;border-radius:16px;box-shadow:0 6px 25px #0000000b}
+.searchbox input{width:100%;padding:14px;border:1px solid #d8dee9;border-radius:10px;font-size:15px;outline:none}
+.filters{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px}
+.filters select,.reset{padding:12px;border:1px solid #d8dee9;border-radius:9px;background:#fff;font-size:14px}
+.reset{background:#111827;color:#fff}
+.heading{display:flex;align-items:center;justify-content:space-between;margin:25px 0 12px}
+.heading h2{margin:0;font-size:21px}
+.count{font-size:13px;color:#667085}
+.result-card{background:#fff;border:1px solid #e7eaf0;border-radius:16px;padding:18px;margin-bottom:13px;box-shadow:0 5px 18px #00000008}
+.top{display:flex;justify-content:space-between;gap:10px;align-items:center}
+.badge{background:#e8f7ee;color:#147a3c;padding:6px 10px;border-radius:20px;font-size:11px;font-weight:bold}
+.type{font-size:12px;color:#667085}
+.result-card h3{margin:12px 0 6px;font-size:19px}
+.org{font-size:14px;color:#667085;margin-bottom:13px}
+.info{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:15px}
+.info span{background:#f5f7fa;padding:7px 9px;border-radius:7px;font-size:12px;color:#475467}
+.actions{display:flex;gap:8px;flex-wrap:wrap}
+.btn{padding:10px 14px;border-radius:8px;font-size:13px;font-weight:bold;background:#2563eb;color:#fff}
+.btn.alt{background:#eef2f7;color:#172033}
+.empty{text-align:center;background:#fff;border-radius:15px;padding:45px 20px;color:#667085}
+.notice{background:#fff8e7;border:1px solid #f3dfaa;border-radius:13px;padding:15px;margin-top:20px;font-size:13px;color:#725b20}
+footer{margin-top:35px;background:#0f172a;color:#cbd5e1;text-align:center;padding:25px 15px;font-size:13px}
+@media(max-width:700px){
+.nav{display:none}
+.hero{padding:35px 15px}
+.hero h1{font-size:26px}
+.filters{grid-template-columns:1fr 1fr}
+}
+@media(max-width:430px){
+.filters{grid-template-columns:1fr}
+.top{align-items:flex-start}
+.result-card h3{font-size:17px}
+.actions .btn{flex:1;text-align:center}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">Sarkariiichij</div>
+<nav class="nav">
+<a href="index.html">Home</a>
+<a href="jobs.html">Jobs</a>
+<a href="results.html">Results</a>
+<a href="#">Admit Card</a>
+</nav>
+</header>
+
+<section class="hero">
+<span class="tag">RESULT • MARKSHEET • SCORECARD</span>
+<h1>Government & Education Results</h1>
+<p>Exam, Board और University Results एक ही जगह</p>
+</section>
+
+<main>
+
+<div class="searchbox">
+<input id="search" type="search"
+placeholder="Search SSC, Railway, UP Board, University...">
+
+<div class="filters">
+<select id="category">
+<option value="">All Categories</option>
+<option value="Government Exam">Government Exam</option>
+<option value="Board Result">Board Result</option>
+<option value="University Result">University Result</option>
+<option value="Entrance Result">Entrance Result</option>
+</select>
+
+<select id="level">
+<option value="">All Levels</option>
+<option value="10th">10th</option>
+<option value="12th">12th</option>
+<option value="UG">UG</option>
+<option value="PG">PG</option>
+<option value="Graduate">Graduate</option>
+<option value="Other">Other</option>
+</select>
+
+<select id="state">
+<option value="">All States</option>
+<option value="Central">Central</option>
+<option value="Uttar Pradesh">Uttar Pradesh</option>
+<option value="Bihar">Bihar</option>
+<option value="Other">Other States</option>
+</select>
+
+<button class="reset" id="reset">Reset Filters</button>
+</div>
+</div>
+
+<div class="heading">
+<h2>Latest Results</h2>
+<span class="count" id="count"></span>
+</div>
+
+<div id="resultList"></div>
+
+<div class="notice">
+<strong>⚠ Important:</strong>
+Sarkariiichij पर दी गई जानकारी को संबंधित official website से verify करें।
+</div>
+
+</main>
+
+<footer>
+© 2026 Sarkariiichij • Government Jobs • Results • Education • Career
+</footer>
+
+<script>
+const RESULTS=[
+{
+title:"SSC CGL Result",
+org:"Staff Selection Commission",
+category:"Government Exam",
+level:"Graduate",
+state:"Central",
+date:"To Be Updated",
+status:"Coming Soon",
+result:"#",
+official:"https://ssc.gov.in/"
+},
+{
+title:"SSC CHSL Result",
+org:"Staff Selection Commission",
+category:"Government Exam",
+level:"12th",
+state:"Central",
+date:"To Be Updated",
+status:"Coming Soon",
+result:"#",
+official:"https://ssc.gov.in/"
+},
+{
+title:"UP Board High School Result",
+org:"UPMSP",
+category:"Board Result",
+level:"10th",
+state:"Uttar Pradesh",
+date:"2026",
+status:"Available",
+result:"https://results.upmsp.edu.in/",
+official:"https://upmsp.edu.in/"
+},
+{
+title:"UP Board Intermediate Result",
+org:"UPMSP",
+category:"Board Result",
+level:"12th",
+state:"Uttar Pradesh",
+date:"2026",
+status:"Available",
+result:"https://results.upmsp.edu.in/",
+official:"https://upmsp.edu.in/"
+}
+];
+
+const list=document.getElementById("resultList");
+const search=document.getElementById("search");
+const category=document.getElementById("category");
+const level=document.getElementById("level");
+const state=document.getElementById("state");
+const count=document.getElementById("count");
+
+function render(){
+const q=search.value.toLowerCase().trim();
+
+const data=RESULTS.filter(r=>
+(!q||(r.title+" "+r.org+" "+r.category).toLowerCase().includes(q))&&
+(!category.value||r.category===category.value)&&
+(!level.value||r.level===level.value)&&
+(!state.value||r.state===state.value)
+);
+
+count.textContent=data.length+" Results";
+
+if(!data.length){
+list.innerHTML=`
+<div class="empty">
+<h3>Result नहीं मिला</h3>
+<p>Exam, Board या University का नाम बदलकर search करें।</p>
+</div>`;
+return;
+}
+
+list.innerHTML=data.map(r=>`
+<article class="result-card">
+<div class="top">
+<span class="badge">${r.status}</span>
+<span class="type">${r.category}</span>
+</div>
+
+<h3>${r.title}</h3>
+<div class="org">${r.org}</div>
+
+<div class="info">
+<span>🎓 ${r.level}</span>
+<span>📍 ${r.state}</span>
+<span>📅 ${r.date}</span>
+</div>
+
+<div class="actions">
+<a class="btn" href="${r.result}" target="_blank">Check Result →</a>
+<a class="btn alt" href="${r.official}" target="_blank">Official Website</a>
+</div>
+</article>
+`).join("");
+}
+
+[search,category,level,state].forEach(x=>{
+x.addEventListener("input",render);
+});
+
+document.getElementById("reset").onclick=()=>{
+search.value="";
+category.value="";
+level.value="";
+state.value="";
+render();
+};
+
+render();
+
+/* PART 2 YAHAN SE DIRECT START HOGA */
+  <!-- PART 2 : PREMIUM RESULT DIRECTORY -->
+
+<section class="directory">
+<div class="heading">
+<h2>Result Categories</h2>
+<span class="count">Explore Results</span>
+</div>
+
+<div class="category-grid">
+
+<a href="#" class="category-card" data-filter="Government Exam">
+<div class="category-icon">🏛️</div>
+<strong>Government Exams</strong>
+<span>SSC • UPSC • Railway • Banking</span>
+</a>
+
+<a href="#" class="category-card" data-filter="Board Result">
+<div class="category-icon">📚</div>
+<strong>Board Results</strong>
+<span>10th • 12th • All Boards</span>
+</a>
+
+<a href="#" class="category-card" data-filter="University Result">
+<div class="category-icon">🎓</div>
+<strong>University Results</strong>
+<span>UG • PG • Semester Results</span>
+</a>
+
+<a href="#" class="category-card" data-filter="Entrance Result">
+<div class="category-icon">📝</div>
+<strong>Entrance Results</strong>
+<span>Admission • Entrance Exams</span>
+</a>
+
+</div>
+</section>
+
+<section class="directory">
+<div class="heading">
+<h2>Popular Results</h2>
+<span class="count">Quick Access</span>
+</div>
+
+<div class="popular-grid">
+
+<a href="#" class="popular-card">
+<strong>SSC Results</strong>
+<span>CGL • CHSL • GD • CPO • MTS</span>
+</a>
+
+<a href="#" class="popular-card">
+<strong>Railway Results</strong>
+<span>NTPC • Group D • ALP • JE</span>
+</a>
+
+<a href="#" class="popular-card">
+<strong>UP Board Results</strong>
+<span>High School • Intermediate</span>
+</a>
+
+<a href="#" class="popular-card">
+<strong>Bihar Board Results</strong>
+<span>Matric • Intermediate</span>
+</a>
+
+<a href="#" class="popular-card">
+<strong>UPPSC Results</strong>
+<span>PCS • RO/ARO • Other Exams</span>
+</a>
+
+<a href="#" class="popular-card">
+<strong>University Results</strong>
+<span>Semester • Annual • UG • PG</span>
+</a>
+
+</div>
+</section>
+
+<section class="directory">
+<div class="heading">
+<h2>Results by Education</h2>
+<span class="count">Choose Level</span>
+</div>
+
+<div class="education-grid">
+
+<a href="#" class="education-card">
+<b>10th Result</b>
+<span>High School Results</span>
+</a>
+
+<a href="#" class="education-card">
+<b>12th Result</b>
+<span>Intermediate Results</span>
+</a>
+
+<a href="#" class="education-card">
+<b>UG Result</b>
+<span>BA • BSc • BCom</span>
+</a>
+
+<a href="#" class="education-card">
+<b>PG Result</b>
+<span>MA • MSc • MCom</span>
+</a>
+
+<a href="#" class="education-card">
+<b>Entrance Result</b>
+<span>Admission Exams</span>
+</a>
+
+<a href="#" class="education-card">
+<b>Government Exam</b>
+<span>Recruitment Results</span>
+</a>
+
+</div>
+</section>
+
+<style>
+.directory{margin-top:28px}
+
+.category-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:12px
+}
+
+.category-card{
+background:#fff;
+border:1px solid #e5e9f0;
+border-radius:15px;
+padding:18px;
+color:#172033;
+transition:.2s;
+box-shadow:0 5px 18px #00000007
+}
+
+.category-card:hover{
+transform:translateY(-3px);
+box-shadow:0 8px 25px #0002
+}
+
+.category-icon{
+font-size:25px;
+margin-bottom:10px
+}
+
+.category-card strong{
+display:block;
+font-size:16px;
+margin-bottom:6px
+}
+
+.category-card span{
+font-size:12px;
+color:#667085
+}
+
+.popular-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:12px
+}
+
+.popular-card{
+background:#fff;
+border:1px solid #e5e9f0;
+border-radius:14px;
+padding:17px;
+color:#172033
+}
+
+.popular-card strong{
+display:block;
+font-size:15px;
+margin-bottom:6px
+}
+
+.popular-card span{
+font-size:12px;
+color:#667085
+}
+
+.education-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:12px
+}
+
+.education-card{
+background:#fff;
+border-radius:13px;
+border:1px solid #e5e9f0;
+padding:16px;
+color:#172033
+}
+
+.education-card b{
+display:block;
+margin-bottom:5px
+}
+
+.education-card span{
+font-size:12px;
+color:#667085
+}
+
+.category-card,
+.popular-card,
+.education-card{
+cursor:pointer
+}
+
+@media(max-width:700px){
+.category-grid,
+.popular-grid,
+.education-grid{
+grid-template-columns:1fr 1fr
+}
+}
+
+@media(max-width:430px){
+.category-grid,
+.popular-grid,
+.education-grid{
+grid-template-columns:1fr
+}
+}
+</style>
+
+<script>
+document.querySelectorAll(".category-card").forEach(card=>{
+card.addEventListener("click",e=>{
+e.preventDefault();
+
+const filter=card.dataset.filter;
+
+document.getElementById("category").value=filter;
+render();
+
+window.scrollTo({
+top:document.querySelector(".heading").offsetTop-80,
+behavior:"smooth"
+});
+});
+});
+
+document.querySelectorAll(".popular-card,.education-card").forEach(card=>{
+card.addEventListener("click",e=>{
+e.preventDefault();
+
+const text=card.innerText.toLowerCase();
+
+search.value=text
+.replace("results","")
+.replace("result","")
+.trim();
+
+render();
+
+window.scrollTo({
+top:document.querySelector(".searchbox").offsetTop-80,
+behavior:"smooth"
+});
+});
+});
+</script>
+
+<!-- PART 3 : FINAL CLOSE YAHAN SE HOGA -->
+  <!-- PART 3 : FINAL PREMIUM CLOSE -->
+
+<section class="result-features">
+<div class="heading">
+<h2>Important Result Information</h2>
+<span class="count">Sarkariiichij</span>
+</div>
+
+<div class="feature-grid">
+
+<div class="feature-card">
+<div>🔎</div>
+<strong>Easy Search</strong>
+<p>Exam, Board और University को आसानी से खोजें।</p>
+</div>
+
+<div class="feature-card">
+<div>📱</div>
+<strong>Mobile Friendly</strong>
+<p>पूरी Results service mobile users के लिए optimized है।</p>
+</div>
+
+<div class="feature-card">
+<div>🔗</div>
+<strong>Official Sources</strong>
+<p>Result देखने से पहले official website verify करें।</p>
+</div>
+
+<div class="feature-card">
+<div>🛡️</div>
+<strong>Important Notice</strong>
+<p>Result की अंतिम पुष्टि संबंधित official portal से करें।</p>
+</div>
+
+</div>
+</section>
+
+<style>
+.result-features{
+margin-top:28px
+}
+
+.feature-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:12px
+}
+
+.feature-card{
+background:#fff;
+border:1px solid #e5e9f0;
+border-radius:14px;
+padding:17px;
+box-shadow:0 5px 18px #00000007
+}
+
+.feature-card div{
+font-size:24px;
+margin-bottom:9px
+}
+
+.feature-card strong{
+display:block;
+font-size:15px;
+margin-bottom:6px
+}
+
+.feature-card p{
+margin:0;
+font-size:12px;
+line-height:1.5;
+color:#667085
+}
+
+@media(max-width:700px){
+.feature-grid{
+grid-template-columns:1fr 1fr
+}
+}
+
+@media(max-width:430px){
+.feature-grid{
+grid-template-columns:1fr
+}
+}
+</style>
+
+<nav class="mobile-nav">
+<a href="index.html">⌂<span>Home</span></a>
+<a href="jobs.html">💼<span>Jobs</span></a>
+<a href="results.html" class="active">📊<span>Results</span></a>
+<a href="#">🎓<span>Education</span></a>
+<a href="#">☰<span>More</span></a>
+</nav>
+
+<style>
+.mobile-nav{
+display:none
+}
+
+@media(max-width:700px){
+.mobile-nav{
+display:flex;
+position:fixed;
+bottom:0;
+left:0;
+right:0;
+height:62px;
+background:#fff;
+border-top:1px solid #e5e7eb;
+z-index:50;
+justify-content:space-around;
+box-shadow:0 -4px 18px #00000012
+}
+
+.mobile-nav a{
+flex:1;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+gap:3px;
+font-size:18px;
+color:#667085
+}
+
+.mobile-nav span{
+font-size:10px
+}
+
+.mobile-nav .active{
+color:#2563eb;
+font-weight:bold
+}
+
+body{
+padding-bottom:65px
+}
+}
+</style>
+
+<footer>
+<div style="font-size:19px;font-weight:800;color:#fff;margin-bottom:8px">
+Sarkariiichij
+</div>
+
+<div style="margin-bottom:12px">
+Government Jobs • Results • Education • Career • Services
+</div>
+
+<div>
+<a href="index.html" style="color:#cbd5e1">Home</a>
+&nbsp; • &nbsp;
+<a href="jobs.html" style="color:#cbd5e1">Jobs</a>
+&nbsp; • &nbsp;
+<a href="results.html" style="color:#cbd5e1">Results</a>
+</div>
+
+<div style="margin-top:12px">
+© 2026 Sarkariiichij. All Rights Reserved.
+</div>
+</footer>
+
+<script>
+window.addEventListener("scroll",()=>{
+const h=document.querySelector("header");
+
+if(h){
+h.style.boxShadow=
+window.scrollY>10
+?"0 4px 18px #0003"
+:"0 3px 15px #0002";
+}
+});
+
+document.querySelectorAll('a[href="#"]').forEach(a=>{
+a.addEventListener("click",e=>{
+e.preventDefault();
+});
+});
+</script>
+
+</body>
+</html>
