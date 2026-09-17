@@ -4140,47 +4140,139 @@ document.addEventListener("DOMContentLoaded",function(){
   </script>
 
 <!-- PART 18 YAHAN SE START HOGA -->
-  <!-- PART 18 : FINAL JOBS PAGE STRUCTURE -->
+  <!-- PART 18 : MOBILE + DIRECTORY FIX -->
+
+<style>
+/* Mobile navigation */
+@media(max-width:700px){
+
+  .mobile-nav{
+    display:flex !important;
+    position:fixed;
+    left:10px;
+    right:10px;
+    bottom:10px;
+    z-index:9999;
+    padding:8px;
+    border-radius:18px;
+    background:#ffffff;
+    box-shadow:0 8px 30px rgba(0,0,0,.18);
+  }
+
+  .mobile-nav a{
+    flex:1;
+    text-align:center;
+    text-decoration:none;
+    font-size:12px;
+    font-weight:700;
+    padding:8px 3px;
+  }
+
+  body{
+    padding-bottom:82px;
+  }
+}
+
+/* Desktop */
+@media(min-width:701px){
+  .mobile-nav{
+    display:none !important;
+  }
+}
+
+/* Directory cards must remain visible */
+#directory{
+  display:block;
+}
+
+#directory .exam-card{
+  display:block !important;
+}
+
+/* Prevent hidden directory cards from affecting filters */
+#directory .exam-card{
+  pointer-events:auto;
+}
+</style>
 
 <script>
-document.addEventListener("DOMContentLoaded",function(){
+/* =========================================================
+   MOBILE + DIRECTORY SYSTEM
+   ========================================================= */
 
-  /* Mobile navigation resize fix */
-  const mobileNav=document.querySelector(".mobile-nav");
+(function(){
 
   function fixMobileNav(){
-    if(!mobileNav)return;
 
-    if(window.innerWidth<=700){
-      mobileNav.style.display="flex";
+    const nav =
+      document.querySelector(".mobile-nav");
+
+    if(!nav) return;
+
+    if(window.innerWidth <= 700){
+      nav.style.display = "flex";
     }else{
-      mobileNav.style.display="none";
+      nav.style.display = "none";
     }
   }
 
-  fixMobileNav();
-  window.addEventListener("resize",fixMobileNav);
 
+  /* Keep directory independent from exam filters */
+  function fixDirectory(){
 
-  /* Keep directory cards visible */
-  document.querySelectorAll("#directory .exam-card").forEach(card=>{
-    card.style.display="";
-  });
+    const directory =
+      document.getElementById("directory");
 
+    if(!directory) return;
 
-  /* Final page check */
-  const examGrid=document.getElementById("examGrid");
+    directory.style.display = "block";
 
-  if(examGrid){
-    examGrid.querySelectorAll(".exam-card").forEach(card=>{
-      card.style.cursor="pointer";
-    });
+    directory
+      .querySelectorAll(".exam-card")
+      .forEach(card => {
+        card.style.display = "block";
+      });
   }
 
-});
-</script>
 
-<!-- PART 19 YAHAN SE START HOGA -->
+  /* Initial */
+  fixMobileNav();
+  fixDirectory();
+
+
+  /* Resize */
+  window.addEventListener(
+    "resize",
+    function(){
+      fixMobileNav();
+      fixDirectory();
+    }
+  );
+
+
+  /* Mobile nav links */
+  document
+    .querySelectorAll(".mobile-nav a")
+    .forEach(link => {
+
+      link.addEventListener("click", function(){
+
+        const href =
+          this.getAttribute("href");
+
+        if(!href || href === "#"){
+          return;
+        }
+
+        window.location.href = href;
+
+      });
+
+    });
+
+})();
+</script>
+  
 
 <!-- PART 19 : REMAINING OFFICIAL LINKS -->
 
