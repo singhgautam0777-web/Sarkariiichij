@@ -2626,270 +2626,217 @@ Reset Filters
 </section>
 
 <!-- NEXT PARTS WILL CONTINUE HERE -->
-  <!-- PART 8 : SEARCH + CATEGORY FILTER -->
+  <!-- PART 8 : SEARCH + CATEGORY FILTER -
+  <script>
+/* =========================================================
+   PART 8 : JOB FILTER SYSTEM — FIXED
+   ========================================================= */
 
-<script>
+(function(){
 
-const searchInput = document.getElementById("jobSearch");
-const searchButton = document.querySelector(".search-box button");
-const cards = document.querySelectorAll(".exam-card");
-const categoryButtons =
-document.querySelectorAll(".filter-tabs button");
+  const grid = document.getElementById("examGrid");
+  const searchBox = document.getElementById("jobSearch");
+  const categoryButtons = document.querySelectorAll(".quick-filter");
+  const qualification = document.getElementById("qualification");
+  const department = document.getElementById("department");
+  const state = document.getElementById("state");
+  const resetBtn = document.getElementById("resetFilters");
+  const emptyReset = document.getElementById("emptyReset");
+  const visibleCount = document.getElementById("visibleCount");
+  const noResults = document.getElementById("noResults");
 
-const visibleCount =
-document.getElementById("visibleCount");
+  if(!grid) return;
 
-const noResults =
-document.getElementById("noResults");
+  /* केवल असली exam/job cards को filter करेंगे.
+     Directory cards को नहीं. */
+  const cards = Array.from(
+    grid.querySelectorAll(".exam-card[data-category]")
+  );
 
-const emptyReset =
-document.getElementById("emptyReset");
+  let activeCategory = "all";
 
-let selectedCategory = "all";
+  function text(value){
+    return String(value || "").toLowerCase().trim();
+  }
 
+  function filterJobs(){
 
-function filterJobs(){
+    const search = text(searchBox ? searchBox.value : "");
+    const qual = text(qualification ? qualification.value : "all");
+    const dept = text(department ? department.value : "all");
+    const st = text(state ? state.value : "all");
 
-  const searchText =
-  searchInput.value.trim().toLowerCase();
+    let count = 0;
 
-  let count = 0;
+    cards.forEach(card => {
 
-  cards.forEach(card => {
+      const cardText = text(card.innerText);
 
-    const name =
-    (card.dataset.name || "").toLowerCase();
+      const cardCategory =
+        text(card.dataset.category);
 
-    const text =
-    card.innerText.toLowerCase();
+      const cardQualification =
+        text(card.dataset.qualification);
 
-    const category =
-    (card.dataset.category || "").toLowerCase();
+      const cardDepartment =
+        text(card.dataset.department);
 
-    const department =
-    (card.dataset.department || "").toLowerCase();
+      const cardState =
+        text(card.dataset.state);
 
-    const state =
-    (card.dataset.state || "").toLowerCase();
+      const searchMatch =
+        !search || cardText.includes(search);
 
-    const qualification =
-    (card.dataset.qualification || "").toLowerCase();
+      const categoryMatch =
+        activeCategory === "all" ||
+        cardCategory === activeCategory ||
+        cardText.includes(activeCategory);
 
+      const qualificationMatch =
+        qual === "all" ||
+        cardQualification === qual ||
+        cardText.includes(qual);
 
-    const searchMatch =
-    !searchText ||
-    name.includes(searchText) ||
-    text.includes(searchText) ||
-    department.includes(searchText) ||
-    state.includes(searchText) ||
-    qualification.includes(searchText);
+      const departmentMatch =
+        dept === "all" ||
+        cardDepartment === dept ||
+        cardText.includes(dept);
 
+      const stateMatch =
+        st === "all" ||
+        cardState === st ||
+        cardText.includes(st);
 
-    const categoryMatch =
-    selectedCategory === "all" ||
-    category === selectedCategory;
+      const show =
+        searchMatch &&
+        categoryMatch &&
+        qualificationMatch &&
+        departmentMatch &&
+        stateMatch;
 
+      card.style.display = show ? "" : "none";
 
-    const advancedMatch =
-    advancedFilterMatch(card);
+      if(show) count++;
+    });
 
-
-    if(
-      searchMatch &&
-      categoryMatch &&
-      advancedMatch
-    ){
-
-      card.style.display = "";
-
-      count++;
-
-    }else{
-
-      card.style.display = "none";
-
+    if(visibleCount){
+      visibleCount.textContent = count;
     }
+
+    if(noResults){
+      noResults.style.display =
+        count === 0 ? "block" : "none";
+    }
+  }
+
+  /* Search */
+  if(searchBox){
+    searchBox.addEventListener("input", filterJobs);
+  }
+
+  /* Quick category filters */
+  categoryButtons.forEach(button => {
+
+    button.addEventListener("click", function(){
+
+      categoryButtons.forEach(btn =>
+        btn.classList.remove("active")
+      );
+
+      this.classList.add("active");
+
+      activeCategory =
+        text(this.dataset.category || this.textContent);
+
+      filterJobs();
+    });
 
   });
 
-
-  visibleCount.textContent = count;
-
-
-  if(count === 0){
-
-    noResults.style.display = "block";
-
-  }else{
-
-    noResults.style.display = "none";
-
+  /* Advanced filters */
+  if(qualification){
+    qualification.addEventListener(
+      "change",
+      filterJobs
+    );
   }
 
-}
+  if(department){
+    department.addEventListener(
+      "change",
+      filterJobs
+    );
+  }
 
+  if(state){
+    state.addEventListener(
+      "change",
+      filterJobs
+    );
+  }
 
-function advancedFilterMatch(card){
+  /* Reset */
+  function resetAll(){
 
-  const qualification =
-  document.getElementById("qualification").value;
+    activeCategory = "all";
 
-  const department =
-  document.getElementById("department").value;
+    if(searchBox){
+      searchBox.value = "";
+    }
 
-  const state =
-  document.getElementById("state").value;
+    if(qualification){
+      qualification.value = "all";
+    }
 
+    if(department){
+      department.value = "all";
+    }
 
-  const cardQualification =
-  (card.dataset.qualification || "")
-  .toLowerCase()
-  .split(",");
-
-  const cardDepartment =
-  (card.dataset.department || "")
-  .toLowerCase();
-
-  const cardState =
-  (card.dataset.state || "")
-  .toLowerCase();
-
-
-  const qualificationMatch =
-  qualification === "all" ||
-  cardQualification.includes(
-    qualification.toLowerCase()
-  );
-
-
-  const departmentMatch =
-  department === "all" ||
-  cardDepartment ===
-  department.toLowerCase();
-
-
-  const stateMatch =
-  state === "all" ||
-  cardState ===
-  state.toLowerCase();
-
-
-  return(
-    qualificationMatch &&
-    departmentMatch &&
-    stateMatch
-  );
-
-}
-
-
-categoryButtons.forEach(button => {
-
-  button.addEventListener("click", () => {
+    if(state){
+      state.value = "all";
+    }
 
     categoryButtons.forEach(btn =>
       btn.classList.remove("active")
     );
 
-    button.classList.add("active");
+    const first =
+      document.querySelector(
+        ".quick-filter[data-category='all']"
+      );
 
-    selectedCategory =
-    button.dataset.category;
+    if(first){
+      first.classList.add("active");
+    }
 
     filterJobs();
 
-  });
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
 
-});
+  if(resetBtn){
+    resetBtn.addEventListener(
+      "click",
+      resetAll
+    );
+  }
 
+  if(emptyReset){
+    emptyReset.addEventListener(
+      "click",
+      resetAll
+    );
+  }
 
-searchInput.addEventListener(
-  "input",
-  filterJobs
-);
-
-
-searchButton.addEventListener(
-  "click",
-  filterJobs
-);
-
-
-document
-.getElementById("qualification")
-.addEventListener(
-  "change",
-  filterJobs
-);
-
-
-document
-.getElementById("department")
-.addEventListener(
-  "change",
-  filterJobs
-);
-
-
-document
-.getElementById("state")
-.addEventListener(
-  "change",
-  filterJobs
-);
-
-
-emptyReset.addEventListener(
-  "click",
-  resetAllFilters
-);
-
-
-document
-.getElementById("resetFilters")
-.addEventListener(
-  "click",
-  resetAllFilters
-);
-
-
-function resetAllFilters(){
-
-  searchInput.value = "";
-
-  document.getElementById("qualification")
-  .value = "all";
-
-  document.getElementById("department")
-  .value = "all";
-
-  document.getElementById("state")
-  .value = "all";
-
-
-  selectedCategory = "all";
-
-
-  categoryButtons.forEach(btn =>
-    btn.classList.remove("active")
-  );
-
-
-  document
-  .querySelector(
-    '.filter-tabs button[data-category="all"]'
-  )
-  .classList.add("active");
-
-
+  /* Initial count */
   filterJobs();
 
-}
+})();
+</script>
 
-
-filterJobs();
-
-  </script>
   <!-- PART 9 : JOB DETAILS POPUP -->
 
 <style>
