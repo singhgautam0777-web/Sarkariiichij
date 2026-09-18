@@ -1,1512 +1,693 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="theme-color" content="#07111f">
-<meta name="description" content="Sarkariiichij Syllabus Portal - SSC, UPSC, Railway, Banking, Defence, Police, Teaching और State Exams का syllabus।">
-<title>Exam Syllabus | Sarkariiichij</title>
 
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:#f5f7fb;
-  color:#172033;
-  line-height:1.5
-}
-a{text-decoration:none;color:inherit}
-button,input,select{font:inherit}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-.header{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:#07111f;
-  color:#fff;
-  box-shadow:0 2px 15px #0002
-}
-.header-inner{
-  max-width:1150px;
-  margin:auto;
-  padding:13px 15px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:14px
-}
-.logo{
-  font-size:22px;
-  font-weight:800;
-  white-space:nowrap
-}
-.logo span{color:#4ade80}
+  <title>Syllabus – Sarkariiichij</title>
 
-.nav{
-  display:flex;
-  gap:5px;
-  overflow:auto;
-  white-space:nowrap
-}
-.nav a{
-  color:#cbd5e1;
-  font-size:13px;
-  padding:8px 10px;
-  border-radius:8px
-}
-.nav a.active,
-.nav a:hover{
-  background:#ffffff12;
-  color:#fff
-}
+  <meta
+    name="description"
+    content="Government Exam Syllabus, Exam Pattern, Subjects, Important Topics and Preparation information."
+  >
 
-main{
-  max-width:1150px;
-  margin:auto;
-  padding:0 14px 80px
-}
+  <link rel="stylesheet" href="style.css">
 
-.hero{
-  margin:18px 0;
-  padding:29px 18px;
-  border-radius:18px;
-  background:linear-gradient(135deg,#0b1728,#123b62);
-  color:#fff;
-  overflow:hidden;
-  position:relative
-}
-.hero:after{
-  content:"";
-  position:absolute;
-  width:190px;
-  height:190px;
-  right:-80px;
-  top:-80px;
-  border-radius:50%;
-  background:#ffffff0c
-}
-.badge{
-  display:inline-block;
-  padding:6px 10px;
-  border:1px solid #ffffff20;
-  background:#ffffff12;
-  border-radius:20px;
-  font-size:10px;
-  font-weight:800;
-  margin-bottom:10px
-}
-.hero h1{
-  font-size:30px;
-  line-height:1.15;
-  margin-bottom:9px
-}
-.hero h1 span{color:#4ade80}
-.hero p{
-  color:#d7e2ef;
-  font-size:13px;
-  max-width:700px
-}
-
-.search-box{
-  margin-top:18px;
-  background:#fff;
-  border-radius:13px;
-  padding:7px;
-  display:flex;
-  gap:7px;
-  box-shadow:0 8px 25px #0002
-}
-.search-box input{
-  flex:1;
-  min-width:0;
-  border:0;
-  outline:0;
-  padding:11px 12px;
-  color:#172033
-}
-.search-box button{
-  border:0;
-  border-radius:9px;
-  padding:0 16px;
-  background:#16a34a;
-  color:#fff;
-  font-weight:700;
-  cursor:pointer
-}
-
-.section{margin-top:25px}
-
-.section-title{
-  display:flex;
-  align-items:end;
-  justify-content:space-between;
-  gap:10px;
-  margin-bottom:12px
-}
-.section-title h2{font-size:20px}
-.section-title p{
-  font-size:12px;
-  color:#64748b
-}
-
-.filters{
-  background:#fff;
-  border:1px solid #e5e9f0;
-  border-radius:15px;
-  padding:14px;
-  box-shadow:0 5px 18px #00000008
-}
-.filter-row{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:10px
-}
-.filter-group label{
-  display:block;
-  font-size:11px;
-  color:#64748b;
-  font-weight:700;
-  margin-bottom:5px
-}
-.filter-group select{
-  width:100%;
-  border:1px solid #dce2ea;
-  border-radius:9px;
-  padding:10px;
-  background:#fff;
-  outline:0
-}
-.filter-actions{
-  display:flex;
-  justify-content:flex-end;
-  margin-top:10px
-}
-.reset{
-  border:0;
-  background:#eef2f7;
-  color:#334155;
-  padding:9px 14px;
-  border-radius:9px;
-  font-weight:700;
-  cursor:pointer
-}
-
-.syllabus-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:12px
-}
-.syllabus-card{
-  background:#fff;
-  border:1px solid #e5e9f0;
-  border-radius:15px;
-  padding:15px;
-  box-shadow:0 4px 15px #00000007;
-  transition:.2s
-}
-.syllabus-card:hover{
-  transform:translateY(-2px);
-  box-shadow:0 9px 24px #00000012
-}
-.card-top{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:8px;
-  margin-bottom:9px
-}
-.exam-tag{
-  background:#dbeafe;
-  color:#1d4ed8;
-  padding:4px 7px;
-  border-radius:20px;
-  font-size:10px;
-  font-weight:800
-}
-.level-tag{
-  color:#64748b;
-  font-size:10px
-}
-.syllabus-card h3{
-  font-size:16px;
-  margin-bottom:4px
-}
-.syllabus-card p{
-  color:#64748b;
-  font-size:12px;
-  margin-bottom:11px
-}
-.subjects{
-  display:flex;
-  flex-wrap:wrap;
-  gap:5px;
-  margin-bottom:12px
-}
-.subjects span{
-  background:#f1f5f9;
-  color:#475569;
-  border-radius:6px;
-  padding:4px 7px;
-  font-size:10px
-}
-.view-btn{
-  display:block;
-  text-align:center;
-  background:#0f172a;
-  color:#fff;
-  border-radius:9px;
-  padding:9px;
-  font-size:12px;
-  font-weight:700
-}
-
-.empty{
-  background:#fff;
-  border:1px solid #e5e9f0;
-  border-radius:15px;
-  text-align:center;
-  padding:35px 15px;
-  color:#64748b
-}
-.empty strong{
-  display:block;
-  color:#334155;
-  margin-bottom:4px
-}
-
-.notice{
-  margin-top:22px;
-  padding:14px;
-  border-radius:13px;
-  background:#fff7ed;
-  border:1px solid #fed7aa;
-  color:#7c2d12;
-  font-size:12px
-}
-
-@media(max-width:800px){
-  .header-inner{
-    flex-direction:column;
-    align-items:flex-start;
-    gap:7px
-  }
-  .nav{width:100%}
-  .filter-row{grid-template-columns:1fr 1fr}
-  .syllabus-grid{grid-template-columns:repeat(2,1fr)}
-}
-
-@media(max-width:560px){
-  main{padding:0 10px 75px}
-  .hero{
-    padding:23px 15px;
-    border-radius:15px
-  }
-  .hero h1{font-size:25px}
-  .hero p{font-size:12px}
-  .filter-row{grid-template-columns:1fr}
-  .syllabus-grid{grid-template-columns:1fr}
-  .section-title h2{font-size:18px}
-}
-</style>
 </head>
 
 <body>
 
-<header class="header">
-  <div class="header-inner">
+  <!-- HEADER -->
+  <header class="site-header">
 
-    <a class="logo" href="index.html">
-      Sarkarii<span>ichij</span>
-    </a>
+    <div class="logo">
+      <a href="index.html">Sarkariiichij</a>
+    </div>
 
-    <nav class="nav">
+    <nav class="main-nav">
       <a href="index.html">Home</a>
       <a href="jobs.html">Jobs</a>
-      <a href="admission.html">Admission</a>
       <a href="results.html">Results</a>
       <a href="admit-card.html">Admit Card</a>
-      <a href="syllabus.html" class="active">Syllabus</a>
+      <a href="admission.html">Admission</a>
+      <a href="syllabus.html">Syllabus</a>
     </nav>
 
-  </div>
-</header>
-
-<main>
-
-<section class="hero">
-
-  <span class="badge">
-    SYLLABUS • EXAM PATTERN • SUBJECTS • TOPICS
-  </span>
-
-  <h1>
-    Exam Syllabus<br>
-    <span>एक ही जगह</span>
-  </h1>
-
-  <p>
-    SSC, UPSC, Railway, Banking, Defence, Police, Teaching और
-    State Government Exams का syllabus आसानी से खोजें।
-  </p>
-
-  <div class="search-box">
-
-    <input
-      type="search"
-      id="search"
-      placeholder="Search SSC CGL, CHSL, Railway, Banking..."
-    >
-
-    <button onclick="applySearch()">Search</button>
-
-  </div>
-
-</section>
+  </header>
 
 
-<section class="section">
+  <!-- HERO -->
+  <section class="hero-section">
 
-  <div class="section-title">
-    <div>
-      <h2>Syllabus Search & Filters</h2>
-      <p>Exam या category के अनुसार syllabus खोजें</p>
-    </div>
-  </div>
+    <div class="hero-content">
 
-  <div class="filters">
+      <span class="hero-badge">Syllabus & Exam Pattern</span>
 
-    <div class="filter-row">
+      <h1>Government Exam Syllabus</h1>
 
-      <div class="filter-group">
-        <label>Exam Category</label>
+      <p>
+        SSC, Railway, Banking, Defence, Police, Teaching और
+        State Government Exams का syllabus एक ही जगह।
+      </p>
 
-        <select id="category">
-          <option value="all">All Exams</option>
-          <option value="ssc">SSC</option>
-          <option value="upsc">UPSC</option>
-          <option value="railway">Railway</option>
-          <option value="banking">Banking</option>
-          <option value="defence">Defence</option>
-          <option value="police">Police</option>
-          <option value="teaching">Teaching</option>
-          <option value="state">State Exams</option>
-        </select>
+      <!-- SEARCH -->
+      <div class="search-box">
 
-      </div>
+        <input
+          type="search"
+          id="syllabusSearch"
+          placeholder="Search Exam, Syllabus, Subject..."
+        >
 
-
-      <div class="filter-group">
-
-        <label>Education Level</label>
-
-        <select id="level">
-          <option value="all">All Levels</option>
-          <option value="10th">10th</option>
-          <option value="12th">12th</option>
-          <option value="graduate">Graduate</option>
-          <option value="postgraduate">Post Graduate</option>
-          <option value="other">Other</option>
-        </select>
-
-      </div>
-
-
-      <div class="filter-group">
-
-        <label>Exam Type</label>
-
-        <select id="type">
-          <option value="all">All Types</option>
-          <option value="government">Government Exam</option>
-          <option value="entrance">Entrance Exam</option>
-          <option value="recruitment">Recruitment Exam</option>
-        </select>
+        <button type="button">
+          Search
+        </button>
 
       </div>
 
     </div>
 
+  </section>
 
-    <div class="filter-actions">
 
-      <button class="reset" id="reset">
-        Reset Filters
-      </button>
+  <!-- PAGE INTRO -->
+  <section class="section">
+
+    <div class="section-heading">
+
+      <h2>Find Your Exam Syllabus</h2>
+
+      <p>
+        अपने exam के अनुसार syllabus, subjects और exam pattern देखें।
+      </p>
 
     </div>
 
-  </div>
+  </section>
+    <!-- LATEST SYLLABUS -->
+  <section class="section">
 
-</section>
-
-
-<section class="section">
-
-  <div class="section-title">
-
-    <div>
-      <h2>Latest Exam Syllabus</h2>
-      <p id="count">Loading syllabus...</p>
+    <div class="section-heading">
+      <h2>Latest Syllabus</h2>
+      <p>Popular government exams के latest syllabus और pattern देखें।</p>
     </div>
 
-  </div>
+    <div class="quick-grid">
 
-  <div class="syllabus-grid" id="syllabusList"></div>
-
-</section>
-
-
-<section class="notice">
-
-  <strong>⚠️ Important:</strong>
-  Syllabus और exam pattern समय के साथ बदल सकता है।
-  तैयारी शुरू करने से पहले संबंधित exam की latest official notification
-  जरूर check करें।
-
-</section>
-
-
-<script>
-
-const SYLLABUS = [
-
-  {
-    title:"SSC CGL",
-    org:"Staff Selection Commission",
-    category:"ssc",
-    level:"graduate",
-    type:"recruitment",
-    subjects:["General Intelligence","Reasoning","Quantitative Aptitude","English","General Awareness"]
-  },
-
-  {
-    title:"SSC CHSL",
-    org:"Staff Selection Commission",
-    category:"ssc",
-    level:"12th",
-    type:"recruitment",
-    subjects:["English","General Intelligence","Quantitative Aptitude","General Awareness"]
-  },
-
-  {
-    title:"SSC MTS",
-    org:"Staff Selection Commission",
-    category:"ssc",
-    level:"10th",
-    type:"recruitment",
-    subjects:["Numerical Ability","Reasoning","General Awareness","English"]
-  },
-
-  {
-    title:"SSC GD Constable",
-    org:"Staff Selection Commission",
-    category:"ssc",
-    level:"10th",
-    type:"recruitment",
-    subjects:["General Intelligence","General Knowledge","Elementary Mathematics","English/Hindi"]
-  },
-
-  {
-    title:"SSC CPO",
-    org:"Staff Selection Commission",
-    category:"ssc",
-    level:"graduate",
-    type:"recruitment",
-    subjects:["General Intelligence","GK & Awareness","Quantitative Aptitude","English"]
-  },
-
-  {
-    title:"UPSC Civil Services",
-    org:"Union Public Service Commission",
-    category:"upsc",
-    level:"graduate",
-    type:"recruitment",
-    subjects:["General Studies","CSAT","Essay","Optional Subject"]
-  },
-
-  {
-    title:"UPSC NDA",
-    org:"Union Public Service Commission",
-    category:"upsc",
-    level:"12th",
-    type:"entrance",
-    subjects:["Mathematics","General Ability Test","English","General Knowledge"]
-  },
-
-  {
-    title:"RRB NTPC",
-    org:"Railway Recruitment Boards",
-    category:"railway",
-    level:"12th",
-    type:"recruitment",
-    subjects:["Mathematics","General Intelligence","General Awareness"]
-  },
-
-  {
-    title:"RRB Group D",
-    org:"Railway Recruitment Boards",
-    category:"railway",
-    level:"10th",
-    type:"recruitment",
-    subjects:["Mathematics","General Science","Reasoning","General Awareness"]
-  },
-
-  {
-    title:"RRB ALP",
-    org:"Railway Recruitment Boards",
-    category:"railway",
-    level:"10th",
-    type:"recruitment",
-    subjects:["Mathematics","Reasoning","General Science","General Awareness","Technical"]
-  },
-
-  {
-    title:"IBPS PO",
-    org:"Institute of Banking Personnel Selection",
-    category:"banking",
-    level:"graduate",
-    type:"recruitment",
-    subjects:["English","Quantitative Aptitude","Reasoning","General Awareness","Computer"]
-  },
-
-  {
-    title:"SBI PO",
-    org:"State Bank of India",
-    category:"banking",
-    level:"graduate",
-    type:"recruitment",
-    subjects:["English","Quantitative Aptitude","Reasoning","Data Analysis","General Awareness"]
-  },
-
-  {
-    title:"RBI Grade B",
-    org:"Reserve Bank of India",
-    category:"banking",
-    level:"graduate",
-    type:"recruitment",
-    subjects:["General Awareness","English","Quantitative Aptitude","Reasoning","Economic & Social Issues"]
-  },
-
-  {
-    title:"Indian Army Agniveer",
-    org:"Indian Army",
-    category:"defence",
-    level:"10th",
-    type:"recruitment",
-    subjects:["General Knowledge","General Science","Mathematics","Reasoning"]
-  },
-
-  {
-    title:"AFCAT",
-    org:"Indian Air Force",
-    category:"defence",
-    level:"graduate",
-    type:"recruitment",
-    subjects:["English","General Awareness","Numerical Ability","Reasoning","Military Aptitude"]
-  },
-
-  {
-    title:"UP Police Constable",
-    org:"Uttar Pradesh Police",
-    category:"police",
-    level:"12th",
-    type:"recruitment",
-    subjects:["General Knowledge","General Hindi","Numerical Ability","Reasoning"]
-  },
-
-  {
-    title:"CTET",
-    org:"Central Board of Secondary Education",
-    category:"teaching",
-    level:"graduate",
-    type:"entrance",
-    subjects:["Child Development","Mathematics","EVS","Language","Social Studies/Science"]
-  },
-
-  {
-    title:"UPPSC PCS",
-    org:"Uttar Pradesh Public Service Commission",
-    category:"state",
-    level:"graduate",
-    type:"recruitment",
-    subjects:["General Studies","CSAT","General Hindi","Essay","General Awareness"]
-  }
-
-];
-
-
-function renderSyllabus(list){
-
-  const box=document.getElementById("syllabusList");
-  const count=document.getElementById("count");
-
-  box.innerHTML="";
-
-  count.textContent=list.length+" syllabus found";
-
-  if(!list.length){
-
-    box.innerHTML=`
-      <div class="empty">
-        <strong>No syllabus found</strong>
-        <p>Search या filters बदलकर दोबारा देखें।</p>
-      </div>
-    `;
-
-    return;
-  }
-
-  list.forEach(item=>{
-
-    const card=document.createElement("article");
-
-    card.className="syllabus-card";
-
-    card.innerHTML=`
-
-      <div class="card-top">
-
-        <span class="exam-tag">
-          ${item.category.toUpperCase()}
-        </span>
-
-        <span class="level-tag">
-          ${item.level}
-        </span>
-
+      <div class="quick-card">
+        <h3>SSC CGL</h3>
+        <p>Tier 1, Tier 2 subjects, topics और exam pattern.</p>
+        <a href="#">View Syllabus</a>
       </div>
 
-      <h3>${item.title}</h3>
-
-      <p>${item.org}</p>
-
-      <div class="subjects">
-
-        ${item.subjects.map(subject=>
-          `<span>${subject}</span>`
-        ).join("")}
-
+      <div class="quick-card">
+        <h3>SSC CHSL</h3>
+        <p>Tier 1, Tier 2 और Skill Test की syllabus information.</p>
+        <a href="#">View Syllabus</a>
       </div>
 
-      <a
-        class="view-btn"
-        href="#"
-        onclick="return false"
-      >
-        View Syllabus →
-      </a>
+      <div class="quick-card">
+        <h3>SSC GD</h3>
+        <p>General Intelligence, GK, Maths और Hindi/English syllabus.</p>
+        <a href="#">View Syllabus</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>SSC CPO</h3>
+        <p>Paper 1 और Paper 2 के subjects और important topics.</p>
+        <a href="#">View Syllabus</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>RRB NTPC</h3>
+        <p>CBT 1 और CBT 2 का complete syllabus और exam pattern.</p>
+        <a href="#">View Syllabus</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>RRB Group D</h3>
+        <p>Maths, Reasoning, General Science और General Awareness.</p>
+        <a href="#">View Syllabus</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>IBPS PO</h3>
+        <p>Prelims और Mains subjects तथा important topics.</p>
+        <a href="#">View Syllabus</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>SBI PO</h3>
+        <p>Prelims, Mains और descriptive test syllabus.</p>
+        <a href="#">View Syllabus</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>UP Police</h3>
+        <p>UP Police भर्ती के subjects और examination pattern.</p>
+        <a href="#">View Syllabus</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>UPPSC PCS</h3>
+        <p>Prelims और Mains के subjects और syllabus.</p>
+        <a href="#">View Syllabus</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>UPSSSC PET</h3>
+        <p>PET के सभी subjects और important syllabus topics.</p>
+        <a href="#">View Syllabus</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>Defence Exams</h3>
+        <p>Army, Navy, Air Force और अन्य defence exams syllabus.</p>
+        <a href="#">View Syllabus</a>
+      </div>
 
-    `;
-
-    box.appendChild(card);
-
-  });
-
-}
-
-
-function filterSyllabus(){
-
-  const q=
-    document.getElementById("search")
-    .value
-    .toLowerCase()
-    .trim();
-
-  const category=
-    document.getElementById("category").value;
-
-  const level=
-    document.getElementById("level").value;
-
-  const type=
-    document.getElementById("type").value;
-
-
-  const list=SYLLABUS.filter(item=>{
-
-    const text=[
-      item.title,
-      item.org,
-      item.category,
-      item.level,
-      item.type,
-      item.subjects.join(" ")
-    ].join(" ").toLowerCase();
-
-
-    return (!q || text.includes(q)) &&
-      (category==="all" || item.category===category) &&
-      (level==="all" || item.level===level) &&
-      (type==="all" || item.type===type);
-
-  });
-
-
-  renderSyllabus(list);
-
-}
-
-
-function applySearch(){
-  filterSyllabus();
-}
-
-
-document
-  .getElementById("search")
-  .addEventListener("input",filterSyllabus);
-
-document
-  .getElementById("category")
-  .addEventListener("change",filterSyllabus);
-
-document
-  .getElementById("level")
-  .addEventListener("change",filterSyllabus);
-
-document
-  .getElementById("type")
-  .addEventListener("change",filterSyllabus);
-
-
-document
-  .getElementById("reset")
-  .addEventListener("click",function(){
-
-    document.getElementById("search").value="";
-    document.getElementById("category").value="all";
-    document.getElementById("level").value="all";
-    document.getElementById("type").value="all";
-
-    renderSyllabus(SYLLABUS);
-
-  });
-
-
-renderSyllabus(SYLLABUS);
-
-</script>
-
-<!-- PART 2 YAHAN SE DIRECT START HOGA -->
-  <!-- PART 2 : SYLLABUS CATEGORIES + POPULAR EXAMS -->
-
-<section class="section">
-
-  <div class="section-title">
-    <div>
-      <h2>Syllabus Categories</h2>
-      <p>Exam category के अनुसार syllabus खोजें</p>
-    </div>
-  </div>
-
-  <div class="category-grid">
-
-    <button class="category-card" data-category="ssc">
-      <span>📋</span>
-      <strong>SSC Syllabus</strong>
-      <small>CGL • CHSL • MTS • GD • CPO</small>
-    </button>
-
-    <button class="category-card" data-category="upsc">
-      <span>🏛️</span>
-      <strong>UPSC Syllabus</strong>
-      <small>CSE • NDA • CDS • CAPF</small>
-    </button>
-
-    <button class="category-card" data-category="railway">
-      <span>🚆</span>
-      <strong>Railway Syllabus</strong>
-      <small>NTPC • Group D • ALP</small>
-    </button>
-
-    <button class="category-card" data-category="banking">
-      <span>🏦</span>
-      <strong>Banking Syllabus</strong>
-      <small>IBPS • SBI • RBI</small>
-    </button>
-
-    <button class="category-card" data-category="defence">
-      <span>🪖</span>
-      <strong>Defence Syllabus</strong>
-      <small>Army • Navy • Air Force</small>
-    </button>
-
-    <button class="category-card" data-category="police">
-      <span>👮</span>
-      <strong>Police Syllabus</strong>
-      <small>Constable • SI • Other Posts</small>
-    </button>
-
-    <button class="category-card" data-category="teaching">
-      <span>👨‍🏫</span>
-      <strong>Teaching Syllabus</strong>
-      <small>CTET • TET • Teacher Exams</small>
-    </button>
-
-    <button class="category-card" data-category="state">
-      <span>🏢</span>
-      <strong>State Exams</strong>
-      <small>PSC • SSC • State Recruitment</small>
-    </button>
-
-  </div>
-
-</section>
-
-
-<section class="section">
-
-  <div class="section-title">
-    <div>
-      <h2>Popular Exam Syllabus</h2>
-      <p>Popular exams को जल्दी खोजें</p>
-    </div>
-  </div>
-
-  <div class="popular-grid">
-
-    <button class="popular-card" data-search="SSC CGL">
-      <strong>SSC CGL</strong>
-      <span>Graduate Level</span>
-    </button>
-
-    <button class="popular-card" data-search="SSC CHSL">
-      <strong>SSC CHSL</strong>
-      <span>12th Level</span>
-    </button>
-
-    <button class="popular-card" data-search="SSC GD">
-      <strong>SSC GD</strong>
-      <span>10th Level</span>
-    </button>
-
-    <button class="popular-card" data-search="UPSC Civil Services">
-      <strong>UPSC CSE</strong>
-      <span>Civil Services</span>
-    </button>
-
-    <button class="popular-card" data-search="RRB NTPC">
-      <strong>RRB NTPC</strong>
-      <span>Railway Exam</span>
-    </button>
-
-    <button class="popular-card" data-search="IBPS PO">
-      <strong>IBPS PO</strong>
-      <span>Banking Exam</span>
-    </button>
-
-    <button class="popular-card" data-search="Agniveer">
-      <strong>Army Agniveer</strong>
-      <span>Defence Exam</span>
-    </button>
-
-    <button class="popular-card" data-search="UP Police">
-      <strong>UP Police</strong>
-      <span>Police Recruitment</span>
-    </button>
-
-  </div>
-
-</section>
-
-
-<section class="section">
-
-  <div class="section-title">
-    <div>
-      <h2>What You Get</h2>
-      <p>हर exam के लिए जरूरी preparation information</p>
-    </div>
-  </div>
-
-  <div class="feature-grid">
-
-    <div class="feature-card">
-      <span>📚</span>
-      <strong>Subjects</strong>
-      <p>Exam में आने वाले मुख्य subjects की जानकारी।</p>
     </div>
 
-    <div class="feature-card">
-      <span>📝</span>
-      <strong>Topics</strong>
-      <p>हर subject के important topics को व्यवस्थित करें।</p>
+  </section>
+    <!-- EXAM-WISE SYLLABUS -->
+  <section class="section">
+
+    <div class="section-heading">
+      <h2>Exam-wise Syllabus</h2>
+      <p>अलग-अलग examination categories का syllabus एक जगह देखें।</p>
     </div>
 
-    <div class="feature-card">
-      <span>⏱️</span>
-      <strong>Exam Pattern</strong>
-      <p>Questions, sections और परीक्षा pattern की जानकारी।</p>
+    <div class="quick-grid">
+
+      <div class="quick-card">
+        <h3>UPSC</h3>
+        <p>Civil Services और UPSC के अन्य examinations का syllabus.</p>
+        <a href="#">View Syllabus</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>SSC</h3>
+        <p>CGL, CHSL, MTS, GD, CPO और अन्य SSC exams.</p>
+        <a href="#">View Syllabus</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>Railway</h3>
+        <p>NTPC, Group D, ALP, Technician और Railway exams.</p>
+        <a href="#">View Syllabus</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>Banking</h3>
+        <p>IBPS, SBI, RBI और अन्य banking examinations.</p>
+        <a href="#">View Syllabus</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>Defence</h3>
+        <p>Army, Navy, Air Force, ICG और defence examinations.</p>
+        <a href="#">View Syllabus</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>Police</h3>
+        <p>Central और State Police भर्ती examinations का syllabus.</p>
+        <a href="#">View Syllabus</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>Teaching</h3>
+        <p>CTET, TET, KVS, NVS और teaching examinations.</p>
+        <a href="#">View Syllabus</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>State Government</h3>
+        <p>PSC, SSC, Police और अन्य State Government exams.</p>
+        <a href="#">View Syllabus</a>
+      </div>
+
     </div>
 
-    <div class="feature-card">
-      <span>🎯</span>
-      <strong>Preparation</strong>
-      <p>अपने syllabus के अनुसार preparation plan बनाएं।</p>
+  </section>
+    <!-- SUBJECT-WISE SYLLABUS -->
+  <section class="section">
+
+    <div class="section-heading">
+      <h2>Subject-wise Syllabus</h2>
+      <p>Common subjects के syllabus और important topics देखें।</p>
     </div>
 
-  </div>
+    <div class="quick-grid">
+
+      <div class="quick-card">
+        <h3>Mathematics</h3>
+        <p>Arithmetic, Algebra, Geometry, Mensuration और अन्य topics.</p>
+        <a href="#">View Topics</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>Reasoning</h3>
+        <p>Verbal, Non-Verbal, Analogy, Series और Logical Reasoning.</p>
+        <a href="#">View Topics</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>General Knowledge</h3>
+        <p>History, Geography, Polity, Economy और Static GK.</p>
+        <a href="#">View Topics</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>Current Affairs</h3>
+        <p>National, International, Sports, Awards और important events.</p>
+        <a href="#">View Topics</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>General Science</h3>
+        <p>Physics, Chemistry, Biology और daily life science.</p>
+        <a href="#">View Topics</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>English</h3>
+        <p>Grammar, Vocabulary, Comprehension और basic English topics.</p>
+        <a href="#">View Topics</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>Hindi</h3>
+        <p>व्याकरण, पर्यायवाची, विलोम, संधि, समास और भाषा ज्ञान.</p>
+        <a href="#">View Topics</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>Computer</h3>
+        <p>Computer Basics, Internet, MS Office और सामान्य computer knowledge.</p>
+        <a href="#">View Topics</a>
+      </div>
 
-</section>
-
-
-<style>
-
-.category-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:12px
-}
-
-.category-card{
-  border:1px solid #e5e9f0;
-  background:#fff;
-  border-radius:15px;
-  padding:16px 12px;
-  text-align:left;
-  cursor:pointer;
-  transition:.2s;
-  box-shadow:0 4px 14px #00000007
-}
-
-.category-card:hover{
-  transform:translateY(-2px);
-  box-shadow:0 9px 22px #00000010;
-  border-color:#bbf7d0
-}
-
-.category-card span{
-  display:block;
-  font-size:24px;
-  margin-bottom:8px
-}
-
-.category-card strong{
-  display:block;
-  font-size:13px;
-  margin-bottom:3px
-}
-
-.category-card small{
-  color:#64748b;
-  font-size:10px
-}
-
-.popular-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:10px
-}
-
-.popular-card{
-  border:1px solid #e5e9f0;
-  background:#fff;
-  border-radius:13px;
-  padding:14px;
-  text-align:left;
-  cursor:pointer;
-  transition:.2s
-}
-
-.popular-card:hover{
-  transform:translateY(-2px);
-  box-shadow:0 7px 18px #0000000d
-}
-
-.popular-card strong{
-  display:block;
-  font-size:13px;
-  margin-bottom:3px
-}
-
-.popular-card span{
-  color:#64748b;
-  font-size:10px
-}
-
-.feature-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:12px
-}
-
-.feature-card{
-  background:#fff;
-  border:1px solid #e5e9f0;
-  border-radius:15px;
-  padding:16px;
-  box-shadow:0 4px 14px #00000007
-}
-
-.feature-card span{
-  display:block;
-  font-size:23px;
-  margin-bottom:8px
-}
-
-.feature-card strong{
-  display:block;
-  font-size:14px;
-  margin-bottom:4px
-}
-
-.feature-card p{
-  color:#64748b;
-  font-size:11px
-}
-
-@media(max-width:800px){
-
-  .category-grid{
-    grid-template-columns:repeat(2,1fr)
-  }
-
-  .popular-grid{
-    grid-template-columns:repeat(2,1fr)
-  }
-
-  .feature-grid{
-    grid-template-columns:repeat(2,1fr)
-  }
-
-}
-
-@media(max-width:560px){
-
-  .category-grid{
-    gap:9px
-  }
-
-  .category-card{
-    padding:13px 10px
-  }
-
-  .category-card span{
-    font-size:21px
-  }
-
-  .popular-grid{
-    grid-template-columns:repeat(2,1fr)
-  }
-
-  .feature-grid{
-    grid-template-columns:1fr 1fr
-  }
-
-  .feature-card{
-    padding:13px 10px
-  }
-
-}
-
-</style>
-
-
-<script>
-
-document.querySelectorAll(".category-card").forEach(card=>{
-
-  card.addEventListener("click",function(){
-
-    const category=this.dataset.category;
-
-    document.getElementById("search").value="";
-
-    document.getElementById("category").value=category;
-
-    document.getElementById("level").value="all";
-
-    document.getElementById("type").value="all";
-
-    filterSyllabus();
-
-    document.getElementById("syllabusList")
-      .scrollIntoView({
-        behavior:"smooth",
-        block:"start"
-      });
-
-  });
-
-});
-
-
-document.querySelectorAll(".popular-card").forEach(card=>{
-
-  card.addEventListener("click",function(){
-
-    document.getElementById("search").value=
-      this.dataset.search;
-
-    document.getElementById("category").value="all";
-
-    document.getElementById("level").value="all";
-
-    document.getElementById("type").value="all";
-
-    filterSyllabus();
-
-    document.getElementById("syllabusList")
-      .scrollIntoView({
-        behavior:"smooth",
-        block:"start"
-      });
-
-  });
-
-});
-
-</script>
-
-
-<!-- PART 3 : FINAL CLOSE YAHAN SE HOGA -->
-  <!-- PART 3 : TRUST + FOOTER + MOBILE NAV + FINAL CLOSE -->
-
-<section class="section">
-
-  <div class="section-title">
-    <div>
-      <h2>Why Use Sarkariiichij?</h2>
-      <p>Exam preparation को आसान बनाने के लिए</p>
-    </div>
-  </div>
-
-  <div class="trust-grid">
-
-    <div class="trust-card">
-      <span>🔎</span>
-      <strong>Easy Search</strong>
-      <p>Exam, subject और category के अनुसार syllabus खोजें।</p>
     </div>
 
-    <div class="trust-card">
-      <span>📱</span>
-      <strong>Mobile Friendly</strong>
-      <p>पूरी syllabus directory मोबाइल पर आसानी से इस्तेमाल करें।</p>
+  </section>
+    <!-- RECRUITMENT CATEGORY SYLLABUS -->
+  <section class="section">
+
+    <div class="section-heading">
+      <h2>Category-wise Syllabus</h2>
+      <p>अपने job category के अनुसार syllabus खोजें।</p>
     </div>
 
-    <div class="trust-card">
-      <span>📚</span>
-      <strong>Exam Wise</strong>
-      <p>SSC, UPSC, Railway, Banking और अन्य exams एक जगह।</p>
+    <div class="quick-grid">
+
+      <div class="quick-card">
+        <h3>Clerk & Office Jobs</h3>
+        <p>Clerk, LDC, JSA और अन्य office posts के syllabus.</p>
+        <a href="#">View Syllabus</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>Technical Jobs</h3>
+        <p>ITI, Diploma, Engineering और technical posts.</p>
+        <a href="#">View Syllabus</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>Police Jobs</h3>
+        <p>Constable, SI और अन्य police recruitment exams.</p>
+        <a href="#">View Syllabus</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>Defence Jobs</h3>
+        <p>Army, Navy, Air Force और Coast Guard examinations.</p>
+        <a href="#">View Syllabus</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>Railway Jobs</h3>
+        <p>NTPC, Group D, ALP, Technician और अन्य railway posts.</p>
+        <a href="#">View Syllabus</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>Banking Jobs</h3>
+        <p>PO, Clerk, Specialist Officer और banking exams.</p>
+        <a href="#">View Syllabus</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>Teaching Jobs</h3>
+        <p>Teacher, TET, CTET और अन्य teaching examinations.</p>
+        <a href="#">View Syllabus</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>Medical & Health Jobs</h3>
+        <p>Nursing, Pharmacist, Technician और health department exams.</p>
+        <a href="#">View Syllabus</a>
+      </div>
+
     </div>
 
-    <div class="trust-card">
-      <span>🛡️</span>
-      <strong>Official Source</strong>
-      <p>Latest notification से syllabus verify करना जरूरी है।</p>
+  </section>
+    <!-- STATE-WISE SYLLABUS -->
+  <section class="section">
+
+    <div class="section-heading">
+      <h2>State-wise Syllabus</h2>
+      <p>अलग-अलग राज्यों की government exams का syllabus देखें।</p>
     </div>
 
-  </div>
+    <div class="quick-grid">
 
-</section>
+      <div class="quick-card">
+        <h3>Uttar Pradesh</h3>
+        <p>UPPSC, UPSSSC, UP Police और अन्य UP exams.</p>
+        <a href="#">View Syllabus</a>
+      </div>
 
+      <div class="quick-card">
+        <h3>Bihar</h3>
+        <p>BPSC, Bihar SSC, Police और अन्य Bihar exams.</p>
+        <a href="#">View Syllabus</a>
+      </div>
 
-<section class="section">
+      <div class="quick-card">
+        <h3>Rajasthan</h3>
+        <p>RPSC, RSSB, Police और अन्य Rajasthan exams.</p>
+        <a href="#">View Syllabus</a>
+      </div>
 
-  <div class="important-box">
+      <div class="quick-card">
+        <h3>Madhya Pradesh</h3>
+        <p>MPPSC, MPESB और अन्य MP government exams.</p>
+        <a href="#">View Syllabus</a>
+      </div>
 
-    <h2>📌 Important Syllabus Information</h2>
+      <div class="quick-card">
+        <h3>Jharkhand</h3>
+        <p>JPSC, JSSC, Police और अन्य Jharkhand exams.</p>
+        <a href="#">View Syllabus</a>
+      </div>
 
-    <ul>
-      <li>Syllabus और exam pattern recruitment के अनुसार बदल सकता है।</li>
-      <li>हर exam की latest official notification जरूर पढ़ें।</li>
-      <li>Subjects के साथ-साथ topic-wise preparation करें।</li>
-      <li>Exam pattern, negative marking और question count भी check करें।</li>
-      <li>किसी भी पुराने syllabus को current मानने से पहले official source verify करें।</li>
-    </ul>
+      <div class="quick-card">
+        <h3>Maharashtra</h3>
+        <p>MPSC, Police और अन्य Maharashtra government exams.</p>
+        <a href="#">View Syllabus</a>
+      </div>
 
-  </div>
+      <div class="quick-card">
+        <h3>West Bengal</h3>
+        <p>WBPSC, Police और अन्य West Bengal exams.</p>
+        <a href="#">View Syllabus</a>
+      </div>
 
-</section>
+      <div class="quick-card">
+        <h3>All States</h3>
+        <p>भारत के सभी राज्यों और UTs के examination syllabus.</p>
+        <a href="#">View All States</a>
+      </div>
 
+    </div>
 
-<style>
+  </section>
+    <!-- EXAM PATTERN & SELECTION PROCESS -->
+  <section class="section">
 
-.trust-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:12px
-}
+    <div class="section-heading">
+      <h2>Exam Pattern & Selection Process</h2>
+      <p>Exam की तैयारी से पहले pattern और selection stages समझें।</p>
+    </div>
 
-.trust-card{
-  background:#fff;
-  border:1px solid #e5e9f0;
-  border-radius:15px;
-  padding:16px;
-  box-shadow:0 4px 14px #00000007
-}
+    <div class="quick-grid">
 
-.trust-card span{
-  display:block;
-  font-size:24px;
-  margin-bottom:9px
-}
+      <div class="quick-card">
+        <h3>Exam Pattern</h3>
+        <p>
+          Questions, marks, duration और subjects की जानकारी देखें।
+        </p>
+        <a href="#">View Exam Pattern</a>
+      </div>
 
-.trust-card strong{
-  display:block;
-  font-size:14px;
-  margin-bottom:5px
-}
+      <div class="quick-card">
+        <h3>Selection Process</h3>
+        <p>
+          Written Exam, Skill Test, Physical Test, Interview आदि stages देखें।
+        </p>
+        <a href="#">View Selection Process</a>
+      </div>
 
-.trust-card p{
-  color:#64748b;
-  font-size:11px
-}
+      <div class="quick-card">
+        <h3>Tier-wise Exam</h3>
+        <p>
+          Tier 1, Tier 2 और आगे के examination stages की जानकारी।
+        </p>
+        <a href="#">View Tier Details</a>
+      </div>
 
-.important-box{
-  background:#fff;
-  border:1px solid #e5e9f0;
-  border-radius:15px;
-  padding:18px;
-  box-shadow:0 4px 14px #00000007
-}
+      <div class="quick-card">
+        <h3>Subject & Marks</h3>
+        <p>
+          प्रत्येक subject के questions और marks का विवरण।
+        </p>
+        <a href="#">View Marks</a>
+      </div>
 
-.important-box h2{
-  font-size:17px;
-  margin-bottom:10px
-}
+      <div class="quick-card">
+        <h3>Negative Marking</h3>
+        <p>
+          गलत उत्तर पर लागू होने वाली negative marking की जानकारी।
+        </p>
+        <a href="#">View Details</a>
+      </div>
 
-.important-box ul{
-  padding-left:18px
-}
+      <div class="quick-card">
+        <h3>Skill Test</h3>
+        <p>
+          Typing, Computer और अन्य skill tests की जानकारी।
+        </p>
+        <a href="#">View Skill Test</a>
+      </div>
 
-.important-box li{
-  color:#64748b;
-  font-size:12px;
-  margin:6px 0
-}
+      <div class="quick-card">
+        <h3>Physical Test</h3>
+        <p>
+          Police और Defence exams के physical stages की जानकारी।
+        </p>
+        <a href="#">View Physical Test</a>
+      </div>
 
-.footer{
-  background:#07111f;
-  color:#fff;
-  margin-top:30px;
-  padding:28px 15px 90px
-}
+      <div class="quick-card">
+        <h3>Interview</h3>
+        <p>
+          जिन भर्ती प्रक्रियाओं में interview होता है उनकी जानकारी।
+        </p>
+        <a href="#">View Interview Details</a>
+      </div>
 
-.footer-inner{
-  max-width:1150px;
-  margin:auto
-}
+    </div>
 
-.footer-brand{
-  font-size:20px;
-  font-weight:800;
-  margin-bottom:7px
-}
+  </section>
+    <!-- IMPORTANT SYLLABUS RESOURCES -->
+  <section class="section">
 
-.footer-brand span{
-  color:#4ade80
-}
+    <div class="section-heading">
+      <h2>Important Syllabus Resources</h2>
+      <p>Exam preparation के लिए जरूरी syllabus और study resources.</p>
+    </div>
 
-.footer-text{
-  color:#94a3b8;
-  font-size:11px;
-  max-width:520px;
-  margin-bottom:20px
-}
+    <div class="quick-grid">
 
-.footer-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px
-}
+      <div class="quick-card">
+        <h3>Syllabus PDF</h3>
+        <p>Official syllabus PDF और downloadable syllabus खोजें।</p>
+        <a href="#">View PDF</a>
+      </div>
 
-.footer-col h3{
-  font-size:13px;
-  margin-bottom:8px
-}
+      <div class="quick-card">
+        <h3>Important Topics</h3>
+        <p>Exam में पूछे जाने वाले important topics की जानकारी।</p>
+        <a href="#">View Topics</a>
+      </div>
 
-.footer-col a{
-  display:block;
-  color:#94a3b8;
-  font-size:11px;
-  margin:6px 0
-}
+      <div class="quick-card">
+        <h3>Previous Year Papers</h3>
+        <p>पुराने question papers से exam pattern समझें।</p>
+        <a href="papers.html">View Papers</a>
+      </div>
 
-.footer-bottom{
-  border-top:1px solid #ffffff12;
-  margin-top:22px;
-  padding-top:14px;
-  text-align:center;
-  color:#64748b;
-  font-size:10px
-}
+      <div class="quick-card">
+        <h3>Mock Test</h3>
+        <p>Practice के लिए online mock tests और quizzes.</p>
+        <a href="mock-test.html">Start Mock Test</a>
+      </div>
 
-.mobile-nav{
-  display:none
-}
+      <div class="quick-card">
+        <h3>Current Affairs</h3>
+        <p>Latest current affairs की daily preparation करें।</p>
+        <a href="current-affairs.html">View Current Affairs</a>
+      </div>
 
-@media(max-width:800px){
+      <div class="quick-card">
+        <h3>GK Preparation</h3>
+        <p>Static GK और General Knowledge की तैयारी करें।</p>
+        <a href="gk.html">Study GK</a>
+      </div>
 
-  .trust-grid{
-    grid-template-columns:repeat(2,1fr)
-  }
+      <div class="quick-card">
+        <h3>Study Material</h3>
+        <p>Subject-wise preparation material और useful resources.</p>
+        <a href="#">View Material</a>
+      </div>
 
-  .footer-grid{
-    grid-template-columns:repeat(2,1fr)
-  }
+      <div class="quick-card">
+        <h3>Preparation Guide</h3>
+        <p>Exam preparation strategy और study guidance देखें।</p>
+        <a href="#">Read Guide</a>
+      </div>
 
-  .mobile-nav{
-    position:fixed;
-    display:flex;
-    left:0;
-    right:0;
-    bottom:0;
-    z-index:2000;
-    justify-content:space-around;
-    background:#07111f;
-    border-top:1px solid #ffffff15;
-    padding:7px 3px
-  }
+    </div>
 
-  .mobile-nav a{
-    color:#cbd5e1;
-    text-align:center;
-    font-size:10px;
-    padding:3px 7px
-  }
+  </section>
+    <!-- TRUST & VERIFICATION -->
+  <section class="section">
 
-  .mobile-nav span{
-    display:block;
-    font-size:18px;
-    margin-bottom:1px
-  }
+    <div class="section-heading">
+      <h2>Trust & Verification</h2>
+      <p>Syllabus information को verify करने के लिए जरूरी details.</p>
+    </div>
 
-}
+    <div class="quick-grid">
 
-@media(max-width:560px){
+      <div class="quick-card">
+        <h3>Official Source</h3>
+        <p>
+          Final syllabus हमेशा संबंधित official recruitment body
+          की website से verify करें।
+        </p>
+        <a href="#">Verify Official Source</a>
+      </div>
 
-  .trust-grid{
-    grid-template-columns:1fr 1fr;
-    gap:9px
-  }
+      <div class="quick-card">
+        <h3>Last Updated</h3>
+        <p>
+          Syllabus में latest update और बदलाव की जानकारी देखें।
+        </p>
+        <a href="#">View Latest Update</a>
+      </div>
 
-  .trust-card{
-    padding:13px 10px
-  }
+      <div class="quick-card">
+        <h3>Important Notice</h3>
+        <p>
+          Exam authority द्वारा जारी महत्वपूर्ण notices और changes.
+        </p>
+        <a href="#">View Notice</a>
+      </div>
 
-  .important-box{
-    padding:15px
-  }
+      <div class="quick-card">
+        <h3>Exam Date</h3>
+        <p>
+          परीक्षा की निर्धारित date और related schedule देखें।
+        </p>
+        <a href="#">View Exam Date</a>
+      </div>
 
-  .footer-grid{
-    grid-template-columns:1fr 1fr;
-    gap:14px
-  }
+      <div class="quick-card">
+        <h3>Documents Required</h3>
+        <p>
+          Exam और application के लिए जरूरी documents की जानकारी।
+        </p>
+        <a href="#">View Documents</a>
+      </div>
 
-}
+      <div class="quick-card">
+        <h3>How to Prepare</h3>
+        <p>
+          Syllabus को topics में divide करके preparation plan बनाएं।
+        </p>
+        <a href="#">Preparation Guide</a>
+      </div>
 
-</style>
+      <div class="quick-card">
+        <h3>FAQ</h3>
+        <p>
+          Syllabus, pattern और exam preparation से जुड़े सामान्य सवाल।
+        </p>
+        <a href="#">View FAQ</a>
+      </div>
 
+      <div class="quick-card">
+        <h3>Report an Error</h3>
+        <p>
+          किसी syllabus information में गलती दिखाई दे तो report करें।
+        </p>
+        <a href="#">Report Error</a>
+      </div>
 
-<footer class="footer">
+    </div>
 
-  <div class="footer-inner">
+  </section>
+    <!-- FOOTER -->
+  <footer class="site-footer">
 
     <div class="footer-brand">
-      Sarkarii<span>ichij</span>
+      <h2>Sarkariiichij</h2>
+      <p>
+        Government Jobs, Syllabus, Results, Admission और
+        Career Information का सरल platform.
+      </p>
     </div>
 
-    <p class="footer-text">
-      Government Jobs, Education, Admission, Results और Career
-      information का mobile-first portal.
-    </p>
+    <div class="footer-links">
 
-    <div class="footer-grid">
+      <a href="index.html">Home</a>
+      <a href="jobs.html">Government Jobs</a>
+      <a href="results.html">Results</a>
+      <a href="admit-card.html">Admit Card</a>
+      <a href="admission.html">Admission</a>
+      <a href="syllabus.html">Syllabus</a>
 
-      <div class="footer-col">
-        <h3>Career</h3>
-        <a href="jobs.html">Government Jobs</a>
-        <a href="syllabus.html">Syllabus</a>
-        <a href="results.html">Results</a>
-        <a href="admit-card.html">Admit Card</a>
-      </div>
+    </div>
 
-      <div class="footer-col">
-        <h3>Education</h3>
-        <a href="admission.html">Admission</a>
-        <a href="syllabus.html">Exam Syllabus</a>
-        <a href="#">Scholarship</a>
-        <a href="#">Mock Test</a>
-      </div>
+    <div class="footer-info">
 
-      <div class="footer-col">
-        <h3>Services</h3>
-        <a href="#">Sarkari Yojana</a>
-        <a href="#">Sarkari Kaam</a>
-        <a href="#">GK</a>
-        <a href="#">Current Affairs</a>
-      </div>
+      <a href="#">About Sarkariiichij</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms & Conditions</a>
+      <a href="#">Disclaimer</a>
+      <a href="#">Contact Us</a>
+      <a href="#">Report Error</a>
 
     </div>
 
     <div class="footer-bottom">
-      © 2026 Sarkariiichij • Verify information from official sources.
+
+      <p>© 2026 Sarkariiichij. All Rights Reserved.</p>
+
+      <p>
+        Information is provided for educational and
+        informational purposes.
+      </p>
+
     </div>
 
-  </div>
-
-</footer>
+  </footer>
 
 
-<nav class="mobile-nav">
+  <!-- MOBILE NAV -->
+  <nav class="mobile-nav">
 
-  <a href="index.html">
-    <span>⌂</span>
-    Home
-  </a>
+    <a href="index.html">Home</a>
+    <a href="jobs.html">Jobs</a>
+    <a href="results.html">Results</a>
+    <a href="admit-card.html">Admit Card</a>
+    <a href="admission.html">Admission</a>
 
-  <a href="jobs.html">
-    <span>💼</span>
-    Jobs
-  </a>
-
-  <a href="syllabus.html">
-    <span>📚</span>
-    Syllabus
-  </a>
-
-  <a href="results.html">
-    <span>📊</span>
-    Results
-  </a>
-
-  <a href="admission.html">
-    <span>🎓</span>
-    Admission
-  </a>
-
-</nav>
+  </nav>
 
 
-<script>
-
-window.addEventListener("scroll",function(){
-
-  const header=document.querySelector(".header");
-
-  if(window.scrollY>10){
-    header.style.boxShadow="0 4px 18px #0004";
-  }else{
-    header.style.boxShadow="0 2px 15px #0002";
-  }
-
-});
-
-
-document.querySelectorAll('a[href="#"]').forEach(link=>{
-
-  link.addEventListener("click",function(e){
-    e.preventDefault();
-  });
-
-});
-
-</script>
-
-</main>
 </body>
 </html>
