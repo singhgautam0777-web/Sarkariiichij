@@ -1,726 +1,501 @@
 <!DOCTYPE html>
 <html lang="hi">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#0f172a">
-<meta name="description" content="Sarkariiichij Admit Card - Government Exam Admit Cards and Official Download Links">
-<title>Admit Card | Sarkariiichij</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-*{box-sizing:border-box}
-body{margin:0;background:#f5f7fb;color:#172033;font-family:Arial,sans-serif}
-a{text-decoration:none}
-header{position:sticky;top:0;z-index:20;background:#0f172a;color:#fff;padding:14px 5%;display:flex;align-items:center;justify-content:space-between;box-shadow:0 3px 15px #0002}
-.logo{font-size:22px;font-weight:800}
-.nav{display:flex;gap:18px}
-.nav a{color:#fff;font-size:14px}
-.hero{background:linear-gradient(135deg,#0f172a,#263b64);color:#fff;text-align:center;padding:42px 15px}
-.tag{display:inline-block;background:#ffffff18;border:1px solid #ffffff30;padding:7px 13px;border-radius:20px;font-size:12px}
-.hero h1{font-size:31px;margin:14px 0 8px}
-.hero p{margin:0;color:#d7deea}
-main{max-width:1050px;margin:auto;padding:25px 15px}
-.searchbox{background:#fff;padding:15px;border-radius:16px;box-shadow:0 6px 25px #0000000b}
-.searchbox input{width:100%;padding:14px;border:1px solid #d8dee9;border-radius:10px;font-size:15px;outline:none}
-.filters{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px}
-.filters select,.reset{padding:12px;border:1px solid #d8dee9;border-radius:9px;background:#fff;font-size:14px}
-.reset{background:#111827;color:#fff;cursor:pointer}
-.heading{display:flex;align-items:center;justify-content:space-between;margin:25px 0 12px}
-.heading h2{margin:0;font-size:21px}
-.count{font-size:13px;color:#667085}
-.admit-card{background:#fff;border:1px solid #e7eaf0;border-radius:16px;padding:18px;margin-bottom:13px;box-shadow:0 5px 18px #00000008}
-.top{display:flex;justify-content:space-between;align-items:center;gap:10px}
-.badge{padding:6px 10px;border-radius:20px;font-size:11px;font-weight:bold}
-.released{background:#e8f7ee;color:#147a3c}
-.soon{background:#fff4d6;color:#8a6410}
-.admit-card h3{margin:12px 0 6px;font-size:19px}
-.org{font-size:14px;color:#667085;margin-bottom:13px}
-.info{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:15px}
-.info span{background:#f5f7fa;padding:7px 9px;border-radius:7px;font-size:12px;color:#475467}
-.actions{display:flex;gap:8px;flex-wrap:wrap}
-.btn{padding:10px 14px;border-radius:8px;font-size:13px;font-weight:bold;background:#2563eb;color:#fff}
-.btn.alt{background:#eef2f7;color:#172033}
-.empty{text-align:center;background:#fff;border-radius:15px;padding:45px 20px;color:#667085}
-.notice{background:#fff8e7;border:1px solid #f3dfaa;border-radius:13px;padding:15px;margin-top:20px;font-size:13px;color:#725b20}
-footer{margin-top:35px;background:#0f172a;color:#cbd5e1;text-align:center;padding:25px 15px;font-size:13px}
+  <title>Admit Card - Sarkariiichij</title>
 
-@media(max-width:700px){
-.nav{display:none}
-.hero{padding:35px 15px}
-.hero h1{font-size:26px}
-.filters{grid-template-columns:1fr 1fr}
-}
-@media(max-width:430px){
-.filters{grid-template-columns:1fr}
-.top{align-items:flex-start}
-.admit-card h3{font-size:17px}
-.actions .btn{flex:1;text-align:center}
-}
-</style>
+  <meta name="description"
+    content="Sarkariiichij पर Government Jobs और Competitive Exams के Latest Admit Card, Hall Ticket और Exam Information देखें।">
+
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-<div class="logo">Sarkariiichij</div>
-<nav class="nav">
-<a href="index.html">Home</a>
-<a href="jobs.html">Jobs</a>
-<a href="results.html">Results</a>
-<a href="admit-card.html">Admit Card</a>
-</nav>
-</header>
-
-<section class="hero">
-<span class="tag">ADMIT CARD • HALL TICKET • CALL LETTER</span>
-<h1>Government Exam Admit Card</h1>
-<p>All Government Exams के Admit Cards एक ही जगह</p>
-</section>
-
-<main>
-
-<div class="searchbox">
-<input id="search" type="search"
-placeholder="Search SSC, Railway, UPSC, Banking...">
-
-<div class="filters">
-
-<select id="category">
-<option value="">All Categories</option>
-<option value="SSC">SSC</option>
-<option value="UPSC">UPSC</option>
-<option value="Railway">Railway</option>
-<option value="Banking">Banking</option>
-<option value="Defence">Defence</option>
-<option value="Police">Police</option>
-<option value="Teaching">Teaching</option>
-<option value="State">State Government</option>
-</select>
-
-<select id="status">
-<option value="">All Status</option>
-<option value="Released">Released</option>
-<option value="Coming Soon">Coming Soon</option>
-</select>
-
-<select id="state">
-<option value="">All States</option>
-<option value="Central">Central</option>
-<option value="Uttar Pradesh">Uttar Pradesh</option>
-<option value="Bihar">Bihar</option>
-<option value="Other">Other States</option>
-</select>
-
-<button class="reset" id="reset">Reset Filters</button>
-
-</div>
-</div>
-
-<div class="heading">
-<h2>Latest Admit Cards</h2>
-<span class="count" id="count"></span>
-</div>
-
-<div id="admitList"></div>
-
-<div class="notice">
-<strong>⚠ Important:</strong>
-Admit Card download करने से पहले exam name, registration details और official website जरूर verify करें।
-Sarkariiichij किसी परीक्षा की official authority नहीं है।
-</div>
-
-<script>
-const ADMIT_CARDS=[
-{
-title:"SSC CGL Admit Card",
-org:"Staff Selection Commission",
-category:"SSC",
-state:"Central",
-status:"Coming Soon",
-examDate:"To Be Announced",
-releaseDate:"To Be Announced",
-admit:"#",
-official:"https://ssc.gov.in/"
-},
-{
-title:"SSC CHSL Admit Card",
-org:"Staff Selection Commission",
-category:"SSC",
-state:"Central",
-status:"Coming Soon",
-examDate:"To Be Announced",
-releaseDate:"To Be Announced",
-admit:"#",
-official:"https://ssc.gov.in/"
-},
-{
-title:"UPSC Civil Services Admit Card",
-org:"Union Public Service Commission",
-category:"UPSC",
-state:"Central",
-status:"Coming Soon",
-examDate:"To Be Announced",
-releaseDate:"To Be Announced",
-admit:"#",
-official:"https://upsc.gov.in/"
-},
-{
-title:"RRB NTPC Admit Card",
-org:"Railway Recruitment Boards",
-category:"Railway",
-state:"Central",
-status:"Coming Soon",
-examDate:"To Be Announced",
-releaseDate:"To Be Announced",
-admit:"#",
-official:"https://www.rrbapply.gov.in/"
-},
-{
-title:"IBPS PO Admit Card",
-org:"Institute of Banking Personnel Selection",
-category:"Banking",
-state:"Central",
-status:"Coming Soon",
-examDate:"To Be Announced",
-releaseDate:"To Be Announced",
-admit:"#",
-official:"https://www.ibps.in/"
-},
-{
-title:"UP Police Admit Card",
-org:"Uttar Pradesh Police Recruitment",
-category:"Police",
-state:"Uttar Pradesh",
-status:"Coming Soon",
-examDate:"To Be Announced",
-releaseDate:"To Be Announced",
-admit:"#",
-official:"https://uppbpb.gov.in/"
-}
-];
-
-const list=document.getElementById("admitList");
-const search=document.getElementById("search");
-const category=document.getElementById("category");
-const status=document.getElementById("status");
-const state=document.getElementById("state");
-const count=document.getElementById("count");
-
-function render(){
-const q=search.value.toLowerCase().trim();
-
-const data=ADMIT_CARDS.filter(r=>
-(!q||(r.title+" "+r.org+" "+r.category).toLowerCase().includes(q))&&
-(!category.value||r.category===category.value)&&
-(!status.value||r.status===status.value)&&
-(!state.value||r.state===state.value)
-);
-
-count.textContent=data.length+" Admit Cards";
-
-if(!data.length){
-list.innerHTML=`
-<div class="empty">
-<h3>Admit Card नहीं मिला</h3>
-<p>Exam या category बदलकर फिर search करें।</p>
-</div>`;
-return;
-}
-
-list.innerHTML=data.map(r=>`
-<article class="admit-card">
-
-<div class="top">
-<span class="badge ${r.status==="Released"?"released":"soon"}">
-${r.status}
-</span>
-<span class="count">${r.category}</span>
-</div>
-
-<h3>${r.title}</h3>
-
-<div class="org">${r.org}</div>
-
-<div class="info">
-<span>📍 ${r.state}</span>
-<span>📅 Exam: ${r.examDate}</span>
-<span>📢 Release: ${r.releaseDate}</span>
-</div>
-
-<div class="actions">
-<a class="btn" href="${r.admit}" target="_blank">
-Download Admit Card →
-</a>
-<a class="btn alt" href="${r.official}" target="_blank">
-Official Website
-</a>
-</div>
-
-</article>
-`).join("");
-}
-
-[search,category,status,state].forEach(x=>{
-x.addEventListener("input",render);
-});
-
-document.getElementById("reset").onclick=()=>{
-search.value="";
-category.value="";
-status.value="";
-state.value="";
-render();
-};
-
-render();
-
-/* PART 2 YAHAN SE DIRECT START HOGA */
-  <!-- PART 2 : PREMIUM ADMIT CARD DIRECTORY -->
-
-<section class="directory">
-<div class="heading">
-<h2>Admit Card Categories</h2>
-<span class="count">Quick Access</span>
-</div>
-
-<div class="category-grid">
-
-<a href="#" class="category-card" data-cat="SSC">
-<div class="category-icon">📋</div>
-<strong>SSC Admit Card</strong>
-<span>CGL • CHSL • GD • CPO • MTS</span>
-</a>
-
-<a href="#" class="category-card" data-cat="Railway">
-<div class="category-icon">🚆</div>
-<strong>Railway Admit Card</strong>
-<span>NTPC • Group D • ALP • JE</span>
-</a>
-
-<a href="#" class="category-card" data-cat="UPSC">
-<div class="category-icon">🏛️</div>
-<strong>UPSC Admit Card</strong>
-<span>CSE • NDA • CDS • CAPF</span>
-</a>
-
-<a href="#" class="category-card" data-cat="Banking">
-<div class="category-icon">🏦</div>
-<strong>Banking Admit Card</strong>
-<span>IBPS • SBI • RBI</span>
-</a>
-
-<a href="#" class="category-card" data-cat="Defence">
-<div class="category-icon">🪖</div>
-<strong>Defence Admit Card</strong>
-<span>Army • Navy • Air Force • ICG</span>
-</a>
-
-<a href="#" class="category-card" data-cat="Police">
-<div class="category-icon">👮</div>
-<strong>Police Admit Card</strong>
-<span>UP Police • CAPF • State Police</span>
-</a>
-
-<a href="#" class="category-card" data-cat="Teaching">
-<div class="category-icon">🎓</div>
-<strong>Teaching Admit Card</strong>
-<span>CTET • TET • KVS • NVS</span>
-</a>
-
-<a href="#" class="category-card" data-cat="State">
-<div class="category-icon">🏢</div>
-<strong>State Exams</strong>
-<span>PSC • SSC • Other State Exams</span>
-</a>
-
-</div>
-</section>
-
-<section class="directory">
-<div class="heading">
-<h2>Popular Admit Cards</h2>
-<span class="count">Quick Search</span>
-</div>
-
-<div class="popular-grid">
-
-<a href="#" class="popular-card" data-search="SSC CGL">
-<strong>SSC CGL</strong>
-<span>Combined Graduate Level</span>
-</a>
-
-<a href="#" class="popular-card" data-search="SSC CHSL">
-<strong>SSC CHSL</strong>
-<span>12th Level Examination</span>
-</a>
-
-<a href="#" class="popular-card" data-search="RRB NTPC">
-<strong>RRB NTPC</strong>
-<span>Railway Recruitment</span>
-</a>
-
-<a href="#" class="popular-card" data-search="UPSC Civil Services">
-<strong>UPSC CSE</strong>
-<span>Civil Services Examination</span>
-</a>
-
-<a href="#" class="popular-card" data-search="IBPS PO">
-<strong>IBPS PO</strong>
-<span>Banking Recruitment</span>
-</a>
-
-<a href="#" class="popular-card" data-search="UP Police">
-<strong>UP Police</strong>
-<span>Uttar Pradesh Police</span>
-</a>
-
-</div>
-</section>
-
-<section class="directory">
-<div class="heading">
-<h2>Important Information</h2>
-<span class="count">Before Download</span>
-</div>
-
-<div class="info-box">
-<div>
-<strong>📌 Registration Number</strong>
-<p>Admit Card download करने के लिए registration/roll number तैयार रखें।</p>
-</div>
-
-<div>
-<strong>🔐 Date of Birth</strong>
-<p>Login के लिए DOB या password की आवश्यकता हो सकती है।</p>
-</div>
-
-<div>
-<strong>📱 Mobile Number</strong>
-<p>Official recruitment portal पर registered mobile details सुरक्षित रखें।</p>
-</div>
-
-<div>
-<strong>🛡️ Official Website</strong>
-<p>किसी भी suspicious link की जगह official examination portal का उपयोग करें।</p>
-</div>
-</div>
-</section>
-
-<style>
-.directory{margin-top:28px}
-
-.category-grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:12px
-}
-
-.category-card{
-background:#fff;
-border:1px solid #e5e9f0;
-border-radius:15px;
-padding:18px;
-color:#172033;
-box-shadow:0 5px 18px #00000007;
-transition:.2s
-}
-
-.category-card:hover{
-transform:translateY(-3px);
-box-shadow:0 8px 25px #0002
-}
-
-.category-icon{
-font-size:25px;
-margin-bottom:9px
-}
-
-.category-card strong{
-display:block;
-font-size:15px;
-margin-bottom:6px
-}
-
-.category-card span{
-font-size:12px;
-color:#667085
-}
-
-.popular-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:12px
-}
-
-.popular-card{
-background:#fff;
-border:1px solid #e5e9f0;
-border-radius:14px;
-padding:17px;
-color:#172033
-}
-
-.popular-card strong{
-display:block;
-font-size:15px;
-margin-bottom:6px
-}
-
-.popular-card span{
-font-size:12px;
-color:#667085
-}
-
-.info-box{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:12px
-}
-
-.info-box>div{
-background:#fff;
-border:1px solid #e5e9f0;
-border-radius:13px;
-padding:16px
-}
-
-.info-box strong{
-font-size:14px
-}
-
-.info-box p{
-margin:7px 0 0;
-font-size:12px;
-line-height:1.5;
-color:#667085
-}
-
-@media(max-width:700px){
-.category-grid{grid-template-columns:1fr 1fr}
-.popular-grid{grid-template-columns:1fr 1fr}
-}
-
-@media(max-width:430px){
-.category-grid,
-.popular-grid,
-.info-box{grid-template-columns:1fr}
-}
-</style>
-
-<script>
-document.querySelectorAll(".category-card").forEach(card=>{
-card.addEventListener("click",e=>{
-e.preventDefault();
-
-const cat=card.dataset.cat;
-category.value=cat;
-render();
-
-window.scrollTo({
-top:document.querySelector(".searchbox").offsetTop-70,
-behavior:"smooth"
-});
-});
-});
-
-document.querySelectorAll(".popular-card").forEach(card=>{
-card.addEventListener("click",e=>{
-e.preventDefault();
-
-search.value=card.dataset.search;
-render();
-
-window.scrollTo({
-top:document.querySelector(".searchbox").offsetTop-70,
-behavior:"smooth"
-});
-});
-});
-</script>
-
-<!-- PART 3 : FINAL CLOSE YAHAN SE HOGA -->
-  <!-- PART 3 : FINAL PREMIUM CLOSE -->
-
-<section class="trust-section">
-<div class="heading">
-<h2>Sarkariiichij पर Admit Card</h2>
-<span class="count">Simple • Fast • Safe</span>
-</div>
-
-<div class="trust-grid">
-
-<div class="trust-card">
-<div class="trust-icon">⚡</div>
-<strong>Quick Access</strong>
-<p>Exam को search करके सीधे Admit Card तक पहुँचें।</p>
-</div>
-
-<div class="trust-card">
-<div class="trust-icon">📱</div>
-<strong>Mobile Friendly</strong>
-<p>Phone पर आसान और fast browsing के लिए बनाया गया।</p>
-</div>
-
-<div class="trust-card">
-<div class="trust-icon">🔗</div>
-<strong>Official Source</strong>
-<p>Download से पहले official recruitment website verify करें।</p>
-</div>
-
-<div class="trust-card">
-<div class="trust-icon">🛡️</div>
-<strong>Safety First</strong>
-<p>OTP, password और personal details किसी से share न करें।</p>
-</div>
-
-</div>
-</section>
-
-<style>
-.trust-section{
-margin-top:28px
-}
-
-.trust-grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:12px
-}
-
-.trust-card{
-background:#fff;
-border:1px solid #e5e9f0;
-border-radius:14px;
-padding:17px;
-box-shadow:0 5px 18px #00000007
-}
-
-.trust-icon{
-font-size:24px;
-margin-bottom:9px
-}
-
-.trust-card strong{
-display:block;
-font-size:15px;
-margin-bottom:6px
-}
-
-.trust-card p{
-margin:0;
-font-size:12px;
-line-height:1.5;
-color:#667085
-}
-
-@media(max-width:700px){
-.trust-grid{
-grid-template-columns:1fr 1fr
-}
-}
-
-@media(max-width:430px){
-.trust-grid{
-grid-template-columns:1fr
-}
-}
-</style>
-
-<nav class="mobile-nav">
-<a href="index.html">⌂<span>Home</span></a>
-<a href="jobs.html">💼<span>Jobs</span></a>
-<a href="results.html">📊<span>Results</span></a>
-<a href="admit-card.html" class="active">🎫<span>Admit Card</span></a>
-<a href="#">☰<span>More</span></a>
-</nav>
-
-<style>
-.mobile-nav{
-display:none
-}
-
-@media(max-width:700px){
-.mobile-nav{
-display:flex;
-position:fixed;
-bottom:0;
-left:0;
-right:0;
-height:62px;
-background:#fff;
-border-top:1px solid #e5e7eb;
-z-index:50;
-justify-content:space-around;
-box-shadow:0 -4px 18px #00000012
-}
-
-.mobile-nav a{
-flex:1;
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:center;
-gap:3px;
-font-size:18px;
-color:#667085
-}
-
-.mobile-nav span{
-font-size:10px
-}
-
-.mobile-nav .active{
-color:#2563eb;
-font-weight:bold
-}
-
-body{
-padding-bottom:65px
-}
-}
-</style>
-
-<footer>
-<div style="font-size:19px;font-weight:800;color:#fff;margin-bottom:8px">
-Sarkariiichij
-</div>
-
-<div style="margin-bottom:12px">
-Government Jobs • Admit Card • Results • Education • Career
-</div>
-
-<div>
-<a href="index.html" style="color:#cbd5e1">Home</a>
-&nbsp; • &nbsp;
-<a href="jobs.html" style="color:#cbd5e1">Jobs</a>
-&nbsp; • &nbsp;
-<a href="results.html" style="color:#cbd5e1">Results</a>
-&nbsp; • &nbsp;
-<a href="admit-card.html" style="color:#cbd5e1">Admit Card</a>
-</div>
-
-<div style="margin-top:12px">
-© 2026 Sarkariiichij. All Rights Reserved.
-</div>
-</footer>
-
-<script>
-window.addEventListener("scroll",()=>{
-const h=document.querySelector("header");
-if(h){
-h.style.boxShadow=
-window.scrollY>10
-?"0 4px 18px #0003"
-:"0 3px 15px #0002";
-}
-});
-
-document.querySelectorAll('a[href="#"]').forEach(a=>{
-a.addEventListener("click",e=>{
-e.preventDefault();
-});
-});
-</script>
+  <!-- HEADER -->
+  <header class="site-header">
+
+    <div class="logo">
+      <a href="index.html">Sarkariiichij</a>
+    </div>
+
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="jobs.html">Jobs</a>
+      <a href="results.html">Results</a>
+      <a href="admit-card.html" class="active">Admit Card</a>
+      <a href="admission.html">Admission</a>
+      <a href="syllabus.html">Syllabus</a>
+    </nav>
+
+  </header>
+
+
+  <!-- ADMIT CARD HERO -->
+  <section class="hero-section">
+
+    <div class="hero-content">
+
+      <p class="hero-tag">Admit Card</p>
+
+      <h1>Latest Government Exam Admit Cards</h1>
+
+      <p>
+        Government Jobs, Competitive Exams और Entrance Exams
+        के Admit Card और Hall Ticket एक जगह देखें।
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- ADMIT CARD SEARCH -->
+  <section class="section">
+
+    <div class="section-heading">
+      <h2>Search Admit Card</h2>
+      <p>अपना exam या admit card खोजें</p>
+    </div>
+
+    <div class="search-box">
+
+      <input
+        type="search"
+        id="admitSearch"
+        placeholder="Search SSC, Railway, Police, Banking..."
+      >
+
+      <button type="button">
+        Search
+      </button>
+
+    </div>
+
+  </section>
+    <!-- LATEST ADMIT CARDS -->
+  <section class="section">
+
+    <div class="section-heading">
+      <h2>Latest Admit Cards</h2>
+      <p>हाल ही में जारी किए गए प्रमुख Admit Cards</p>
+    </div>
+
+    <div class="quick-grid">
+
+      <div class="quick-card">
+        <h3>SSC CGL Admit Card</h3>
+        <p>Combined Graduate Level Examination</p>
+        <span class="status-badge">Latest</span>
+        <a href="#">Download Admit Card</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>SSC CHSL Admit Card</h3>
+        <p>Combined Higher Secondary Level</p>
+        <span class="status-badge">Latest</span>
+        <a href="#">Download Admit Card</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>RRB NTPC Admit Card</h3>
+        <p>Railway NTPC Examination</p>
+        <span class="status-badge">Latest</span>
+        <a href="#">Download Admit Card</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>SSC GD Admit Card</h3>
+        <p>General Duty Constable Examination</p>
+        <span class="status-badge">Latest</span>
+        <a href="#">Download Admit Card</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>IBPS PO Admit Card</h3>
+        <p>Probationary Officer Examination</p>
+        <span class="status-badge">Latest</span>
+        <a href="#">Download Admit Card</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>UP Police Admit Card</h3>
+        <p>Uttar Pradesh Police Recruitment</p>
+        <span class="status-badge">Latest</span>
+        <a href="#">Download Admit Card</a>
+      </div>
+
+    </div>
+
+  </section>
+    <!-- EXAM-WISE ADMIT CARDS -->
+  <section class="section">
+
+    <div class="section-heading">
+      <h2>Exam-wise Admit Cards</h2>
+      <p>अलग-अलग परीक्षाओं के Admit Card यहाँ देखें</p>
+    </div>
+
+    <div class="quick-grid">
+
+      <div class="quick-card">
+        <h3>UPSC Admit Cards</h3>
+        <p>Civil Services, NDA, CDS और अन्य परीक्षाएँ</p>
+        <a href="#">View Admit Cards</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>SSC Admit Cards</h3>
+        <p>CGL, CHSL, MTS, GD, CPO और अन्य परीक्षाएँ</p>
+        <a href="#">View Admit Cards</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>Railway Admit Cards</h3>
+        <p>RRB NTPC, Group D, ALP और अन्य परीक्षाएँ</p>
+        <a href="#">View Admit Cards</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>Banking Admit Cards</h3>
+        <p>IBPS, SBI, RBI और अन्य बैंकिंग परीक्षाएँ</p>
+        <a href="#">View Admit Cards</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>Defence Admit Cards</h3>
+        <p>Army, Navy, Air Force और Defence exams</p>
+        <a href="#">View Admit Cards</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>Police Admit Cards</h3>
+        <p>State Police, CAPF और अन्य पुलिस भर्ती</p>
+        <a href="#">View Admit Cards</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>Teaching Admit Cards</h3>
+        <p>CTET, TET और Teacher Recruitment exams</p>
+        <a href="#">View Admit Cards</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>State Government Admit Cards</h3>
+        <p>PSC, SSC और State Recruitment exams</p>
+        <a href="#">View Admit Cards</a>
+      </div>
+
+    </div>
+
+  </section>
+    <!-- CATEGORY-WISE ADMIT CARDS -->
+  <section class="section">
+
+    <div class="section-heading">
+      <h2>Admit Card Categories</h2>
+      <p>अपनी परीक्षा की category चुनकर Admit Card खोजें</p>
+    </div>
+
+    <div class="quick-grid">
+
+      <div class="quick-card">
+        <h3>Government Jobs</h3>
+        <p>सरकारी भर्ती परीक्षाओं के Admit Cards</p>
+        <a href="#">Explore</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>Entrance Exams</h3>
+        <p>JEE, NEET, CUET और अन्य Entrance Exams</p>
+        <a href="#">Explore</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>Board Exams</h3>
+        <p>10वीं और 12वीं Board Examination</p>
+        <a href="#">Explore</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>University Exams</h3>
+        <p>UG, PG, Semester और Annual Exams</p>
+        <a href="#">Explore</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>Police Exams</h3>
+        <p>State Police, CAPF और अन्य Police Exams</p>
+        <a href="#">Explore</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>Defence Exams</h3>
+        <p>Army, Navy, Air Force और ICG Exams</p>
+        <a href="#">Explore</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>Teaching Exams</h3>
+        <p>CTET, TET और Teacher Recruitment Exams</p>
+        <a href="#">Explore</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>Banking Exams</h3>
+        <p>IBPS, SBI, RBI और अन्य Banking Exams</p>
+        <a href="#">Explore</a>
+      </div>
+
+    </div>
+
+  </section>
+    <!-- STATE-WISE ADMIT CARDS -->
+  <section class="section">
+
+    <div class="section-heading">
+      <h2>State-wise Admit Cards</h2>
+      <p>राज्य के अनुसार Government और Competitive Exam Admit Cards</p>
+    </div>
+
+    <div class="quick-grid">
+
+      <div class="quick-card">
+        <h3>Uttar Pradesh</h3>
+        <p>UPPSC, UPSSSC, UP Police और अन्य Exams</p>
+        <a href="#">View Admit Cards</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>Bihar</h3>
+        <p>BPSC, Bihar Police, BTSC और अन्य Exams</p>
+        <a href="#">View Admit Cards</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>Rajasthan</h3>
+        <p>RPSC, RSSB और अन्य भर्ती परीक्षाएँ</p>
+        <a href="#">View Admit Cards</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>Madhya Pradesh</h3>
+        <p>MPPSC, MPESB और अन्य Exams</p>
+        <a href="#">View Admit Cards</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>Jharkhand</h3>
+        <p>JPSC, JSSC और अन्य Recruitment Exams</p>
+        <a href="#">View Admit Cards</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>Maharashtra</h3>
+        <p>MPSC और अन्य Government Exams</p>
+        <a href="#">View Admit Cards</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>West Bengal</h3>
+        <p>WBPSC और अन्य Recruitment Exams</p>
+        <a href="#">View Admit Cards</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>All States</h3>
+        <p>भारत के सभी राज्यों के Admit Cards</p>
+        <a href="#">View All</a>
+      </div>
+
+    </div>
+
+  </section>
+    <!-- IMPORTANT ADMIT CARD INFORMATION -->
+  <section class="section">
+
+    <div class="section-heading">
+      <h2>Important Admit Card Information</h2>
+      <p>Exam से पहले जरूरी जानकारी</p>
+    </div>
+
+    <div class="quick-grid">
+
+      <div class="quick-card">
+        <h3>How to Download</h3>
+        <p>Official website से Admit Card download करने का तरीका</p>
+        <a href="#">Read Guide</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>Exam Centre</h3>
+        <p>Exam Centre, City और Reporting Time की जानकारी</p>
+        <a href="#">View Details</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>Documents Required</h3>
+        <p>Admit Card के साथ कौन-कौन से documents ले जाएँ</p>
+        <a href="#">View Details</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>Exam Day Instructions</h3>
+        <p>Exam Day पर जरूरी rules और instructions</p>
+        <a href="#">Read Instructions</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>Photo & Signature</h3>
+        <p>Photo और Signature से जुड़ी जरूरी requirements</p>
+        <a href="#">View Guide</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>Forgot Registration Number</h3>
+        <p>Registration या Application Number भूलने पर सहायता</p>
+        <a href="#">Get Help</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>Admit Card Correction</h3>
+        <p>Admit Card में गलती होने पर क्या करें</p>
+        <a href="#">Read Guide</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>Important Notice</h3>
+        <p>Final information के लिए हमेशा official notice देखें</p>
+        <a href="#">View Notice</a>
+      </div>
+
+    </div>
+
+  </section>
+    <!-- TRUST & VERIFICATION -->
+  <section class="section">
+
+    <div class="section-heading">
+      <h2>Trust & Verification</h2>
+      <p>Admit Card information को verify करने में मदद</p>
+    </div>
+
+    <div class="quick-grid">
+
+      <div class="quick-card">
+        <h3>Official Source</h3>
+        <p>Admit Card के लिए official recruitment website को प्राथमिकता दें।</p>
+        <a href="#">Verify Official Link</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>Last Updated</h3>
+        <p>Information की latest update date देखें।</p>
+        <a href="#">View Updates</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>Exam Date</h3>
+        <p>Exam Date और Shift की जानकारी carefully check करें।</p>
+        <a href="#">View Details</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>Reporting Time</h3>
+        <p>Exam Centre पर Reporting Time से पहले पहुँचें।</p>
+        <a href="#">Read Instructions</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>Documents</h3>
+        <p>Exam में required ID और अन्य documents की जानकारी।</p>
+        <a href="#">View Documents</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>Exam Instructions</h3>
+        <p>Exam Centre के जरूरी rules और instructions देखें।</p>
+        <a href="#">Read Instructions</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>FAQ</h3>
+        <p>Admit Card से जुड़े सामान्य सवालों के जवाब।</p>
+        <a href="#">View FAQ</a>
+      </div>
+
+      <div class="quick-card">
+        <h3>Report Error</h3>
+        <p>किसी information में गलती मिले तो हमें बताएं।</p>
+        <a href="#">Report Error</a>
+      </div>
+
+    </div>
+
+  </section>
+    <!-- FOOTER -->
+  <footer class="site-footer">
+
+    <div class="footer-brand">
+      <h2>Sarkariiichij</h2>
+      <p>
+        Government Jobs, Admit Card, Results, Admission
+        और Career Information का सरल platform.
+      </p>
+    </div>
+
+    <div class="footer-links">
+
+      <a href="index.html">Home</a>
+      <a href="jobs.html">Government Jobs</a>
+      <a href="results.html">Results</a>
+      <a href="admit-card.html">Admit Card</a>
+      <a href="admission.html">Admission</a>
+      <a href="syllabus.html">Syllabus</a>
+
+    </div>
+
+    <div class="footer-info">
+
+      <a href="#">About Sarkariiichij</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms & Conditions</a>
+      <a href="#">Disclaimer</a>
+      <a href="#">Contact Us</a>
+      <a href="#">Report Error</a>
+
+    </div>
+
+    <div class="footer-bottom">
+
+      <p>
+        © 2026 Sarkariiichij. All Rights Reserved.
+      </p>
+
+      <p>
+        Information is provided for educational and
+        informational purposes.
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <!-- MOBILE NAV -->
+  <nav class="mobile-nav">
+
+    <a href="index.html">Home</a>
+    <a href="jobs.html">Jobs</a>
+    <a href="results.html">Results</a>
+    <a href="admit-card.html">Admit Card</a>
+    <a href="admission.html">Admission</a>
+
+  </nav>
+
 
 </body>
 </html>
