@@ -1,4263 +1,1310 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Government Jobs | Sarkariiichij</title>
+  <title>Government Jobs - Sarkariiichij</title>
 
-<meta name="description"
-content="Sarkariiichij पर सभी Central और State Government Jobs, SSC, UPSC, Railway, Banking, Defence, Police, Teaching और अन्य सरकारी भर्ती की जानकारी देखें।">
+  <meta name="description"
+    content="Sarkariiichij पर Government Jobs, Sarkari Naukri और सभी प्रमुख सरकारी परीक्षाओं की जानकारी देखें।">
 
-<meta name="keywords"
-content="government jobs, sarkari naukri, सरकारी नौकरी, SSC, UPSC, Railway, Banking, Defence, Police, Sarkariiichij">
-
-<meta name="theme-color" content="#071426">
-
-<style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:#f4f7fb;
-  color:#172033;
-  line-height:1.5;
-}
-
-a{
-  text-decoration:none;
-  color:inherit;
-}
-
-button,
-input,
-select{
-  font:inherit;
-}
-
-.header{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:#071426;
-  color:#fff;
-  box-shadow:0 4px 18px rgba(0,0,0,.15);
-}
-
-.header-inner{
-  max-width:1200px;
-  margin:auto;
-  padding:14px 18px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:20px;
-}
-
-.logo{
-  font-size:23px;
-  font-weight:800;
-  letter-spacing:-.5px;
-  white-space:nowrap;
-}
-
-.logo span{
-  color:#38bdf8;
-}
-
-.nav{
-  display:flex;
-  gap:6px;
-  flex-wrap:wrap;
-  justify-content:flex-end;
-}
-
-.nav a{
-  padding:9px 12px;
-  border-radius:8px;
-  font-size:14px;
-  color:#dbeafe;
-}
-
-.nav a:hover{
-  background:#10243e;
-  color:#fff;
-}
-
-.hero{
-  background:
-  radial-gradient(circle at top right,#164e73 0,#071426 42%,#030b16 100%);
-  color:#fff;
-  padding:55px 18px 60px;
-}
-
-.hero-inner{
-  max-width:1100px;
-  margin:auto;
-  text-align:center;
-}
-
-.badge{
-  display:inline-block;
-  padding:7px 13px;
-  border:1px solid rgba(255,255,255,.18);
-  border-radius:30px;
-  background:rgba(255,255,255,.07);
-  color:#7dd3fc;
-  font-size:13px;
-  margin-bottom:16px;
-}
-
-.hero h1{
-  font-size:clamp(30px,6vw,52px);
-  line-height:1.08;
-  margin-bottom:15px;
-}
-
-.hero p{
-  max-width:700px;
-  margin:0 auto 25px;
-  color:#cbd5e1;
-  font-size:16px;
-}
-
-.search-box{
-  max-width:760px;
-  margin:auto;
-  display:flex;
-  background:#fff;
-  padding:6px;
-  border-radius:14px;
-  box-shadow:0 15px 40px rgba(0,0,0,.25);
-}
-
-.search-box input{
-  flex:1;
-  border:0;
-  outline:0;
-  padding:13px 15px;
-  color:#172033;
-  min-width:0;
-}
-
-.search-box button{
-  border:0;
-  background:#0ea5e9;
-  color:#fff;
-  padding:0 20px;
-  border-radius:10px;
-  cursor:pointer;
-  font-weight:700;
-}
-
-.container{
-  max-width:1200px;
-  margin:auto;
-  padding:35px 18px;
-}
-
-.section-head{
-  margin-bottom:20px;
-}
-
-.section-head h2{
-  font-size:26px;
-  margin-bottom:5px;
-}
-
-.section-head p{
-  color:#64748b;
-  font-size:14px;
-}
-
-.filter-panel{
-  background:#fff;
-  border:1px solid #e2e8f0;
-  border-radius:16px;
-  padding:18px;
-  margin-bottom:28px;
-  box-shadow:0 5px 20px rgba(15,23,42,.05);
-}
-
-.filter-title{
-  font-size:17px;
-  font-weight:800;
-  margin-bottom:13px;
-}
-
-.filter-tabs{
-  display:flex;
-  gap:8px;
-  flex-wrap:wrap;
-}
-
-.filter-tabs button{
-  border:1px solid #dbe3ed;
-  background:#f8fafc;
-  color:#334155;
-  padding:9px 13px;
-  border-radius:9px;
-  cursor:pointer;
-  font-size:13px;
-}
-
-.filter-tabs button:hover,
-.filter-tabs button.active{
-  background:#0f172a;
-  color:#fff;
-  border-color:#0f172a;
-}
-
-.advanced{
-  margin-top:18px;
-  padding-top:18px;
-  border-top:1px solid #e5e7eb;
-}
-
-.advanced-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:12px;
-}
-
-.field label{
-  display:block;
-  font-size:12px;
-  font-weight:700;
-  color:#475569;
-  margin-bottom:6px;
-}
-
-.field select{
-  width:100%;
-  padding:11px;
-  border:1px solid #dbe3ed;
-  border-radius:9px;
-  background:#fff;
-  outline:0;
-}
-
-.reset{
-  margin-top:13px;
-  padding:10px 15px;
-  border:0;
-  border-radius:9px;
-  background:#e2e8f0;
-  color:#172033;
-  cursor:pointer;
-  font-weight:700;
-}
-
-.exam-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-}
-
-.exam-card{
-  background:#fff;
-  border:1px solid #e2e8f0;
-  border-radius:15px;
-  padding:19px;
-  box-shadow:0 5px 18px rgba(15,23,42,.05);
-  transition:.2s ease;
-}
-
-.exam-card:hover{
-  transform:translateY(-3px);
-  box-shadow:0 12px 28px rgba(15,23,42,.1);
-}
-
-.exam-tag{
-  display:inline-block;
-  padding:5px 9px;
-  border-radius:20px;
-  background:#e0f2fe;
-  color:#0369a1;
-  font-size:11px;
-  font-weight:800;
-  margin-bottom:10px;
-}
-
-.exam-card h3{
-  font-size:18px;
-  margin-bottom:7px;
-}
-
-.exam-card p{
-  color:#64748b;
-  font-size:13px;
-  min-height:42px;
-}
-
-.meta{
-  display:flex;
-  flex-wrap:wrap;
-  gap:7px;
-  margin:14px 0;
-}
-
-.meta span{
-  background:#f1f5f9;
-  padding:5px 8px;
-  border-radius:6px;
-  font-size:11px;
-  color:#475569;
-}
-
-.card-actions{
-  display:flex;
-  gap:8px;
-}
-
-.card-actions a{
-  flex:1;
-  text-align:center;
-  padding:9px 8px;
-  border-radius:8px;
-  font-size:12px;
-  font-weight:700;
-}
-
-.details{
-  background:#0f172a;
-  color:#fff;
-}
-
-.official{
-  background:#e0f2fe;
-  color:#0369a1;
-}
-
-@media(max-width:900px){
-  .exam-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .advanced-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-}
-
-@media(max-width:650px){
-  .header-inner{
-    align-items:flex-start;
-    flex-direction:column;
-    gap:10px;
-  }
-
-  .nav{
-    width:100%;
-    justify-content:flex-start;
-    overflow-x:auto;
-    flex-wrap:nowrap;
-    padding-bottom:2px;
-  }
-
-  .nav a{
-    white-space:nowrap;
-  }
-
-  .hero{
-    padding:40px 15px 45px;
-  }
-
-  .search-box{
-    flex-direction:column;
-    gap:6px;
-  }
-
-  .search-box button{
-    min-height:45px;
-  }
-
-  .container{
-    padding:28px 14px;
-  }
-
-  .exam-grid{
-    grid-template-columns:1fr;
-  }
-
-  .advanced-grid{
-    grid-template-columns:1fr;
-  }
-
-  .filter-tabs{
-    overflow-x:auto;
-    flex-wrap:nowrap;
-    padding-bottom:4px;
-  }
-
-  .filter-tabs button{
-    white-space:nowrap;
-  }
-}
-</style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header class="header">
-  <div class="header-inner">
+  <!-- HEADER -->
+  <header class="site-header">
 
-    <a href="index.html" class="logo">
-      Sarkariiichij<span>.</span>
-    </a>
+    <div class="logo">
+      <a href="index.html">Sarkariiichij</a>
+    </div>
 
-    <nav class="nav">
+    <nav class="main-nav">
       <a href="index.html">Home</a>
-      <a href="jobs.html">Jobs</a>
-      <a href="eligibility.html">Eligibility</a>
-      <a href="admission.html">Admission</a>
+      <a href="jobs.html" class="active">Jobs</a>
       <a href="results.html">Results</a>
-      <a href="sarkari-kaam.html">Sarkari Kaam</a>
+      <a href="admit-card.html">Admit Card</a>
+      <a href="admission.html">Admission</a>
+      <a href="syllabus.html">Syllabus</a>
     </nav>
 
-  </div>
-</header>
+  </header>
 
-<section class="hero">
-  <div class="hero-inner">
 
-    <span class="badge">🇮🇳 Government Jobs Directory</span>
+  <!-- JOBS HERO -->
+  <section class="hero-section">
 
-    <h1>All Government Exams & Jobs</h1>
+    <div class="hero-content">
 
-    <p>
-      Central Government, State Government, Railway, Banking,
-      Defence, Police, Teaching और सभी प्रमुख सरकारी भर्ती एक जगह।
-    </p>
+      <p class="hero-tag">Government Jobs</p>
+
+      <h1>Latest Government Jobs</h1>
+
+      <p>
+        Central और State Government की सरकारी नौकरियों
+        और सभी प्रमुख competitive exams की जानकारी एक जगह।
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- JOB SEARCH -->
+  <section class="section">
+
+    <div class="section-heading">
+      <h2>Search Government Jobs</h2>
+      <p>अपनी पसंद की सरकारी नौकरी खोजें</p>
+    </div>
 
     <div class="search-box">
+
       <input
         type="search"
         id="jobSearch"
-        placeholder="Search Government Jobs, SSC, UPSC, Railway..."
+        placeholder="Search SSC, Railway, Police, Banking..."
       >
-      <button type="button">Search</button>
-    </div>
 
-  </div>
-</section>
-
-<main class="container">
-
-<section>
-
-  <div class="section-head">
-    <h2>🇮🇳 Government Jobs</h2>
-    <p>अपनी जरूरत के अनुसार Government Exam या Recruitment खोजें।</p>
-  </div>
-
-  <div class="filter-panel">
-
-    <div class="filter-title">Quick Categories</div>
-
-    <div class="filter-tabs">
-
-      <button class="active" data-category="all">
-        All Exams
-      </button>
-
-      <button data-category="central">
-        Central Govt
-      </button>
-
-      <button data-category="state">
-        State Govt
-      </button>
-
-      <button data-category="defence">
-        Defence
-      </button>
-
-      <button data-category="railway">
-        Railway
-      </button>
-
-      <button data-category="banking">
-        Banking
-      </button>
-
-      <button data-category="police">
-        Police
-      </button>
-
-      <button data-category="teaching">
-        Teaching
-      </button>
-
-      <button data-category="psu">
-        PSU
-      </button>
-
-      <button data-category="court">
-        Court
-      </button>
-
-      <button data-category="university">
-        University
+      <button type="button">
+        Search
       </button>
 
     </div>
 
-    <div class="advanced">
+  </section>
+    <!-- ALL GOVERNMENT EXAMS -->
+  <section class="section">
 
-      <div class="filter-title">
-        Advanced Filters
+    <div class="section-heading">
+      <h2>All Government Exams</h2>
+      <p>सभी प्रमुख सरकारी भर्ती परीक्षाएँ एक जगह</p>
+    </div>
+
+    <div class="quick-grid">
+
+      <a href="#" class="quick-card">
+        <strong>UPSC</strong>
+        <span>Civil Services, NDA, CDS और अन्य exams</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>SSC</strong>
+        <span>CGL, CHSL, MTS, GD, CPO और अन्य exams</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Railway</strong>
+        <span>RRB NTPC, Group D, ALP और अन्य भर्ती</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Banking</strong>
+        <span>IBPS, SBI, RBI, NABARD और अन्य exams</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Defence</strong>
+        <span>Army, Navy, Air Force, ICG और अन्य भर्ती</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Police & CAPF</strong>
+        <span>CRPF, BSF, CISF, ITBP, Police और अन्य भर्ती</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Teaching</strong>
+        <span>CTET, TET, KVS, NVS और अन्य भर्ती</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>State Government</strong>
+        <span>सभी राज्यों की सरकारी नौकरियाँ</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>PSU</strong>
+        <span>ONGC, NTPC, BHEL, SAIL और अन्य PSU</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Courts</strong>
+        <span>High Court और District Court भर्ती</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Health & Medical</strong>
+        <span>Medical और Health Department भर्ती</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Other Government Jobs</strong>
+        <span>अन्य सभी सरकारी विभाग और भर्ती</span>
+      </a>
+
+    </div>
+
+  </section>
+    <!-- JOBS BY QUALIFICATION -->
+  <section class="section">
+
+    <div class="section-heading">
+      <h2>Jobs by Qualification</h2>
+      <p>अपनी qualification के अनुसार सरकारी नौकरी खोजें</p>
+    </div>
+
+    <div class="quick-grid">
+
+      <a href="#" class="quick-card">
+        <strong>8th Pass</strong>
+        <span>8वीं पास candidates के लिए jobs</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>10th Pass</strong>
+        <span>10वीं पास candidates के लिए jobs</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>12th Pass</strong>
+        <span>12वीं पास candidates के लिए jobs</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>ITI</strong>
+        <span>ITI candidates के लिए सरकारी jobs</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Diploma</strong>
+        <span>Diploma holders के लिए jobs</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Graduate</strong>
+        <span>Graduation के बाद सरकारी jobs</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Engineering</strong>
+        <span>B.Tech और engineering jobs</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Post Graduate</strong>
+        <span>PG candidates के लिए jobs</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Medical</strong>
+        <span>Medical और healthcare jobs</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Research</strong>
+        <span>Research और academic opportunities</span>
+      </a>
+
+    </div>
+
+  </section>
+    <!-- JOBS BY JOB TYPE -->
+  <section class="section">
+
+    <div class="section-heading">
+      <h2>Jobs by Job Type</h2>
+      <p>आप किस तरह की सरकारी नौकरी चाहते हैं?</p>
+    </div>
+
+    <div class="quick-grid">
+
+      <a href="#" class="quick-card">
+        <strong>Police Jobs</strong>
+        <span>Police और law enforcement jobs</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Defence Jobs</strong>
+        <span>Army, Navy, Air Force और Defence jobs</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Railway Jobs</strong>
+        <span>Railway में विभिन्न सरकारी jobs</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Banking Jobs</strong>
+        <span>Bank और financial sector jobs</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Teaching Jobs</strong>
+        <span>Teacher और education department jobs</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Clerk Jobs</strong>
+        <span>Clerk और office assistant jobs</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Stenographer Jobs</strong>
+        <span>Steno और secretarial jobs</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Engineer Jobs</strong>
+        <span>Engineering और technical jobs</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Medical Jobs</strong>
+        <span>Doctor, Nursing और Health jobs</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Driver Jobs</strong>
+        <span>Government driver और transport jobs</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Forest Jobs</strong>
+        <span>Forest और wildlife department jobs</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>PSU Jobs</strong>
+        <span>Public Sector Undertakings में jobs</span>
+      </a>
+
+    </div>
+
+  </section>
+    <!-- JOBS BY DEPARTMENT -->
+  <section class="section">
+
+    <div class="section-heading">
+      <h2>Jobs by Department</h2>
+      <p>Department के अनुसार सरकारी नौकरी खोजें</p>
+    </div>
+
+    <div class="quick-grid">
+
+      <a href="#" class="quick-card">
+        <strong>Central Ministries</strong>
+        <span>भारत सरकार के विभिन्न मंत्रालय</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Railway</strong>
+        <span>Railway के सभी प्रमुख departments</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Defence</strong>
+        <span>Defence और Armed Forces departments</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Home Affairs</strong>
+        <span>Police, CAPF और Home Ministry related jobs</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Education</strong>
+        <span>Schools, Colleges और Education departments</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Health</strong>
+        <span>Hospitals और Health departments</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Agriculture</strong>
+        <span>Agriculture और Rural Development jobs</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Finance</strong>
+        <span>Finance, Banking और Accounts departments</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Environment & Forest</strong>
+        <span>Forest और Environment departments</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Power & Electricity</strong>
+        <span>Electricity और Power sector jobs</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Courts & Judiciary</strong>
+        <span>High Court और District Court jobs</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Local Government</strong>
+        <span>Municipal, Panchayat और local body jobs</span>
+      </a>
+
+    </div>
+
+  </section>
+    <!-- STATE WISE JOBS -->
+  <section class="section">
+
+    <div class="section-heading">
+      <h2>State-wise Government Jobs</h2>
+      <p>अपने राज्य की सरकारी नौकरियाँ खोजें</p>
+    </div>
+
+    <div class="quick-grid">
+
+      <a href="#" class="quick-card">
+        <strong>Uttar Pradesh</strong>
+        <span>UPPSC, UP Police, UPSSSC और अन्य jobs</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Bihar</strong>
+        <span>BPSC, BSSC, Bihar Police और अन्य jobs</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Rajasthan</strong>
+        <span>RPSC, RSSB, Rajasthan Police और अन्य jobs</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Madhya Pradesh</strong>
+        <span>MPPSC, MPESB और अन्य jobs</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Jharkhand</strong>
+        <span>JPSC, JSSC और अन्य jobs</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Maharashtra</strong>
+        <span>MPSC और अन्य state government jobs</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>West Bengal</strong>
+        <span>WBPSC और अन्य government jobs</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Delhi</strong>
+        <span>Delhi Government और अन्य jobs</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Gujarat</strong>
+        <span>GPSC और अन्य state jobs</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Haryana</strong>
+        <span>HPSC और अन्य government jobs</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Punjab</strong>
+        <span>Punjab Government और अन्य jobs</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>All States</strong>
+        <span>सभी States और Union Territories देखें</span>
+      </a>
+
+    </div>
+
+  </section>
+    <!-- LATEST GOVERNMENT JOBS -->
+  <section class="section">
+
+    <div class="section-heading">
+      <h2>Latest Government Jobs</h2>
+      <p>हाल की प्रमुख सरकारी भर्तियाँ</p>
+    </div>
+
+    <div class="update-grid">
+
+      <div class="update-card">
+        <span class="status-badge">Latest</span>
+        <h3>SSC CGL</h3>
+        <p>Staff Selection Commission</p>
+        <p><strong>Qualification:</strong> Graduate</p>
+        <a href="#">View Details →</a>
       </div>
 
-      <div class="advanced-grid">
-
-        <div class="field">
-          <label>Qualification</label>
-
-          <select id="qualification">
-            <option value="all">All Qualification</option>
-            <option value="8th">8th Pass</option>
-            <option value="10th">10th Pass</option>
-            <option value="12th">12th Pass</option>
-            <option value="iti">ITI</option>
-            <option value="diploma">Diploma</option>
-            <option value="graduate">Graduate</option>
-            <option value="engineering">Engineering</option>
-            <option value="pg">Post Graduate</option>
-            <option value="medical">Medical</option>
-          </select>
-        </div>
-
-        <div class="field">
-          <label>Department</label>
-
-          <select id="department">
-            <option value="all">All Departments</option>
-            <option value="upsc">UPSC</option>
-            <option value="ssc">SSC</option>
-            <option value="railway">Railway</option>
-            <option value="banking">Banking</option>
-            <option value="defence">Defence</option>
-            <option value="police">Police</option>
-            <option value="teaching">Teaching</option>
-            <option value="psu">PSU</option>
-            <option value="health">Health</option>
-            <option value="technical">Technical</option>
-            <option value="court">Court</option>
-          </select>
-        </div>
-
-        <div class="field">
-          <label>State</label>
-
-          <select id="state">
-            <option value="all">All States</option>
-            <option value="central">Central Government</option>
-            <option value="up">Uttar Pradesh</option>
-            <option value="bihar">Bihar</option>
-            <option value="rajasthan">Rajasthan</option>
-            <option value="mp">Madhya Pradesh</option>
-            <option value="jharkhand">Jharkhand</option>
-            <option value="other">Other States</option>
-          </select>
-        </div>
-
+      <div class="update-card">
+        <span class="status-badge">Latest</span>
+        <h3>SSC CHSL</h3>
+        <p>Staff Selection Commission</p>
+        <p><strong>Qualification:</strong> 12th Pass</p>
+        <a href="#">View Details →</a>
       </div>
 
-      <button class="reset" id="resetFilters">
+      <div class="update-card">
+        <span class="status-badge">Latest</span>
+        <h3>RRB NTPC</h3>
+        <p>Railway Recruitment Board</p>
+        <p><strong>Qualification:</strong> 12th / Graduate</p>
+        <a href="#">View Details →</a>
+      </div>
+
+      <div class="update-card">
+        <span class="status-badge">Latest</span>
+        <h3>SSC GD Constable</h3>
+        <p>Staff Selection Commission</p>
+        <p><strong>Qualification:</strong> 10th Pass</p>
+        <a href="#">View Details →</a>
+      </div>
+
+      <div class="update-card">
+        <span class="status-badge">Latest</span>
+        <h3>IBPS PO</h3>
+        <p>Banking Recruitment</p>
+        <p><strong>Qualification:</strong> Graduate</p>
+        <a href="#">View Details →</a>
+      </div>
+
+      <div class="update-card">
+        <span class="status-badge">Latest</span>
+        <h3>UP Police</h3>
+        <p>Uttar Pradesh Police</p>
+        <p><strong>Qualification:</strong> 12th Pass</p>
+        <a href="#">View Details →</a>
+      </div>
+
+    </div>
+
+  </section>
+    <!-- UPCOMING GOVERNMENT EXAMS -->
+  <section class="section">
+
+    <div class="section-heading">
+      <h2>Upcoming Government Exams</h2>
+      <p>आने वाली प्रमुख सरकारी परीक्षाएँ</p>
+    </div>
+
+    <div class="update-grid">
+
+      <div class="update-card">
+        <span class="status-badge">Upcoming</span>
+        <h3>SSC CGL</h3>
+        <p>Staff Selection Commission</p>
+        <p><strong>Exam:</strong> Coming Soon</p>
+        <a href="#">Exam Details →</a>
+      </div>
+
+      <div class="update-card">
+        <span class="status-badge">Upcoming</span>
+        <h3>SSC CHSL</h3>
+        <p>Staff Selection Commission</p>
+        <p><strong>Exam:</strong> Coming Soon</p>
+        <a href="#">Exam Details →</a>
+      </div>
+
+      <div class="update-card">
+        <span class="status-badge">Upcoming</span>
+        <h3>RRB NTPC</h3>
+        <p>Railway Recruitment Board</p>
+        <p><strong>Exam:</strong> Coming Soon</p>
+        <a href="#">Exam Details →</a>
+      </div>
+
+      <div class="update-card">
+        <span class="status-badge">Upcoming</span>
+        <h3>UP Police</h3>
+        <p>Uttar Pradesh Police</p>
+        <p><strong>Exam:</strong> Coming Soon</p>
+        <a href="#">Exam Details →</a>
+      </div>
+
+      <div class="update-card">
+        <span class="status-badge">Upcoming</span>
+        <h3>IBPS PO</h3>
+        <p>Banking Recruitment</p>
+        <p><strong>Exam:</strong> Coming Soon</p>
+        <a href="#">Exam Details →</a>
+      </div>
+
+      <div class="update-card">
+        <span class="status-badge">Upcoming</span>
+        <h3>UPPSC PCS</h3>
+        <p>Uttar Pradesh Public Service Commission</p>
+        <p><strong>Exam:</strong> Coming Soon</p>
+        <a href="#">Exam Details →</a>
+      </div>
+
+    </div>
+
+  </section>
+    <!-- ADVANCED JOB FILTERS -->
+  <section class="section">
+
+    <div class="section-heading">
+      <h2>Find Your Government Job</h2>
+      <p>Qualification, department और state के अनुसार jobs filter करें</p>
+    </div>
+
+    <div class="job-filters">
+
+      <select id="qualificationFilter">
+        <option value="">All Qualifications</option>
+        <option value="8th">8th Pass</option>
+        <option value="10th">10th Pass</option>
+        <option value="12th">12th Pass</option>
+        <option value="ITI">ITI</option>
+        <option value="Diploma">Diploma</option>
+        <option value="Graduate">Graduate</option>
+        <option value="Engineering">Engineering</option>
+        <option value="Post Graduate">Post Graduate</option>
+      </select>
+
+      <select id="departmentFilter">
+        <option value="">All Departments</option>
+        <option value="SSC">SSC</option>
+        <option value="Railway">Railway</option>
+        <option value="Banking">Banking</option>
+        <option value="Defence">Defence</option>
+        <option value="Police">Police</option>
+        <option value="Teaching">Teaching</option>
+        <option value="PSU">PSU</option>
+        <option value="Health">Health</option>
+      </select>
+
+      <select id="stateFilter">
+        <option value="">All States</option>
+        <option value="Uttar Pradesh">Uttar Pradesh</option>
+        <option value="Bihar">Bihar</option>
+        <option value="Rajasthan">Rajasthan</option>
+        <option value="Madhya Pradesh">Madhya Pradesh</option>
+        <option value="Jharkhand">Jharkhand</option>
+        <option value="Delhi">Delhi</option>
+        <option value="Maharashtra">Maharashtra</option>
+        <option value="All India">All India</option>
+      </select>
+
+      <select id="jobTypeFilter">
+        <option value="">All Job Types</option>
+        <option value="Police">Police</option>
+        <option value="Defence">Defence</option>
+        <option value="Railway">Railway</option>
+        <option value="Banking">Banking</option>
+        <option value="Teaching">Teaching</option>
+        <option value="Clerk">Clerk</option>
+        <option value="Technical">Technical</option>
+        <option value="Medical">Medical</option>
+      </select>
+
+      <button type="button" id="resetJobFilters">
         Reset Filters
       </button>
 
     </div>
 
-  </div>
+    <div id="filteredJobs" class="update-grid">
+
+      <div class="update-card">
+        <h3>Search results will appear here</h3>
+        <p>
+          ऊपर दिए गए filters चुनकर अपनी qualification
+          और preference के अनुसार jobs खोजें।
+        </p>
+      </div>
 
-  <div class="section-head">
-    <h2>All Government Exams</h2>
-    <p id="resultCount">Government recruitment directory</p>
-  </div>
-
-  <div class="exam-grid" id="examGrid">
-
-    <!-- PART 2 YAHAN SE START HOGA -->
-    <!-- PART 2 : UPSC + SSC -->
-
-<article class="exam-card"
- data-category="central"
- data-department="upsc"
- data-state="central"
- data-qualification="graduate"
- data-name="UPSC Civil Services CSE">
-
-<span class="exam-tag">UPSC</span>
-<h3>Civil Services Examination</h3>
-<p>IAS, IPS, IFS और अन्य Group A/B सेवाओं के लिए प्रमुख UPSC परीक्षा।</p>
-
-<div class="meta">
-<span>Graduate</span>
-<span>Central Govt</span>
-<span>Group A/B</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="central"
- data-department="upsc"
- data-state="central"
- data-qualification="12th"
- data-name="UPSC NDA NA">
-
-<span class="exam-tag">UPSC</span>
-<h3>NDA & NA</h3>
-<p>Army, Navy और Air Force में Officer Entry के लिए राष्ट्रीय रक्षा अकादमी परीक्षा।</p>
-
-<div class="meta">
-<span>12th Pass</span>
-<span>Defence</span>
-<span>Officer Entry</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="central"
- data-department="upsc"
- data-state="central"
- data-qualification="graduate"
- data-name="UPSC CDS">
-
-<span class="exam-tag">UPSC</span>
-<h3>CDS</h3>
-<p>Indian Military Academy, Naval Academy, Air Force Academy और OTA में Officer Entry।</p>
-
-<div class="meta">
-<span>Graduate</span>
-<span>Defence</span>
-<span>Officer Entry</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="central"
- data-department="upsc"
- data-state="central"
- data-qualification="graduate"
- data-name="UPSC CAPF AC">
-
-<span class="exam-tag">UPSC</span>
-<h3>CAPF Assistant Commandant</h3>
-<p>BSF, CRPF, CISF, ITBP और SSB में Assistant Commandant भर्ती।</p>
-
-<div class="meta">
-<span>Graduate</span>
-<span>CAPF</span>
-<span>Officer</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="central"
- data-department="upsc"
- data-state="central"
- data-qualification="engineering"
- data-name="UPSC Engineering Services">
-
-<span class="exam-tag">UPSC</span>
-<h3>Engineering Services</h3>
-<p>Central Government engineering services में Group A technical recruitment।</p>
-
-<div class="meta">
-<span>Engineering</span>
-<span>Group A</span>
-<span>Technical</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="central"
- data-department="upsc"
- data-state="central"
- data-qualification="medical"
- data-name="UPSC Combined Medical Services">
-
-<span class="exam-tag">UPSC</span>
-<h3>Combined Medical Services</h3>
-<p>Medical officers और Central Government medical services के लिए भर्ती।</p>
-
-<div class="meta">
-<span>Medical</span>
-<span>Group A/B</span>
-<span>Central Govt</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="central"
- data-department="upsc"
- data-state="central"
- data-qualification="graduate"
- data-name="UPSC IES ISS">
-
-<span class="exam-tag">UPSC</span>
-<h3>IES / ISS</h3>
-<p>Indian Economic Service और Indian Statistical Service के लिए भर्ती।</p>
-
-<div class="meta">
-<span>Graduate/PG</span>
-<span>Central Govt</span>
-<span>Group A</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="central"
- data-department="ssc"
- data-state="central"
- data-qualification="graduate"
- data-name="SSC CGL">
-
-<span class="exam-tag">SSC</span>
-<h3>SSC CGL</h3>
-<p>Central Government के विभिन्न Group B और Group C पदों की भर्ती।</p>
-
-<div class="meta">
-<span>Graduate</span>
-<span>Group B/C</span>
-<span>Central Govt</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="central"
- data-department="ssc"
- data-state="central"
- data-qualification="12th"
- data-name="SSC CHSL">
-
-<span class="exam-tag">SSC</span>
-<h3>SSC CHSL</h3>
-<p>LDC, JSA और DEO जैसे Central Government posts के लिए भर्ती परीक्षा।</p>
-
-<div class="meta">
-<span>12th Pass</span>
-<span>Group C</span>
-<span>Central Govt</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="central"
- data-department="ssc"
- data-state="central"
- data-qualification="10th"
- data-name="SSC MTS Havaldar">
-
-<span class="exam-tag">SSC</span>
-<h3>SSC MTS / Havaldar</h3>
-<p>Central Government offices में Multi Tasking Staff और Havaldar भर्ती।</p>
-
-<div class="meta">
-<span>10th Pass</span>
-<span>Group C</span>
-<span>Central Govt</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="central"
- data-department="ssc"
- data-state="central"
- data-qualification="10th"
- data-name="SSC GD Constable">
-
-<span class="exam-tag">SSC</span>
-<h3>SSC GD Constable</h3>
-<p>CAPFs और Assam Rifles में Constable GD भर्ती परीक्षा।</p>
-
-<div class="meta">
-<span>10th Pass</span>
-<span>Police/CAPF</span>
-<span>Constable</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="central"
- data-department="ssc"
- data-state="central"
- data-qualification="graduate"
- data-name="SSC CPO">
-
-<span class="exam-tag">SSC</span>
-<h3>SSC CPO</h3>
-<p>Delhi Police और CAPFs में Sub-Inspector भर्ती के लिए परीक्षा।</p>
-
-<div class="meta">
-<span>Graduate</span>
-<span>SI</span>
-<span>Police/CAPF</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="central"
- data-department="ssc"
- data-state="central"
- data-qualification="diploma"
- data-name="SSC Junior Engineer">
-
-<span class="exam-tag">SSC</span>
-<h3>SSC Junior Engineer</h3>
-<p>Civil, Electrical और Mechanical engineering posts के लिए भर्ती।</p>
-
-<div class="meta">
-<span>Diploma/Engineering</span>
-<span>Technical</span>
-<span>Group B</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="central"
- data-department="ssc"
- data-state="central"
- data-qualification="12th"
- data-name="SSC Stenographer">
-
-<span class="exam-tag">SSC</span>
-<h3>SSC Stenographer C & D</h3>
-<p>Central Government departments में Stenographer Grade C और D भर्ती।</p>
-
-<div class="meta">
-<span>12th Pass</span>
-<span>Stenographer</span>
-<span>Group C/D</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="central"
- data-department="ssc"
- data-state="central"
- data-qualification="12th"
- data-name="SSC JHT">
-
-<span class="exam-tag">SSC</span>
-<h3>SSC JHT</h3>
-<p>Junior Hindi Translator और संबंधित language posts के लिए भर्ती।</p>
-
-<div class="meta">
-<span>Graduate/PG</span>
-<span>Language</span>
-<span>Central Govt</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="central"
- data-department="ssc"
- data-state="central"
- data-qualification="10th"
- data-name="SSC Selection Post">
-
-<span class="exam-tag">SSC</span>
-<h3>SSC Selection Post</h3>
-<p>विभिन्न Central Government departments में अलग-अलग qualification वाले posts।</p>
-
-<div class="meta">
-<span>10th/12th/Graduate</span>
-<span>Various Posts</span>
-<span>Central Govt</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-<!-- PART 3 : RAILWAY + BANKING -->
-
-<article class="exam-card"
- data-category="railway"
- data-department="railway"
- data-state="central"
- data-qualification="12th,graduate"
- data-name="Railway NTPC">
-
-<span class="exam-tag">RAILWAY</span>
-<h3>RRB NTPC</h3>
-<p>Indian Railways में Graduate और Undergraduate level के विभिन्न posts।</p>
-
-<div class="meta">
-<span>12th/Graduate</span>
-<span>Railway</span>
-<span>Central Govt</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="railway"
- data-department="railway"
- data-state="central"
- data-qualification="10th"
- data-name="Railway Group D">
-
-<span class="exam-tag">RAILWAY</span>
-<h3>RRB Group D</h3>
-<p>Indian Railways में Level-1 posts के लिए recruitment examination।</p>
-
-<div class="meta">
-<span>10th/ITI</span>
-<span>Level 1</span>
-<span>Railway</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="railway"
- data-department="railway"
- data-state="central"
- data-qualification="12th,iti"
- data-name="Railway ALP">
-
-<span class="exam-tag">RAILWAY</span>
-<h3>RRB ALP</h3>
-<p>Assistant Loco Pilot के technical posts के लिए Railway recruitment।</p>
-
-<div class="meta">
-<span>ITI/Diploma</span>
-<span>Technical</span>
-<span>Railway</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="railway"
- data-department="railway"
- data-state="central"
- data-qualification="iti,diploma"
- data-name="Railway Technician">
-
-<span class="exam-tag">RAILWAY</span>
-<h3>RRB Technician</h3>
-<p>Railway के technical और maintenance posts के लिए recruitment।</p>
-
-<div class="meta">
-<span>ITI/Diploma</span>
-<span>Technical</span>
-<span>Railway</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="railway"
- data-department="railway"
- data-state="central"
- data-qualification="diploma,engineering"
- data-name="Railway Junior Engineer">
-
-<span class="exam-tag">RAILWAY</span>
-<h3>RRB Junior Engineer</h3>
-<p>Civil, Electrical, Mechanical और अन्य technical departments में JE posts।</p>
-
-<div class="meta">
-<span>Diploma/Engineering</span>
-<span>Technical</span>
-<span>Railway</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="railway"
- data-department="railway"
- data-state="central"
- data-qualification="medical"
- data-name="Railway Paramedical">
-
-<span class="exam-tag">RAILWAY</span>
-<h3>RRB Paramedical</h3>
-<p>Railway hospitals और medical departments में विभिन्न healthcare posts।</p>
-
-<div class="meta">
-<span>Medical</span>
-<span>Paramedical</span>
-<span>Railway</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="railway"
- data-department="railway"
- data-state="central"
- data-qualification="12th,graduate"
- data-name="Railway Ministerial Isolated">
-
-<span class="exam-tag">RAILWAY</span>
-<h3>Ministerial & Isolated Categories</h3>
-<p>Railway के teaching, stenography और अन्य specialised posts।</p>
-
-<div class="meta">
-<span>12th/Graduate</span>
-<span>Various Posts</span>
-<span>Railway</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="railway"
- data-department="railway"
- data-state="central"
- data-qualification="10th,iti"
- data-name="RRC Apprentice">
-
-<span class="exam-tag">RAILWAY</span>
-<h3>RRC Apprentice</h3>
-<p>Railway zones और workshops में apprenticeship opportunities।</p>
-
-<div class="meta">
-<span>10th/ITI</span>
-<span>Apprentice</span>
-<span>Railway</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="banking"
- data-department="banking"
- data-state="central"
- data-qualification="graduate"
- data-name="IBPS PO">
-
-<span class="exam-tag">BANKING</span>
-<h3>IBPS PO</h3>
-<p>Public Sector Banks में Probationary Officer / Management Trainee recruitment।</p>
-
-<div class="meta">
-<span>Graduate</span>
-<span>Banking</span>
-<span>Officer</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="banking"
- data-department="banking"
- data-state="central"
- data-qualification="graduate"
- data-name="IBPS Clerk CSA">
-
-<span class="exam-tag">BANKING</span>
-<h3>IBPS Clerk / CSA</h3>
-<p>Participating Public Sector Banks में clerical customer service posts।</p>
-
-<div class="meta">
-<span>Graduate</span>
-<span>Banking</span>
-<span>Clerical</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="banking"
- data-department="banking"
- data-state="central"
- data-qualification="graduate,pg"
- data-name="IBPS SO">
-
-<span class="exam-tag">BANKING</span>
-<h3>IBPS SO</h3>
-<p>IT, Agriculture, Law, HR, Marketing और अन्य specialist officer posts।</p>
-
-<div class="meta">
-<span>Graduate/PG</span>
-<span>Specialist</span>
-<span>Banking</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="banking"
- data-department="banking"
- data-state="central"
- data-qualification="graduate"
- data-name="IBPS RRB">
-
-<span class="exam-tag">BANKING</span>
-<h3>IBPS RRB</h3>
-<p>Regional Rural Banks में Officer और Office Assistant recruitment।</p>
-
-<div class="meta">
-<span>Graduate</span>
-<span>RRB Banking</span>
-<span>Officer/Assistant</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="banking"
- data-department="banking"
- data-state="central"
- data-qualification="graduate"
- data-name="SBI PO">
-
-<span class="exam-tag">SBI</span>
-<h3>SBI PO</h3>
-<p>State Bank of India में Probationary Officer recruitment examination।</p>
-
-<div class="meta">
-<span>Graduate</span>
-<span>Officer</span>
-<span>Banking</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="banking"
- data-department="banking"
- data-state="central"
- data-qualification="graduate"
- data-name="SBI Clerk">
-
-<span class="exam-tag">SBI</span>
-<h3>SBI Clerk</h3>
-<p>Junior Associate के रूप में customer support और clerical banking work।</p>
-
-<div class="meta">
-<span>Graduate</span>
-<span>Clerical</span>
-<span>Banking</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="banking"
- data-department="banking"
- data-state="central"
- data-qualification="graduate"
- data-name="RBI Grade B">
-
-<span class="exam-tag">RBI</span>
-<h3>RBI Grade B</h3>
-<p>Reserve Bank of India में Officer Grade B recruitment examination।</p>
-
-<div class="meta">
-<span>Graduate</span>
-<span>Officer</span>
-<span>RBI</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="banking"
- data-department="banking"
- data-state="central"
- data-qualification="graduate"
- data-name="RBI Assistant">
-
-<span class="exam-tag">RBI</span>
-<h3>RBI Assistant</h3>
-<p>Reserve Bank of India में Assistant level recruitment।</p>
-
-<div class="meta">
-<span>Graduate</span>
-<span>Assistant</span>
-<span>Banking</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-<!-- PART 4 : DEFENCE + POLICE/CAPF -->
-
-<article class="exam-card"
- data-category="defence"
- data-department="defence"
- data-state="central"
- data-qualification="10th"
- data-name="Indian Army Agniveer">
-
-<span class="exam-tag">ARMY</span>
-<h3>Indian Army Agniveer</h3>
-<p>Indian Army में Agniveer के विभिन्न categories में recruitment।</p>
-
-<div class="meta">
-<span>10th/12th</span>
-<span>Defence</span>
-<span>Agniveer</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="defence"
- data-department="defence"
- data-state="central"
- data-qualification="12th,graduate"
- data-name="Indian Army Officer Entry">
-
-<span class="exam-tag">ARMY</span>
-<h3>Indian Army Officer Entry</h3>
-<p>NDA, CDS और अन्य entries के माध्यम से Officer बनने के अवसर।</p>
-
-<div class="meta">
-<span>12th/Graduate</span>
-<span>Officer</span>
-<span>Defence</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="defence"
- data-department="defence"
- data-state="central"
- data-qualification="10th,12th"
- data-name="Indian Navy Agniveer">
-
-<span class="exam-tag">NAVY</span>
-<h3>Indian Navy Agniveer</h3>
-<p>Indian Navy में Agniveer SSR और MR जैसी recruitment opportunities।</p>
-
-<div class="meta">
-<span>10th/12th</span>
-<span>Navy</span>
-<span>Agniveer</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="defence"
- data-department="defence"
- data-state="central"
- data-qualification="12th,graduate"
- data-name="Indian Navy Officer Entry">
-
-<span class="exam-tag">NAVY</span>
-<h3>Indian Navy Officer Entry</h3>
-<p>Indian Navy में विभिन्न Officer Entry schemes और recruitment।</p>
-
-<div class="meta">
-<span>12th/Graduate</span>
-<span>Officer</span>
-<span>Navy</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="defence"
- data-department="defence"
- data-state="central"
- data-qualification="12th"
- data-name="Air Force Agniveer Vayu">
-
-<span class="exam-tag">AIR FORCE</span>
-<h3>Agniveer Vayu</h3>
-<p>Indian Air Force में Agniveervayu recruitment और selection process।</p>
-
-<div class="meta">
-<span>12th Pass</span>
-<span>Air Force</span>
-<span>Agniveer</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="defence"
- data-department="defence"
- data-state="central"
- data-qualification="graduate"
- data-name="AFCAT">
-
-<span class="exam-tag">AIR FORCE</span>
-<h3>AFCAT</h3>
-<p>Indian Air Force में Flying और Ground Duty branches के लिए Officer Entry।</p>
-
-<div class="meta">
-<span>Graduate</span>
-<span>Officer</span>
-<span>Air Force</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="defence"
- data-department="defence"
- data-state="central"
- data-qualification="12th,graduate"
- data-name="Indian Coast Guard">
-
-<span class="exam-tag">ICG</span>
-<h3>Indian Coast Guard</h3>
-<p>Indian Coast Guard में Navik, Yantrik और अन्य recruitment opportunities।</p>
-
-<div class="meta">
-<span>12th/Graduate</span>
-<span>Coast Guard</span>
-<span>Defence</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="defence"
- data-department="defence"
- data-state="central"
- data-qualification="diploma,engineering"
- data-name="DRDO Recruitment">
-
-<span class="exam-tag">DRDO</span>
-<h3>DRDO Recruitment</h3>
-<p>Defence Research and Development Organisation में technical और non-technical jobs।</p>
-
-<div class="meta">
-<span>Diploma/Engineering</span>
-<span>Research</span>
-<span>Defence</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="police"
- data-department="police"
- data-state="central"
- data-qualification="10th"
- data-name="CRPF Recruitment">
-
-<span class="exam-tag">CAPF</span>
-<h3>CRPF Recruitment</h3>
-<p>Central Reserve Police Force में Constable से लेकर विभिन्न posts की भर्ती।</p>
-
-<div class="meta">
-<span>10th/12th/Graduate</span>
-<span>CAPF</span>
-<span>Police</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="police"
- data-department="police"
- data-state="central"
- data-qualification="10th"
- data-name="BSF Recruitment">
-
-<span class="exam-tag">CAPF</span>
-<h3>BSF Recruitment</h3>
-<p>Border Security Force में Constable, Head Constable और अन्य posts।</p>
-
-<div class="meta">
-<span>10th/12th/Graduate</span>
-<span>CAPF</span>
-<span>Defence</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="police"
- data-department="police"
- data-state="central"
- data-qualification="10th"
- data-name="CISF Recruitment">
-
-<span class="exam-tag">CAPF</span>
-<h3>CISF Recruitment</h3>
-<p>Central Industrial Security Force में विभिन्न security और technical posts।</p>
-
-<div class="meta">
-<span>10th/12th/Graduate</span>
-<span>CAPF</span>
-<span>Security</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="police"
- data-department="police"
- data-state="central"
- data-qualification="10th"
- data-name="ITBP Recruitment">
-
-<span class="exam-tag">CAPF</span>
-<h3>ITBP Recruitment</h3>
-<p>Indo-Tibetan Border Police Force में विभिन्न पदों पर भर्ती।</p>
-
-<div class="meta">
-<span>10th/12th/Graduate</span>
-<span>CAPF</span>
-<span>Border Force</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="police"
- data-department="police"
- data-state="central"
- data-qualification="10th"
- data-name="SSB Recruitment">
-
-<span class="exam-tag">CAPF</span>
-<h3>SSB Recruitment</h3>
-<p>Sashastra Seema Bal में Constable और अन्य categories की recruitment।</p>
-
-<div class="meta">
-<span>10th/12th/Graduate</span>
-<span>CAPF</span>
-<span>Security</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="police"
- data-department="police"
- data-state="central"
- data-qualification="10th,12th,graduate"
- data-name="Assam Rifles Recruitment">
-
-<span class="exam-tag">DEFENCE</span>
-<h3>Assam Rifles Recruitment</h3>
-<p>Assam Rifles में Rifleman, Technical और अन्य recruitment opportunities।</p>
-
-<div class="meta">
-<span>10th/12th/Graduate</span>
-<span>Defence</span>
-<span>Rifles</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-<!-- PART 5 : TEACHING + PSU + COURT + UNIVERSITY + HEALTH -->
-
-<article class="exam-card"
- data-category="teaching"
- data-department="teaching"
- data-state="central"
- data-qualification="12th,graduate"
- data-name="CTET">
-
-<span class="exam-tag">TEACHING</span>
-<h3>CTET</h3>
-<p>Central Government schools में teaching eligibility के लिए Central Teacher Eligibility Test।</p>
-
-<div class="meta">
-<span>12th/Graduate</span>
-<span>Teacher</span>
-<span>Central</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="teaching"
- data-department="teaching"
- data-state="central"
- data-qualification="graduate,pg"
- data-name="KVS Recruitment">
-
-<span class="exam-tag">TEACHING</span>
-<h3>KVS Recruitment</h3>
-<p>Kendriya Vidyalaya Sangathan में teaching और non-teaching posts।</p>
-
-<div class="meta">
-<span>Graduate/PG</span>
-<span>Teaching</span>
-<span>Central</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="teaching"
- data-department="teaching"
- data-state="central"
- data-qualification="graduate,pg"
- data-name="NVS Recruitment">
-
-<span class="exam-tag">TEACHING</span>
-<h3>NVS Recruitment</h3>
-<p>Navodaya Vidyalaya Samiti में teaching और administrative posts।</p>
-
-<div class="meta">
-<span>Graduate/PG</span>
-<span>Teaching</span>
-<span>Central</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="teaching"
- data-department="teaching"
- data-state="state"
- data-qualification="graduate"
- data-name="State TET">
-
-<span class="exam-tag">TEACHING</span>
-<h3>State TET</h3>
-<p>अलग-अलग राज्यों में teacher eligibility और teaching recruitment का प्रमुख रास्ता।</p>
-
-<div class="meta">
-<span>Graduate</span>
-<span>Teacher</span>
-<span>State Govt</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="teaching"
- data-department="teaching"
- data-state="delhi"
- data-qualification="12th,graduate"
- data-name="DSSSB">
-
-<span class="exam-tag">TEACHING</span>
-<h3>DSSSB Recruitment</h3>
-<p>Delhi Government departments में teaching और अन्य विभिन्न posts।</p>
-
-<div class="meta">
-<span>12th/Graduate</span>
-<span>Delhi Govt</span>
-<span>Various Posts</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="psu"
- data-department="psu"
- data-state="central"
- data-qualification="diploma,engineering,graduate"
- data-name="ONGC Recruitment">
-
-<span class="exam-tag">PSU</span>
-<h3>ONGC Recruitment</h3>
-<p>Oil and Natural Gas Corporation में technical और non-technical career opportunities।</p>
-
-<div class="meta">
-<span>Diploma/Graduate</span>
-<span>Engineering</span>
-<span>PSU</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="psu"
- data-department="psu"
- data-state="central"
- data-qualification="diploma,engineering,graduate"
- data-name="NTPC Recruitment">
-
-<span class="exam-tag">PSU</span>
-<h3>NTPC Recruitment</h3>
-<p>Power sector में engineering, technical और executive level opportunities।</p>
-
-<div class="meta">
-<span>Diploma/Graduate</span>
-<span>Engineering</span>
-<span>PSU</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="psu"
- data-department="psu"
- data-state="central"
- data-qualification="iti,diploma,engineering"
- data-name="BHEL Recruitment">
-
-<span class="exam-tag">PSU</span>
-<h3>BHEL Recruitment</h3>
-<p>Bharat Heavy Electricals Limited में technical और engineering opportunities।</p>
-
-<div class="meta">
-<span>ITI/Diploma/Engineering</span>
-<span>Technical</span>
-<span>PSU</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="psu"
- data-department="psu"
- data-state="central"
- data-qualification="iti,diploma,engineering,graduate"
- data-name="SAIL Recruitment">
-
-<span class="exam-tag">PSU</span>
-<h3>SAIL Recruitment</h3>
-<p>Steel Authority of India Limited में technical और administrative posts।</p>
-
-<div class="meta">
-<span>ITI/Diploma/Graduate</span>
-<span>Technical</span>
-<span>PSU</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="psu"
- data-department="psu"
- data-state="central"
- data-qualification="iti,diploma,engineering,graduate"
- data-name="IOCL Recruitment">
-
-<span class="exam-tag">PSU</span>
-<h3>IOCL Recruitment</h3>
-<p>Indian Oil Corporation में apprentice, technical और officer level opportunities।</p>
-
-<div class="meta">
-<span>ITI/Diploma/Graduate</span>
-<span>Oil & Energy</span>
-<span>PSU</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="court"
- data-department="court"
- data-state="central"
- data-qualification="10th,12th,graduate"
- data-name="Supreme Court Recruitment">
-
-<span class="exam-tag">COURT</span>
-<h3>Supreme Court Recruitment</h3>
-<p>Supreme Court of India में विभिन्न administrative और support posts।</p>
-
-<div class="meta">
-<span>10th/12th/Graduate</span>
-<span>Judiciary</span>
-<span>Central</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="court"
- data-department="court"
- data-state="up"
- data-qualification="10th,12th,graduate"
- data-name="Allahabad High Court">
-
-<span class="exam-tag">COURT</span>
-<h3>Allahabad High Court</h3>
-<p>Uttar Pradesh High Court में Clerk, Stenographer और अन्य posts।</p>
-
-<div class="meta">
-<span>10th/12th/Graduate</span>
-<span>UP Govt</span>
-<span>Court</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="court"
- data-department="court"
- data-state="bihar"
- data-qualification="10th,12th,graduate"
- data-name="Patna High Court">
-
-<span class="exam-tag">COURT</span>
-<h3>Patna High Court</h3>
-<p>Bihar High Court में विभिन्न clerical, technical और administrative recruitment।</p>
-
-<div class="meta">
-<span>10th/12th/Graduate</span>
-<span>Bihar</span>
-<span>Court</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="university"
- data-department="university"
- data-state="other"
- data-qualification="graduate,pg"
- data-name="University Recruitment">
-
-<span class="exam-tag">UNIVERSITY</span>
-<h3>University Recruitment</h3>
-<p>Central और State Universities में teaching, non-teaching और research vacancies।</p>
-
-<div class="meta">
-<span>Graduate/PG</span>
-<span>University</span>
-<span>Research</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="university"
- data-department="university"
- data-state="central"
- data-qualification="pg"
- data-name="CSIR NET">
-
-<span class="exam-tag">RESEARCH</span>
-<h3>CSIR NET</h3>
-<p>Science subjects में Junior Research Fellowship और Lectureship eligibility examination।</p>
-
-<div class="meta">
-<span>Post Graduate</span>
-<span>Research</span>
-<span>Science</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="university"
- data-department="university"
- data-state="central"
- data-qualification="pg"
- data-name="UGC NET">
-
-<span class="exam-tag">RESEARCH</span>
-<h3>UGC NET</h3>
-<p>Assistant Professor और research eligibility के लिए National Eligibility Test।</p>
-
-<div class="meta">
-<span>Post Graduate</span>
-<span>Research</span>
-<span>Teaching</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="health"
- data-department="health"
- data-state="central"
- data-qualification="graduate,medical"
- data-name="AIIMS Recruitment">
-
-<span class="exam-tag">HEALTH</span>
-<h3>AIIMS Recruitment</h3>
-<p>AIIMS institutions में medical, nursing, technical और administrative posts।</p>
-
-<div class="meta">
-<span>Medical/Graduate</span>
-<span>Healthcare</span>
-<span>Central</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="health"
- data-department="health"
- data-state="central"
- data-qualification="10th,12th,graduate,medical"
- data-name="ESIC Recruitment">
-
-<span class="exam-tag">HEALTH</span>
-<h3>ESIC Recruitment</h3>
-<p>Employees' State Insurance Corporation में medical और administrative posts।</p>
-
-<div class="meta">
-<span>10th/12th/Graduate</span>
-<span>Medical</span>
-<span>Central</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-
-<article class="exam-card"
- data-category="health"
- data-department="health"
- data-state="state"
- data-qualification="10th,12th,graduate,medical"
- data-name="NHM Recruitment">
-
-<span class="exam-tag">HEALTH</span>
-<h3>NHM Recruitment</h3>
-<p>National Health Mission के तहत अलग-अलग राज्यों में healthcare vacancies।</p>
-
-<div class="meta">
-<span>Various Qualification</span>
-<span>Healthcare</span>
-<span>State/Central</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-<!-- PART 6 : AGRICULTURE + STATE + OTHER -->
-
-<article class="exam-card"
- data-category="state"
- data-department="agriculture"
- data-state="up"
- data-qualification="10th,12th,graduate"
- data-name="Agriculture Department">
-
-<span class="exam-tag">AGRICULTURE</span>
-<h3>Agriculture Department Jobs</h3>
-<p>कृषि विभाग में technical, field और administrative posts की भर्ती।</p>
-
-<div class="meta">
-<span>10th/12th/Graduate</span>
-<span>Agriculture</span>
-<span>State Govt</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-<article class="exam-card"
- data-category="central"
- data-department="agriculture"
- data-state="central"
- data-qualification="graduate,pg"
- data-name="ICAR Recruitment">
-
-<span class="exam-tag">AGRICULTURE</span>
-<h3>ICAR Recruitment</h3>
-<p>Indian Council of Agricultural Research में research और technical opportunities।</p>
-
-<div class="meta">
-<span>Graduate/PG</span>
-<span>Research</span>
-<span>Central</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-<article class="exam-card"
- data-category="state"
- data-department="state"
- data-state="up"
- data-qualification="graduate"
- data-name="UPPSC">
-
-<span class="exam-tag">UTTAR PRADESH</span>
-<h3>UPPSC</h3>
-<p>Uttar Pradesh Public Service Commission की विभिन्न भर्ती परीक्षाएँ।</p>
-
-<div class="meta">
-<span>Graduate</span>
-<span>UP Govt</span>
-<span>PSC</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-<article class="exam-card"
- data-category="state"
- data-department="state"
- data-state="up"
- data-qualification="12th,graduate"
- data-name="UPSSSC">
-
-<span class="exam-tag">UTTAR PRADESH</span>
-<h3>UPSSSC</h3>
-<p>उत्तर प्रदेश में विभिन्न Group C और subordinate services recruitment।</p>
-
-<div class="meta">
-<span>12th/Graduate</span>
-<span>UP Govt</span>
-<span>Group C</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-<article class="exam-card"
- data-category="police"
- data-department="police"
- data-state="up"
- data-qualification="12th,graduate"
- data-name="UP Police">
-
-<span class="exam-tag">POLICE</span>
-<h3>UP Police Recruitment</h3>
-<p>Uttar Pradesh Police में Constable, SI और अन्य posts की भर्ती।</p>
-
-<div class="meta">
-<span>12th/Graduate</span>
-<span>UP Police</span>
-<span>Uniform Job</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-<article class="exam-card"
- data-category="state"
- data-department="state"
- data-state="bihar"
- data-qualification="graduate"
- data-name="BPSC">
-
-<span class="exam-tag">BIHAR</span>
-<h3>BPSC</h3>
-<p>Bihar Public Service Commission की विभिन्न competitive examinations।</p>
-
-<div class="meta">
-<span>Graduate</span>
-<span>Bihar Govt</span>
-<span>PSC</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-<article class="exam-card"
- data-category="police"
- data-department="police"
- data-state="bihar"
- data-qualification="12th,graduate"
- data-name="Bihar Police">
-
-<span class="exam-tag">POLICE</span>
-<h3>Bihar Police</h3>
-<p>Bihar Police में Constable, SI और अन्य recruitment opportunities।</p>
-
-<div class="meta">
-<span>12th/Graduate</span>
-<span>Bihar Police</span>
-<span>Uniform Job</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-<article class="exam-card"
- data-category="state"
- data-department="state"
- data-state="mp"
- data-qualification="graduate"
- data-name="MPPSC">
-
-<span class="exam-tag">MADHYA PRADESH</span>
-<h3>MPPSC</h3>
-<p>Madhya Pradesh Public Service Commission की प्रमुख examinations।</p>
-
-<div class="meta">
-<span>Graduate</span>
-<span>MP Govt</span>
-<span>PSC</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-<article class="exam-card"
- data-category="state"
- data-department="state"
- data-state="rajasthan"
- data-qualification="graduate"
- data-name="RPSC">
-
-<span class="exam-tag">RAJASTHAN</span>
-<h3>RPSC</h3>
-<p>Rajasthan Public Service Commission की विभिन्न government examinations।</p>
-
-<div class="meta">
-<span>Graduate</span>
-<span>Rajasthan Govt</span>
-<span>PSC</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-<article class="exam-card"
- data-category="state"
- data-department="state"
- data-state="jharkhand"
- data-qualification="graduate"
- data-name="JPSC">
-
-<span class="exam-tag">JHARKHAND</span>
-<h3>JPSC</h3>
-<p>Jharkhand Public Service Commission की भर्ती परीक्षाएँ और posts।</p>
-
-<div class="meta">
-<span>Graduate</span>
-<span>Jharkhand Govt</span>
-<span>PSC</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-<article class="exam-card"
- data-category="police"
- data-department="police"
- data-state="other"
- data-qualification="12th,graduate"
- data-name="State Police Constable">
-
-<span class="exam-tag">POLICE</span>
-<h3>State Police Constable</h3>
-<p>विभिन्न राज्यों की Police Constable भर्ती और recruitment updates।</p>
-
-<div class="meta">
-<span>12th/Graduate</span>
-<span>Police</span>
-<span>State Govt</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-<article class="exam-card"
- data-category="police"
- data-department="police"
- data-state="other"
- data-qualification="graduate"
- data-name="State Police SI">
-
-<span class="exam-tag">POLICE</span>
-<h3>State Police SI</h3>
-<p>अलग-अलग राज्यों में Sub Inspector और equivalent police posts।</p>
-
-<div class="meta">
-<span>Graduate</span>
-<span>SI</span>
-<span>State Govt</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-<article class="exam-card"
- data-category="state"
- data-department="forest"
- data-state="other"
- data-qualification="12th,graduate"
- data-name="Forest Department">
-
-<span class="exam-tag">FOREST</span>
-<h3>Forest Department Jobs</h3>
-<p>Forest Guard, Forester और अन्य वन विभाग की recruitment opportunities।</p>
-
-<div class="meta">
-<span>12th/Graduate</span>
-<span>Forest</span>
-<span>State Govt</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-<article class="exam-card"
- data-category="central"
- data-department="forest"
- data-state="central"
- data-qualification="graduate"
- data-name="Indian Forest Service">
-
-<span class="exam-tag">UPSC</span>
-<h3>Indian Forest Service</h3>
-<p>UPSC के माध्यम से Indian Forest Service में Officer recruitment।</p>
-
-<div class="meta">
-<span>Graduate</span>
-<span>Group A</span>
-<span>Forest</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-<article class="exam-card"
- data-category="state"
- data-department="power"
- data-state="other"
- data-qualification="iti,diploma,engineering"
- data-name="Electricity Department">
-
-<span class="exam-tag">POWER</span>
-<h3>Electricity Department</h3>
-<p>State electricity departments में technical और field level jobs।</p>
-
-<div class="meta">
-<span>ITI/Diploma</span>
-<span>Technical</span>
-<span>Power</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-<article class="exam-card"
- data-category="state"
- data-department="power"
- data-state="up"
- data-qualification="iti,diploma,engineering"
- data-name="Power Corporation Jobs">
-
-<span class="exam-tag">POWER</span>
-<h3>Power Corporation Jobs</h3>
-<p>Power Corporation में technician, JE और अन्य technical opportunities।</p>
-
-<div class="meta">
-<span>ITI/Diploma/Engineering</span>
-<span>Technical</span>
-<span>State PSU</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-
-<article class="exam-card"
- data-category="state"
- data-department="transport"
- data-state="other"
- data-qualification="10th,12th,graduate"
- data-name="State Transport">
-
-<span class="exam-tag">TRANSPORT</span>
-<h3>State Transport Jobs</h3>
-<p>State Road Transport departments और corporations में विभिन्न posts।</p>
-
-<div class="meta">
-<span>10th/12th/Graduate</span>
-<span>Transport</span>
-<span>State Govt</span>
-</div>
-
-<div class="card-actions">
-<a href="#" class="details">View Details</a>
-<a href="#" class="official">Official Site</a>
-</div>
-</article>
-<!-- PART 7 : RESULT AREA -->
-
-<div id="resultInfo"
-style="
-margin:24px 0 16px;
-padding:14px 16px;
-background:#f8fafc;
-border:1px solid #e2e8f0;
-border-radius:12px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:12px;
-flex-wrap:wrap;
-">
-
-<div>
-<strong id="visibleCount">0</strong>
-<span style="color:#64748b;font-size:13px;">
- Government Exams दिख रहे हैं
-</span>
-</div>
-
-<span style="
-font-size:12px;
-color:#0f766e;
-background:#ccfbf1;
-padding:6px 10px;
-border-radius:20px;
-font-weight:700;
-">
-Updated Directory
-</span>
-
-</div>
-
-
-<div id="noResults"
-style="
-display:none;
-text-align:center;
-padding:40px 20px;
-background:#fff;
-border:1px solid #e2e8f0;
-border-radius:16px;
-margin-bottom:25px;
-">
-
-<div style="font-size:38px;margin-bottom:10px;">🔎</div>
-
-<h3 style="margin-bottom:7px;">
-No Government Exam Found
-</h3>
-
-<p style="
-color:#64748b;
-font-size:14px;
-max-width:480px;
-margin:auto;
-">
-आपके search या selected filters के अनुसार
-कोई exam नहीं मिला। Filters reset करके दोबारा देखें।
-</p>
-
-<button
-id="emptyReset"
-type="button"
-style="
-margin-top:18px;
-border:0;
-background:#0f172a;
-color:#fff;
-padding:10px 17px;
-border-radius:9px;
-cursor:pointer;
-font-weight:700;
-">
-Reset Filters
-</button>
-
-</div>
-
-
-</div>
-</section>
-
-<!-- NEXT PARTS WILL CONTINUE HERE -->
-  <!-- PART 8 : SEARCH + CATEGORY FILTER -
-  <script>
-/* =========================================================
-   PART 8 : JOB FILTER SYSTEM — FIXED
-   ========================================================= */
-
-(function(){
-
-  const grid = document.getElementById("examGrid");
-  const searchBox = document.getElementById("jobSearch");
-  const categoryButtons = document.querySelectorAll(".quick-filter");
-  const qualification = document.getElementById("qualification");
-  const department = document.getElementById("department");
-  const state = document.getElementById("state");
-  const resetBtn = document.getElementById("resetFilters");
-  const emptyReset = document.getElementById("emptyReset");
-  const visibleCount = document.getElementById("visibleCount");
-  const noResults = document.getElementById("noResults");
-
-  if(!grid) return;
-
-  /* केवल असली exam/job cards को filter करेंगे.
-     Directory cards को नहीं. */
-  const cards = Array.from(
-    grid.querySelectorAll(".exam-card[data-category]")
-  );
-
-  let activeCategory = "all";
-
-  function text(value){
-    return String(value || "").toLowerCase().trim();
-  }
-
-  function filterJobs(){
-
-    const search = text(searchBox ? searchBox.value : "");
-    const qual = text(qualification ? qualification.value : "all");
-    const dept = text(department ? department.value : "all");
-    const st = text(state ? state.value : "all");
-
-    let count = 0;
-
-    cards.forEach(card => {
-
-      const cardText = text(card.innerText);
-
-      const cardCategory =
-        text(card.dataset.category);
-
-      const cardQualification =
-        text(card.dataset.qualification);
-
-      const cardDepartment =
-        text(card.dataset.department);
-
-      const cardState =
-        text(card.dataset.state);
-
-      const searchMatch =
-        !search || cardText.includes(search);
-
-      const categoryMatch =
-        activeCategory === "all" ||
-        cardCategory === activeCategory ||
-        cardText.includes(activeCategory);
-
-      const qualificationMatch =
-        qual === "all" ||
-        cardQualification === qual ||
-        cardText.includes(qual);
-
-      const departmentMatch =
-        dept === "all" ||
-        cardDepartment === dept ||
-        cardText.includes(dept);
-
-      const stateMatch =
-        st === "all" ||
-        cardState === st ||
-        cardText.includes(st);
-
-      const show =
-        searchMatch &&
-        categoryMatch &&
-        qualificationMatch &&
-        departmentMatch &&
-        stateMatch;
-
-      card.style.display = show ? "" : "none";
-
-      if(show) count++;
-    });
-
-    if(visibleCount){
-      visibleCount.textContent = count;
-    }
-
-    if(noResults){
-      noResults.style.display =
-        count === 0 ? "block" : "none";
-    }
-  }
-
-  /* Search */
-  if(searchBox){
-    searchBox.addEventListener("input", filterJobs);
-  }
-
-  /* Quick category filters */
-  categoryButtons.forEach(button => {
-
-    button.addEventListener("click", function(){
-
-      categoryButtons.forEach(btn =>
-        btn.classList.remove("active")
-      );
-
-      this.classList.add("active");
-
-      activeCategory =
-        text(this.dataset.category || this.textContent);
-
-      filterJobs();
-    });
-
-  });
-
-  /* Advanced filters */
-  if(qualification){
-    qualification.addEventListener(
-      "change",
-      filterJobs
-    );
-  }
-
-  if(department){
-    department.addEventListener(
-      "change",
-      filterJobs
-    );
-  }
-
-  if(state){
-    state.addEventListener(
-      "change",
-      filterJobs
-    );
-  }
-
-  /* Reset */
-  function resetAll(){
-
-    activeCategory = "all";
-
-    if(searchBox){
-      searchBox.value = "";
-    }
-
-    if(qualification){
-      qualification.value = "all";
-    }
-
-    if(department){
-      department.value = "all";
-    }
-
-    if(state){
-      state.value = "all";
-    }
-
-    categoryButtons.forEach(btn =>
-      btn.classList.remove("active")
-    );
-
-    const first =
-      document.querySelector(
-        ".quick-filter[data-category='all']"
-      );
-
-    if(first){
-      first.classList.add("active");
-    }
-
-    filterJobs();
-
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  }
-
-  if(resetBtn){
-    resetBtn.addEventListener(
-      "click",
-      resetAll
-    );
-  }
-
-  if(emptyReset){
-    emptyReset.addEventListener(
-      "click",
-      resetAll
-    );
-  }
-
-  /* Initial count */
-  filterJobs();
-
-})();
-</script>
-
-  <!-- PART 9 : JOB DETAILS POPUP -->
-  <!-- PART 9 : DIRECT JOB DETAILS + OFFICIAL LINKS -->
-
-<script>
-/* =========================================================
-   PART 9 : DIRECT JOB ACTION SYSTEM
-   ========================================================= */
-
-(function(){
-
-  /* -------------------------------------------------------
-     JOB TITLE → DATABASE ID
-     ------------------------------------------------------- */
-
-  const jobIds = {
-
-    "Civil Services Examination":"upsc-cse",
-    "NDA & NA":"upsc-nda",
-    "CDS":"upsc-cds",
-    "CAPF Assistant Commandant":"upsc-capf",
-    "Engineering Services":"upsc-ies",
-    "Combined Medical Services":"upsc-cms",
-    "IES / ISS":"upsc-ies-iss",
-
-    "CGL":"ssc-cgl",
-    "CHSL":"ssc-chsl",
-    "MTS / Havaldar":"ssc-mts",
-    "GD Constable":"ssc-gd",
-    "CPO":"ssc-cpo",
-    "Junior Engineer":"ssc-je",
-    "Stenographer C & D":"ssc-steno",
-    "JHT":"ssc-jht",
-    "Selection Post":"ssc-selection-post",
-
-    "RRB NTPC":"rrb-ntpc",
-    "RRB Group D":"rrb-group-d",
-    "RRB ALP":"rrb-alp",
-    "RRB Technician":"rrb-technician",
-    "RRB Junior Engineer":"rrb-je",
-    "RRB Paramedical":"rrb-paramedical",
-    "Ministerial & Isolated Categories":"rrb-ministerial",
-    "RRC Apprentice":"rrc-apprentice",
-
-    "IBPS PO":"ibps-po",
-    "IBPS Clerk / CSA":"ibps-clerk",
-    "IBPS SO":"ibps-so",
-    "IBPS RRB":"ibps-rrb",
-    "SBI PO":"sbi-po",
-    "SBI Clerk":"sbi-clerk",
-    "RBI Grade B":"rbi-grade-b",
-    "RBI Assistant":"rbi-assistant",
-
-    "Indian Army Agniveer":"army-agniveer",
-    "Indian Army Officer Entry":"army-officer",
-    "Indian Navy Agniveer":"indian-navy-agniveer",
-    "Indian Navy Officer Entry":"navy-officer",
-    "Air Force Agniveer Vayu":"agniveer-vayu",
-    "AFCAT":"afcat",
-    "Indian Coast Guard":"coast-guard",
-    "DRDO Recruitment":"drdo",
-
-    "CRPF Recruitment":"crpf",
-    "BSF Recruitment":"bsf",
-    "CISF Recruitment":"cisf",
-    "ITBP Recruitment":"itbp",
-    "SSB Recruitment":"ssb",
-    "Assam Rifles Recruitment":"assam-rifles",
-
-    "CTET":"ctet",
-    "KVS Recruitment":"kvs",
-    "NVS Recruitment":"nvs",
-    "DSSSB Recruitment":"dsssb",
-
-    "ONGC Recruitment":"ongc",
-    "NTPC Recruitment":"ntpc",
-    "BHEL Recruitment":"bhel",
-    "SAIL Recruitment":"sail",
-    "IOCL Recruitment":"iocl",
-
-    "Supreme Court Recruitment":"supreme-court",
-    "Allahabad High Court":"allahabad-high-court",
-
-    "CSIR NET":"csir-net",
-    "UGC NET":"ugc-net",
-
-    "AIIMS Recruitment":"aiims",
-    "ESIC Recruitment":"esic",
-    "NHM Recruitment":"nhm",
-
-    "Agriculture Department Jobs":"agriculture",
-    "ICAR Recruitment":"icar",
-
-    "UPPSC":"uppsc-pcs",
-    "UPSSSC":"upsssc",
-    "UP Police":"up-police",
-    "BPSC":"bpsc",
-    "Bihar Police":"bihar-police",
-    "MPPSC":"mppsc",
-    "RPSC":"rpsc",
-    "JPSC":"jpsc"
-
-  };
-
-
-  /* -------------------------------------------------------
-     OFFICIAL WEBSITE MAP
-     ------------------------------------------------------- */
-
-  const official = {
-
-    "Civil Services Examination":"https://www.upsc.gov.in/",
-    "NDA & NA":"https://www.upsc.gov.in/",
-    "CDS":"https://www.upsc.gov.in/",
-    "CAPF Assistant Commandant":"https://www.upsc.gov.in/",
-    "Engineering Services":"https://www.upsc.gov.in/",
-    "Combined Medical Services":"https://www.upsc.gov.in/",
-    "IES / ISS":"https://www.upsc.gov.in/",
-
-    "CGL":"https://ssc.gov.in/",
-    "CHSL":"https://ssc.gov.in/",
-    "MTS / Havaldar":"https://ssc.gov.in/",
-    "GD Constable":"https://ssc.gov.in/",
-    "CPO":"https://ssc.gov.in/",
-    "Junior Engineer":"https://ssc.gov.in/",
-    "Stenographer C & D":"https://ssc.gov.in/",
-    "JHT":"https://ssc.gov.in/",
-    "Selection Post":"https://ssc.gov.in/",
-
-    "RRB NTPC":"https://www.rrbapply.gov.in/",
-    "RRB Group D":"https://www.rrbapply.gov.in/",
-    "RRB ALP":"https://www.rrbapply.gov.in/",
-    "RRB Technician":"https://www.rrbapply.gov.in/",
-    "RRB Junior Engineer":"https://www.rrbapply.gov.in/",
-    "RRB Paramedical":"https://www.rrbapply.gov.in/",
-    "Ministerial & Isolated Categories":"https://www.rrbapply.gov.in/",
-    "RRC Apprentice":"https://indianrailways.gov.in/",
-
-    "IBPS PO":"https://www.ibps.in/",
-    "IBPS Clerk / CSA":"https://www.ibps.in/",
-    "IBPS SO":"https://www.ibps.in/",
-    "IBPS RRB":"https://www.ibps.in/",
-    "SBI PO":"https://sbi.co.in/web/careers/",
-    "SBI Clerk":"https://sbi.co.in/web/careers/",
-    "RBI Grade B":"https://opportunities.rbi.org.in/",
-    "RBI Assistant":"https://opportunities.rbi.org.in/",
-
-    "Indian Army Agniveer":"https://joinindianarmy.nic.in/",
-    "Indian Army Officer Entry":"https://joinindianarmy.nic.in/",
-    "Indian Navy Agniveer":"https://www.joinindiannavy.gov.in/",
-    "Indian Navy Officer Entry":"https://www.joinindiannavy.gov.in/",
-    "Air Force Agniveer Vayu":"https://agnipathvayu.cdac.in/",
-    "AFCAT":"https://afcat.cdac.in/",
-    "Indian Coast Guard":"https://joinindiancoastguard.cdac.in/",
-    "DRDO Recruitment":"https://www.drdo.gov.in/",
-
-    "CRPF Recruitment":"https://rect.crpf.gov.in/",
-    "BSF Recruitment":"https://rectt.bsf.gov.in/",
-    "CISF Recruitment":"https://cisfrectt.cisf.gov.in/",
-    "ITBP Recruitment":"https://recruitment.itbpolice.nic.in/",
-    "SSB Recruitment":"https://recruitment.ssb.gov.in/",
-    "Assam Rifles Recruitment":"https://www.assamrifles.gov.in/",
-
-    "CTET":"https://ctet.nic.in/",
-    "KVS Recruitment":"https://kvsangathan.nic.in/",
-    "NVS Recruitment":"https://exams.nta.ac.in/NVS/",
-    "DSSSB Recruitment":"https://dsssb.delhi.gov.in/",
-
-    "ONGC Recruitment":"https://ongcindia.com/",
-    "NTPC Recruitment":"https://careers.ntpc.co.in/",
-    "BHEL Recruitment":"https://careers.bhel.in/",
-    "SAIL Recruitment":"https://sailcareers.com/",
-    "IOCL Recruitment":"https://iocl.com/careers",
-
-    "Supreme Court Recruitment":"https://www.sci.gov.in/",
-    "Allahabad High Court":"https://www.allahabadhighcourt.in/",
-
-    "CSIR NET":"https://csirnet.nta.ac.in/",
-    "UGC NET":"https://ugcnet.nta.ac.in/",
-
-    "AIIMS Recruitment":"https://aiimsexams.ac.in/",
-    "ESIC Recruitment":"https://www.esic.gov.in/recruitments",
-    "NHM Recruitment":"https://nhm.gov.in/",
-
-    "Agriculture Department Jobs":"https://agriwelfare.gov.in/",
-    "ICAR Recruitment":"https://icar.gov.in/",
-
-    "UPPSC":"https://uppsc.up.nic.in/",
-    "UPSSSC":"https://upsssc.gov.in/",
-    "UP Police":"https://www.uppbpb.gov.in/",
-    "BPSC":"https://www.bpsc.bih.nic.in/",
-    "Bihar Police":"https://police.bihar.gov.in/",
-    "MPPSC":"https://mppsc.mp.gov.in/",
-    "RPSC":"https://rpsc.rajasthan.gov.in/",
-    "JPSC":"https://www.jpsc.gov.in/"
-
-  };
-
-
-  /* -------------------------------------------------------
-     GET JOB TITLE
-     ------------------------------------------------------- */
-
-  function getTitle(card){
-
-    const title =
-      card.querySelector("h3");
-
-    if(!title) return "";
-
-    return title.textContent.trim();
-  }
-
-
-  /* -------------------------------------------------------
-     VIEW DETAILS
-     ------------------------------------------------------- */
-
-  document
-    .querySelectorAll("#examGrid .details")
-    .forEach(button => {
-
-      button.addEventListener("click",function(e){
-
-        e.preventDefault();
-        e.stopPropagation();
-
-        const card =
-          this.closest(".exam-card");
-
-        if(!card) return;
-
-        const title =
-          getTitle(card);
-
-        const id =
-          jobIds[title];
-
-        if(id){
-
-          window.location.href =
-            "job-details.html?id=" +
-            encodeURIComponent(id);
-
-        }else{
-
-          alert(
-            "इस job की detailed information अभी database में नहीं है।"
-          );
-
-        }
-
-      });
-
-    });
-
-
-  /* -------------------------------------------------------
-     OFFICIAL SITE
-     ------------------------------------------------------- */
-
-  document
-    .querySelectorAll("#examGrid .official")
-    .forEach(button => {
-
-      button.addEventListener("click",function(e){
-
-        e.preventDefault();
-        e.stopPropagation();
-
-        const card =
-          this.closest(".exam-card");
-
-        if(!card) return;
-
-        const title =
-          getTitle(card);
-
-        const url =
-          official[title];
-
-        if(url){
-
-          window.location.href = url;
-
-        }else{
-
-          alert(
-            "Official website link अभी उपलब्ध नहीं है।"
-          );
-
-        }
-
-      });
-
-    });
-
-
-})();
-</script>
-
-<!-- PART 10 YAHAN SE CONTINUE HOGA -->
-
-<style
-<!-- PART 10 : GOVERNMENT DIRECTORY -->
-
-<section class="container" id="directory">
-
-  <div class="section-head">
-    <h2>Government Recruitment Directory</h2>
-    <p>Major Government departments, boards, forces और recruitment bodies एक जगह।</p>
-  </div>
-
-  <div style="
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
-    gap:12px;
-  ">
-
-    <a href="#" class="exam-card">
-      <span class="exam-tag">CENTRAL</span>
-      <h3>UPSC</h3>
-      <p>Civil Services, NDA, CDS, CAPF और अन्य examinations.</p>
-    </a>
-
-    <a href="#" class="exam-card">
-      <span class="exam-tag">CENTRAL</span>
-      <h3>SSC</h3>
-      <p>CGL, CHSL, MTS, GD, CPO, JE और अन्य भर्ती.</p>
-    </a>
-
-    <a href="#" class="exam-card">
-      <span class="exam-tag">RAILWAY</span>
-      <h3>Indian Railways</h3>
-      <p>RRB, RRC, NTPC, Group D, ALP, Technician और JE.</p>
-    </a>
-
-    <a href="#" class="exam-card">
-      <span class="exam-tag">BANKING</span>
-      <h3>Banking</h3>
-      <p>IBPS, SBI, RBI, NABARD, SEBI और अन्य banking recruitment.</p>
-    </a>
-
-    <a href="#" class="exam-card">
-      <span class="exam-tag">DEFENCE</span>
-      <h3>Defence</h3>
-      <p>Army, Navy, Air Force, ICG, DRDO और अन्य defence jobs.</p>
-    </a>
-
-    <a href="#" class="exam-card">
-      <span class="exam-tag">CAPF</span>
-      <h3>CAPF Forces</h3>
-      <p>CRPF, BSF, CISF, ITBP, SSB और Assam Rifles.</p>
-    </a>
-
-    <a href="#" class="exam-card">
-      <span class="exam-tag">POST</span>
-      <h3>India Post</h3>
-      <p>GDS, Postman, Mail Guard और अन्य postal recruitment.</p>
-    </a>
-
-    <a href="#" class="exam-card">
-      <span class="exam-tag">PSU</span>
-      <h3>Public Sector Units</h3>
-      <p>ONGC, NTPC, BHEL, SAIL, IOCL और अन्य PSU jobs.</p>
-    </a>
-
-    <a href="#" class="exam-card">
-      <span class="exam-tag">TEACHING</span>
-      <h3>Teaching</h3>
-      <p>CTET, TET, KVS, NVS और अन्य teaching recruitment.</p>
-    </a>
-
-    <a href="#" class="exam-card">
-      <span class="exam-tag">COURT</span>
-      <h3>Courts</h3>
-      <p>Supreme Court, High Courts और District Courts recruitment.</p>
-    </a>
-
-    <a href="#" class="exam-card">
-      <span class="exam-tag">HEALTH</span>
-      <h3>Health</h3>
-      <p>AIIMS, ESIC, NHM और अन्य healthcare recruitment.</p>
-    </a>
-
-    <a href="#" class="exam-card">
-      <span class="exam-tag">STATE</span>
-      <h3>State Government</h3>
-      <p>PSC, Police, Teaching, Forest, Health और अन्य state jobs.</p>
-    </a>
-
-  </div>
-
-</section>
-<!-- PART 11 : QUALIFICATION & JOB TYPE DIRECTORY -->
-
-<section class="container" id="qualification-directory">
-
-  <div class="section-head">
-    <h2>Jobs by Qualification</h2>
-    <p>अपनी qualification के अनुसार Government Jobs खोजें।</p>
-  </div>
-
-  <div class="quick-grid">
-
-    <a href="#" class="quick-card">
-      <strong>8th Pass</strong>
-      <span>8वीं पास सरकारी नौकरी</span>
-    </a>
-
-    <a href="#" class="quick-card">
-      <strong>10th Pass</strong>
-      <span>10वीं पास सरकारी नौकरी</span>
-    </a>
-
-    <a href="#" class="quick-card">
-      <strong>12th Pass</strong>
-      <span>12वीं पास सरकारी नौकरी</span>
-    </a>
-
-    <a href="#" class="quick-card">
-      <strong>ITI</strong>
-      <span>ITI based recruitment</span>
-    </a>
-
-    <a href="#" class="quick-card">
-      <strong>Diploma</strong>
-      <span>Diploma level jobs</span>
-    </a>
-
-    <a href="#" class="quick-card">
-      <strong>Graduate</strong>
-      <span>Graduation based jobs</span>
-    </a>
-
-    <a href="#" class="quick-card">
-      <strong>Engineering</strong>
-      <span>B.Tech / Engineering jobs</span>
-    </a>
-
-    <a href="#" class="quick-card">
-      <strong>Post Graduate</strong>
-      <span>PG level recruitment</span>
-    </a>
-
-    <a href="#" class="quick-card">
-      <strong>Medical</strong>
-      <span>Medical & healthcare jobs</span>
-    </a>
-
-  </div>
-
-</section>
-
-
-<section class="container" id="job-type-directory">
-
-  <div class="section-head">
-    <h2>Jobs by Job Type</h2>
-    <p>अपने पसंदीदा Government job sector के अनुसार देखें।</p>
-  </div>
-
-  <div class="quick-grid">
-
-    <a href="#" class="quick-card">
-      <strong>Police Jobs</strong>
-      <span>Police & law enforcement</span>
-    </a>
-
-    <a href="#" class="quick-card">
-      <strong>Defence Jobs</strong>
-      <span>Army, Navy, Air Force & ICG</span>
-    </a>
-
-    <a href="#" class="quick-card">
-      <strong>Railway Jobs</strong>
-      <span>RRB & RRC recruitment</span>
-    </a>
-
-    <a href="#" class="quick-card">
-      <strong>Banking Jobs</strong>
-      <span>Bank & financial sector</span>
-    </a>
-
-    <a href="#" class="quick-card">
-      <strong>Teaching Jobs</strong>
-      <span>Teacher & education sector</span>
-    </a>
-
-    <a href="#" class="quick-card">
-      <strong>Clerk Jobs</strong>
-      <span>Clerical & office posts</span>
-    </a>
-
-    <a href="#" class="quick-card">
-      <strong>Stenographer</strong>
-      <span>Steno & secretarial posts</span>
-    </a>
-
-    <a href="#" class="quick-card">
-      <strong>Engineer Jobs</strong>
-      <span>Technical engineering posts</span>
-    </a>
-
-    <a href="#" class="quick-card">
-      <strong>Medical Jobs</strong>
-      <span>Hospital & healthcare posts</span>
-    </a>
-
-    <a href="#" class="quick-card">
-      <strong>Forest Jobs</strong>
-      <span>Forest & wildlife department</span>
-    </a>
-
-    <a href="#" class="quick-card">
-      <strong>Court Jobs</strong>
-      <span>Supreme, High & District Courts</span>
-    </a>
-
-    <a href="#" class="quick-card">
-      <strong>PSU Jobs</strong>
-      <span>Public sector companies</span>
-    </a>
-
-  </div>
-
-</section>
-
-
-<style>
-.quick-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
-  gap:12px;
-}
-
-.quick-card{
-  display:block;
-  padding:16px;
-  border:1px solid #e5e7eb;
-  border-radius:14px;
-  background:#fff;
-  text-decoration:none;
-  color:#111827;
-  transition:.2s;
-}
-
-.quick-card:hover{
-  transform:translateY(-3px);
-  box-shadow:0 8px 22px rgba(0,0,0,.08);
-}
-
-.quick-card strong{
-  display:block;
-  font-size:16px;
-  margin-bottom:6px;
-}
-
-.quick-card span{
-  color:#6b7280;
-  font-size:13px;
-}
-</style>
-<!-- PART 12 : STATE WISE DIRECTORY -->
-
-<section class="container" id="state-directory">
-
-  <div class="section-head">
-    <h2>Government Jobs by State</h2>
-    <p>भारत के सभी राज्यों और केंद्र शासित प्रदेशों की सरकारी भर्ती।</p>
-  </div>
-
-  <div class="quick-grid">
-
-    <a href="#" class="quick-card"><strong>Uttar Pradesh</strong><span>UPPSC, UPSSSC, Police & other jobs</span></a>
-    <a href="#" class="quick-card"><strong>Bihar</strong><span>BPSC, Bihar Police & other jobs</span></a>
-    <a href="#" class="quick-card"><strong>Madhya Pradesh</strong><span>MPPSC, MP Police & other jobs</span></a>
-    <a href="#" class="quick-card"><strong>Rajasthan</strong><span>RPSC, RSSB, Police & other jobs</span></a>
-
-    <a href="#" class="quick-card"><strong>Jharkhand</strong><span>JPSC, JSSC & other jobs</span></a>
-    <a href="#" class="quick-card"><strong>Chhattisgarh</strong><span>CGPSC, Police & other jobs</span></a>
-    <a href="#" class="quick-card"><strong>Uttarakhand</strong><span>UKPSC, Police & other jobs</span></a>
-    <a href="#" class="quick-card"><strong>Haryana</strong><span>HPSC, HSSC & other jobs</span></a>
-
-    <a href="#" class="quick-card"><strong>Punjab</strong><span>PPSC, Police & other jobs</span></a>
-    <a href="#" class="quick-card"><strong>Himachal Pradesh</strong><span>HPPSC & other jobs</span></a>
-    <a href="#" class="quick-card"><strong>Delhi</strong><span>DSSSB & Delhi Government jobs</span></a>
-    <a href="#" class="quick-card"><strong>Maharashtra</strong><span>MPSC, Police & other jobs</span></a>
-
-    <a href="#" class="quick-card"><strong>Gujarat</strong><span>GPSC, GSSSB & other jobs</span></a>
-    <a href="#" class="quick-card"><strong>West Bengal</strong><span>WBPSC & other jobs</span></a>
-    <a href="#" class="quick-card"><strong>Odisha</strong><span>OPSC, OSSC & other jobs</span></a>
-    <a href="#" class="quick-card"><strong>Assam</strong><span>APSC, Police & other jobs</span></a>
-
-    <a href="#" class="quick-card"><strong>Telangana</strong><span>TSPSC & other jobs</span></a>
-    <a href="#" class="quick-card"><strong>Andhra Pradesh</strong><span>APPSC & other jobs</span></a>
-    <a href="#" class="quick-card"><strong>Karnataka</strong><span>KPSC & other jobs</span></a>
-    <a href="#" class="quick-card"><strong>Tamil Nadu</strong><span>TNPSC & other jobs</span></a>
-
-    <a href="#" class="quick-card"><strong>Kerala</strong><span>Kerala PSC & other jobs</span></a>
-    <a href="#" class="quick-card"><strong>Goa</strong><span>Goa Government jobs</span></a>
-    <a href="#" class="quick-card"><strong>Jammu & Kashmir</strong><span>JKPSC & other jobs</span></a>
-    <a href="#" class="quick-card"><strong>Other States</strong><span>View remaining state recruitment</span></a>
-
-  </div>
-
-</section>
-<!-- PART 13 : TRUST & INFORMATION -->
-
-<section class="container" id="trust-section">
-
-  <div class="section-head">
-    <h2>Why Use Sarkariiichij?</h2>
-    <p>Government jobs और career information को आसान और व्यवस्थित तरीके से खोजें।</p>
-  </div>
-
-  <div class="quick-grid">
-
-    <div class="quick-card">
-      <strong>🔎 Easy Search</strong>
-      <span>Job, exam, result और recruitment information जल्दी खोजें।</span>
     </div>
 
-    <div class="quick-card">
-      <strong>📋 Eligibility</strong>
-      <span>Qualification, age और other requirements को समझने में मदद।</span>
+  </section>
+    <!-- JOB QUICK LINKS -->
+  <section class="section">
+
+    <div class="section-heading">
+      <h2>Explore Government Jobs</h2>
+      <p>सरकारी नौकरी की अलग-अलग categories जल्दी खोलें</p>
     </div>
 
-    <div class="quick-card">
-      <strong>📅 Important Dates</strong>
-      <span>Application और examination dates को एक जगह track करें।</span>
+    <div class="quick-grid">
+
+      <a href="#" class="quick-card">
+        <strong>Central Government Jobs</strong>
+        <span>भारत सरकार की सभी प्रमुख भर्ती</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>State Government Jobs</strong>
+        <span>सभी राज्यों की सरकारी भर्ती</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>10th Pass Jobs</strong>
+        <span>10वीं पास candidates के लिए jobs</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>12th Pass Jobs</strong>
+        <span>12वीं पास candidates के लिए jobs</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Graduate Jobs</strong>
+        <span>Graduation के बाद सरकारी jobs</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Police Recruitment</strong>
+        <span>Police और security department jobs</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Defence Recruitment</strong>
+        <span>Army, Navy, Air Force और ICG</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Railway Recruitment</strong>
+        <span>RRB और Railway की भर्ती</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Banking Recruitment</strong>
+        <span>IBPS, SBI और अन्य banking jobs</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Teaching Recruitment</strong>
+        <span>Teacher और education jobs</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>PSU Recruitment</strong>
+        <span>Public Sector Undertakings की jobs</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Apprentice Jobs</strong>
+        <span>Apprenticeship और training opportunities</span>
+      </a>
+
     </div>
 
-    <div class="quick-card">
-      <strong>🏛️ Official Sources</strong>
-      <span>Application से पहले संबंधित official notification जरूर देखें।</span>
+  </section>
+    <!-- EXAM CALENDAR -->
+  <section class="section">
+
+    <div class="section-heading">
+      <h2>Exam Calendar</h2>
+      <p>आने वाली सरकारी परीक्षाओं और महत्वपूर्ण dates पर नजर रखें</p>
     </div>
 
-  </div>
+    <div class="update-grid">
 
-  <div style="
-    margin-top:20px;
-    padding:18px;
-    border:1px solid #e5e7eb;
-    border-radius:16px;
-    background:#f8fafc;
-  ">
+      <div class="update-card">
+        <span class="status-badge">Upcoming</span>
+        <h3>SSC Exams</h3>
+        <p>CGL, CHSL, MTS, GD, CPO और अन्य SSC exams</p>
+        <a href="#">View Calendar →</a>
+      </div>
 
-    <h3 style="margin-top:0">Important Information</h3>
+      <div class="update-card">
+        <span class="status-badge">Upcoming</span>
+        <h3>Railway Exams</h3>
+        <p>NTPC, Group D, ALP और अन्य Railway exams</p>
+        <a href="#">View Calendar →</a>
+      </div>
 
-    <p style="color:#64748b;line-height:1.7;margin-bottom:0">
-      Sarkariiichij एक information portal है। यहाँ दी गई vacancy,
-      eligibility, fee, salary, dates और अन्य जानकारी समय के साथ बदल सकती है।
-      किसी भी आवेदन या payment से पहले संबंधित Government Department की
-      official notification और official website पर जानकारी verify करें।
-    </p>
+      <div class="update-card">
+        <span class="status-badge">Upcoming</span>
+        <h3>Banking Exams</h3>
+        <p>IBPS, SBI, RBI और अन्य banking exams</p>
+        <a href="#">View Calendar →</a>
+      </div>
 
-  </div>
+      <div class="update-card">
+        <span class="status-badge">Upcoming</span>
+        <h3>Defence Exams</h3>
+        <p>Army, Navy, Air Force, ICG और Defence exams</p>
+        <a href="#">View Calendar →</a>
+      </div>
 
-</section>
-<!-- PART 14 : PREMIUM FOOTER -->
+      <div class="update-card">
+        <span class="status-badge">Upcoming</span>
+        <h3>State Exams</h3>
+        <p>PSC, Police, Teaching और अन्य State exams</p>
+        <a href="#">View Calendar →</a>
+      </div>
 
-<footer class="site-footer">
+      <div class="update-card">
+        <span class="status-badge">Upcoming</span>
+        <h3>Teaching Exams</h3>
+        <p>CTET, TET, KVS, NVS और अन्य exams</p>
+        <a href="#">View Calendar →</a>
+      </div>
 
-  <div class="footer-grid">
+    </div>
 
-    <div>
+  </section>
+    <!-- LAST DATE ALERTS -->
+  <section class="section">
+
+    <div class="section-heading">
+      <h2>Last Date Alerts</h2>
+      <p>जिन सरकारी भर्तियों की last date पर ध्यान देना जरूरी है</p>
+    </div>
+
+    <div class="update-grid">
+
+      <div class="update-card">
+        <span class="status-badge">Closing Soon</span>
+        <h3>SSC Recruitment</h3>
+        <p>Application की last date जल्द समाप्त हो सकती है।</p>
+        <a href="#">Check Details →</a>
+      </div>
+
+      <div class="update-card">
+        <span class="status-badge">Closing Soon</span>
+        <h3>Railway Recruitment</h3>
+        <p>Railway recruitment की important dates देखें।</p>
+        <a href="#">Check Details →</a>
+      </div>
+
+      <div class="update-card">
+        <span class="status-badge">Closing Soon</span>
+        <h3>Banking Recruitment</h3>
+        <p>Banking exams की application dates देखें।</p>
+        <a href="#">Check Details →</a>
+      </div>
+
+      <div class="update-card">
+        <span class="status-badge">Closing Soon</span>
+        <h3>Police Recruitment</h3>
+        <p>Police भर्ती की last date और details देखें।</p>
+        <a href="#">Check Details →</a>
+      </div>
+
+      <div class="update-card">
+        <span class="status-badge">Closing Soon</span>
+        <h3>Defence Recruitment</h3>
+        <p>Defence भर्ती की application deadline देखें।</p>
+        <a href="#">Check Details →</a>
+      </div>
+
+      <div class="update-card">
+        <span class="status-badge">Closing Soon</span>
+        <h3>Teaching Recruitment</h3>
+        <p>Teaching jobs की important application dates देखें।</p>
+        <a href="#">Check Details →</a>
+      </div>
+
+    </div>
+
+  </section>
+    <!-- JOB STATUS -->
+  <section class="section">
+
+    <div class="section-heading">
+      <h2>Jobs by Status</h2>
+      <p>भर्ती की वर्तमान स्थिति के अनुसार jobs देखें</p>
+    </div>
+
+    <div class="quick-grid">
+
+      <a href="#" class="quick-card">
+        <strong>Active Jobs</strong>
+        <span>जिनमें अभी application चल रही है</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Newly Released</strong>
+        <span>हाल ही में जारी हुई notifications</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Closing Soon</strong>
+        <span>जिनकी last date नजदीक है</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Upcoming</strong>
+        <span>जल्द आने वाली government vacancies</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Exam Date Announced</strong>
+        <span>जिनकी परीक्षा date जारी हो चुकी है</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Admit Card Released</strong>
+        <span>जिनके admit card जारी हो चुके हैं</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Result Released</strong>
+        <span>जिनके results जारी हो चुके हैं</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Answer Key Released</strong>
+        <span>जिनकी answer key जारी हो चुकी है</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Application Closed</strong>
+        <span>जिनकी application बंद हो चुकी है</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Recruitment Completed</strong>
+        <span>पूरी हो चुकी recruitments</span>
+      </a>
+
+    </div>
+
+  </section>
+    <!-- RECRUITMENT BODIES -->
+  <section class="section">
+
+    <div class="section-heading">
+      <h2>Major Recruitment Bodies</h2>
+      <p>सरकारी भर्ती कराने वाली प्रमुख संस्थाएँ</p>
+    </div>
+
+    <div class="quick-grid">
+
+      <a href="#" class="quick-card">
+        <strong>UPSC</strong>
+        <span>Union Public Service Commission</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>SSC</strong>
+        <span>Staff Selection Commission</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>RRB</strong>
+        <span>Railway Recruitment Boards</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>IBPS</strong>
+        <span>Institute of Banking Personnel Selection</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>SBI</strong>
+        <span>State Bank of India Recruitment</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>RBI</strong>
+        <span>Reserve Bank of India Recruitment</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>UPPSC</strong>
+        <span>Uttar Pradesh Public Service Commission</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>UPSSSC</strong>
+        <span>Uttar Pradesh Subordinate Services</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>State PSCs</strong>
+        <span>सभी राज्यों की Public Service Commissions</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>State Recruitment Boards</strong>
+        <span>राज्य स्तरीय recruitment boards</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Defence Recruitment</strong>
+        <span>Army, Navy, Air Force और Defence recruitment</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Other Recruiters</strong>
+        <span>अन्य government recruitment agencies</span>
+      </a>
+
+    </div>
+
+  </section>
+    <!-- JOBS BY LOCATION -->
+  <section class="section">
+
+    <div class="section-heading">
+      <h2>Jobs by Location</h2>
+      <p>अपने राज्य या क्षेत्र के अनुसार सरकारी jobs खोजें</p>
+    </div>
+
+    <div class="quick-grid">
+
+      <a href="#" class="quick-card">
+        <strong>All India</strong>
+        <span>पूरे भारत की Central Government jobs</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Uttar Pradesh</strong>
+        <span>UP की State और Central jobs</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Bihar</strong>
+        <span>Bihar की सरकारी नौकरियाँ</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Delhi</strong>
+        <span>Delhi की Government jobs</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Madhya Pradesh</strong>
+        <span>MP की सरकारी नौकरियाँ</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Rajasthan</strong>
+        <span>Rajasthan की सरकारी नौकरियाँ</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Jharkhand</strong>
+        <span>Jharkhand की सरकारी नौकरियाँ</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Maharashtra</strong>
+        <span>Maharashtra की सरकारी नौकरियाँ</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>West Bengal</strong>
+        <span>West Bengal की सरकारी नौकरियाँ</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>South India</strong>
+        <span>South Indian states की government jobs</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>North India</strong>
+        <span>North Indian states की government jobs</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>All States & UTs</strong>
+        <span>सभी States और Union Territories</span>
+      </a>
+
+    </div>
+
+  </section>
+    <!-- JOB INFORMATION & RESOURCES -->
+  <section class="section">
+
+    <div class="section-heading">
+      <h2>Job Information & Resources</h2>
+      <p>हर सरकारी भर्ती से जुड़ी जरूरी जानकारी</p>
+    </div>
+
+    <div class="quick-grid">
+
+      <a href="#" class="quick-card">
+        <strong>Eligibility</strong>
+        <span>Age, qualification और eligibility देखें</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Vacancy Details</strong>
+        <span>Post और vacancy की जानकारी</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Salary</strong>
+        <span>Pay Level, salary और allowances</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Application Fee</strong>
+        <span>Category-wise application fee</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Important Dates</strong>
+        <span>Start date, last date और exam date</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Selection Process</strong>
+        <span>Exam से final selection तक पूरी प्रक्रिया</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Exam Pattern</strong>
+        <span>Questions, marks और exam pattern</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Syllabus</strong>
+        <span>Subject-wise syllabus और topics</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Admit Card</strong>
+        <span>Admit card और exam instructions</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Answer Key</strong>
+        <span>Answer key और objection information</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Result</strong>
+        <span>Result, merit list और cut off</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Previous Year Papers</strong>
+        <span>पिछले वर्षों के question papers</span>
+      </a>
+
+    </div>
+
+  </section>
+    <!-- JOB COMPARISON & CAREER TOOLS -->
+  <section class="section">
+
+    <div class="section-heading">
+      <h2>Job Comparison & Career Tools</h2>
+      <p>अलग-अलग government jobs और career options को समझें</p>
+    </div>
+
+    <div class="quick-grid">
+
+      <a href="#" class="quick-card">
+        <strong>Job Comparison</strong>
+        <span>दो या अधिक government jobs की तुलना करें</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Post Comparison</strong>
+        <span>अलग-अलग posts की जानकारी compare करें</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Exam Comparison</strong>
+        <span>अलग-अलग competitive exams compare करें</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Career Guide</strong>
+        <span>Qualification के अनुसार career options देखें</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Eligibility Checker</strong>
+        <span>अपनी qualification और age से eligibility check करें</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Salary Calculator</strong>
+        <span>Salary और pay information समझें</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Age Calculator</strong>
+        <span>अपनी exact age calculate करें</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Qualification Finder</strong>
+        <span>अपनी qualification के अनुसार jobs खोजें</span>
+      </a>
+
+    </div>
+
+  </section>
+    <!-- SAVED JOBS & APPLICATION TRACKER -->
+  <section class="section">
+
+    <div class="section-heading">
+      <h2>My Job Tools</h2>
+      <p>अपनी पसंद की jobs और applications को manage करें</p>
+    </div>
+
+    <div class="quick-grid">
+
+      <a href="#" class="quick-card">
+        <strong>Saved Jobs</strong>
+        <span>पसंद की government jobs save करके रखें</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Application Tracker</strong>
+        <span>अपनी applications की स्थिति track करें</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Exam Reminders</strong>
+        <span>Exam और important dates के reminders</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Last Date Reminder</strong>
+        <span>Application की last date याद रखें</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>My Applications</strong>
+        <span>आपने किन jobs के लिए apply किया, देखें</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>My Exams</strong>
+        <span>अपने upcoming exams की list देखें</span>
+      </a>
+
+    </div>
+
+  </section>
+    <!-- JOB HELP & GUIDANCE -->
+  <section class="section">
+
+    <div class="section-heading">
+      <h2>Job Help & Guidance</h2>
+      <p>सरकारी नौकरी की तैयारी और application से जुड़ी मदद</p>
+    </div>
+
+    <div class="quick-grid">
+
+      <a href="#" class="quick-card">
+        <strong>How to Apply</strong>
+        <span>Online application भरने की पूरी प्रक्रिया</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Documents Required</strong>
+        <span>Application के लिए जरूरी documents</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Photo & Signature</strong>
+        <span>Photo और signature के size और format की जानकारी</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Application Correction</strong>
+        <span>Form में correction करने की जानकारी</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Exam Preparation</strong>
+        <span>Exam की तैयारी और study resources</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Previous Year Papers</strong>
+        <span>Practice के लिए पुराने question papers</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Cut Off</strong>
+        <span>Previous और current cut off information</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Selection Process</strong>
+        <span>Written exam से final selection तक</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>FAQ</strong>
+        <span>Government jobs से जुड़े common questions</span>
+      </a>
+
+      <a href="#" class="quick-card">
+        <strong>Report an Error</strong>
+        <span>गलत या पुरानी information की report करें</span>
+      </a>
+
+    </div>
+
+  </section>
+    <!-- FOOTER -->
+  <footer class="site-footer">
+
+    <div class="footer-brand">
       <h2>Sarkariiichij</h2>
+
       <p>
-        Government Jobs, Results, Admission, Scholarship,
-        Sarkari Kaam और Career information एक जगह।
+        Government Jobs, Exams और Career से जुड़ी
+        जानकारी एक जगह।
       </p>
     </div>
 
-    <div>
-      <h3>Quick Links</h3>
+
+    <div class="footer-links">
+
       <a href="index.html">Home</a>
       <a href="jobs.html">Government Jobs</a>
-      <a href="#">Eligibility</a>
-      <a href="#">Admission</a>
-      <a href="#">Results</a>
-      <a href="#">Admit Card</a>
+      <a href="results.html">Results</a>
+      <a href="admit-card.html">Admit Card</a>
+      <a href="admission.html">Admission</a>
+      <a href="syllabus.html">Syllabus</a>
+
     </div>
 
-    <div>
-      <h3>Career</h3>
-      <a href="#">Syllabus</a>
-      <a href="#">Cut Off</a>
-      <a href="#">Previous Papers</a>
-      <a href="#">Exam Calendar</a>
-      <a href="#">Mock Test</a>
-      <a href="#">Current Affairs</a>
-    </div>
 
-    <div>
-      <h3>Important</h3>
+    <div class="footer-links">
+
+      <a href="#">About</a>
       <a href="#">Privacy Policy</a>
+      <a href="#">Terms & Conditions</a>
       <a href="#">Disclaimer</a>
       <a href="#">Contact Us</a>
       <a href="#">Report an Error</a>
-      <a href="#">About Us</a>
+
     </div>
 
-  </div>
 
-  <div class="footer-bottom">
-    <span>© 2026 Sarkariiichij</span>
-    <span>Information • Career • Government Services</span>
-  </div>
+    <div class="footer-bottom">
 
-</footer>
+      <p>
+        © 2026 Sarkariiichij. All Rights Reserved.
+      </p>
 
+      <p>
+        Information is provided for educational and
+        informational purposes.
+      </p>
 
-<style>
-.site-footer{
-  margin-top:40px;
-  padding:35px 20px 15px;
-  background:#111827;
-  color:#fff;
-}
+    </div>
 
-.footer-grid{
-  max-width:1100px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-  gap:28px;
-}
+  </footer>
 
-.footer-grid h2{
-  margin:0 0 10px;
-}
-
-.footer-grid h3{
-  margin:0 0 12px;
-  font-size:16px;
-}
-
-.footer-grid p{
-  color:#cbd5e1;
-  line-height:1.7;
-  font-size:14px;
-}
-
-.footer-grid a{
-  display:block;
-  color:#cbd5e1;
-  text-decoration:none;
-  font-size:14px;
-  margin:9px 0;
-}
-
-.footer-grid a:hover{
-  color:#fff;
-}
-
-.footer-bottom{
-  max-width:1100px;
-  margin:28px auto 0;
-  padding-top:15px;
-  border-top:1px solid #374151;
-  display:flex;
-  justify-content:space-between;
-  gap:12px;
-  flex-wrap:wrap;
-  color:#9ca3af;
-  font-size:13px;
-}
-</style>
-<!-- PART 15 : MOBILE NAV + BACK TO TOP -->
-
-<button id="backTop" aria-label="Back to top">↑</button>
-
-<nav class="mobile-nav">
-
-  <a href="index.html">
-    <span>⌂</span>
-    <small>Home</small>
-  </a>
-
-  <a href="jobs.html" class="active">
-    <span>💼</span>
-    <small>Jobs</small>
-  </a>
-
-  <a href="#">
-    <span>🎓</span>
-    <small>Admission</small>
-  </a>
-
-  <a href="#">
-    <span>📄</span>
-    <small>Results</small>
-  </a>
-
-  <a href="#">
-    <span>☰</span>
-    <small>More</small>
-  </a>
-
-</nav>
-
-
-<style>
-.mobile-nav{
-  display:none;
-}
-
-#backTop{
-  position:fixed;
-  right:18px;
-  bottom:22px;
-  width:44px;
-  height:44px;
-  border:0;
-  border-radius:50%;
-  background:#111827;
-  color:#fff;
-  font-size:22px;
-  cursor:pointer;
-  display:none;
-  z-index:999;
-  box-shadow:0 6px 18px rgba(0,0,0,.2);
-}
-
-#backTop.show{
-  display:block;
-}
-
-@media(max-width:700px){
-
-  .mobile-nav{
-    position:fixed;
-    left:0;
-    right:0;
-    bottom:0;
-    height:62px;
-    background:#fff;
-    border-top:1px solid #e5e7eb;
-    display:flex;
-    justify-content:space-around;
-    align-items:center;
-    z-index:998;
-    box-shadow:0 -4px 15px rgba(0,0,0,.08);
-  }
-
-  .mobile-nav a{
-    flex:1;
-    text-align:center;
-    text-decoration:none;
-    color:#64748b;
-    font-size:18px;
-  }
-
-  .mobile-nav a.active{
-    color:#111827;
-    font-weight:700;
-  }
-
-  .mobile-nav span{
-    display:block;
-    line-height:20px;
-  }
-
-  .mobile-nav small{
-    font-size:10px;
-  }
-
-  body{
-    padding-bottom:70px;
-  }
-
-  #backTop{
-    bottom:78px;
-  }
-
-}
-</style>
-
-
-<script>
-const backTop = document.getElementById("backTop");
-
-window.addEventListener("scroll", () => {
-  if(window.scrollY > 350){
-    backTop.classList.add("show");
-  }else{
-    backTop.classList.remove("show");
-  }
-});
-
-backTop.addEventListener("click", () => {
-  window.scrollTo({
-    top:0,
-    behavior:"smooth"
-  });
-});
-</script>
-<!-- PART 16 : PAGE CONTINUE SYSTEM -->
-
-<div id="backTop" class="back-top">↑</div>
-
-<nav class="mobile-nav">
-  <a href="../index.html">⌂<span>Home</span></a>
-  <a href="jobs.html" class="active">▣<span>Jobs</span></a>
-  <a href="#">▤<span>Admission</span></a>
-  <a href="#">◉<span>Results</span></a>
-  <a href="#">☰<span>More</span></a>
-</nav>
-
-<style>
-.back-top{
-  position:fixed;
-  right:18px;
-  bottom:82px;
-  width:44px;
-  height:44px;
-  border:0;
-  border-radius:50%;
-  background:#0f172a;
-  color:#fff;
-  font-size:22px;
-  display:none;
-  align-items:center;
-  justify-content:center;
-  z-index:999;
-  cursor:pointer;
-}
-
-.mobile-nav{
-  display:none;
-}
-
-@media(max-width:700px){
-  .mobile-nav{
-    position:fixed;
-    left:0;
-    right:0;
-    bottom:0;
-    height:64px;
-    background:#fff;
-    border-top:1px solid #e5e7eb;
-    display:flex;
-    justify-content:space-around;
-    align-items:center;
-    z-index:998;
-  }
-
-  .mobile-nav a{
-    color:#475569;
-    text-decoration:none;
-    font-size:20px;
-    text-align:center;
-    line-height:18px;
-  }
-
-  .mobile-nav a span{
-    display:block;
-    font-size:11px;
-    margin-top:4px;
-  }
-
-  .mobile-nav a.active{
-    color:#2563eb;
-    font-weight:700;
-  }
-
-  body{
-    padding-bottom:70px;
-  }
-}
-</style>
-
-<script>
-document.addEventListener("DOMContentLoaded",function(){
-
-  const backTop=document.getElementById("backTop");
-
-  window.addEventListener("scroll",function(){
-    backTop.style.display=window.scrollY>350?"flex":"none";
-  });
-
-  backTop.addEventListener("click",function(){
-    window.scrollTo({
-      top:0,
-      behavior:"smooth"
-    });
-  });
-
-});
-</script>
-
-<!-- PART 17 YAHAN SE START HOGA -->
-  <script>
-/* =========================================================
-   PART 17 : VERIFIED OFFICIAL WEBSITE SYSTEM
-   ========================================================= */
-
-(function(){
-
-  const officialLinks = {
-
-    /* UPSC */
-    "Civil Services Examination":
-      "https://www.upsc.gov.in/",
-    "NDA & NA":
-      "https://www.upsc.gov.in/",
-    "CDS":
-      "https://www.upsc.gov.in/",
-    "CAPF Assistant Commandant":
-      "https://www.upsc.gov.in/",
-    "Engineering Services":
-      "https://www.upsc.gov.in/",
-    "Combined Medical Services":
-      "https://www.upsc.gov.in/",
-    "IES / ISS":
-      "https://www.upsc.gov.in/",
-
-    /* SSC */
-    "CGL":
-      "https://ssc.gov.in/",
-    "CHSL":
-      "https://ssc.gov.in/",
-    "MTS / Havaldar":
-      "https://ssc.gov.in/",
-    "GD Constable":
-      "https://ssc.gov.in/",
-    "CPO":
-      "https://ssc.gov.in/",
-    "Junior Engineer":
-      "https://ssc.gov.in/",
-    "Stenographer C & D":
-      "https://ssc.gov.in/",
-    "JHT":
-      "https://ssc.gov.in/",
-    "Selection Post":
-      "https://ssc.gov.in/",
-
-    /* Railway */
-    "RRB NTPC":
-      "https://www.rrbapply.gov.in/",
-    "RRB Group D":
-      "https://www.rrbapply.gov.in/",
-    "RRB ALP":
-      "https://www.rrbapply.gov.in/",
-    "RRB Technician":
-      "https://www.rrbapply.gov.in/",
-    "RRB Junior Engineer":
-      "https://www.rrbapply.gov.in/",
-    "RRB Paramedical":
-      "https://www.rrbapply.gov.in/",
-    "Ministerial & Isolated Categories":
-      "https://www.rrbapply.gov.in/",
-    "RRC Apprentice":
-      "https://indianrailways.gov.in/",
-
-    /* Banking */
-    "IBPS PO":
-      "https://www.ibps.in/",
-    "IBPS Clerk / CSA":
-      "https://www.ibps.in/",
-    "IBPS SO":
-      "https://www.ibps.in/",
-    "IBPS RRB":
-      "https://www.ibps.in/",
-    "SBI PO":
-      "https://sbi.co.in/web/careers/",
-    "SBI Clerk":
-      "https://sbi.co.in/web/careers/",
-    "RBI Grade B":
-      "https://opportunities.rbi.org.in/",
-    "RBI Assistant":
-      "https://opportunities.rbi.org.in/",
-
-    /* Defence */
-    "Indian Army Agniveer":
-      "https://joinindianarmy.nic.in/",
-    "Indian Army Officer Entry":
-      "https://joinindianarmy.nic.in/",
-    "Indian Navy Agniveer":
-      "https://www.joinindiannavy.gov.in/",
-    "Indian Navy Officer Entry":
-      "https://www.joinindiannavy.gov.in/",
-    "Air Force Agniveer Vayu":
-      "https://agnipathvayu.cdac.in/",
-    "AFCAT":
-      "https://afcat.cdac.in/",
-    "Indian Coast Guard":
-      "https://joinindiancoastguard.cdac.in/",
-    "DRDO Recruitment":
-      "https://www.drdo.gov.in/",
-
-    /* Police / CAPF */
-    "CRPF Recruitment":
-      "https://rect.crpf.gov.in/",
-    "BSF Recruitment":
-      "https://rectt.bsf.gov.in/",
-    "CISF Recruitment":
-      "https://cisfrectt.cisf.gov.in/",
-    "ITBP Recruitment":
-      "https://recruitment.itbpolice.nic.in/",
-    "SSB Recruitment":
-      "https://recruitment.ssb.gov.in/",
-    "Assam Rifles Recruitment":
-      "https://www.assamrifles.gov.in/",
-
-    /* Teaching */
-    "CTET":
-      "https://ctet.nic.in/",
-    "KVS Recruitment":
-      "https://kvsangathan.nic.in/",
-    "NVS Recruitment":
-      "https://exams.nta.ac.in/NVS/",
-    "State TET":
-      "#",
-    "DSSSB Recruitment":
-      "https://dsssb.delhi.gov.in/",
-
-    /* PSU */
-    "ONGC Recruitment":
-      "https://ongcindia.com/",
-    "NTPC Recruitment":
-      "https://careers.ntpc.co.in/",
-    "BHEL Recruitment":
-      "https://careers.bhel.in/",
-    "SAIL Recruitment":
-      "https://sailcareers.com/",
-    "IOCL Recruitment":
-      "https://iocl.com/careers",
-
-    /* Court */
-    "Supreme Court Recruitment":
-      "https://www.sci.gov.in/",
-    "Allahabad High Court":
-      "https://www.allahabadhighcourt.in/",
-
-    /* University / Research */
-    "University Recruitment":
-      "#",
-    "CSIR NET":
-      "https://csirnet.nta.ac.in/",
-    "UGC NET":
-      "https://ugcnet.nta.ac.in/",
-
-    /* Health */
-    "AIIMS Recruitment":
-      "https://aiimsexams.ac.in/",
-    "ESIC Recruitment":
-      "https://www.esic.gov.in/recruitments",
-    "NHM Recruitment":
-      "https://nhm.gov.in/",
-
-    /* Agriculture */
-    "Agriculture Department Jobs":
-      "https://agriwelfare.gov.in/",
-    "ICAR Recruitment":
-      "https://icar.gov.in/",
-
-    /* State */
-    "UPPSC":
-      "https://uppsc.up.nic.in/",
-    "UPSSSC":
-      "https://upsssc.gov.in/",
-    "UP Police":
-      "https://www.uppbpb.gov.in/",
-    "BPSC":
-      "https://www.bpsc.bih.nic.in/",
-    "Bihar Police":
-      "https://police.bihar.gov.in/",
-    "MPPSC":
-      "https://mppsc.mp.gov.in/",
-    "RPSC":
-      "https://rpsc.rajasthan.gov.in/",
-    "JPSC":
-      "https://www.jpsc.gov.in/"
-
-  };
-
-
-  /* ---------------------------------------------------------
-     Direct Official Website
-     --------------------------------------------------------- */
-
-  document
-    .querySelectorAll("#examGrid .exam-card")
-    .forEach(card => {
-
-      const titleElement =
-        card.querySelector("h3");
-
-      if(!titleElement) return;
-
-      const title =
-        titleElement.textContent.trim();
-
-      const url =
-        officialLinks[title];
-
-      if(!url || url === "#") return;
-
-      card.style.cursor = "pointer";
-
-      card.addEventListener("click", function(e){
-
-        /* Buttons/links को अलग से handle होने दें */
-        if(
-          e.target.closest("a") ||
-          e.target.closest("button")
-        ){
-          return;
-        }
-
-        window.location.href = url;
-
-      });
-
-    });
-
-
-})();
-  </script>
-
-<!-- PART 18 YAHAN SE START HOGA -->
-  <!-- PART 18 : MOBILE + DIRECTORY FIX -->
-
-<style>
-/* Mobile navigation */
-@media(max-width:700px){
-
-  .mobile-nav{
-    display:flex !important;
-    position:fixed;
-    left:10px;
-    right:10px;
-    bottom:10px;
-    z-index:9999;
-    padding:8px;
-    border-radius:18px;
-    background:#ffffff;
-    box-shadow:0 8px 30px rgba(0,0,0,.18);
-  }
-
-  .mobile-nav a{
-    flex:1;
-    text-align:center;
-    text-decoration:none;
-    font-size:12px;
-    font-weight:700;
-    padding:8px 3px;
-  }
-
-  body{
-    padding-bottom:82px;
-  }
-}
-
-/* Desktop */
-@media(min-width:701px){
-  .mobile-nav{
-    display:none !important;
-  }
-}
-
-/* Directory cards must remain visible */
-#directory{
-  display:block;
-}
-
-#directory .exam-card{
-  display:block !important;
-}
-
-/* Prevent hidden directory cards from affecting filters */
-#directory .exam-card{
-  pointer-events:auto;
-}
-</style>
-
-<script>
-/* =========================================================
-   MOBILE + DIRECTORY SYSTEM
-   ========================================================= */
-
-(function(){
-
-  function fixMobileNav(){
-
-    const nav =
-      document.querySelector(".mobile-nav");
-
-    if(!nav) return;
-
-    if(window.innerWidth <= 700){
-      nav.style.display = "flex";
-    }else{
-      nav.style.display = "none";
-    }
-  }
-
-
-  /* Keep directory independent from exam filters */
-  function fixDirectory(){
-
-    const directory =
-      document.getElementById("directory");
-
-    if(!directory) return;
-
-    directory.style.display = "block";
-
-    directory
-      .querySelectorAll(".exam-card")
-      .forEach(card => {
-        card.style.display = "block";
-      });
-  }
-
-
-  /* Initial */
-  fixMobileNav();
-  fixDirectory();
-
-
-  /* Resize */
-  window.addEventListener(
-    "resize",
-    function(){
-      fixMobileNav();
-      fixDirectory();
-    }
-  );
-
-
-  /* Mobile nav links */
-  document
-    .querySelectorAll(".mobile-nav a")
-    .forEach(link => {
-
-      link.addEventListener("click", function(){
-
-        const href =
-          this.getAttribute("href");
-
-        if(!href || href === "#"){
-          return;
-        }
-
-        window.location.href = href;
-
-      });
-
-    });
-
-})();
-</script>
-  
-
-<!-- PART 19 : REMAINING OFFICIAL LINKS -->
-
-<script>
-document.addEventListener("DOMContentLoaded",function(){
-
-const links={
-
-"RRB Paramedical":"https://www.rrbapply.gov.in/",
-"Ministerial & Isolated Categories":"https://www.rrb.indianrailways.gov.in/",
-"RRC Apprentice":"https://www.rrcb.gov.in/",
-
-"JHT":"https://ssc.gov.in/",
-"Selection Post":"https://ssc.gov.in/",
-"Stenographer C & D":"https://ssc.gov.in/",
-"Junior Engineer":"https://ssc.gov.in/",
-
-"State TET":"https://education.gov.in/",
-
-"University Recruitment":"https://www.ugc.gov.in/",
-
-"State Police Constable":"https://uppbpb.gov.in/",
-"State Police SI":"https://uppbpb.gov.in/",
-
-"Forest Department Jobs":"https://moef.gov.in/",
-"Electricity Department":"https://powermin.gov.in/",
-"Power Corporation Jobs":"https://powermin.gov.in/",
-"State Transport Jobs":"https://morth.nic.in/"
-
-};
-
-document.querySelectorAll("#examGrid .exam-card").forEach(card=>{
-
-const title=card.querySelector("h3,h2,.card-title");
-if(!title)return;
-
-const name=title.innerText.trim();
-const url=links[name];
-
-if(!url)return;
-
-card.style.cursor="pointer";
-
-card.addEventListener("click",function(e){
-
-if(e.target.closest("a"))e.preventDefault();
-
-window.location.href=url;
-
-});
-
-card.querySelectorAll("a").forEach(a=>{
-a.href=url;
-a.target="_self";
-});
-
-});
-
-});
-</script>
-
-<!-- PART 20 YAHAN SE START HOGA -->
-  <!-- SARKARIIICHIJ VACANCY ENGINE -->
-<script src="jobs-data.js"></script>
-<script src="jobs-connect.js"></script>
 
 </body>
 </html>
-  
