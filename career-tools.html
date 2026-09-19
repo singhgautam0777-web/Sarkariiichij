@@ -160,7 +160,9 @@
         CGPA और percentage calculate करें।
       </p>
 
-      <a href="#">Open Calculator</a>
+      <a href="#cgpaCalculator">
+  Open Calculator
+      </a>
 
     </div>
 
@@ -322,6 +324,44 @@
     <div id="percentageResult">
       <p>
         Total और obtained marks डालकर Calculate Percentage पर click करें।
+      </p>
+    </div>
+
+  </div>
+
+</section>
+    <!-- CGPA CALCULATOR -->
+<section class="section" id="cgpaCalculator">
+
+  <div class="section-heading">
+    <h2>CGPA Calculator</h2>
+    <p>
+      अपना CGPA डालकर percentage में convert करें।
+    </p>
+  </div>
+
+  <div class="info-card">
+
+    <h3>Convert CGPA to Percentage</h3>
+
+    <input
+      type="number"
+      id="cgpaValue"
+      placeholder="Enter CGPA"
+      step="0.01"
+      min="0"
+      max="10"
+    >
+
+    <br><br>
+
+    <button type="button" id="calculateCGPA">
+      Calculate Percentage
+    </button>
+
+    <div id="cgpaResult">
+      <p>
+        अपना CGPA डालकर Calculate Percentage पर click करें।
       </p>
     </div>
 
@@ -2138,6 +2178,36 @@ document.getElementById("calculatePercentage").addEventListener("click", functio
         Obtained Marks:
         <strong>${obtained}</strong> /
         <strong>${total}</strong>
+      </p>
+    </div>
+  `;
+
+});
+  </script>
+  <script>
+document.getElementById("calculateCGPA").addEventListener("click", function () {
+
+  const cgpa = Number(document.getElementById("cgpaValue").value);
+  const result = document.getElementById("cgpaResult");
+
+  if (isNaN(cgpa) || cgpa < 0 || cgpa > 10) {
+    result.innerHTML =
+      "<p>Please enter CGPA between 0 and 10.</p>";
+    return;
+  }
+
+  const percentage = cgpa * 9.5;
+
+  result.innerHTML = `
+    <div class="age-result-box">
+      <h3>Your Result</h3>
+      <p>
+        CGPA:
+        <strong>${cgpa.toFixed(2)}</strong>
+      </p>
+      <p>
+        Approx. Percentage:
+        <strong>${percentage.toFixed(2)}%</strong>
       </p>
     </div>
   `;
