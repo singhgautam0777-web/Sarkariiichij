@@ -176,7 +176,7 @@
         height convert करें।
       </p>
 
-      <a href="#">Open Converter</a>
+      <a href="#heightConverter">Open Converter</a>
 
     </div>
 
@@ -362,6 +362,52 @@
     <div id="cgpaResult">
       <p>
         अपना CGPA डालकर Calculate Percentage पर click करें।
+      </p>
+    </div>
+
+  </div>
+
+</section>
+  <!-- HEIGHT CONVERTER -->
+<section class="section" id="heightConverter">
+
+  <div class="section-heading">
+    <h2>Height Converter</h2>
+    <p>
+      Feet, inches और centimetres के बीच height convert करें।
+    </p>
+  </div>
+
+  <div class="info-card">
+
+    <h3>Height Converter</h3>
+
+    <input
+      type="number"
+      id="heightFeet"
+      placeholder="Feet"
+      min="0"
+    >
+
+    <br><br>
+
+    <input
+      type="number"
+      id="heightInches"
+      placeholder="Inches"
+      min="0"
+      max="11"
+    >
+
+    <br><br>
+
+    <button type="button" id="convertHeight">
+      Convert Height
+    </button>
+
+    <div id="heightResult">
+      <p>
+        Feet और inches डालकर Convert Height पर click करें।
       </p>
     </div>
 
@@ -2208,6 +2254,42 @@ document.getElementById("calculateCGPA").addEventListener("click", function () {
       <p>
         Approx. Percentage:
         <strong>${percentage.toFixed(2)}%</strong>
+      </p>
+    </div>
+  `;
+
+});
+  </script>
+  <script>
+document.getElementById("convertHeight").addEventListener("click", function () {
+
+  const feet = Number(document.getElementById("heightFeet").value);
+  const inches = Number(document.getElementById("heightInches").value);
+  const result = document.getElementById("heightResult");
+
+  if (feet < 0 || inches < 0 || inches >= 12 || isNaN(feet) || isNaN(inches)) {
+    result.innerHTML =
+      "<p>Please enter valid feet and inches.</p>";
+    return;
+  }
+
+  if (feet === 0 && inches === 0) {
+    result.innerHTML =
+      "<p>Please enter your height.</p>";
+    return;
+  }
+
+  const totalInches = (feet * 12) + inches;
+  const centimeters = totalInches * 2.54;
+
+  result.innerHTML = `
+    <div class="age-result-box">
+      <h3>Your Height</h3>
+      <p>
+        <strong>${centimeters.toFixed(2)} cm</strong>
+      </p>
+      <p>
+        ${feet} Feet ${inches} Inches
       </p>
     </div>
   `;
