@@ -130,7 +130,9 @@
         years, months और days calculate करें।
       </p>
 
-      <a href="#">Open Calculator</a>
+      <a href="#ageCalculator">
+  Open Calculator
+</a>
 
     </div>
 
@@ -232,6 +234,53 @@
 
     </div>
 
+
+  </div>
+
+</section>
+  <!-- AGE CALCULATOR -->
+
+<section class="section" id="ageCalculator">
+
+  <div class="section-heading">
+
+    <h2>Age Calculator</h2>
+
+    <p>
+      अपनी Date of Birth डालकर अपनी exact age
+      years, months और days में calculate करें।
+    </p>
+
+  </div>
+
+
+  <div class="info-card">
+
+    <h3>Enter Your Date of Birth</h3>
+
+    <input
+      type="date"
+      id="dateOfBirth"
+    >
+
+    <br><br>
+
+    <button
+      type="button"
+      id="calculateAge"
+    >
+      Calculate Age
+    </button>
+
+
+    <div id="ageResult">
+
+      <p>
+        अपनी Date of Birth select करके
+        Calculate Age पर click करें।
+      </p>
+
+    </div>
 
   </div>
 
@@ -1953,6 +2002,69 @@
 
 </nav>
 
+<script>
+document.getElementById("calculateAge").addEventListener("click", function () {
 
+  const dobInput = document.getElementById("dateOfBirth");
+  const result = document.getElementById("ageResult");
+
+  if (!dobInput.value) {
+    result.innerHTML = "<p>Please select your Date of Birth.</p>";
+    return;
+  }
+
+  const dob = new Date(dobInput.value);
+  const today = new Date();
+
+  if (dob > today) {
+    result.innerHTML = "<p>Date of Birth future की नहीं हो सकती।</p>";
+    return;
+  }
+
+  let years = today.getFullYear() - dob.getFullYear();
+  let months = today.getMonth() - dob.getMonth();
+  let days = today.getDate() - dob.getDate();
+
+  if (days < 0) {
+    months--;
+
+    const previousMonth = new Date(
+      today.getFullYear(),
+      today.getMonth(),
+      0
+    );
+
+    days += previousMonth.getDate();
+  }
+
+  if (months < 0) {
+    years--;
+    months += 12;
+  }
+
+  const totalDays = Math.floor(
+    (today - dob) / (1000 * 60 * 60 * 24)
+  );
+
+  result.innerHTML = `
+    <div class="age-result-box">
+
+      <h3>Your Age</h3>
+
+      <p>
+        <strong>${years}</strong> Years
+        <strong>${months}</strong> Months
+        <strong>${days}</strong> Days
+      </p>
+
+      <p>
+        Total Days: <strong>${totalDays.toLocaleString()}</strong>
+      </p>
+
+    </div>
+  `;
+
+});
+</script>
 </body>
 </html>
