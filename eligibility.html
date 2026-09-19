@@ -1,0 +1,1366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>My Eligibility – Sarkariiichij</title>
+
+  <meta
+    name="description"
+    content="Check Government Job Eligibility by Age, Qualification, Category, Gender, Height and Other Requirements."
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+
+    <div class="logo">
+      <a href="index.html">Sarkariiichij</a>
+    </div>
+
+    <nav class="main-nav">
+
+      <a href="index.html">Home</a>
+      <a href="jobs.html">Jobs</a>
+      <a href="results.html">Results</a>
+      <a href="admit-card.html">Admit Card</a>
+      <a href="admission.html">Admission</a>
+      <a href="syllabus.html">Syllabus</a>
+      <a href="cutoff.html">Cut Off</a>
+      <a href="papers.html">Papers</a>
+      <a href="scholarship.html">Scholarship</a>
+      <a href="yojana.html">Yojana</a>
+      <a href="sarkari-kaam.html">Sarkari Kaam</a>
+      <a href="eligibility.html">Eligibility</a>
+
+    </nav>
+
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero-section">
+
+    <div class="hero-content">
+
+      <span class="hero-badge">
+        Government Job Eligibility Checker
+      </span>
+
+      <h1>
+        Check Your Government Job Eligibility
+      </h1>
+
+      <p>
+        अपनी age, qualification, category,
+        gender, height और अन्य details के
+        अनुसार Government Jobs की eligibility
+        check करें।
+      </p>
+
+      <div class="search-box">
+
+        <input
+          type="search"
+          id="eligibilitySearch"
+          placeholder="Search Exam, Post, Department..."
+        >
+
+        <button type="button">
+          Search
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- INTRO -->
+  <section class="section">
+
+    <div class="section-heading">
+
+      <h2>
+        My Eligibility Checker
+      </h2>
+
+      <p>
+        अपनी basic details के आधार पर
+        अलग-अलग Government Exams और Jobs
+        की eligibility समझें।
+      </p>
+
+    </div>
+
+  </section>
+  <!-- ELIGIBILITY CHECKER -->
+<section class="section">
+
+  <div class="section-heading">
+    <h2>Enter Your Details</h2>
+    <p>
+      अपनी basic details भरें और अपने लिए
+      suitable Government Jobs की eligibility
+      check करने की तैयारी करें।
+    </p>
+  </div>
+
+  <div class="eligibility-form">
+
+    <div class="form-group">
+      <label for="userAge">Age</label>
+      <input
+        type="number"
+        id="userAge"
+        placeholder="Enter your age"
+      >
+    </div>
+
+    <div class="form-group">
+      <label for="qualification">Qualification</label>
+      <select id="qualification">
+        <option value="">Select Qualification</option>
+        <option>8th Pass</option>
+        <option>10th Pass</option>
+        <option>12th Pass</option>
+        <option>ITI</option>
+        <option>Diploma</option>
+        <option>Graduate</option>
+        <option>Post Graduate</option>
+        <option>Engineering</option>
+        <option>Medical</option>
+        <option>Other</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="category">Category</label>
+      <select id="category">
+        <option value="">Select Category</option>
+        <option>General / UR</option>
+        <option>EWS</option>
+        <option>OBC</option>
+        <option>SC</option>
+        <option>ST</option>
+        <option>PwBD</option>
+        <option>Ex-Servicemen</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="gender">Gender</label>
+      <select id="gender">
+        <option value="">Select Gender</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="state">State</label>
+      <select id="state">
+        <option value="">Select State</option>
+        <option>Uttar Pradesh</option>
+        <option>Bihar</option>
+        <option>Rajasthan</option>
+        <option>Madhya Pradesh</option>
+        <option>Jharkhand</option>
+        <option>Maharashtra</option>
+        <option>West Bengal</option>
+        <option>Other State</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="height">Height (cm)</label>
+      <input
+        type="number"
+        id="height"
+        placeholder="Example: 167"
+      >
+    </div>
+
+    <div class="form-group">
+      <label for="percentage">Percentage</label>
+      <input
+        type="number"
+        id="percentage"
+        placeholder="Example: 54"
+      >
+    </div>
+
+    <div class="form-group">
+      <label for="experience">Experience</label>
+      <select id="experience">
+        <option value="">Select Experience</option>
+        <option>No Experience</option>
+        <option>Less than 1 Year</option>
+        <option>1–3 Years</option>
+        <option>3–5 Years</option>
+        <option>5+ Years</option>
+      </select>
+    </div>
+
+    <div class="form-action">
+
+      <button
+        type="button"
+        id="checkEligibility"
+      >
+        Check Eligibility
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+  <!-- ELIGIBILITY RESULTS -->
+<section class="section">
+
+  <div class="section-heading">
+    <h2>Eligibility Results</h2>
+    <p>
+      आपकी details के आधार पर Government
+      Jobs की eligibility यहाँ दिखाई जाएगी।
+    </p>
+  </div>
+
+  <div class="eligibility-results">
+
+    <div class="result-card">
+      <span class="result-status">
+        Eligible
+      </span>
+
+      <h3>Government Jobs</h3>
+
+      <p>
+        आपकी qualification और basic details
+        के अनुसार available Government Jobs
+        यहाँ दिखाई जाएंगी।
+      </p>
+
+      <a href="jobs.html">
+        View Government Jobs
+      </a>
+    </div>
+
+
+    <div class="result-card">
+      <span class="result-status">
+        Check Details
+      </span>
+
+      <h3>Age Eligibility</h3>
+
+      <p>
+        अलग-अलग exams में age limit और
+        category-wise relaxation अलग हो सकती है।
+      </p>
+
+      <a href="#">
+        Check Age Criteria
+      </a>
+    </div>
+
+
+    <div class="result-card">
+      <span class="result-status">
+        Check Details
+      </span>
+
+      <h3>Qualification Eligibility</h3>
+
+      <p>
+        8th, 10th, 12th, ITI, Diploma,
+        Graduate और अन्य qualifications
+        के अनुसार jobs देखें।
+      </p>
+
+      <a href="#">
+        Check Qualification
+      </a>
+    </div>
+
+
+    <div class="result-card">
+      <span class="result-status">
+        Check Details
+      </span>
+
+      <h3>Physical Eligibility</h3>
+
+      <p>
+        Police, Defence और अन्य posts में
+        height, chest और physical standards
+        अलग-अलग हो सकते हैं।
+      </p>
+
+      <a href="#">
+        Check Physical Criteria
+      </a>
+    </div>
+
+  </div>
+
+</section>
+  <!-- QUALIFICATION WISE ELIGIBILITY -->
+<section class="section">
+
+  <div class="section-heading">
+    <h2>Eligibility by Qualification</h2>
+    <p>
+      अपनी qualification के अनुसार
+      Government Jobs और Exams की categories देखें।
+    </p>
+  </div>
+
+  <div class="card-grid">
+
+    <div class="info-card">
+      <h3>8th Pass Jobs</h3>
+      <p>
+        8th pass candidates के लिए available
+        Government job categories।
+      </p>
+      <a href="jobs.html">View Jobs</a>
+    </div>
+
+    <div class="info-card">
+      <h3>10th Pass Jobs</h3>
+      <p>
+        10th pass candidates के लिए
+        Government recruitment categories।
+      </p>
+      <a href="jobs.html">View Jobs</a>
+    </div>
+
+    <div class="info-card">
+      <h3>12th Pass Jobs</h3>
+      <p>
+        12th pass candidates के लिए
+        Government Jobs और Exams।
+      </p>
+      <a href="jobs.html">View Jobs</a>
+    </div>
+
+    <div class="info-card">
+      <h3>ITI Jobs</h3>
+      <p>
+        ITI qualified candidates के लिए
+        technical और trade-based jobs।
+      </p>
+      <a href="jobs.html">View Jobs</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Diploma Jobs</h3>
+      <p>
+        Diploma holders के लिए technical
+        Government job opportunities।
+      </p>
+      <a href="jobs.html">View Jobs</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Graduate Jobs</h3>
+      <p>
+        Graduation complete candidates के लिए
+        Government exams और posts।
+      </p>
+      <a href="jobs.html">View Jobs</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Post Graduate Jobs</h3>
+      <p>
+        PG qualified candidates के लिए
+        Government recruitment opportunities।
+      </p>
+      <a href="jobs.html">View Jobs</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Professional Jobs</h3>
+      <p>
+        Engineering, Medical, Law और अन्य
+        professional qualifications के लिए jobs।
+      </p>
+      <a href="jobs.html">View Jobs</a>
+    </div>
+
+  </div>
+
+</section>
+  <!-- AGE WISE ELIGIBILITY -->
+<section class="section">
+
+  <div class="section-heading">
+    <h2>Age-wise Eligibility</h2>
+    <p>
+      अलग-अलग Government Exams में age limit
+      और applicable relaxation की जानकारी।
+    </p>
+  </div>
+
+  <div class="card-grid">
+
+    <div class="info-card">
+      <h3>18–20 Years</h3>
+      <p>
+        युवा candidates के लिए उपलब्ध
+        entry-level Government Jobs देखें।
+      </p>
+      <a href="jobs.html">View Jobs</a>
+    </div>
+
+    <div class="info-card">
+      <h3>21–25 Years</h3>
+      <p>
+        इस age group में आने वाले candidates
+        के लिए विभिन्न Government Exams।
+      </p>
+      <a href="jobs.html">View Jobs</a>
+    </div>
+
+    <div class="info-card">
+      <h3>26–30 Years</h3>
+      <p>
+        26 से 30 years age वाले candidates
+        के लिए available job categories।
+      </p>
+      <a href="jobs.html">View Jobs</a>
+    </div>
+
+    <div class="info-card">
+      <h3>31–35 Years</h3>
+      <p>
+        31 से 35 years candidates के लिए
+        available Government recruitment।
+      </p>
+      <a href="jobs.html">View Jobs</a>
+    </div>
+
+    <div class="info-card">
+      <h3>36–40 Years</h3>
+      <p>
+        Higher age limit वाली Government
+        Jobs और applicable posts देखें।
+      </p>
+      <a href="jobs.html">View Jobs</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Age Relaxation</h3>
+      <p>
+        Reserved categories और अन्य eligible
+        candidates के लिए age relaxation।
+      </p>
+      <a href="#">View Rules</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Category Relaxation</h3>
+      <p>
+        SC, ST, OBC, EWS और अन्य categories
+        से जुड़े age criteria।
+      </p>
+      <a href="#">View Details</a>
+    </div>
+
+    <div class="info-card">
+      <h3>PwBD Relaxation</h3>
+      <p>
+        PwBD candidates के लिए applicable
+        age-related provisions की जानकारी।
+      </p>
+      <a href="#">View Details</a>
+    </div>
+
+  </div>
+
+</section>
+  <!-- CATEGORY WISE ELIGIBILITY -->
+<section class="section">
+
+  <div class="section-heading">
+    <h2>Eligibility by Category</h2>
+    <p>
+      Category के अनुसार Government Jobs में
+      eligibility और applicable provisions की जानकारी।
+    </p>
+  </div>
+
+  <div class="card-grid">
+
+    <div class="info-card">
+      <h3>General / UR</h3>
+      <p>
+        General category candidates के लिए
+        eligibility और job information।
+      </p>
+      <a href="jobs.html">View Jobs</a>
+    </div>
+
+    <div class="info-card">
+      <h3>EWS</h3>
+      <p>
+        EWS category से जुड़े eligibility
+        criteria और Government Jobs।
+      </p>
+      <a href="jobs.html">View Jobs</a>
+    </div>
+
+    <div class="info-card">
+      <h3>OBC</h3>
+      <p>
+        OBC candidates के लिए eligibility,
+        relaxation और job information।
+      </p>
+      <a href="jobs.html">View Jobs</a>
+    </div>
+
+    <div class="info-card">
+      <h3>SC</h3>
+      <p>
+        SC category candidates के लिए
+        Government recruitment information।
+      </p>
+      <a href="jobs.html">View Jobs</a>
+    </div>
+
+    <div class="info-card">
+      <h3>ST</h3>
+      <p>
+        ST category candidates के लिए
+        eligibility और recruitment information।
+      </p>
+      <a href="jobs.html">View Jobs</a>
+    </div>
+
+    <div class="info-card">
+      <h3>PwBD</h3>
+      <p>
+        PwBD candidates के लिए eligibility,
+        reservation और applicable provisions।
+      </p>
+      <a href="jobs.html">View Jobs</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Ex-Servicemen</h3>
+      <p>
+        Ex-Servicemen candidates के लिए
+        applicable Government job provisions।
+      </p>
+      <a href="jobs.html">View Jobs</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Other Categories</h3>
+      <p>
+        अन्य eligible categories और
+        recruitment provisions की जानकारी।
+      </p>
+      <a href="jobs.html">View Jobs</a>
+    </div>
+
+  </div>
+
+</section>
+  <!-- PHYSICAL ELIGIBILITY -->
+<section class="section">
+
+  <div class="section-heading">
+    <h2>Physical Eligibility</h2>
+    <p>
+      Police, Defence और अन्य physical posts के
+      height, chest, running और physical standards
+      की जानकारी।
+    </p>
+  </div>
+
+  <div class="card-grid">
+
+    <div class="info-card">
+      <h3>Height Requirement</h3>
+      <p>
+        अलग-अलग Government posts में
+        minimum height requirements अलग हो सकती हैं।
+      </p>
+      <a href="#">Check Height</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Chest Requirement</h3>
+      <p>
+        Applicable posts में chest measurement
+        और expansion requirements की जानकारी।
+      </p>
+      <a href="#">Check Chest</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Running Test</h3>
+      <p>
+        Physical recruitment में running और
+        endurance test से जुड़ी जानकारी।
+      </p>
+      <a href="#">View Details</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Physical Standard Test</h3>
+      <p>
+        PST में लागू होने वाले physical
+        standards की जानकारी।
+      </p>
+      <a href="#">View PST</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Physical Efficiency Test</h3>
+      <p>
+        PET में running, jumping और अन्य
+        physical activities की जानकारी।
+      </p>
+      <a href="#">View PET</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Medical Test</h3>
+      <p>
+        Government recruitment में medical
+        examination से जुड़ी सामान्य जानकारी।
+      </p>
+      <a href="#">View Medical</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Police Physical</h3>
+      <p>
+        Police recruitment के physical
+        requirements और tests की जानकारी।
+      </p>
+      <a href="#">View Police</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Defence Physical</h3>
+      <p>
+        Defence recruitment में लागू physical
+        standards की जानकारी।
+      </p>
+      <a href="#">View Defence</a>
+    </div>
+
+  </div>
+
+</section>
+  <!-- EDUCATION & MARKS ELIGIBILITY -->
+<section class="section">
+
+  <div class="section-heading">
+    <h2>Education & Marks Eligibility</h2>
+    <p>
+      Qualification, subjects, percentage और
+      educational requirements के अनुसार
+      Government Exams की जानकारी।
+    </p>
+  </div>
+
+  <div class="card-grid">
+
+    <div class="info-card">
+      <h3>10th Marks</h3>
+      <p>
+        10th qualification और applicable
+        marks criteria वाली Government Jobs।
+      </p>
+      <a href="jobs.html">View Jobs</a>
+    </div>
+
+    <div class="info-card">
+      <h3>12th Marks</h3>
+      <p>
+        12th pass candidates के लिए
+        qualification और marks requirements।
+      </p>
+      <a href="jobs.html">View Jobs</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Graduation Marks</h3>
+      <p>
+        Graduation based exams में applicable
+        percentage और qualification criteria।
+      </p>
+      <a href="jobs.html">View Jobs</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Subject Requirements</h3>
+      <p>
+        PCM, PCB, Commerce, Arts और अन्य
+        subject-specific eligibility।
+      </p>
+      <a href="#">View Requirements</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Minimum Percentage</h3>
+      <p>
+        जिन exams में minimum percentage
+        required हो, उनकी जानकारी।
+      </p>
+      <a href="#">Check Percentage</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Passing Criteria</h3>
+      <p>
+        Qualification में required passing
+        criteria और educational conditions।
+      </p>
+      <a href="#">View Criteria</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Technical Qualification</h3>
+      <p>
+        ITI, Diploma और technical qualification
+        वाली Government Jobs।
+      </p>
+      <a href="jobs.html">View Jobs</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Professional Qualification</h3>
+      <p>
+        Engineering, Medical, Law और अन्य
+        professional qualifications।
+      </p>
+      <a href="jobs.html">View Jobs</a>
+    </div>
+
+  </div>
+
+</section>
+  <!-- EXAM WISE ELIGIBILITY -->
+<section class="section">
+
+  <div class="section-heading">
+    <h2>Exam-wise Eligibility</h2>
+    <p>
+      अलग-अलग Government Exams की qualification,
+      age और अन्य eligibility requirements देखें।
+    </p>
+  </div>
+
+  <div class="card-grid">
+
+    <div class="info-card">
+      <h3>UPSC Exams</h3>
+      <p>
+        UPSC examinations की basic eligibility,
+        qualification और age criteria।
+      </p>
+      <a href="jobs.html">View Exams</a>
+    </div>
+
+    <div class="info-card">
+      <h3>SSC Exams</h3>
+      <p>
+        SSC CGL, CHSL, MTS, GD, CPO और
+        अन्य exams की eligibility।
+      </p>
+      <a href="jobs.html">View Exams</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Railway Exams</h3>
+      <p>
+        RRB और Railway recruitment exams की
+        qualification और eligibility।
+      </p>
+      <a href="jobs.html">View Exams</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Banking Exams</h3>
+      <p>
+        IBPS, SBI और अन्य banking exams की
+        eligibility information।
+      </p>
+      <a href="jobs.html">View Exams</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Defence Exams</h3>
+      <p>
+        Army, Navy, Air Force और Defence
+        recruitment की eligibility।
+      </p>
+      <a href="jobs.html">View Exams</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Police Exams</h3>
+      <p>
+        Central और State Police recruitment
+        की eligibility और physical criteria।
+      </p>
+      <a href="jobs.html">View Exams</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Teaching Exams</h3>
+      <p>
+        CTET, State TET और अन्य teaching
+        recruitment की eligibility।
+      </p>
+      <a href="jobs.html">View Exams</a>
+    </div>
+
+    <div class="info-card">
+      <h3>State Government Exams</h3>
+      <p>
+        अलग-अलग राज्यों के PSC, SSC और
+        अन्य recruitment exams।
+      </p>
+      <a href="jobs.html">View Exams</a>
+    </div>
+
+  </div>
+
+</section>
+  <!-- DEPARTMENT & JOB TYPE ELIGIBILITY -->
+<section class="section">
+
+  <div class="section-heading">
+    <h2>Department & Job Type Eligibility</h2>
+    <p>
+      Department और job type के अनुसार
+      Government recruitment की eligibility देखें।
+    </p>
+  </div>
+
+  <div class="card-grid">
+
+    <div class="info-card">
+      <h3>Police Jobs</h3>
+      <p>
+        Police recruitment में qualification,
+        age और physical eligibility की जानकारी।
+      </p>
+      <a href="jobs.html">View Jobs</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Defence Jobs</h3>
+      <p>
+        Army, Navy, Air Force और अन्य
+        Defence jobs की eligibility।
+      </p>
+      <a href="jobs.html">View Jobs</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Railway Jobs</h3>
+      <p>
+        Railway posts के लिए qualification,
+        age और other requirements।
+      </p>
+      <a href="jobs.html">View Jobs</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Banking Jobs</h3>
+      <p>
+        Banking recruitment में applicable
+        qualification और eligibility criteria।
+      </p>
+      <a href="jobs.html">View Jobs</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Teaching Jobs</h3>
+      <p>
+        Teaching posts के लिए qualification,
+        training और eligibility requirements।
+      </p>
+      <a href="jobs.html">View Jobs</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Clerk & Office Jobs</h3>
+      <p>
+        Clerk, Assistant और office posts की
+        qualification और eligibility।
+      </p>
+      <a href="jobs.html">View Jobs</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Technical Jobs</h3>
+      <p>
+        ITI, Diploma और Engineering based
+        technical posts की eligibility।
+      </p>
+      <a href="jobs.html">View Jobs</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Medical & Health Jobs</h3>
+      <p>
+        Medical, Nursing और Health Department
+        recruitment की eligibility।
+      </p>
+      <a href="jobs.html">View Jobs</a>
+    </div>
+
+  </div>
+
+</section>
+  <!-- STATE WISE ELIGIBILITY -->
+<section class="section">
+
+  <div class="section-heading">
+    <h2>State-wise Eligibility</h2>
+    <p>
+      अलग-अलग राज्यों की Government Jobs में
+      लागू eligibility और recruitment information।
+    </p>
+  </div>
+
+  <div class="card-grid">
+
+    <div class="info-card">
+      <h3>Uttar Pradesh</h3>
+      <p>
+        UP Government Jobs और State
+        recruitment की eligibility।
+      </p>
+      <a href="jobs.html">View Jobs</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Bihar</h3>
+      <p>
+        Bihar Government recruitment और
+        eligibility information।
+      </p>
+      <a href="jobs.html">View Jobs</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Rajasthan</h3>
+      <p>
+        Rajasthan Government Jobs और
+        eligibility criteria।
+      </p>
+      <a href="jobs.html">View Jobs</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Madhya Pradesh</h3>
+      <p>
+        MP Government recruitment और
+        eligibility requirements।
+      </p>
+      <a href="jobs.html">View Jobs</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Jharkhand</h3>
+      <p>
+        Jharkhand Government Jobs और
+        recruitment eligibility।
+      </p>
+      <a href="jobs.html">View Jobs</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Maharashtra</h3>
+      <p>
+        Maharashtra Government recruitment
+        और eligibility information।
+      </p>
+      <a href="jobs.html">View Jobs</a>
+    </div>
+
+    <div class="info-card">
+      <h3>West Bengal</h3>
+      <p>
+        West Bengal Government Jobs और
+        eligibility criteria।
+      </p>
+      <a href="jobs.html">View Jobs</a>
+    </div>
+
+    <div class="info-card">
+      <h3>All States</h3>
+      <p>
+        भारत के सभी राज्यों की Government
+        Jobs और eligibility एक जगह।
+      </p>
+      <a href="jobs.html">View All States</a>
+    </div>
+
+  </div>
+
+</section>
+  <!-- ELIGIBILITY QUICK TOOLS -->
+<section class="section">
+
+  <div class="section-heading">
+    <h2>Eligibility Quick Tools</h2>
+    <p>
+      Government Job eligibility समझने के लिए
+      useful quick tools और guides।
+    </p>
+  </div>
+
+  <div class="card-grid">
+
+    <div class="info-card">
+      <h3>Age Calculator</h3>
+      <p>
+        अपनी date of birth के आधार पर
+        current age calculate करें।
+      </p>
+      <a href="#">Open Calculator</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Age Limit Checker</h3>
+      <p>
+        Exam की maximum और minimum age
+        requirement check करें।
+      </p>
+      <a href="#">Check Age</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Percentage Calculator</h3>
+      <p>
+        Marks से percentage और required
+        percentage calculate करें।
+      </p>
+      <a href="#">Open Calculator</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Height Converter</h3>
+      <p>
+        Feet, inch और centimetre में
+        height convert करें।
+      </p>
+      <a href="#">Convert Height</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Category Eligibility</h3>
+      <p>
+        Category के अनुसार applicable
+        eligibility provisions देखें।
+      </p>
+      <a href="#">Check Category</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Physical Eligibility</h3>
+      <p>
+        Height, chest और physical test
+        requirements की जानकारी।
+      </p>
+      <a href="#">Check Physical</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Qualification Checker</h3>
+      <p>
+        अपनी qualification के अनुसार
+        suitable job categories देखें।
+      </p>
+      <a href="#">Check Qualification</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Job Eligibility Search</h3>
+      <p>
+        अपनी details के अनुसार Government
+        Jobs खोजने की सुविधा।
+      </p>
+      <a href="jobs.html">Search Jobs</a>
+    </div>
+
+  </div>
+
+</section>
+  <!-- ELIGIBILITY HELP & IMPORTANT INFORMATION -->
+<section class="section">
+
+  <div class="section-heading">
+    <h2>Eligibility Help & Important Information</h2>
+    <p>
+      Government Job eligibility check करते समय
+      जरूरी rules, documents और verification
+      information यहाँ देखें।
+    </p>
+  </div>
+
+  <div class="card-grid">
+
+    <div class="info-card">
+      <h3>Documents Required</h3>
+      <p>
+        Eligibility और application के लिए
+        जरूरी documents की जानकारी।
+      </p>
+      <a href="#">View Documents</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Domicile Requirement</h3>
+      <p>
+        State-specific jobs में domicile और
+        residence requirements की जानकारी।
+      </p>
+      <a href="#">View Details</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Certificate Requirements</h3>
+      <p>
+        EWS, OBC, SC, ST और अन्य certificates
+        से जुड़ी eligibility information।
+      </p>
+      <a href="#">View Requirements</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Official Notification</h3>
+      <p>
+        Final eligibility हमेशा संबंधित
+        official recruitment notification से verify करें।
+      </p>
+      <a href="jobs.html">View Jobs</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Selection Process</h3>
+      <p>
+        Written Exam, Skill Test, Physical Test,
+        Interview आदि की जानकारी।
+      </p>
+      <a href="syllabus.html">View Details</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Exam Pattern</h3>
+      <p>
+        Exam stages, subjects, marks और
+        qualifying requirements की जानकारी।
+      </p>
+      <a href="syllabus.html">View Pattern</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Eligibility FAQ</h3>
+      <p>
+        Government Job eligibility से जुड़े
+        common questions और answers।
+      </p>
+      <a href="#">View FAQ</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Report an Error</h3>
+      <p>
+        Eligibility information में कोई
+        गलती मिले तो report करें।
+      </p>
+      <a href="#">Report Error</a>
+    </div>
+
+  </div>
+
+</section>
+  <!-- TRUST & VERIFICATION -->
+<section class="section">
+
+  <div class="section-heading">
+    <h2>Trust & Verification</h2>
+    <p>
+      Eligibility information को official
+      sources से verify करने के लिए जरूरी
+      information।
+    </p>
+  </div>
+
+  <div class="card-grid">
+
+    <div class="info-card">
+      <h3>Official Source</h3>
+      <p>
+        Recruitment की final eligibility
+        official notification से verify करें।
+      </p>
+      <a href="#">View Source</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Last Updated</h3>
+      <p>
+        Information को latest notification
+        के अनुसार check करें।
+      </p>
+      <a href="#">View Update</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Eligibility Verification</h3>
+      <p>
+        Age, qualification और category
+        requirements verify करें।
+      </p>
+      <a href="#">Verify Eligibility</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Physical Verification</h3>
+      <p>
+        Height, chest और physical standards
+        official rules से verify करें।
+      </p>
+      <a href="#">Verify Physical</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Important Notice</h3>
+      <p>
+        Eligibility में बदलाव या correction
+        होने पर official notice देखें।
+      </p>
+      <a href="#">View Notice</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Documents Verification</h3>
+      <p>
+        Application से पहले सभी required
+        documents और certificates check करें।
+      </p>
+      <a href="#">Check Documents</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Eligibility FAQ</h3>
+      <p>
+        Eligibility से जुड़े frequently
+        asked questions और useful answers।
+      </p>
+      <a href="#">View FAQ</a>
+    </div>
+
+    <div class="info-card">
+      <h3>Report an Error</h3>
+      <p>
+        किसी information में गलती मिले तो
+        Sarkariiichij को report करें।
+      </p>
+      <a href="#">Report Error</a>
+    </div>
+
+  </div>
+
+</section>
+  <!-- FOOTER -->
+<footer class="site-footer">
+
+  <div class="footer-brand">
+    <h2>Sarkariiichij</h2>
+
+    <p>
+      Government Jobs, Eligibility,
+      Results, Admission और Career
+      Information का सरल platform.
+    </p>
+  </div>
+
+
+  <div class="footer-links">
+
+    <a href="index.html">Home</a>
+    <a href="jobs.html">Government Jobs</a>
+    <a href="results.html">Results</a>
+    <a href="admit-card.html">Admit Card</a>
+    <a href="admission.html">Admission</a>
+    <a href="syllabus.html">Syllabus</a>
+    <a href="cutoff.html">Cut Off</a>
+    <a href="papers.html">Previous Papers</a>
+    <a href="scholarship.html">Scholarship</a>
+    <a href="yojana.html">Sarkari Yojana</a>
+    <a href="sarkari-kaam.html">Sarkari Kaam</a>
+    <a href="eligibility.html">Eligibility</a>
+
+  </div>
+
+
+  <div class="footer-info">
+
+    <a href="#">About Sarkariiichij</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms & Conditions</a>
+    <a href="#">Disclaimer</a>
+    <a href="#">Contact Us</a>
+    <a href="#">Report Error</a>
+
+  </div>
+
+
+  <div class="footer-bottom">
+
+    <p>
+      © 2026 Sarkariiichij. All Rights Reserved.
+    </p>
+
+    <p>
+      Information is provided for educational
+      and informational purposes.
+    </p>
+
+  </div>
+
+</footer>
+
+
+<!-- MOBILE NAV -->
+<nav class="mobile-nav">
+
+  <a href="index.html">Home</a>
+
+  <a href="jobs.html">Jobs</a>
+
+  <a href="results.html">Results</a>
+
+  <a href="admit-card.html">Admit Card</a>
+
+  <a href="eligibility.html">Eligibility</a>
+
+</nav>
+
+
+</body>
+</html>
