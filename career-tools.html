@@ -190,7 +190,7 @@
         approximate salary calculate करें।
       </p>
 
-      <a href="#">Open Calculator</a>
+      <a href="#salaryCalculator">Open Calculator</a>
 
     </div>
 
@@ -408,6 +408,60 @@
     <div id="heightResult">
       <p>
         Feet और inches डालकर Convert Height पर click करें।
+      </p>
+    </div>
+
+  </div>
+
+</section>
+  <!-- SALARY CALCULATOR -->
+<section class="section" id="salaryCalculator">
+
+  <div class="section-heading">
+    <h2>Salary Calculator</h2>
+    <p>
+      Basic salary और allowances के आधार पर estimated gross salary calculate करें।
+    </p>
+  </div>
+
+  <div class="info-card">
+
+    <h3>Calculate Your Salary</h3>
+
+    <input
+      type="number"
+      id="basicSalary"
+      placeholder="Basic Salary"
+      min="0"
+    >
+
+    <br><br>
+
+    <input
+      type="number"
+      id="allowances"
+      placeholder="Allowances"
+      min="0"
+    >
+
+    <br><br>
+
+    <input
+      type="number"
+      id="deductions"
+      placeholder="Deductions"
+      min="0"
+    >
+
+    <br><br>
+
+    <button type="button" id="calculateSalary">
+      Calculate Salary
+    </button>
+
+    <div id="salaryResult">
+      <p>
+        Salary details डालकर Calculate Salary पर click करें।
       </p>
     </div>
 
@@ -2296,5 +2350,51 @@ document.getElementById("convertHeight").addEventListener("click", function () {
 
 });
   </script>
+  <script>
+document.getElementById("calculateSalary").addEventListener("click", function () {
+
+  const basic = Number(document.getElementById("basicSalary").value);
+  const allowances = Number(document.getElementById("allowances").value);
+  const deductions = Number(document.getElementById("deductions").value);
+  const result = document.getElementById("salaryResult");
+
+  if (basic < 0 || allowances < 0 || deductions < 0) {
+    result.innerHTML =
+      "<p>Please enter valid salary values.</p>";
+    return;
+  }
+
+  if (basic === 0) {
+    result.innerHTML =
+      "<p>Please enter Basic Salary.</p>";
+    return;
+  }
+
+  const gross = basic + allowances;
+  const net = gross - deductions;
+
+  result.innerHTML = `
+    <div class="age-result-box">
+      <h3>Salary Result</h3>
+
+      <p>
+        Gross Salary:
+        <strong>₹${gross.toLocaleString("en-IN")}</strong>
+      </p>
+
+      <p>
+        Total Deductions:
+        <strong>₹${deductions.toLocaleString("en-IN")}</strong>
+      </p>
+
+      <p>
+        Estimated Net Salary:
+        <strong>₹${net.toLocaleString("en-IN")}</strong>
+      </p>
+    </div>
+  `;
+
+});
+    </script>
 </body>
 </html>
