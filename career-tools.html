@@ -2109,5 +2109,40 @@ document.getElementById("calculateAge").addEventListener("click", function () {
 
 });
 </script>
+  <script>
+document.getElementById("calculatePercentage").addEventListener("click", function () {
+
+  const total = Number(document.getElementById("totalMarks").value);
+  const obtained = Number(document.getElementById("obtainedMarks").value);
+  const result = document.getElementById("percentageResult");
+
+  if (!total || total <= 0) {
+    result.innerHTML = "<p>Please enter valid Total Marks.</p>";
+    return;
+  }
+
+  if (obtained < 0 || obtained > total) {
+    result.innerHTML = "<p>Obtained Marks, Total Marks से ज्यादा नहीं हो सकते।</p>";
+    return;
+  }
+
+  const percentage = (obtained / total) * 100;
+
+  result.innerHTML = `
+    <div class="age-result-box">
+      <h3>Your Percentage</h3>
+      <p>
+        <strong>${percentage.toFixed(2)}%</strong>
+      </p>
+      <p>
+        Obtained Marks:
+        <strong>${obtained}</strong> /
+        <strong>${total}</strong>
+      </p>
+    </div>
+  `;
+
+});
+  </script>
 </body>
 </html>
