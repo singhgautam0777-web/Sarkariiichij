@@ -809,7 +809,7 @@
         या कितने दिन बीत चुके हैं।
       </p>
 
-      <a href="#">
+      <a href="#daysCalculator">
         Open Calculator
       </a>
 
@@ -913,6 +913,26 @@
 
 
   </div>
+
+</section>
+  <!-- DATE DIFFERENCE CALCULATOR -->
+
+<section class="section" id="dateDifference">
+
+   ...
+   Date Difference Calculator
+   ...
+
+</section>
+
+
+<!-- DAYS CALCULATOR -->
+
+<section class="section" id="daysCalculator">
+
+   ...
+   Days Calculator
+   ...
 
 </section>
   <!-- DATE DIFFERENCE CALCULATOR -->
@@ -2552,6 +2572,92 @@ document
             ${totalDays.toLocaleString("en-IN")}
           </strong>
         </p>
+
+      </div>
+
+    `;
+
+  });
+
+  </script>
+  <script>
+
+document
+  .getElementById("calculateDays")
+  .addEventListener("click", function () {
+
+    const selectedValue =
+      document.getElementById("daysDate").value;
+
+    const result =
+      document.getElementById("daysResult");
+
+    if (!selectedValue) {
+      result.innerHTML =
+        "<p>Please select a date.</p>";
+      return;
+    }
+
+    const selectedDate =
+      new Date(selectedValue + "T00:00:00");
+
+    const today = new Date();
+
+    today.setHours(0, 0, 0, 0);
+
+    const difference =
+      selectedDate.getTime() - today.getTime();
+
+    const totalDays =
+      Math.round(
+        Math.abs(difference) /
+        (1000 * 60 * 60 * 24)
+      );
+
+    let message = "";
+
+    if (difference > 0) {
+
+      message = `
+        <p>
+          <strong>${totalDays}</strong>
+          days remaining.
+        </p>
+      `;
+
+    } else if (difference < 0) {
+
+      message = `
+        <p>
+          <strong>${totalDays}</strong>
+          days have passed.
+        </p>
+      `;
+
+    } else {
+
+      message = `
+        <p>
+          <strong>Today</strong> is the selected date.
+        </p>
+      `;
+
+    }
+
+    result.innerHTML = `
+
+      <div class="age-result-box">
+
+        <h3>Days Calculator Result</h3>
+
+        <p>
+          Selected Date:
+          <strong>
+            ${selectedDate.toLocaleDateString("en-IN")}
+          </strong>
+        </p>
+
+        ${message}
 
       </div>
 
