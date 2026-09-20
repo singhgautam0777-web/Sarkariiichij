@@ -793,7 +793,7 @@
         months और years calculate करें।
       </p>
 
-      <a href="#">
+      <a href="#dateDifference">
         Open Tool
       </a>
 
@@ -911,6 +911,66 @@
 
     </div>
 
+
+  </div>
+
+</section>
+  <!-- DATE DIFFERENCE CALCULATOR -->
+<section class="section" id="dateDifference">
+
+  <div class="section-heading">
+    <h2>Date Difference Calculator</h2>
+    <p>
+      दो dates के बीच total days और exact
+      years, months और days calculate करें।
+    </p>
+  </div>
+
+  <div class="info-card">
+
+    <h3>Calculate Date Difference</h3>
+
+    <label for="startDate">
+      Start Date
+    </label>
+
+    <br><br>
+
+    <input
+      type="date"
+      id="startDate"
+    >
+
+    <br><br>
+
+    <label for="endDate">
+      End Date
+    </label>
+
+    <br><br>
+
+    <input
+      type="date"
+      id="endDate"
+    >
+
+    <br><br>
+
+    <button
+      type="button"
+      id="calculateDateDifference"
+    >
+      Calculate Difference
+    </button>
+
+    <div id="dateDifferenceResult">
+
+      <p>
+        Start Date और End Date select करके
+        Calculate Difference पर click करें।
+      </p>
+
+    </div>
 
   </div>
 
@@ -2396,5 +2456,109 @@ document.getElementById("calculateSalary").addEventListener("click", function ()
 
 });
     </script>
+  <script>
+
+document
+  .getElementById("calculateDateDifference")
+  .addEventListener("click", function () {
+
+    const startValue =
+      document.getElementById("startDate").value;
+
+    const endValue =
+      document.getElementById("endDate").value;
+
+    const result =
+      document.getElementById("dateDifferenceResult");
+
+    if (!startValue || !endValue) {
+
+      result.innerHTML =
+        "<p>Please select both dates.</p>";
+
+      return;
+    }
+
+    const start = new Date(startValue);
+    const end = new Date(endValue);
+
+    if (start > end) {
+
+      result.innerHTML =
+        "<p>End Date, Start Date से पहले नहीं हो सकती।</p>";
+
+      return;
+    }
+
+    const totalDays = Math.floor(
+      (end - start) /
+      (1000 * 60 * 60 * 24)
+    );
+
+    let years =
+      end.getFullYear() -
+      start.getFullYear();
+
+    let months =
+      end.getMonth() -
+      start.getMonth();
+
+    let days =
+      end.getDate() -
+      start.getDate();
+
+    if (days < 0) {
+
+      months--;
+
+      const previousMonth =
+        new Date(
+          end.getFullYear(),
+          end.getMonth(),
+          0
+        );
+
+      days += previousMonth.getDate();
+    }
+
+    if (months < 0) {
+
+      years--;
+
+      months += 12;
+    }
+
+    result.innerHTML = `
+
+      <div class="age-result-box">
+
+        <h3>Date Difference</h3>
+
+        <p>
+          <strong>
+            ${years} Years
+          </strong>
+          <strong>
+            ${months} Months
+          </strong>
+          <strong>
+            ${days} Days
+          </strong>
+        </p>
+
+        <p>
+          Total Days:
+          <strong>
+            ${totalDays.toLocaleString("en-IN")}
+          </strong>
+        </p>
+
+      </div>
+
+    `;
+
+  });
+
+  </script>
 </body>
 </html>
