@@ -1,1473 +1,4440 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Sarkariiichij – Government Jobs, Results, Admit Card, Admission & More</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
-  <meta name="description"
-    content="Sarkariiichij पर Government Jobs, Results, Admit Card, Syllabus, Admission, Scholarship, Sarkari Kaam और Career information एक ही जगह पाएं.">
+  <meta
+    name="description"
+    content="Sarkariiichij - Government Jobs, Results, Admit Card, Admission, Scholarship, Sarkari Yojana, Career Tools and Exam Preparation."
+  >
 
-  <meta name="robots" content="index, follow">
+  <meta
+    name="keywords"
+    content="government jobs, sarkari naukri, result, admit card, admission, scholarship, sarkari yojana, career tools, Sarkariiichij"
+  >
 
-  <link rel="stylesheet" href="style.css">
+  <meta
+    name="author"
+    content="Sarkariiichij"
+  >
+
+  <meta
+    name="robots"
+    content="index, follow"
+  >
+
+  <title>
+    Sarkariiichij - Government Jobs, Results, Admission & Career
+  </title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
 </head>
 
 <body>
 
   <!-- HEADER -->
-  <header class="header">
-    <div class="logo">
-      <span>Sarkariiichij</span>
+
+  <header class="site-header">
+
+    <div class="header-inner">
+
+      <a
+        href="index.html"
+        class="brand"
+        aria-label="Sarkariiichij Home"
+      >
+
+        <span class="brand-main">
+          Sarkariiichij
+        </span>
+
+        <span class="brand-sub">
+          Sarkari • Career • Education
+        </span>
+
+      </a>
+
+
+      <button
+        class="menu-button"
+        id="menuButton"
+        type="button"
+        aria-label="Open Menu"
+      >
+        ☰
+      </button>
+
+
+      <nav
+        class="main-nav"
+        id="mainNav"
+        aria-label="Main Navigation"
+      >
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="jobs.html">
+          Government Jobs
+        </a>
+
+        <a href="results.html">
+          Results
+        </a>
+
+        <a href="admit-card.html">
+          Admit Card
+        </a>
+
+        <a href="admission.html">
+          Admission
+        </a>
+
+        <a href="eligibility.html">
+          Eligibility
+        </a>
+
+        <a href="career-tools.html">
+          Career Tools
+        </a>
+
+        <a href="mock-test.html">
+          Mock Test
+        </a>
+
+      </nav>
+
     </div>
 
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="jobs.html">Jobs</a>
-      <a href="results.html">Results</a>
-      <a href="admit-card.html">Admit Card</a>
-      <a href="admission.html">Admission</a>
-    </nav>
   </header>
 
 
-  <!-- HERO -->
-  <section class="hero">
+  <!-- MAIN -->
 
-    <div class="hero-content">
+  <main>
 
-      <p class="welcome">Welcome to Sarkariiichij</p>
 
-      <h1>
-        Government Jobs, Results & Career
-        <span>एक ही जगह</span>
-      </h1>
+    <!-- HERO -->
 
-      <p class="hero-text">
-        Sarkari Naukri, Admit Card, Results, Syllabus,
-        Admission, Scholarship और सरकारी सेवाओं की जानकारी आसानी से पाएं।
-      </p>
+    <section class="hero-section">
 
-      <!-- SEARCH -->
-      <div class="search-box">
-        <input
-          type="search"
-          id="homeSearch"
-          placeholder="Search Government Jobs, Results, Admit Card..."
-          autocomplete="off">
+      <div class="hero-content">
 
-        <button type="button" onclick="homeSearch()">
-          Search
-        </button>
+        <span class="hero-badge">
+          Government • Education • Career
+        </span>
+
+        <h1>
+          Sarkariiichij
+        </h1>
+
+        <h2>
+          सरकारी नौकरी और Career की पूरी जानकारी एक जगह
+        </h2>
+
+        <p>
+          Government Jobs, Results, Admit Card, Admission,
+          Scholarship, Sarkari Yojana, Career Tools,
+          Mock Tests और Exam Preparation की जानकारी।
+        </p>
+
+
+        <!-- GLOBAL SEARCH -->
+
+        <div class="global-search">
+
+          <label
+            for="globalSearch"
+            class="sr-only"
+          >
+            Search
+          </label>
+
+          <input
+            type="search"
+            id="globalSearch"
+            placeholder="Search Government Jobs, Results, Admit Card..."
+            autocomplete="off"
+          >
+
+          <button
+            type="button"
+            id="globalSearchButton"
+          >
+            Search
+          </button>
+
+        </div>
+
+
+        <div
+          id="searchResults"
+          class="search-results"
+        ></div>
+
       </div>
 
-    </div>
-
-  </section>
+    </section>
 
 
-  <!-- QUICK ACCESS -->
-  <section class="section">
+    <!-- TODAY UPDATE -->
 
-    <div class="section-heading">
-      <h2>आज आपको क्या चाहिए?</h2>
-      <p>अपनी जरूरत के अनुसार सीधे section पर जाएं</p>
-    </div>
+    <section class="section">
 
-    <div class="quick-grid">
+      <div class="section-heading">
 
-      <a class="quick-card" href="jobs.html">
-        <strong>Government Jobs</strong>
-        <span>नई सरकारी नौकरियां</span>
-      </a>
+        <span class="section-label">
+          TODAY
+        </span>
 
-      <a class="quick-card" href="results.html">
-        <strong>Results</strong>
-        <span>Latest परीक्षा परिणाम</span>
-      </a>
+        <h2>
+          आज आपको क्या चाहिए?
+        </h2>
 
-      <a class="quick-card" href="admit-card.html">
-        <strong>Admit Card</strong>
-        <span>Hall Ticket Download</span>
-      </a>
+        <p>
+          अपनी जरूरत के अनुसार सीधे सही section पर जाएँ।
+        </p>
 
-      <a class="quick-card" href="syllabus.html">
-        <strong>Syllabus</strong>
-        <span>Exam का पूरा syllabus</span>
-      </a>
-
-      <a class="quick-card" href="admission.html">
-        <strong>Admission</strong>
-        <span>College & Entrance Admission</span>
-      </a>
-
-      <a class="quick-card" href="#">
-        <strong>Scholarship</strong>
-        <span>Scholarship की जानकारी</span>
-      </a>
-
-      <a class="quick-card" href="#">
-        <strong>Sarkari Kaam</strong>
-        <span>सरकारी सेवाएं एवं काम</span>
-      </a>
-
-      <a class="quick-card" href="#">
-        <strong>Eligibility</strong>
-        <span>अपनी eligibility check करें</span>
-      </a>
-
-    </div>
-
-  </section>
-
-
-  <!-- LATEST JOBS -->
-  <section class="section">
-
-    <div class="section-heading">
-      <h2>Latest Government Jobs</h2>
-      <p>नई सरकारी भर्तियों की जानकारी</p>
-    </div>
-
-    <div class="job-preview-grid">
-
-      <article class="job-card">
-        <span class="badge">Latest</span>
-        <h3>SSC CGL</h3>
-        <p>Staff Selection Commission</p>
-        <a href="job-details.html?id=ssc-cgl">View Details →</a>
-      </article>
-
-      <article class="job-card">
-        <span class="badge">Latest</span>
-        <h3>SSC CHSL</h3>
-        <p>12th Pass Government Jobs</p>
-        <a href="job-details.html?id=ssc-chsl">View Details →</a>
-      </article>
-
-      <article class="job-card">
-        <span class="badge">Latest</span>
-        <h3>SSC MTS</h3>
-        <p>10th Pass Government Job</p>
-        <a href="job-details.html?id=ssc-mts">View Details →</a>
-      </article>
-
-      <article class="job-card">
-        <span class="badge">Latest</span>
-        <h3>SSC GD</h3>
-        <p>Defence & CAPF Recruitment</p>
-        <a href="job-details.html?id=ssc-gd">View Details →</a>
-      </article>
-
-    </div>
-
-    <div class="center-button">
-      <a href="jobs.html" class="main-button">
-        View All Government Jobs →
-      </a>
-    </div>
-
-  </section>
-
-
-  <!-- MAIN UPDATES -->
-  <section class="section">
-
-    <div class="section-heading">
-      <h2>Important Updates</h2>
-      <p>आज की जरूरी सरकारी परीक्षा updates</p>
-    </div>
-
-    <div class="update-grid">
-
-      <div class="update-card">
-        <strong>Admit Card</strong>
-        <p>Latest admit card और exam updates यहां देखें।</p>
-        <a href="admit-card.html">Check Now →</a>
       </div>
 
-      <div class="update-card">
-        <strong>Results</strong>
-        <p>Government exams और university results देखें।</p>
-        <a href="results.html">Check Results →</a>
-      </div>
 
-      <div class="update-card">
-        <strong>Upcoming Exams</strong>
-        <p>आने वाली महत्वपूर्ण परीक्षाओं की जानकारी।</p>
-        <a href="#">View Calendar →</a>
-      </div>
+      <div class="quick-grid">
 
-    </div>
 
-  </section>
+        <a
+          href="jobs.html"
+          class="quick-card"
+        >
 
+          <span class="quick-icon">
+            💼
+          </span>
 
-  <!-- FOOTER -->
-  <footer class="footer">
+          <strong>
+            Government Jobs
+          </strong>
 
-    <div class="footer-logo">
-      Sarkariiichij
-    </div>
+          <small>
+            नई सरकारी भर्तियाँ
+          </small>
 
-    <p>
-      Government Jobs • Results • Admission • Career • Sarkari Services
-    </p>
-
-    <p class="copyright">
-      © 2026 Sarkariiichij. All Rights Reserved.
-    </p>
-
-  </footer>
-
-
-  <!-- HOME SEARCH -->
-  <script>
-    function homeSearch() {
-
-      const query = document.getElementById("homeSearch").value.trim();
-
-      if (!query) {
-        alert("कृपया कुछ search करें।");
-        return;
-      }
-
-      const q = encodeURIComponent(query);
-
-      window.location.href = "jobs.html?search=" + q;
-    }
-  </script>
-    <!-- UPCOMING EXAMS -->
-  <section class="section">
-
-    <div class="section-heading">
-      <h2>Upcoming Exams</h2>
-      <p>आने वाली महत्वपूर्ण सरकारी परीक्षाएं</p>
-    </div>
-
-    <div class="update-grid">
-
-      <div class="update-card">
-        <strong>SSC Exams</strong>
-        <p>SSC की आने वाली परीक्षाओं और dates की जानकारी।</p>
-        <a href="#">View Exams →</a>
-      </div>
-
-      <div class="update-card">
-        <strong>Railway Exams</strong>
-        <p>RRB और Railway की upcoming examinations।</p>
-        <a href="#">View Exams →</a>
-      </div>
-
-      <div class="update-card">
-        <strong>Banking Exams</strong>
-        <p>IBPS, SBI और अन्य banking examinations।</p>
-        <a href="#">View Exams →</a>
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- JOBS BY QUALIFICATION -->
-  <section class="section">
-
-    <div class="section-heading">
-      <h2>Government Jobs by Qualification</h2>
-      <p>अपनी qualification के अनुसार jobs खोजें</p>
-    </div>
-
-    <div class="quick-grid">
-
-      <a href="jobs.html?qualification=8th" class="quick-card">
-        <strong>8th Pass</strong>
-        <span>8वीं पास सरकारी नौकरियां</span>
-      </a>
-
-      <a href="jobs.html?qualification=10th" class="quick-card">
-        <strong>10th Pass</strong>
-        <span>10वीं पास सरकारी नौकरियां</span>
-      </a>
-
-      <a href="jobs.html?qualification=12th" class="quick-card">
-        <strong>12th Pass</strong>
-        <span>12वीं पास सरकारी नौकरियां</span>
-      </a>
-
-      <a href="jobs.html?qualification=graduate" class="quick-card">
-        <strong>Graduate</strong>
-        <span>Graduation level jobs</span>
-      </a>
-
-      <a href="jobs.html?qualification=iti" class="quick-card">
-        <strong>ITI</strong>
-        <span>ITI based government jobs</span>
-      </a>
-
-      <a href="jobs.html?qualification=diploma" class="quick-card">
-        <strong>Diploma</strong>
-        <span>Diploma level jobs</span>
-      </a>
-
-      <a href="jobs.html?qualification=engineering" class="quick-card">
-        <strong>Engineering</strong>
-        <span>Engineering government jobs</span>
-      </a>
-
-      <a href="jobs.html?qualification=pg" class="quick-card">
-        <strong>Post Graduate</strong>
-        <span>PG level government jobs</span>
-      </a>
-
-    </div>
-
-  </section>
-
-
-  <!-- JOBS BY DEPARTMENT -->
-  <section class="section">
-
-    <div class="section-heading">
-      <h2>Government Jobs by Department</h2>
-      <p>अलग-अलग departments की सरकारी नौकरियां</p>
-    </div>
-
-    <div class="quick-grid">
-
-      <a href="jobs.html?department=ssc" class="quick-card">
-        <strong>SSC</strong>
-        <span>Staff Selection Commission</span>
-      </a>
-
-      <a href="jobs.html?department=railway" class="quick-card">
-        <strong>Railway</strong>
-        <span>RRB / RRC Recruitment</span>
-      </a>
-
-      <a href="jobs.html?department=banking" class="quick-card">
-        <strong>Banking</strong>
-        <span>IBPS / SBI / RBI आदि</span>
-      </a>
-
-      <a href="jobs.html?department=defence" class="quick-card">
-        <strong>Defence</strong>
-        <span>Army / Navy / Air Force</span>
-      </a>
-
-      <a href="jobs.html?department=police" class="quick-card">
-        <strong>Police</strong>
-        <span>Police और CAPF Recruitment</span>
-      </a>
-
-      <a href="jobs.html?department=teaching" class="quick-card">
-        <strong>Teaching</strong>
-        <span>Teacher और Education Jobs</span>
-      </a>
-
-      <a href="jobs.html?department=upsc" class="quick-card">
-        <strong>UPSC</strong>
-        <span>Central Government Exams</span>
-      </a>
-
-      <a href="jobs.html?department=state" class="quick-card">
-        <strong>State Government</strong>
-        <span>State level Recruitment</span>
-      </a>
-
-    </div>
-
-    <div class="center-button">
-      <a href="jobs.html" class="main-button">
-        View All Departments →
-      </a>
-    </div>
-
-  </section>
-
-
-  <!-- STATE WISE -->
-  <section class="section">
-
-    <div class="section-heading">
-      <h2>State-wise Government Jobs</h2>
-      <p>अपने राज्य की सरकारी भर्ती खोजें</p>
-    </div>
-
-    <div class="quick-grid">
-
-      <a href="jobs.html?state=uttar-pradesh" class="quick-card">
-        <strong>Uttar Pradesh</strong>
-        <span>UP Government Jobs</span>
-      </a>
-
-      <a href="jobs.html?state=bihar" class="quick-card">
-        <strong>Bihar</strong>
-        <span>Bihar Government Jobs</span>
-      </a>
-
-      <a href="jobs.html?state=rajasthan" class="quick-card">
-        <strong>Rajasthan</strong>
-        <span>Rajasthan Government Jobs</span>
-      </a>
-
-      <a href="jobs.html?state=madhya-pradesh" class="quick-card">
-        <strong>Madhya Pradesh</strong>
-        <span>MP Government Jobs</span>
-      </a>
-
-      <a href="jobs.html?state=delhi" class="quick-card">
-        <strong>Delhi</strong>
-        <span>Delhi Government Jobs</span>
-      </a>
-
-      <a href="jobs.html?state=maharashtra" class="quick-card">
-        <strong>Maharashtra</strong>
-        <span>Maharashtra Government Jobs</span>
-      </a>
-
-      <a href="jobs.html?state=west-bengal" class="quick-card">
-        <strong>West Bengal</strong>
-        <span>WB Government Jobs</span>
-      </a>
-
-      <a href="jobs.html?state=all" class="quick-card">
-        <strong>All States</strong>
-        <span>सभी राज्यों की नौकरियां</span>
-      </a>
-
-    </div>
-
-  </section>
-
-
-  <!-- ANSWER KEY -->
-  <section class="section">
-
-    <div class="section-heading">
-      <h2>Answer Key</h2>
-      <p>Latest government exam answer keys</p>
-    </div>
-
-    <div class="job-preview-grid">
-
-      <article class="job-card">
-        <span class="badge">Answer Key</span>
-        <h3>SSC Exams</h3>
-        <p>SSC exams की latest answer key.</p>
-        <a href="#">View Answer Key →</a>
-      </article>
-
-      <article class="job-card">
-        <span class="badge">Answer Key</span>
-        <h3>Railway Exams</h3>
-        <p>RRB examinations की answer key.</p>
-        <a href="#">View Answer Key →</a>
-      </article>
-
-      <article class="job-card">
-        <span class="badge">Answer Key</span>
-        <h3>Banking Exams</h3>
-        <p>Banking examinations की answer key.</p>
-        <a href="#">View Answer Key →</a>
-      </article>
-
-      <article class="job-card">
-        <span class="badge">Answer Key</span>
-        <h3>State Exams</h3>
-        <p>State government exams की answer keys.</p>
-        <a href="#">View Answer Key →</a>
-      </article>
-
-    </div>
-
-    <div class="center-button">
-      <a href="#" class="main-button">
-        View All Answer Keys →
-      </a>
-    </div>
-
-  </section>
-
-
-  <!-- CUT OFF -->
-  <section class="section">
-
-    <div class="section-heading">
-      <h2>Cut Off</h2>
-      <p>Government exams की cutoff information</p>
-    </div>
-
-    <div class="update-grid">
-
-      <div class="update-card">
-        <strong>SSC Cut Off</strong>
-        <p>CGL, CHSL, MTS, GD और अन्य SSC exams.</p>
-        <a href="#">View Cut Off →</a>
-      </div>
-
-      <div class="update-card">
-        <strong>Railway Cut Off</strong>
-        <p>RRB NTPC, Group D और अन्य exams.</p>
-        <a href="#">View Cut Off →</a>
-      </div>
-
-      <div class="update-card">
-        <strong>State Exam Cut Off</strong>
-        <p>State government examinations की cutoff.</p>
-        <a href="#">View Cut Off →</a>
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- PREVIOUS YEAR PAPERS -->
-  <section class="section">
-
-    <div class="section-heading">
-      <h2>Previous Year Papers</h2>
-      <p>पुराने प्रश्नपत्र और exam preparation material</p>
-    </div>
-
-    <div class="quick-grid">
-
-      <a href="#" class="quick-card">
-        <strong>SSC Papers</strong>
-        <span>CGL, CHSL, MTS, GD आदि</span>
-      </a>
-
-      <a href="#" class="quick-card">
-        <strong>Railway Papers</strong>
-        <span>NTPC, Group D, ALP आदि</span>
-      </a>
-
-      <a href="#" class="quick-card">
-        <strong>Banking Papers</strong>
-        <span>IBPS, SBI, RBI आदि</span>
-      </a>
-
-      <a href="#" class="quick-card">
-        <strong>UP Exams</strong>
-        <span>UPPSC, UPSSSC, Police आदि</span>
-      </a>
-
-    </div>
-
-    <div class="center-button">
-      <a href="#" class="main-button">
-        View All Papers →
-      </a>
-    </div>
-
-  </section>
-  <!-- EDUCATION HUB -->
-  <section class="section">
-
-    <div class="section-heading">
-      <h2>Education Hub</h2>
-      <p>Admission, University, College और Scholarship की जानकारी</p>
-    </div>
-
-    <div class="quick-grid">
-
-      <a href="admission.html" class="quick-card">
-        <strong>Admission</strong>
-        <span>UG, PG, Entrance और अन्य admissions</span>
-      </a>
-
-      <a href="#" class="quick-card">
-        <strong>University Results</strong>
-        <span>Universities के latest results</span>
-      </a>
-
-      <a href="#" class="quick-card">
-        <strong>College / University Finder</strong>
-        <span>अपने लिए college और university खोजें</span>
-      </a>
-
-      <a href="#" class="quick-card">
-        <strong>Admission Deadline</strong>
-        <span>Admission की last dates देखें</span>
-      </a>
-
-      <a href="#" class="quick-card">
-        <strong>Scholarship Finder</strong>
-        <span>अपने लिए scholarship खोजें</span>
-      </a>
-
-      <a href="#" class="quick-card">
-        <strong>Study Material</strong>
-        <span>Exam और पढ़ाई के useful materials</span>
-      </a>
-
-    </div>
-
-  </section>
-
-
-  <!-- EDUCATION UPDATES -->
-  <section class="section">
-
-    <div class="section-heading">
-      <h2>Education Updates</h2>
-      <p>छात्रों के लिए जरूरी latest updates</p>
-    </div>
-
-    <div class="update-grid">
-
-      <div class="update-card">
-        <strong>Latest Admissions</strong>
-        <p>नई admission notifications और application dates।</p>
-        <a href="admission.html">View Admissions →</a>
-      </div>
-
-      <div class="update-card">
-        <strong>University Results</strong>
-        <p>UG और PG courses के latest results।</p>
-        <a href="#">View Results →</a>
-      </div>
-
-      <div class="update-card">
-        <strong>Scholarships</strong>
-        <p>Students के लिए scholarship opportunities।</p>
-        <a href="#">View Scholarships →</a>
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- STUDENT HELP -->
-  <section class="section">
-
-    <div class="section-heading">
-      <h2>Student Help</h2>
-      <p>छात्रों के लिए useful information</p>
-    </div>
-
-    <div class="quick-grid">
-
-      <a href="#" class="quick-card">
-        <strong>How to Apply</strong>
-        <span>Online application भरने का तरीका</span>
-      </a>
-
-      <a href="#" class="quick-card">
-        <strong>Documents Required</strong>
-        <span>Application में लगने वाले documents</span>
-      </a>
-
-      <a href="#" class="quick-card">
-        <strong>Exam Pattern</strong>
-        <span>Exam pattern और marking scheme</span>
-      </a>
-
-      <a href="#" class="quick-card">
-        <strong>Selection Process</strong>
-        <span>Selection की पूरी प्रक्रिया</span>
-      </a>
-
-    </div>
-
-  </section>
-    <!-- PREPARATION HUB -->
-  <section class="section">
-
-    <div class="section-heading">
-      <h2>Exam Preparation Hub</h2>
-      <p>सरकारी परीक्षाओं की तैयारी के लिए सभी जरूरी resources</p>
-    </div>
-
-    <div class="quick-grid">
-
-      <a href="#" class="quick-card">
-        <strong>Study Material</strong>
-        <span>Notes, PDFs और useful study resources</span>
-      </a>
-
-      <a href="#" class="quick-card">
-        <strong>Daily Current Affairs</strong>
-        <span>रोज की महत्वपूर्ण current affairs</span>
-      </a>
-
-      <a href="#" class="quick-card">
-        <strong>Daily GK</strong>
-        <span>General Knowledge की daily जानकारी</span>
-      </a>
-
-      <a href="#" class="quick-card">
-        <strong>Daily GK Quiz</strong>
-        <span>रोज GK questions से practice करें</span>
-      </a>
-
-      <a href="#" class="quick-card">
-        <strong>Daily Mock Test</strong>
-        <span>Exam जैसी online practice</span>
-      </a>
-
-      <a href="#" class="quick-card">
-        <strong>Mock Test Performance</strong>
-        <span>अपना score और performance देखें</span>
-      </a>
-
-      <a href="#" class="quick-card">
-        <strong>Exam Preparation</strong>
-        <span>अलग-अलग exams की preparation guide</span>
-      </a>
-
-      <a href="#" class="quick-card">
-        <strong>Exam Calendar</strong>
-        <span>आने वाली परीक्षाओं की dates</span>
-      </a>
-
-    </div>
-
-  </section>
-
-
-  <!-- PREPARATION UPDATES -->
-  <section class="section">
-
-    <div class="section-heading">
-      <h2>Preparation Updates</h2>
-      <p>तैयारी से जुड़ी महत्वपूर्ण जानकारी</p>
-    </div>
-
-    <div class="update-grid">
-
-      <div class="update-card">
-        <strong>Today's Current Affairs</strong>
-        <p>आज के महत्वपूर्ण national, international और exam-related events।</p>
-        <a href="#">Read Today →</a>
-      </div>
-
-      <div class="update-card">
-        <strong>Today's GK Quiz</strong>
-        <p>अपने General Knowledge को daily quiz से test करें।</p>
-        <a href="#">Start Quiz →</a>
-      </div>
-
-      <div class="update-card">
-        <strong>Today's Mock Test</strong>
-        <p>अपनी exam preparation को mock test से practice करें।</p>
-        <a href="#">Start Mock Test →</a>
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- EXAM RESOURCES -->
-  <section class="section">
-
-    <div class="section-heading">
-      <h2>Exam Resources</h2>
-      <p>एक exam की तैयारी के लिए जरूरी resources</p>
-    </div>
-
-    <div class="job-preview-grid">
-
-      <article class="job-card">
-        <span class="badge">01</span>
-        <h3>Syllabus</h3>
-        <p>Exam का पूरा syllabus और subjects.</p>
-        <a href="syllabus.html">View Syllabus →</a>
-      </article>
-
-      <article class="job-card">
-        <span class="badge">02</span>
-        <h3>Previous Papers</h3>
-        <p>Previous year questions से practice.</p>
-        <a href="#">View Papers →</a>
-      </article>
-
-      <article class="job-card">
-        <span class="badge">03</span>
-        <h3>Cut Off</h3>
-        <p>Previous और expected cutoff information.</p>
-        <a href="#">View Cut Off →</a>
-      </article>
-
-      <article class="job-card">
-        <span class="badge">04</span>
-        <h3>Exam Pattern</h3>
-        <p>Questions, marks, time और marking scheme.</p>
-        <a href="#">View Pattern →</a>
-      </article>
-
-    </div>
-
-  </section>
-    <!-- CAREER HUB -->
-  <section class="section">
-
-    <div class="section-heading">
-      <h2>Career Hub</h2>
-      <p>अपनी qualification और career के अनुसार सही जानकारी खोजें</p>
-    </div>
-
-    <div class="quick-grid">
-
-      <a href="#" class="quick-card">
-        <strong>My Eligibility</strong>
-        <span>अपनी age, qualification और category के अनुसार eligibility check करें</span>
-      </a>
-
-      <a href="#" class="quick-card">
-        <strong>Career Guide</strong>
-        <span>अलग-अलग careers और government jobs की जानकारी</span>
-      </a>
-
-      <a href="#" class="quick-card">
-        <strong>Job Comparison</strong>
-        <span>अलग-अलग government jobs की तुलना करें</span>
-      </a>
-
-      <a href="#" class="quick-card">
-        <strong>Post Comparison</strong>
-        <span>Posts, salary, qualification और duties compare करें</span>
-      </a>
-
-      <a href="#" class="quick-card">
-        <strong>Course Comparison</strong>
-        <span>अलग-अलग courses और career options compare करें</span>
-      </a>
-
-      <a href="#" class="quick-card">
-        <strong>College Comparison</strong>
-        <span>Colleges की important information compare करें</span>
-      </a>
-
-      <a href="#" class="quick-card">
-        <strong>Exam Comparison</strong>
-        <span>Government exams का comparison देखें</span>
-      </a>
-
-      <a href="#" class="quick-card">
-        <strong>Salary Information</strong>
-        <span>Posts और jobs की salary structure समझें</span>
-      </a>
-
-    </div>
-
-  </section>
-
-
-  <!-- CAREER TOOLS PREVIEW -->
-  <section class="section">
-
-    <div class="section-heading">
-      <h2>Career Tools</h2>
-      <p>Career planning और government job search के useful tools</p>
-    </div>
-
-    <div class="update-grid">
-
-      <div class="update-card">
-        <strong>Eligibility Checker</strong>
-        <p>Age, qualification, category और state के आधार पर eligibility check करें।</p>
-        <a href="#">Check Eligibility →</a>
-      </div>
-
-      <div class="update-card">
-        <strong>Job Comparison</strong>
-        <p>दो या अधिक government posts की जानकारी एक साथ compare करें।</p>
-        <a href="#">Compare Jobs →</a>
-      </div>
-
-      <div class="update-card">
-        <strong>Career Guide</strong>
-        <p>अपनी qualification के हिसाब से career options explore करें।</p>
-        <a href="#">Explore Careers →</a>
-      </div>
-
-    </div>
-
-  </section>
-    <!-- SARKARI KAAM -->
-  <section class="section">
-
-    <div class="section-heading">
-      <h2>Sarkari Kaam</h2>
-      <p>सरकारी सेवाओं और online applications की जानकारी</p>
-    </div>
-
-    <div class="quick-grid">
-
-      <a href="#" class="quick-card">
-        <strong>Aadhaar Services</strong>
-        <span>Aadhaar से जुड़ी जरूरी online services</span>
-      </a>
-
-      <a href="#" class="quick-card">
-        <strong>PAN Card</strong>
-        <span>PAN application और related services</span>
-      </a>
-
-      <a href="#" class="quick-card">
-        <strong>Income Certificate</strong>
-        <span>आय प्रमाण पत्र से जुड़ी जानकारी</span>
-      </a>
-
-      <a href="#" class="quick-card">
-        <strong>Caste Certificate</strong>
-        <span>जाति प्रमाण पत्र की जानकारी</span>
-      </a>
-
-      <a href="#" class="quick-card">
-        <strong>Domicile Certificate</strong>
-        <span>निवास प्रमाण पत्र की जानकारी</span>
-      </a>
-
-      <a href="#" class="quick-card">
-        <strong>EWS Certificate</strong>
-        <span>EWS certificate application information</span>
-      </a>
-
-      <a href="#" class="quick-card">
-        <strong>Voter Services</strong>
-        <span>मतदाता registration और अन्य services</span>
-      </a>
-
-      <a href="#" class="quick-card">
-        <strong>Driving Licence</strong>
-        <span>DL application और licence services</span>
-      </a>
-
-      <a href="#" class="quick-card">
-        <strong>Passport</strong>
-        <span>Passport application की जानकारी</span>
-      </a>
-
-      <a href="#" class="quick-card">
-        <strong>Ration Card</strong>
-        <span>Ration card से जुड़ी सरकारी services</span>
-      </a>
-
-      <a href="#" class="quick-card">
-        <strong>Pension Services</strong>
-        <span>विभिन्न pension schemes की जानकारी</span>
-      </a>
-
-      <a href="#" class="quick-card">
-        <strong>Government Schemes</strong>
-        <span>सरकारी योजनाओं की जानकारी</span>
-      </a>
-
-    </div>
-
-  </section>
-
-
-  <!-- DOCUMENTS & APPLICATION HELP -->
-  <section class="section">
-
-    <div class="section-heading">
-      <h2>Documents & Application Help</h2>
-      <p>किस काम के लिए कौन से documents चाहिए, इसकी जानकारी</p>
-    </div>
-
-    <div class="update-grid">
-
-      <div class="update-card">
-        <strong>Documents Required</strong>
-        <p>अलग-अलग government applications में लगने वाले documents देखें।</p>
-        <a href="#">View Documents →</a>
-      </div>
-
-      <div class="update-card">
-        <strong>How to Apply</strong>
-        <p>Online government form भरने की आसान step-by-step guide।</p>
-        <a href="#">How to Apply →</a>
-      </div>
-
-      <div class="update-card">
-        <strong>Application Status</strong>
-        <p>जहां उपलब्ध हो वहां application status check करने की जानकारी।</p>
-        <a href="#">Check Status →</a>
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- STATE SERVICES -->
-  <section class="section">
-
-    <div class="section-heading">
-      <h2>State Government Services</h2>
-      <p>अलग-अलग राज्यों की सरकारी services और portals</p>
-    </div>
-
-    <div class="quick-grid">
-
-      <a href="#" class="quick-card">
-        <strong>Uttar Pradesh</strong>
-        <span>UP Government Services</span>
-      </a>
-
-      <a href="#" class="quick-card">
-        <strong>Bihar</strong>
-        <span>Bihar Government Services</span>
-      </a>
-
-      <a href="#" class="quick-card">
-        <strong>Rajasthan</strong>
-        <span>Rajasthan Government Services</span>
-      </a>
-
-      <a href="#" class="quick-card">
-        <strong>Madhya Pradesh</strong>
-        <span>MP Government Services</span>
-      </a>
-
-      <a href="#" class="quick-card">
-        <strong>Delhi</strong>
-        <span>Delhi Government Services</span>
-      </a>
-
-      <a href="#" class="quick-card">
-        <strong>All States</strong>
-        <span>सभी राज्यों की services</span>
-      </a>
-
-    </div>
-
-  </section>
-
-
-  <!-- IMPORTANT GOVERNMENT PORTALS -->
-  <section class="section">
-
-    <div class="section-heading">
-      <h2>Important Government Portals</h2>
-      <p>जरूरी सरकारी websites के लिए quick access</p>
-    </div>
-
-    <div class="update-grid">
-
-      <div class="update-card">
-        <strong>Central Government</strong>
-        <p>Central government की important services और portals।</p>
-        <a href="#">Explore Portals →</a>
-      </div>
-
-      <div class="update-card">
-        <strong>State Government</strong>
-        <p>State government के official portals और services।</p>
-        <a href="#">Explore States →</a>
-      </div>
-
-      <div class="update-card">
-        <strong>Citizen Services</strong>
-        <p>आम नागरिकों के लिए online सरकारी services।</p>
-        <a href="#">View Services →</a>
-      </div>
-
-    </div>
-
-  </section>
-    <!-- TOOLS HUB -->
-  <section class="section">
-
-    <div class="section-heading">
-      <h2>Career & Useful Tools</h2>
-      <p>Students और job seekers के लिए useful online tools</p>
-    </div>
-
-    <div class="quick-grid">
-
-      <a href="#" class="quick-card">
-        <strong>Calculator</strong>
-        <span>Basic और useful calculations</span>
-      </a>
-
-      <a href="career-tools.html#ageCalculator" class="quick-card">
-        <strong>Age Calculator</strong>
-        <span>अपनी exact age calculate करें</span>
-      </a>
-
-      <a href="career-tools.html#percentageCalculator" class="quick-card">
-        <strong>Percentage Calculator</strong>
-        <span>Percentage आसानी से calculate करें</span>
-      </a>
-
-      <a href="career-tools.html#cgpaCalculator" class="quick-card">
-        <strong>CGPA Calculator</strong>
-        <span>CGPA और percentage calculate करें</span>
-      </a>
-
-      <a href="#" class="quick-card">
-        <strong>Salary Calculator</strong>
-        <span>Salary और pay information calculate करें</span>
-      </a>
-
-      <a href="#" class="quick-card">
-        <strong>Date Calculator</strong>
-        <span>Dates और दिनों की calculation</span>
-      </a>
-
-      <a href="#" class="quick-card">
-        <strong>Document Tools</strong>
-        <span>Documents से जुड़े useful tools</span>
-      </a>
-
-      <a href="#" class="quick-card">
-        <strong>Photo Tools</strong>
-        <span>Photo resize और अन्य basic tools</span>
-      </a>
-
-    </div>
-
-  </section>
-
-
-  <!-- TOOLS PREVIEW -->
-  <section class="section">
-
-    <div class="section-heading">
-      <h2>Popular Tools</h2>
-      <p>सबसे ज्यादा उपयोग होने वाले tools</p>
-    </div>
-
-    <div class="update-grid">
-
-      <div class="update-card">
-        <strong>Age Calculator</strong>
-        <p>DOB डालकर अपनी age years, months और days में देखें।</p>
-        <a href="career-tools.html#ageCalculator">
-  Use Tool →
         </a>
-      </div>
 
-      <div class="update-card">
-        <strong>Percentage Calculator</strong>
-        <p>Marks और total marks डालकर percentage निकालें।</p>
-        <a href="career-tools.html#percentageCalculator">
-  Use Tool →
+
+        <a
+          href="eligibility.html"
+          class="quick-card"
+        >
+
+          <span class="quick-icon">
+            ✅
+          </span>
+
+          <strong>
+            My Eligibility
+          </strong>
+
+          <small>
+            Qualification और age check करें
+          </small>
+
         </a>
-      </div>
 
-      <div class="update-card">
-        <strong>CGPA Calculator</strong>
-        <p>CGPA को percentage में convert करने में मदद लें।</p>
-        <a href="career-tools.html#cgpaCalculator">
-  Use Tool →
+
+        <a
+          href="admission.html"
+          class="quick-card"
+        >
+
+          <span class="quick-icon">
+            🎓
+          </span>
+
+          <strong>
+            Admission
+          </strong>
+
+          <small>
+            College और course admissions
+          </small>
+
         </a>
+
+
+        <a
+          href="results.html"
+          class="quick-card"
+        >
+
+          <span class="quick-icon">
+            📊
+          </span>
+
+          <strong>
+            Results
+          </strong>
+
+          <small>
+            Government और University Results
+          </small>
+
+        </a>
+
+
+        <a
+          href="admit-card.html"
+          class="quick-card"
+        >
+
+          <span class="quick-icon">
+            🎫
+          </span>
+
+          <strong>
+            Admit Card
+          </strong>
+
+          <small>
+            Exam hall ticket
+          </small>
+
+        </a>
+
+
+        <a
+          href="sarkari-kaam.html"
+          class="quick-card"
+        >
+
+          <span class="quick-icon">
+            🏛️
+          </span>
+
+          <strong>
+            Sarkari Kaam
+          </strong>
+
+          <small>
+            Online government services
+          </small>
+
+        </a>
+
+
+        <a
+          href="scholarship.html"
+          class="quick-card"
+        >
+
+          <span class="quick-icon">
+            🎓
+          </span>
+
+          <strong>
+            Scholarship
+          </strong>
+
+          <small>
+            Scholarship information
+          </small>
+
+        </a>
+
+
+        <a
+          href="career-tools.html"
+          class="quick-card"
+        >
+
+          <span class="quick-icon">
+            🧮
+          </span>
+
+          <strong>
+            Career Tools
+          </strong>
+
+          <small>
+            Useful calculators और tools
+          </small>
+
+        </a>
+
       </div>
 
-    </div>
+    </section>
 
-  </section>
+
     <!-- LATEST UPDATES -->
-  <section class="section">
 
-    <div class="section-heading">
-      <h2>Latest Updates</h2>
-      <p>Sarkariiichij की latest important updates</p>
-    </div>
+    <section class="section">
 
-    <div class="update-grid">
+      <div class="section-heading">
 
-      <div class="update-card">
-        <strong>Today's Updates</strong>
-        <p>आज जारी हुई नई jobs, results, admit cards और अन्य updates।</p>
-        <a href="#">View Updates →</a>
+        <span class="section-label">
+          LATEST
+        </span>
+
+        <h2>
+          Latest Updates
+        </h2>
+
+        <p>
+          नई भर्ती, result, admit card और important updates।
+        </p>
+
       </div>
 
-      <div class="update-card">
-        <strong>Last Date Alert</strong>
-        <p>जिन government forms की last date नजदीक है, उनकी जानकारी।</p>
-        <a href="#">View Last Dates →</a>
+
+      <div class="update-grid">
+
+
+        <a
+          href="jobs.html"
+          class="update-card"
+        >
+
+          <span class="update-tag">
+            JOB
+          </span>
+
+          <h3>
+            Latest Government Jobs
+          </h3>
+
+          <p>
+            Central और State Government की नई vacancies देखें।
+          </p>
+
+          <span class="card-link">
+            View Jobs →
+          </span>
+
+        </a>
+
+
+        <a
+          href="results.html"
+          class="update-card"
+        >
+
+          <span class="update-tag">
+            RESULT
+          </span>
+
+          <h3>
+            Latest Results
+          </h3>
+
+          <p>
+            SSC, Railway, University और अन्य results।
+          </p>
+
+          <span class="card-link">
+            View Results →
+          </span>
+
+        </a>
+
+
+        <a
+          href="admit-card.html"
+          class="update-card"
+        >
+
+          <span class="update-tag">
+            ADMIT CARD
+          </span>
+
+          <h3>
+            Latest Admit Cards
+          </h3>
+
+          <p>
+            आने वाली परीक्षाओं के admit cards।
+          </p>
+
+          <span class="card-link">
+            View Admit Cards →
+          </span>
+
+        </a>
+
+
+        <a
+          href="admission.html"
+          class="update-card"
+        >
+
+          <span class="update-tag">
+            ADMISSION
+          </span>
+
+          <h3>
+            Latest Admissions
+          </h3>
+
+          <p>
+            College, University और course admission updates।
+          </p>
+
+          <span class="card-link">
+            View Admissions →
+          </span>
+
+        </a>
+
       </div>
 
-      <div class="update-card">
-        <strong>Important Notices</strong>
-        <p>Exam और recruitment से जुड़े महत्वपूर्ण notices।</p>
-        <a href="#">View Notices →</a>
+    </section>
+
+
+    <!-- LAST DATE ALERT -->
+
+    <section class="section alert-section">
+
+      <div class="alert-box">
+
+        <div class="alert-icon">
+          ⏰
+        </div>
+
+        <div class="alert-content">
+
+          <span class="section-label">
+            IMPORTANT
+          </span>
+
+          <h2>
+            Last Date Alert
+          </h2>
+
+          <p>
+            जिन applications की last date नजदीक है,
+            उन्हें समय से पहले check करें।
+          </p>
+
+        </div>
+
+        <a
+          href="jobs.html"
+          class="primary-button"
+        >
+          Check Jobs
+        </a>
+
       </div>
 
-    </div>
-
-  </section>
+    </section>
 
 
-  <!-- USER FEATURES -->
-  <section class="section">
+    <!-- GOVERNMENT JOBS -->
 
-    <div class="section-heading">
-      <h2>My Sarkariiichij</h2>
-      <p>अपनी jobs और applications को एक जगह manage करें</p>
-    </div>
+    <section class="section">
 
-    <div class="quick-grid">
+      <div class="section-heading">
 
-      <a href="#" class="quick-card">
-        <strong>Saved Jobs</strong>
-        <span>अपनी पसंद की jobs save करें</span>
-      </a>
+        <span class="section-label">
+          CAREER
+        </span>
 
-      <a href="#" class="quick-card">
-        <strong>Application Tracker</strong>
-        <span>अपने applications को track करें</span>
-      </a>
+        <h2>
+          Latest Government Jobs
+        </h2>
 
-      <a href="#" class="quick-card">
-        <strong>Reminders</strong>
-        <span>Last date और exam के reminders</span>
-      </a>
+        <p>
+          Central और State Government की अलग-अलग
+          recruitment categories एक जगह।
+        </p>
 
-      <a href="#" class="quick-card">
-        <strong>My Alerts</strong>
-        <span>अपनी पसंद के updates के alerts</span>
-      </a>
-
-    </div>
-
-  </section>
-
-
-  <!-- EXAM CALENDAR -->
-  <section class="section">
-
-    <div class="section-heading">
-      <h2>Exam Calendar</h2>
-      <p>आने वाली government examinations पर नजर रखें</p>
-    </div>
-
-    <div class="job-preview-grid">
-
-      <article class="job-card">
-        <span class="badge">Upcoming</span>
-        <h3>SSC Exams</h3>
-        <p>SSC की upcoming examinations और important dates.</p>
-        <a href="#">View Calendar →</a>
-      </article>
-
-      <article class="job-card">
-        <span class="badge">Upcoming</span>
-        <h3>Railway Exams</h3>
-        <p>RRB examinations और important dates.</p>
-        <a href="#">View Calendar →</a>
-      </article>
-
-      <article class="job-card">
-        <span class="badge">Upcoming</span>
-        <h3>Banking Exams</h3>
-        <p>IBPS, SBI और अन्य banking exams.</p>
-        <a href="#">View Calendar →</a>
-      </article>
-
-      <article class="job-card">
-        <span class="badge">Upcoming</span>
-        <h3>State Exams</h3>
-        <p>State government examinations की dates.</p>
-        <a href="#">View Calendar →</a>
-      </article>
-
-    </div>
-
-  </section>
-
-
-  <!-- TRENDING SEARCHES -->
-  <section class="section">
-
-    <div class="section-heading">
-      <h2>Trending Searches</h2>
-      <p>अभी users द्वारा खोजे जा रहे popular topics</p>
-    </div>
-
-    <div class="quick-grid">
-
-      <a href="jobs.html?search=SSC%20CGL" class="quick-card">
-        <strong>SSC CGL</strong>
-        <span>View latest information</span>
-      </a>
-
-      <a href="jobs.html?search=SSC%20CHSL" class="quick-card">
-        <strong>SSC CHSL</strong>
-        <span>View latest information</span>
-      </a>
-
-      <a href="jobs.html?search=Railway" class="quick-card">
-        <strong>Railway Jobs</strong>
-        <span>View latest information</span>
-      </a>
-
-      <a href="jobs.html?search=UP%20Police" class="quick-card">
-        <strong>UP Police</strong>
-        <span>View latest information</span>
-      </a>
-
-    </div>
-
-  </section>
-    <!-- TRUST & INFORMATION -->
-  <section class="section">
-
-    <div class="section-heading">
-      <h2>Trust & Information</h2>
-      <p>सही और स्पष्ट जानकारी के लिए जरूरी resources</p>
-    </div>
-
-    <div class="quick-grid">
-
-      <a href="#" class="quick-card">
-        <strong>Official Source</strong>
-        <span>Information के official source को देखें</span>
-      </a>
-
-      <a href="#" class="quick-card">
-        <strong>Last Updated</strong>
-        <span>जानकारी कब update की गई, देखें</span>
-      </a>
-
-      <a href="#" class="quick-card">
-        <strong>How to Apply</strong>
-        <span>Application भरने की step-by-step जानकारी</span>
-      </a>
-
-      <a href="#" class="quick-card">
-        <strong>Documents Required</strong>
-        <span>कौन-कौन से documents चाहिए</span>
-      </a>
-
-      <a href="#" class="quick-card">
-        <strong>Selection Process</strong>
-        <span>Selection की पूरी प्रक्रिया समझें</span>
-      </a>
-
-      <a href="#" class="quick-card">
-        <strong>Exam Pattern</strong>
-        <span>Questions, marks और exam pattern</span>
-      </a>
-
-      <a href="#" class="quick-card">
-        <strong>Salary Information</strong>
-        <span>Post की salary और pay information</span>
-      </a>
-
-      <a href="#" class="quick-card">
-        <strong>FAQ</strong>
-        <span>Frequently Asked Questions</span>
-      </a>
-
-    </div>
-
-  </section>
-
-
-  <!-- REPORT ERROR -->
-  <section class="section">
-
-    <div class="section-heading">
-      <h2>Help & Feedback</h2>
-      <p>अगर किसी जानकारी में समस्या मिले तो हमें बताएं</p>
-    </div>
-
-    <div class="update-grid">
-
-      <div class="update-card">
-        <strong>Report an Error</strong>
-        <p>गलत या पुरानी information मिलने पर report करें।</p>
-        <a href="#">Report Error →</a>
       </div>
 
-      <div class="update-card">
-        <strong>FAQ</strong>
-        <p>Sarkariiichij से जुड़े common questions के answers।</p>
-        <a href="#">Read FAQ →</a>
+
+      <div
+        class="job-preview-grid"
+        id="latestJobs"
+      >
+
+
+        <article class="job-preview-card">
+
+          <span class="job-status">
+            Government
+          </span>
+
+          <h3>
+            SSC Recruitment
+          </h3>
+
+          <p>
+            SSC की अलग-अलग परीक्षाओं और posts की जानकारी।
+          </p>
+
+          <div class="job-meta">
+            <span>
+              SSC
+            </span>
+
+            <span>
+              Central
+            </span>
+          </div>
+
+          <a href="jobs.html">
+            View Details →
+          </a>
+
+        </article>
+
+
+        <article class="job-preview-card">
+
+          <span class="job-status">
+            Government
+          </span>
+
+          <h3>
+            Railway Recruitment
+          </h3>
+
+          <p>
+            RRB और Railway recruitment की जानकारी।
+          </p>
+
+          <div class="job-meta">
+            <span>
+              Railway
+            </span>
+
+            <span>
+              Central
+            </span>
+          </div>
+
+          <a href="jobs.html">
+            View Details →
+          </a>
+
+        </article>
+
+
+        <article class="job-preview-card">
+
+          <span class="job-status">
+            Government
+          </span>
+
+          <h3>
+            Banking Recruitment
+          </h3>
+
+          <p>
+            IBPS, SBI और अन्य banking examinations।
+          </p>
+
+          <div class="job-meta">
+            <span>
+              Banking
+            </span>
+
+            <span>
+              Central
+            </span>
+          </div>
+
+          <a href="jobs.html">
+            View Details →
+          </a>
+
+        </article>
+
+
+        <article class="job-preview-card">
+
+          <span class="job-status">
+            Government
+          </span>
+
+          <h3>
+            Defence Recruitment
+          </h3>
+
+          <p>
+            Army, Navy, Air Force और अन्य defence opportunities।
+          </p>
+
+          <div class="job-meta">
+            <span>
+              Defence
+            </span>
+
+            <span>
+              Central
+            </span>
+          </div>
+
+          <a href="jobs.html">
+            View Details →
+          </a>
+
+        </article>
+
       </div>
 
-      <div class="update-card">
-        <strong>Contact Us</strong>
-        <p>Website से संबंधित सवाल या सुझाव भेजें।</p>
-        <a href="#">Contact Us →</a>
+
+      <div class="section-action">
+
+        <a
+          href="jobs.html"
+          class="primary-button"
+        >
+          View All Government Jobs
+        </a>
+
       </div>
 
-    </div>
+    </section>
 
-  </section>
-    <!-- ABOUT & IMPORTANT LINKS -->
-  <section class="section">
 
+    <!-- JOBS BY QUALIFICATION -->
+
+    <section class="section">
+
+      <div class="section-heading">
+
+        <span class="section-label">
+          FIND YOUR JOB
+        </span>
+
+        <h2>
+          Jobs by Qualification
+        </h2>
+
+        <p>
+          अपनी qualification के अनुसार government jobs खोजें।
+        </p>
+
+      </div>
+
+
+      <div class="qualification-grid">
+
+
+        <a
+          href="jobs.html?qualification=8th"
+          class="qualification-card"
+        >
+
+          <strong>
+            8th Pass
+          </strong>
+
+          <span>
+            Jobs →
+          </span>
+
+        </a>
+
+
+        <a
+          href="jobs.html?qualification=10th"
+          class="qualification-card"
+        >
+
+          <strong>
+            10th Pass
+          </strong>
+
+          <span>
+            Jobs →
+          </span>
+
+        </a>
+
+
+        <a
+          href="jobs.html?qualification=12th"
+          class="qualification-card"
+        >
+
+          <strong>
+            12th Pass
+          </strong>
+
+          <span>
+            Jobs →
+          </span>
+
+        </a>
+
+
+        <a
+          href="jobs.html?qualification=iti"
+          class="qualification-card"
+        >
+
+          <strong>
+            ITI
+          </strong>
+
+          <span>
+            Jobs →
+          </span>
+
+        </a>
+
+
+        <a
+          href="jobs.html?qualification=diploma"
+          class="qualification-card"
+        >
+
+          <strong>
+            Diploma
+          </strong>
+
+          <span>
+            Jobs →
+          </span>
+
+        </a>
+
+
+        <a
+          href="jobs.html?qualification=graduate"
+          class="qualification-card"
+        >
+
+          <strong>
+            Graduate
+          </strong>
+
+          <span>
+            Jobs →
+          </span>
+
+        </a>
+
+
+        <a
+          href="jobs.html?qualification=engineering"
+          class="qualification-card"
+        >
+
+          <strong>
+            Engineering
+          </strong>
+
+          <span>
+            Jobs →
+          </span>
+
+        </a>
+
+
+        <a
+          href="jobs.html?qualification=pg"
+          class="qualification-card"
+        >
+
+          <strong>
+            Post Graduate
+          </strong>
+
+          <span>
+            Jobs →
+          </span>
+
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- EXAM RESOURCES -->
+
+    <section class="section">
+
+      <div class="section-heading">
+
+        <span class="section-label">
+          EXAM PREPARATION
+        </span>
+
+        <h2>
+          Exam Resources
+        </h2>
+
+        <p>
+          परीक्षा की तैयारी के लिए जरूरी resources।
+        </p>
+
+      </div>
+
+
+      <div class="resource-grid">
+
+
+        <a
+          href="syllabus.html"
+          class="resource-card"
+        >
+
+          <span>
+            📚
+          </span>
+
+          <h3>
+            Syllabus
+          </h3>
+
+          <p>
+            Exam-wise syllabus और preparation topics।
+          </p>
+
+          <strong>
+            Explore →
+          </strong>
+
+        </a>
+
+
+        <a
+          href="papers.html"
+          class="resource-card"
+        >
+
+          <span>
+            📄
+          </span>
+
+          <h3>
+            Previous Year Papers
+          </h3>
+
+          <p>
+            Previous year questions और practice material।
+          </p>
+
+          <strong>
+            Explore →
+          </strong>
+
+        </a>
+
+
+        <a
+          href="cutoff.html"
+          class="resource-card"
+        >
+
+          <span>
+            📈
+          </span>
+
+          <h3>
+            Cut Off
+          </h3>
+
+          <p>
+            Exam और category-wise cut off information।
+          </p>
+
+          <strong>
+            Explore →
+          </strong>
+
+        </a>
+
+
+        <a
+          href="mock-test.html"
+          class="resource-card"
+        >
+
+          <span>
+            📝
+          </span>
+
+          <h3>
+            Mock Tests
+          </h3>
+
+          <p>
+            Online practice और mock test resources।
+          </p>
+
+          <strong>
+            Explore →
+          </strong>
+
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- EDUCATION -->
+
+    <section class="section">
+
+      <div class="section-heading">
+
+        <span class="section-label">
+          EDUCATION
+        </span>
+
+        <h2>
+          Education & Scholarship
+        </h2>
+
+        <p>
+          Students के लिए admission, result और scholarship resources।
+        </p>
+
+      </div>
+
+
+      <div class="education-grid">
+
+
+        <a
+          href="admission.html"
+          class="education-card"
+        >
+
+          <h3>
+            College Admission
+          </h3>
+
+          <p>
+            Admission notifications और important information।
+          </p>
+
+          <span>
+            View Admissions →
+          </span>
+
+        </a>
+
+
+        <a
+          href="results.html"
+          class="education-card"
+        >
+
+          <h3>
+            University Results
+          </h3>
+
+          <p>
+            University और college examination results।
+          </p>
+
+          <span>
+            Check Results →
+          </span>
+
+        </a>
+
+
+        <a
+          href="scholarship.html"
+          class="education-card"
+        >
+
+          <h3>
+            Scholarship
+          </h3>
+
+          <p>
+            Government और education scholarships।
+          </p>
+
+          <span>
+            Find Scholarship →
+          </span>
+
+        </a>
+
+
+        <a
+          href="eligibility.html"
+          class="education-card"
+        >
+
+          <h3>
+            Eligibility Checker
+          </h3>
+
+          <p>
+            अपनी qualification और age के अनुसार eligibility check करें।
+          </p>
+
+          <span>
+            Check Eligibility →
+          </span>
+
+        </a>
+
+      </div>
+
+    </section>
+    <section class="portal-section education-section" id="education-section">
     <div class="section-heading">
-      <h2>Important Information</h2>
-      <p>Sarkariiichij के बारे में जरूरी जानकारी</p>
+        <div>
+            <span class="section-kicker">EDUCATION</span>
+            <h2>Admission, Results & Scholarship</h2>
+            <p>Admission, university results और scholarship की जानकारी एक जगह।</p>
+        </div>
+        <a href="admission.html" class="section-link">View All →</a>
     </div>
 
-    <div class="quick-grid">
+    <div class="feature-grid">
+        <a href="admission.html" class="feature-card">
+            <div class="feature-icon">🎓</div>
+            <h3>College Admission</h3>
+            <p>UG, PG, Diploma और अन्य admission updates देखें।</p>
+            <span>Admission देखें →</span>
+        </a>
 
-      <a href="#" class="quick-card">
-        <strong>About Sarkariiichij</strong>
-        <span>हमारे platform के बारे में जानें</span>
-      </a>
+        <a href="results.html" class="feature-card">
+            <div class="feature-icon">📜</div>
+            <h3>University Results</h3>
+            <p>University और college के latest results खोजें।</p>
+            <span>Results देखें →</span>
+        </a>
 
-      <a href="#" class="quick-card">
-        <strong>Privacy Policy</strong>
-        <span>आपकी privacy और data से जुड़ी जानकारी</span>
-      </a>
+        <a href="scholarship.html" class="feature-card">
+            <div class="feature-icon">💰</div>
+            <h3>Scholarship</h3>
+            <p>Central और State scholarship की जानकारी प्राप्त करें।</p>
+            <span>Scholarship देखें →</span>
+        </a>
 
-      <a href="#" class="quick-card">
-        <strong>Terms & Conditions</strong>
-        <span>Website इस्तेमाल करने के नियम</span>
-      </a>
+        <a href="eligibility.html" class="feature-card">
+            <div class="feature-icon">✅</div>
+            <h3>Eligibility Checker</h3>
+            <p>Age, qualification और category के आधार पर eligibility देखें।</p>
+            <span>Check Eligibility →</span>
+        </a>
+    </div>
+</section>
 
-      <a href="#" class="quick-card">
-        <strong>Disclaimer</strong>
-        <span>Information और official sources से जुड़ी जरूरी सूचना</span>
-      </a>
-
-      <a href="#" class="quick-card">
-        <strong>Contact Us</strong>
-        <span>हमसे संपर्क करें</span>
-      </a>
-
-      <a href="#" class="quick-card">
-        <strong>Important Links</strong>
-        <span>जरूरी government और education links</span>
-      </a>
-
+<section class="portal-section preparation-section" id="preparation-section">
+    <div class="section-heading">
+        <div>
+            <span class="section-kicker">PREPARATION</span>
+            <h2>Exam Preparation</h2>
+            <p>Exam preparation के लिए जरूरी resources।</p>
+        </div>
+        <a href="mock-test.html" class="section-link">Preparation →</a>
     </div>
 
+    <div class="resource-grid">
+        <a href="syllabus.html" class="resource-card">
+            <div class="resource-icon">📚</div>
+            <div>
+                <h3>Study Material</h3>
+                <p>Exam-wise syllabus और preparation resources।</p>
+            </div>
+        </a>
+
+        <a href="papers.html" class="resource-card">
+            <div class="resource-icon">📄</div>
+            <div>
+                <h3>Previous Year Papers</h3>
+                <p>पुराने प्रश्नपत्र और practice material।</p>
+            </div>
+        </a>
+
+        <a href="mock-test.html" class="resource-card">
+            <div class="resource-icon">📝</div>
+            <div>
+                <h3>Mock Test</h3>
+                <p>Practice questions और mock tests attempt करें।</p>
+            </div>
+        </a>
+
+        <a href="cutoff.html" class="resource-card">
+            <div class="resource-icon">📊</div>
+            <div>
+                <h3>Cut Off</h3>
+                <p>Previous और available official cutoff information।</p>
+            </div>
+        </a>
+
+        <a href="syllabus.html" class="resource-card">
+            <div class="resource-icon">📖</div>
+            <div>
+                <h3>Exam Syllabus</h3>
+                <p>Latest syllabus और subject-wise topics।</p>
+            </div>
+        </a>
+
+        <a href="career-tools.html" class="resource-card">
+            <div class="resource-icon">🧮</div>
+            <div>
+                <h3>Career Tools</h3>
+                <p>Age, percentage, CGPA और date calculators।</p>
+            </div>
+        </a>
+    </div>
+</section>
+
+<section class="portal-section daily-section" id="daily-section">
+    <div class="section-heading">
+        <div>
+            <span class="section-kicker">DAILY PREPARATION</span>
+            <h2>GK, Current Affairs & Quiz</h2>
+            <p>Competitive exams की daily preparation के लिए resources।</p>
+        </div>
+    </div>
+
+    <div class="daily-grid">
+        <article class="daily-card">
+            <div class="daily-icon">📰</div>
+            <h3>Current Affairs</h3>
+            <p>National, international, economy, science और sports updates।</p>
+            <button type="button" class="outline-button" data-action="current-affairs">
+                Open
+            </button>
+        </article>
+
+        <article class="daily-card">
+            <div class="daily-icon">🌍</div>
+            <h3>Daily GK</h3>
+            <p>History, Geography, Polity, Science और Static GK।</p>
+            <button type="button" class="outline-button" data-action="gk">
+                Open
+            </button>
+        </article>
+
+        <article class="daily-card">
+            <div class="daily-icon">❓</div>
+            <h3>GK Quiz</h3>
+            <p>Short questions के जरिए अपनी तैयारी test करें।</p>
+            <button type="button" class="outline-button" data-action="quiz">
+                Start Quiz
+            </button>
+        </article>
+
+        <article class="daily-card">
+            <div class="daily-icon">📝</div>
+            <h3>Mock Test</h3>
+            <p>Exam pattern पर आधारित practice tests।</p>
+            <a href="mock-test.html" class="outline-button">
+                Start Test
+            </a>
+        </article>
+    </div>
+</section>
+
+<section class="portal-section career-section" id="career-section">
+    <div class="section-heading">
+        <div>
+            <span class="section-kicker">CAREER</span>
+            <h2>Career & Comparison Tools</h2>
+            <p>Jobs, posts और courses को समझने के लिए useful sections।</p>
+        </div>
+        <a href="career-tools.html" class="section-link">All Tools →</a>
+    </div>
+
+    <div class="comparison-grid">
+        <div class="comparison-card">
+            <span class="comparison-icon">⚖️</span>
+            <h3>Job Comparison</h3>
+            <p>Qualification, age, salary और selection process compare करें।</p>
+            <button type="button" data-action="job-comparison">
+                Compare Jobs
+            </button>
+        </div>
+
+        <div class="comparison-card">
+            <span class="comparison-icon">👮</span>
+            <h3>Post Comparison</h3>
+            <p>Different government posts की basic requirements देखें।</p>
+            <button type="button" data-action="post-comparison">
+                Compare Posts
+            </button>
+        </div>
+
+        <div class="comparison-card">
+            <span class="comparison-icon">🎓</span>
+            <h3>Course Comparison</h3>
+            <p>Courses की duration और career direction compare करें।</p>
+            <button type="button" data-action="course-comparison">
+                Compare Courses
+            </button>
+        </div>
+
+        <div class="comparison-card">
+            <span class="comparison-icon">🏫</span>
+            <h3>College Comparison</h3>
+            <p>Available college information को compare करें।</p>
+            <button type="button" data-action="college-comparison">
+                Compare Colleges
+            </button>
+        </div>
+    </div>
+</section>
+
+<section class="portal-section citizen-section" id="citizen-section">
+    <div class="section-heading">
+        <div>
+            <span class="section-kicker">CITIZEN SERVICES</span>
+            <h2>Sarkari Kaam</h2>
+            <p>Common government services और important portals तक आसान access।</p>
+        </div>
+        <a href="sarkari-kaam.html" class="section-link">All Services →</a>
+    </div>
+
+    <div class="service-grid">
+        <a href="sarkari-kaam.html#documents" class="service-card">
+            <span>📑</span>
+            <h3>Documents</h3>
+            <p>Income, caste, domicile और अन्य documents।</p>
+        </a>
+
+        <a href="sarkari-kaam.html#certificate" class="service-card">
+            <span>📋</span>
+            <h3>Certificates</h3>
+            <p>Certificate application और verification information।</p>
+        </a>
+
+        <a href="sarkari-kaam.html#identity" class="service-card">
+            <span>🪪</span>
+            <h3>Identity Services</h3>
+            <p>Identity related government services।</p>
+        </a>
+
+        <a href="sarkari-kaam.html#pension" class="service-card">
+            <span>💳</span>
+            <h3>Pension</h3>
+            <p>Pension schemes और application information।</p>
+        </a>
+
+        <a href="sarkari-kaam.html#tax" class="service-card">
+            <span>💼</span>
+            <h3>Tax Services</h3>
+            <p>Tax और finance related government resources।</p>
+        </a>
+
+        <a href="sarkari-kaam.html#other" class="service-card">
+            <span>🏛️</span>
+            <h3>Other Services</h3>
+            <p>Important government services एक जगह।</p>
+        </a>
+    </div>
+</section>
+
+<section class="portal-section state-section" id="state-section">
+    <div class="section-heading">
+        <div>
+            <span class="section-kicker">STATE SERVICES</span>
+            <h2>State-wise Government Portals</h2>
+            <p>अपने state की government services और recruitment information खोजें।</p>
+        </div>
+    </div>
+
+    <div class="state-selector">
+        <label for="stateSelect">अपना State चुनें</label>
+
+        <select id="stateSelect">
+            <option value="">Select State</option>
+            <option value="uttar-pradesh">Uttar Pradesh</option>
+            <option value="bihar">Bihar</option>
+            <option value="jharkhand">Jharkhand</option>
+            <option value="madhya-pradesh">Madhya Pradesh</option>
+            <option value="rajasthan">Rajasthan</option>
+            <option value="delhi">Delhi</option>
+            <option value="maharashtra">Maharashtra</option>
+            <option value="west-bengal">West Bengal</option>
+            <option value="gujarat">Gujarat</option>
+            <option value="haryana">Haryana</option>
+            <option value="punjab">Punjab</option>
+            <option value="uttarakhand">Uttarakhand</option>
+            <option value="chhattisgarh">Chhattisgarh</option>
+            <option value="odisha">Odisha</option>
+        </select>
+
+        <button type="button" id="stateSearchButton" class="primary-button">
+            Search Services
+        </button>
+    </div>
+
+    <div id="stateResults" class="state-results">
+        <div class="empty-state">
+            <span>🗺️</span>
+            <p>State select करने के बाद services यहां दिखाई देंगी।</p>
+        </div>
+    </div>
+</section>
+
+<section class="portal-section tools-section" id="tools-section">
+    <div class="section-heading">
+        <div>
+            <span class="section-kicker">SMART TOOLS</span>
+            <h2>Useful Career Tools</h2>
+            <p>Daily career और application work को आसान बनाने वाले tools।</p>
+        </div>
+        <a href="career-tools.html" class="section-link">View All →</a>
+    </div>
+
+    <div class="tools-grid">
+        <a href="career-tools.html#age-calculator" class="tool-card">
+            <span class="tool-icon">🎂</span>
+            <h3>Age Calculator</h3>
+            <p>Date of birth से exact age calculate करें।</p>
+        </a>
+
+        <a href="career-tools.html#percentage-calculator" class="tool-card">
+            <span class="tool-icon">%</span>
+            <h3>Percentage</h3>
+            <p>Marks से percentage calculate करें।</p>
+        </a>
+
+        <a href="career-tools.html#cgpa-calculator" class="tool-card">
+            <span class="tool-icon">📊</span>
+            <h3>CGPA Calculator</h3>
+            <p>CGPA और percentage conversion करें।</p>
+        </a>
+
+        <a href="career-tools.html#height-converter" class="tool-card">
+            <span class="tool-icon">📏</span>
+            <h3>Height Converter</h3>
+            <p>Feet, inch और centimeter conversion।</p>
+        </a>
+
+        <a href="career-tools.html#date-difference" class="tool-card">
+            <span class="tool-icon">📅</span>
+            <h3>Date Difference</h3>
+            <p>दो dates के बीच days calculate करें।</p>
+        </a>
+
+        <a href="career-tools.html#countdown" class="tool-card">
+            <span class="tool-icon">⏳</span>
+            <h3>Exam Countdown</h3>
+            <p>Exam date तक remaining time देखें।</p>
+        </a>
+
+        <a href="career-tools.html#working-days" class="tool-card">
+            <span class="tool-icon">🗓️</span>
+            <h3>Working Days</h3>
+            <p>Working days calculate करें।</p>
+        </a>
+
+        <a href="career-tools.html#leap-year" class="tool-card">
+            <span class="tool-icon">🔢</span>
+            <h3>Leap Year</h3>
+            <p>किसी year को leap year check करें।</p>
+        </a>
+    </div>
+</section>
+
+<section class="portal-section updates-section" id="important-updates">
+    <div class="section-heading">
+        <div>
+            <span class="section-kicker">LATEST</span>
+            <h2>Important Updates</h2>
+            <p>Recruitment, result, admit card और education updates।</p>
+        </div>
+    </div>
+
+    <div class="update-list">
+        <article class="update-row">
+            <span class="update-tag job">JOB</span>
+            <div class="update-content">
+                <h3>Government Job Updates</h3>
+                <p>नई recruitment की notification और application details।</p>
+            </div>
+            <a href="jobs.html">View →</a>
+        </article>
+
+        <article class="update-row">
+            <span class="update-tag result">RESULT</span>
+            <div class="update-content">
+                <h3>Latest Results</h3>
+                <p>Exam result और merit list updates।</p>
+            </div>
+            <a href="results.html">View →</a>
+        </article>
+
+        <article class="update-row">
+            <span class="update-tag admit">ADMIT</span>
+            <div class="update-content">
+                <h3>Admit Card</h3>
+                <p>Upcoming exams के admit card updates।</p>
+            </div>
+            <a href="admit-card.html">View →</a>
+        </article>
+
+        <article class="update-row">
+            <span class="update-tag admission">ADMISSION</span>
+            <div class="update-content">
+                <h3>Admission Updates</h3>
+                <p>College और university admission information।</p>
+            </div>
+            <a href="admission.html">View →</a>
+        </article>
+    </div>
+</section>
+
+<section class="portal-section trending-section" id="trending-searches">
+    <div class="section-heading">
+        <div>
+            <span class="section-kicker">TRENDING</span>
+            <h2>Trending Searches</h2>
+            <p>Popular government job और education searches।</p>
+        </div>
+    </div>
+
+    <div class="trend-list">
+        <button type="button" class="trend-item" data-search="SSC CHSL">
+            SSC CHSL
+        </button>
+
+        <button type="button" class="trend-item" data-search="SSC CGL">
+            SSC CGL
+        </button>
+
+        <button type="button" class="trend-item" data-search="Railway">
+            Railway Jobs
+        </button>
+
+        <button type="button" class="trend-item" data-search="GDS">
+            India Post GDS
+        </button>
+
+        <button type="button" class="trend-item" data-search="UP Police">
+            UP Police
+        </button>
+
+        <button type="button" class="trend-item" data-search="UPSSSC PET">
+            UPSSSC PET
+        </button>
+
+        <button type="button" class="trend-item" data-search="Army">
+            Army Recruitment
+        </button>
+
+        <button type="button" class="trend-item" data-search="Scholarship">
+            Scholarship
+        </button>
+
+        <button type="button" class="trend-item" data-search="Result">
+            Latest Result
+        </button>
+
+        <button type="button" class="trend-item" data-search="Admit Card">
+            Admit Card
+        </button>
+    </div>
+</section>
+
+<section class="portal-section how-section" id="how-it-works">
+    <div class="section-heading centered-heading">
+        <div>
+            <span class="section-kicker">HOW IT WORKS</span>
+            <h2>Sarkariiichij पर जानकारी कैसे खोजें?</h2>
+            <p>Government job या education update खोजने का आसान तरीका।</p>
+        </div>
+    </div>
+
+    <div class="steps-grid">
+        <div class="step-card">
+            <div class="step-number">1</div>
+            <h3>Search करें</h3>
+            <p>Search box में job, exam, result या service का नाम लिखें।</p>
+        </div>
+
+        <div class="step-card">
+            <div class="step-number">2</div>
+            <h3>Details देखें</h3>
+            <p>Qualification, age, vacancy, dates और selection process देखें।</p>
+        </div>
+
+        <div class="step-card">
+            <div class="step-number">3</div>
+            <h3>Official Source</h3>
+            <p>Application के लिए available official source पर जाएं।</p>
+        </div>
+
+        <div class="step-card">
+            <div class="step-number">4</div>
+            <h3>Track करें</h3>
+            <p>Important dates और future reminders को manage करें।</p>
+        </div>
+    </div>
   </section>
+  <section class="portal-section trust-section" id="trust-section">
+    <div class="trust-box">
+        <div class="trust-icon">🔎</div>
 
+        <div class="trust-content">
+            <span class="section-kicker">TRUST & VERIFICATION</span>
+            <h2>Official Information को प्राथमिकता</h2>
+            <p>
+                Sarkariiichij का उद्देश्य government jobs, results, admissions,
+                scholarships और citizen services की information को आसान तरीके से
+                organize करना है। जहां official source उपलब्ध होगा, वहां official
+                source को प्राथमिकता दी जाएगी।
+            </p>
+        </div>
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
+        <div class="trust-actions">
+            <a href="jobs.html" class="primary-button">
+                Government Jobs
+            </a>
 
-    <div class="footer-brand">
-      <h2>Sarkariiichij</h2>
-      <p>
-        Government Jobs, Education, Results,
-        Admit Cards, Scholarships और Sarkari Services
-        की जानकारी एक जगह।
-      </p>
+            <a href="sarkari-kaam.html" class="secondary-button">
+                Sarkari Kaam
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="portal-section faq-section" id="faq">
+    <div class="section-heading centered-heading">
+        <div>
+            <span class="section-kicker">FAQ</span>
+            <h2>Frequently Asked Questions</h2>
+            <p>Government jobs और website से जुड़े common questions।</p>
+        </div>
+    </div>
+
+    <div class="faq-list">
+        <details class="faq-item">
+            <summary>Sarkariiichij क्या है?</summary>
+            <p>
+                Sarkariiichij एक government jobs, education, career और citizen
+                services information portal है।
+            </p>
+        </details>
+
+        <details class="faq-item">
+            <summary>क्या यहां से government job apply की जा सकती है?</summary>
+            <p>
+                जहां official application link उपलब्ध होगा, वहां job details
+                page से official application source तक पहुंचने का option दिया जाएगा।
+            </p>
+        </details>
+
+        <details class="faq-item">
+            <summary>क्या यहां official notification मिलेगी?</summary>
+            <p>
+                Available होने पर official notification और official website
+                की link को प्राथमिकता दी जाएगी।
+            </p>
+        </details>
+
+        <details class="faq-item">
+            <summary>क्या Results और Admit Cards मिलेंगे?</summary>
+            <p>
+                हां। Results और Admit Card के लिए अलग dedicated sections रहेंगे।
+            </p>
+        </details>
+
+        <details class="faq-item">
+            <summary>क्या Scholarship की जानकारी मिलेगी?</summary>
+            <p>
+                हां। Central और State scholarship की available information
+                scholarship section में organize की जाएगी।
+            </p>
+        </details>
+
+        <details class="faq-item">
+            <summary>क्या Career Tools free होंगे?</summary>
+            <p>
+                Sarkariiichij के career tools free और mobile-friendly बनाए जा रहे हैं।
+            </p>
+        </details>
+    </div>
+</section>
+
+<section class="portal-section popular-section" id="popular-categories">
+    <div class="section-heading">
+        <div>
+            <span class="section-kicker">POPULAR</span>
+            <h2>Popular Government Job Categories</h2>
+            <p>अलग-अलग departments और recruitment bodies के sections।</p>
+        </div>
+        <a href="jobs.html" class="section-link">All Jobs →</a>
+    </div>
+
+    <div class="category-grid">
+        <a href="jobs.html?department=ssc" class="category-card">
+            <span>🏢</span>
+            <h3>SSC Jobs</h3>
+            <p>CGL, CHSL, MTS, GD और अन्य SSC exams।</p>
+        </a>
+
+        <a href="jobs.html?department=railway" class="category-card">
+            <span>🚆</span>
+            <h3>Railway Jobs</h3>
+            <p>RRB और RRC recruitment updates।</p>
+        </a>
+
+        <a href="jobs.html?department=banking" class="category-card">
+            <span>🏦</span>
+            <h3>Banking Jobs</h3>
+            <p>IBPS, SBI, RBI और अन्य banking recruitment।</p>
+        </a>
+
+        <a href="jobs.html?department=defence" class="category-card">
+            <span>🪖</span>
+            <h3>Defence Jobs</h3>
+            <p>Army, Navy, Air Force और Defence recruitment।</p>
+        </a>
+
+        <a href="jobs.html?department=police" class="category-card">
+            <span>👮</span>
+            <h3>Police Jobs</h3>
+            <p>State Police और अन्य police recruitment।</p>
+        </a>
+
+        <a href="jobs.html?department=teaching" class="category-card">
+            <span>👨‍🏫</span>
+            <h3>Teaching Jobs</h3>
+            <p>Teacher, TET, KVS, NVS और education jobs।</p>
+        </a>
+
+        <a href="jobs.html?department=post" class="category-card">
+            <span>📮</span>
+            <h3>India Post</h3>
+            <p>GDS और postal department recruitment।</p>
+        </a>
+
+        <a href="jobs.html?department=psu" class="category-card">
+            <span>⚙️</span>
+            <h3>PSU Jobs</h3>
+            <p>Major public sector recruitment updates।</p>
+        </a>
+    </div>
+</section>
+
+<section class="portal-section qualification-section" id="qualification-section">
+    <div class="section-heading">
+        <div>
+            <span class="section-kicker">QUALIFICATION</span>
+            <h2>Jobs by Qualification</h2>
+            <p>अपनी qualification के हिसाब से jobs खोजें।</p>
+        </div>
+        <a href="jobs.html" class="section-link">Search Jobs →</a>
+    </div>
+
+    <div class="qualification-grid">
+        <a href="jobs.html?qualification=8th" class="qualification-card">
+            <strong>8th Pass</strong>
+            <span>8वीं पास jobs</span>
+        </a>
+
+        <a href="jobs.html?qualification=10th" class="qualification-card">
+            <strong>10th Pass</strong>
+            <span>10वीं पास jobs</span>
+        </a>
+
+        <a href="jobs.html?qualification=12th" class="qualification-card">
+            <strong>12th Pass</strong>
+            <span>12वीं पास jobs</span>
+        </a>
+
+        <a href="jobs.html?qualification=iti" class="qualification-card">
+            <strong>ITI</strong>
+            <span>ITI based jobs</span>
+        </a>
+
+        <a href="jobs.html?qualification=diploma" class="qualification-card">
+            <strong>Diploma</strong>
+            <span>Diploma jobs</span>
+        </a>
+
+        <a href="jobs.html?qualification=graduate" class="qualification-card">
+            <strong>Graduate</strong>
+            <span>Graduation level jobs</span>
+        </a>
+
+        <a href="jobs.html?qualification=engineering" class="qualification-card">
+            <strong>Engineering</strong>
+            <span>Engineering jobs</span>
+        </a>
+
+        <a href="jobs.html?qualification=postgraduate" class="qualification-card">
+            <strong>Post Graduate</strong>
+            <span>PG level jobs</span>
+        </a>
+    </div>
+</section>
+
+<section class="portal-section department-section" id="department-section">
+    <div class="section-heading">
+        <div>
+            <span class="section-kicker">DEPARTMENTS</span>
+            <h2>Jobs by Department</h2>
+            <p>Recruitment को department के हिसाब से browse करें।</p>
+        </div>
+    </div>
+
+    <div class="department-grid">
+        <a href="jobs.html?department=upsc" class="department-card">
+            <span>🏛️</span>
+            <h3>UPSC</h3>
+            <p>Union Public Service Commission</p>
+        </a>
+
+        <a href="jobs.html?department=ssc" class="department-card">
+            <span>📋</span>
+            <h3>SSC</h3>
+            <p>Staff Selection Commission</p>
+        </a>
+
+        <a href="jobs.html?department=railway" class="department-card">
+            <span>🚆</span>
+            <h3>Railway</h3>
+            <p>RRB / RRC recruitment</p>
+        </a>
+
+        <a href="jobs.html?department=banking" class="department-card">
+            <span>🏦</span>
+            <h3>Banking</h3>
+            <p>IBPS / SBI / RBI आदि</p>
+        </a>
+
+        <a href="jobs.html?department=post" class="department-card">
+            <span>📮</span>
+            <h3>India Post</h3>
+            <p>Postal department recruitment</p>
+        </a>
+
+        <a href="jobs.html?department=defence" class="department-card">
+            <span>🪖</span>
+            <h3>Defence</h3>
+            <p>Army / Navy / Air Force</p>
+        </a>
+
+        <a href="jobs.html?department=police" class="department-card">
+            <span>👮</span>
+            <h3>Police</h3>
+            <p>Police और CAPF recruitment</p>
+        </a>
+
+        <a href="jobs.html?department=teaching" class="department-card">
+            <span>📚</span>
+            <h3>Education</h3>
+            <p>Teaching और education jobs</p>
+        </a>
+
+        <a href="jobs.html?department=health" class="department-card">
+            <span>🏥</span>
+            <h3>Health</h3>
+            <p>Medical और health department</p>
+        </a>
+
+        <a href="jobs.html?department=agriculture" class="department-card">
+            <span>🌾</span>
+            <h3>Agriculture</h3>
+            <p>Agriculture department jobs</p>
+        </a>
+
+        <a href="jobs.html?department=forest" class="department-card">
+            <span>🌳</span>
+            <h3>Forest</h3>
+            <p>Forest department recruitment</p>
+        </a>
+
+        <a href="jobs.html?department=psu" class="department-card">
+            <span>⚡</span>
+            <h3>PSU</h3>
+            <p>Public sector jobs</p>
+        </a>
+    </div>
+</section>
+
+<section class="portal-section exam-resources-section" id="exam-resources">
+    <div class="section-heading">
+        <div>
+            <span class="section-kicker">EXAM RESOURCES</span>
+            <h2>Complete Exam Resources</h2>
+            <p>एक exam की तैयारी के लिए जरूरी सभी major resources।</p>
+        </div>
+    </div>
+
+    <div class="exam-resource-layout">
+        <div class="exam-resource-main">
+            <div class="resource-highlight">
+                <span class="highlight-icon">📘</span>
+                <div>
+                    <h3>Syllabus</h3>
+                    <p>
+                        Subject-wise syllabus, topics और exam pattern की जानकारी।
+                    </p>
+                </div>
+                <a href="syllabus.html">Open</a>
+            </div>
+
+            <div class="resource-highlight">
+                <span class="highlight-icon">📄</span>
+                <div>
+                    <h3>Previous Papers</h3>
+                    <p>
+                        Previous year papers और practice resources।
+                    </p>
+                </div>
+                <a href="papers.html">Open</a>
+            </div>
+
+            <div class="resource-highlight">
+                <span class="highlight-icon">📊</span>
+                <div>
+                    <h3>Cut Off</h3>
+                    <p>
+                        Available previous और official cutoff information।
+                    </p>
+                </div>
+                <a href="cutoff.html">Open</a>
+            </div>
+
+            <div class="resource-highlight">
+                <span class="highlight-icon">🎯</span>
+                <div>
+                    <h3>Mock Test</h3>
+                    <p>
+                        Practice और exam preparation के लिए mock tests।
+                    </p>
+                </div>
+                <a href="mock-test.html">Open</a>
+            </div>
+        </div>
+
+        <aside class="exam-resource-side">
+            <div class="side-info-card">
+                <span>💡</span>
+                <h3>Preparation Tip</h3>
+                <p>
+                    किसी भी exam की तैयारी शुरू करने से पहले official syllabus,
+                    exam pattern और previous papers जरूर देखें।
+                </p>
+            </div>
+
+            <div class="side-info-card">
+                <span>🔔</span>
+                <h3>Important Dates</h3>
+                <p>
+                    Application last date, exam date, admit card और result date
+                    को हमेशा verify करें।
+                </p>
+            </div>
+        </aside>
+    </div>
+</section>
+
+<section class="portal-section quick-navigation" id="quick-navigation">
+    <div class="section-heading">
+        <div>
+            <span class="section-kicker">QUICK ACCESS</span>
+            <h2>Quick Navigation</h2>
+            <p>Website के important sections तक जल्दी पहुंचें।</p>
+        </div>
+    </div>
+
+    <div class="quick-nav-grid">
+        <a href="jobs.html">Government Jobs</a>
+        <a href="results.html">Results</a>
+        <a href="admit-card.html">Admit Card</a>
+        <a href="admission.html">Admission</a>
+        <a href="syllabus.html">Syllabus</a>
+        <a href="papers.html">Previous Papers</a>
+        <a href="cutoff.html">Cut Off</a>
+        <a href="scholarship.html">Scholarship</a>
+        <a href="eligibility.html">Eligibility</a>
+        <a href="sarkari-kaam.html">Sarkari Kaam</a>
+        <a href="career-tools.html">Career Tools</a>
+        <a href="mock-test.html">Mock Test</a>
+    </div>
+          </section>
+          <section class="portal-section state-links-section" id="state-links">
+    <div class="section-heading">
+        <div>
+            <span class="section-kicker">STATE WISE</span>
+            <h2>State Government Recruitment</h2>
+            <p>अलग-अलग राज्यों की recruitment और government services।</p>
+        </div>
+    </div>
+
+    <div class="state-links-grid">
+        <a href="jobs.html?state=uttar-pradesh" class="state-link-card">
+            <span>उत्तर प्रदेश</span>
+            <small>UP Jobs</small>
+        </a>
+
+        <a href="jobs.html?state=bihar" class="state-link-card">
+            <span>बिहार</span>
+            <small>Bihar Jobs</small>
+        </a>
+
+        <a href="jobs.html?state=jharkhand" class="state-link-card">
+            <span>झारखंड</span>
+            <small>Jharkhand Jobs</small>
+        </a>
+
+        <a href="jobs.html?state=rajasthan" class="state-link-card">
+            <span>राजस्थान</span>
+            <small>Rajasthan Jobs</small>
+        </a>
+
+        <a href="jobs.html?state=madhya-pradesh" class="state-link-card">
+            <span>मध्य प्रदेश</span>
+            <small>MP Jobs</small>
+        </a>
+
+        <a href="jobs.html?state=delhi" class="state-link-card">
+            <span>दिल्ली</span>
+            <small>Delhi Jobs</small>
+        </a>
+
+        <a href="jobs.html?state=maharashtra" class="state-link-card">
+            <span>महाराष्ट्र</span>
+            <small>Maharashtra Jobs</small>
+        </a>
+
+        <a href="jobs.html?state=west-bengal" class="state-link-card">
+            <span>पश्चिम बंगाल</span>
+            <small>WB Jobs</small>
+        </a>
+
+        <a href="jobs.html?state=gujarat" class="state-link-card">
+            <span>गुजरात</span>
+            <small>Gujarat Jobs</small>
+        </a>
+
+        <a href="jobs.html?state=haryana" class="state-link-card">
+            <span>हरियाणा</span>
+            <small>Haryana Jobs</small>
+        </a>
+
+        <a href="jobs.html?state=punjab" class="state-link-card">
+            <span>पंजाब</span>
+            <small>Punjab Jobs</small>
+        </a>
+
+        <a href="jobs.html?state=uttarakhand" class="state-link-card">
+            <span>उत्तराखंड</span>
+            <small>Uttarakhand Jobs</small>
+        </a>
+    </div>
+</section>
+
+<section class="portal-section application-help-section" id="application-help">
+    <div class="section-heading">
+        <div>
+            <span class="section-kicker">APPLICATION HELP</span>
+            <h2>Online Form भरने में मदद</h2>
+            <p>Government application भरते समय जरूरी information check करें।</p>
+        </div>
+    </div>
+
+    <div class="help-grid">
+        <article class="help-card">
+            <span class="help-icon">📑</span>
+            <h3>Documents Required</h3>
+            <p>
+                Photo, signature, ID proof, certificates और अन्य required documents
+                की जानकारी देखें।
+            </p>
+            <button type="button" data-action="documents">
+                Check Documents
+            </button>
+        </article>
+
+        <article class="help-card">
+            <span class="help-icon">📝</span>
+            <h3>How to Apply</h3>
+            <p>
+                Online application process को step-by-step समझें।
+            </p>
+            <button type="button" data-action="how-to-apply">
+                View Guide
+            </button>
+        </article>
+
+        <article class="help-card">
+            <span class="help-icon">💳</span>
+            <h3>Application Fee</h3>
+            <p>
+                General, OBC, EWS, SC, ST और अन्य categories की applicable fee देखें।
+            </p>
+            <button type="button" data-action="application-fee">
+                Check Fee
+            </button>
+        </article>
+
+        <article class="help-card">
+            <span class="help-icon">🔍</span>
+            <h3>Form Verification</h3>
+            <p>
+                Final submit से पहले application में important details verify करें।
+            </p>
+            <button type="button" data-action="form-check">
+                Check Form
+            </button>
+        </article>
+    </div>
+</section>
+
+<section class="portal-section selection-section" id="selection-process">
+    <div class="section-heading">
+        <div>
+            <span class="section-kicker">SELECTION</span>
+            <h2>Government Job Selection Process</h2>
+            <p>अलग-अलग recruitment में सामान्य selection stages।</p>
+        </div>
+    </div>
+
+    <div class="selection-timeline">
+        <div class="timeline-item">
+            <div class="timeline-number">1</div>
+            <div>
+                <h3>Notification</h3>
+                <p>Official recruitment notification जारी होती है।</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-number">2</div>
+            <div>
+                <h3>Online Application</h3>
+                <p>Eligible candidates official portal पर form भरते हैं।</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-number">3</div>
+            <div>
+                <h3>Admit Card</h3>
+                <p>Exam से पहले eligible candidates का admit card जारी हो सकता है।</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-number">4</div>
+            <div>
+                <h3>Written Exam</h3>
+                <p>Recruitment के अनुसार CBT, written exam या अन्य test हो सकता है।</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-number">5</div>
+            <div>
+                <h3>Skill / Physical Test</h3>
+                <p>कुछ posts में skill, typing, physical या trade test हो सकता है।</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-number">6</div>
+            <div>
+                <h3>Document Verification</h3>
+                <p>Original documents और eligibility verify की जाती है।</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-number">7</div>
+            <div>
+                <h3>Final Result</h3>
+                <p>Final merit/result के बाद appointment process आगे बढ़ता है।</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="portal-section job-info-section" id="job-info">
+    <div class="section-heading">
+        <div>
+            <span class="section-kicker">JOB INFORMATION</span>
+            <h2>हर Job में क्या-क्या देखें?</h2>
+            <p>Application करने से पहले इन important details को जरूर check करें।</p>
+        </div>
+    </div>
+
+    <div class="job-info-grid">
+        <div class="job-info-card">
+            <span>🎓</span>
+            <h3>Qualification</h3>
+            <p>Minimum educational qualification और required certificate।</p>
+        </div>
+
+        <div class="job-info-card">
+            <span>🎂</span>
+            <h3>Age Limit</h3>
+            <p>Minimum और maximum age तथा applicable relaxation।</p>
+        </div>
+
+        <div class="job-info-card">
+            <span>👥</span>
+            <h3>Vacancy</h3>
+            <p>Total vacancies और category-wise vacancy details।</p>
+        </div>
+
+        <div class="job-info-card">
+            <span>💰</span>
+            <h3>Salary</h3>
+            <p>Pay level, salary structure और available allowances।</p>
+        </div>
+
+        <div class="job-info-card">
+            <span>💳</span>
+            <h3>Application Fee</h3>
+            <p>Category-wise application fee और payment method।</p>
+        </div>
+
+        <div class="job-info-card">
+            <span>📅</span>
+            <h3>Important Dates</h3>
+            <p>Start date, last date, exam date और अन्य dates।</p>
+        </div>
+
+        <div class="job-info-card">
+            <span>📚</span>
+            <h3>Syllabus</h3>
+            <p>Subjects, topics और exam pattern की जानकारी।</p>
+        </div>
+
+        <div class="job-info-card">
+            <span>🏛️</span>
+            <h3>Official Website</h3>
+            <p>Application और verification के लिए official source।</p>
+        </div>
+    </div>
+</section>
+
+<section class="portal-section reminders-section" id="reminders">
+    <div class="reminder-box">
+        <div class="reminder-icon">🔔</div>
+
+        <div class="reminder-content">
+            <span class="section-kicker">REMINDERS</span>
+            <h2>Important Dates को Track करें</h2>
+            <p>
+                Future dashboard में users jobs save करके application last date,
+                exam date और result जैसी important dates track कर सकेंगे।
+            </p>
+        </div>
+
+        <button type="button" class="primary-button" id="reminderInfoButton">
+            Learn More
+        </button>
+    </div>
+</section>
+
+<section class="portal-section saved-jobs-section" id="saved-jobs">
+    <div class="section-heading">
+        <div>
+            <span class="section-kicker">MY JOBS</span>
+            <h2>Saved Jobs</h2>
+            <p>Important jobs को future में save करके जल्दी access किया जा सकेगा।</p>
+        </div>
+    </div>
+
+    <div class="saved-jobs-empty">
+        <div class="saved-icon">⭐</div>
+        <h3>No Saved Jobs Yet</h3>
+        <p>
+            जब job saving feature active होगा, यहां आपकी saved jobs दिखाई देंगी।
+        </p>
+        <a href="jobs.html" class="secondary-button">
+            Browse Jobs
+        </a>
+    </div>
+</section>
+
+<section class="portal-section tracker-section" id="application-tracker">
+    <div class="section-heading">
+        <div>
+            <span class="section-kicker">APPLICATION TRACKER</span>
+            <h2>My Application Tracker</h2>
+            <p>अपने applications की important dates और status manage करें।</p>
+        </div>
+    </div>
+
+    <div class="tracker-grid">
+        <div class="tracker-card">
+            <span>📝</span>
+            <strong>Applied</strong>
+            <small>Applications you have submitted</small>
+        </div>
+
+        <div class="tracker-card">
+            <span>⏳</span>
+            <strong>Upcoming</strong>
+            <small>Upcoming exam and important dates</small>
+        </div>
+
+        <div class="tracker-card">
+            <span>🎫</span>
+            <strong>Admit Card</strong>
+            <small>Upcoming admit card reminders</small>
+        </div>
+
+        <div class="tracker-card">
+            <span>📜</span>
+            <strong>Result</strong>
+            <small>Result and merit list tracking</small>
+        </div>
+    </div>
+</section>
+
+<section class="portal-section notification-section" id="notifications">
+    <div class="notification-box">
+        <div class="notification-symbol">🔔</div>
+
+        <div class="notification-content">
+            <h2>Latest Notifications</h2>
+            <p>
+                Important recruitment, result, admit card और admission updates
+                इसी section में दिखाई जाएंगी।
+            </p>
+        </div>
+
+        <a href="jobs.html" class="primary-button">
+            View Updates
+        </a>
+    </div>
+</section>
+
+<section class="portal-section feedback-section" id="feedback">
+    <div class="feedback-card">
+        <div class="feedback-header">
+            <span class="section-kicker">FEEDBACK</span>
+            <h2>Website में कोई Error मिला?</h2>
+            <p>
+                गलत information, broken link या technical issue मिलने पर report करें।
+            </p>
+        </div>
+
+        <div class="feedback-actions">
+            <button type="button" class="secondary-button" data-action="report-error">
+                Report Error
+            </button>
+
+            <button type="button" class="secondary-button" data-action="contact">
+                Contact
+            </button>
+        </div>
+    </div>
+          </section>
+          <section class="portal-section about-preview-section" id="about-preview">
+    <div class="about-preview">
+        <div class="about-content">
+            <span class="section-kicker">ABOUT SARKARIIICHIJ</span>
+            <h2>Government Information को आसान बनाना</h2>
+            <p>
+                Sarkariiichij एक mobile-friendly information platform है जिसका
+                उद्देश्य government jobs, education, career और citizen services
+                से जुड़ी जानकारी को एक जगह व्यवस्थित करना है।
+            </p>
+
+            <p>
+                Users यहां jobs, results, admit cards, syllabus, previous papers,
+                scholarships, admissions और useful career tools तक आसानी से पहुंच
+                सकेंगे।
+            </p>
+
+            <a href="about.html" class="primary-button">
+                About Sarkariiichij
+            </a>
+        </div>
+
+        <div class="about-points">
+            <div class="about-point">
+                <span>✓</span>
+                <div>
+                    <h3>Mobile Friendly</h3>
+                    <p>Phone पर आसान navigation और readable information।</p>
+                </div>
+            </div>
+
+            <div class="about-point">
+                <span>✓</span>
+                <div>
+                    <h3>Organized Information</h3>
+                    <p>Jobs, results, admission और services अलग-अलग sections में।</p>
+                </div>
+            </div>
+
+            <div class="about-point">
+                <span>✓</span>
+                <div>
+                    <h3>Official Sources</h3>
+                    <p>जहां उपलब्ध हो वहां official source को प्राथमिकता।</p>
+                </div>
+            </div>
+
+            <div class="about-point">
+                <span>✓</span>
+                <div>
+                    <h3>Useful Tools</h3>
+                    <p>Career और application related calculators और utilities।</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="portal-section important-links-section" id="important-links">
+    <div class="section-heading">
+        <div>
+            <span class="section-kicker">IMPORTANT LINKS</span>
+            <h2>Important Sections</h2>
+            <p>Website के सबसे जरूरी sections तक direct access।</p>
+        </div>
+    </div>
+
+    <div class="important-links-grid">
+        <a href="jobs.html" class="important-link-card">
+            <span>💼</span>
+            <div>
+                <h3>Government Jobs</h3>
+                <p>Latest recruitment</p>
+            </div>
+            <strong>→</strong>
+        </a>
+
+        <a href="results.html" class="important-link-card">
+            <span>📜</span>
+            <div>
+                <h3>Results</h3>
+                <p>Latest exam results</p>
+            </div>
+            <strong>→</strong>
+        </a>
+
+        <a href="admit-card.html" class="important-link-card">
+            <span>🎫</span>
+            <div>
+                <h3>Admit Card</h3>
+                <p>Exam hall tickets</p>
+            </div>
+            <strong>→</strong>
+        </a>
+
+        <a href="admission.html" class="important-link-card">
+            <span>🎓</span>
+            <div>
+                <h3>Admission</h3>
+                <p>College and university</p>
+            </div>
+            <strong>→</strong>
+        </a>
+
+        <a href="scholarship.html" class="important-link-card">
+            <span>💰</span>
+            <div>
+                <h3>Scholarship</h3>
+                <p>Scholarship updates</p>
+            </div>
+            <strong>→</strong>
+        </a>
+
+        <a href="sarkari-kaam.html" class="important-link-card">
+            <span>🏛️</span>
+            <div>
+                <h3>Sarkari Kaam</h3>
+                <p>Citizen services</p>
+            </div>
+            <strong>→</strong>
+        </a>
+
+        <a href="career-tools.html" class="important-link-card">
+            <span>🧮</span>
+            <div>
+                <h3>Career Tools</h3>
+                <p>Useful calculators</p>
+            </div>
+            <strong>→</strong>
+        </a>
+
+        <a href="mock-test.html" class="important-link-card">
+            <span>📝</span>
+            <div>
+                <h3>Mock Test</h3>
+                <p>Exam preparation</p>
+            </div>
+            <strong>→</strong>
+        </a>
+    </div>
+</section>
+
+<section class="portal-section footer-search-section" id="footer-search">
+    <div class="footer-search-box">
+        <span class="section-kicker">SEARCH SARKARIIICHIJ</span>
+        <h2>क्या खोज रहे हैं?</h2>
+        <p>
+            Government job, result, admit card, admission या किसी service का नाम search करें।
+        </p>
+
+        <div class="footer-search-form">
+            <input
+                type="search"
+                id="footerSearchInput"
+                placeholder="Search Government Jobs, Results, Admission..."
+                autocomplete="off"
+            >
+
+            <button type="button" id="footerSearchButton" class="primary-button">
+                Search
+            </button>
+        </div>
+
+        <div id="footerSearchResults" class="footer-search-results"></div>
+    </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="footer-main">
+        <div class="footer-brand">
+            <a href="index.html" class="footer-logo">
+                <span class="logo-mark">S</span>
+                <span>Sarkariiichij</span>
+            </a>
+
+            <p>
+                Government Jobs, Education, Career और Sarkari Services की
+                information एक जगह।
+            </p>
+
+            <div class="footer-socials">
+                <a href="#" aria-label="Facebook">f</a>
+                <a href="#" aria-label="Instagram">◎</a>
+                <a href="#" aria-label="Telegram">✈</a>
+                <a href="#" aria-label="YouTube">▶</a>
+            </div>
+        </div>
+
+        <div class="footer-column">
+            <h3>Government Jobs</h3>
+            <a href="jobs.html">Latest Jobs</a>
+            <a href="jobs.html?qualification=10th">10th Pass Jobs</a>
+            <a href="jobs.html?qualification=12th">12th Pass Jobs</a>
+            <a href="jobs.html?qualification=graduate">Graduate Jobs</a>
+            <a href="jobs.html?department=ssc">SSC Jobs</a>
+            <a href="jobs.html?department=railway">Railway Jobs</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Exam Resources</h3>
+            <a href="admit-card.html">Admit Card</a>
+            <a href="results.html">Results</a>
+            <a href="syllabus.html">Syllabus</a>
+            <a href="papers.html">Previous Papers</a>
+            <a href="cutoff.html">Cut Off</a>
+            <a href="mock-test.html">Mock Test</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Education</h3>
+            <a href="admission.html">Admission</a>
+            <a href="results.html">University Results</a>
+            <a href="scholarship.html">Scholarship</a>
+            <a href="eligibility.html">Eligibility</a>
+            <a href="career-tools.html">Career Tools</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Sarkari Services</h3>
+            <a href="sarkari-kaam.html">Sarkari Kaam</a>
+            <a href="sarkari-kaam.html#documents">Documents</a>
+            <a href="sarkari-kaam.html#certificate">Certificates</a>
+            <a href="sarkari-kaam.html#identity">Identity Services</a>
+            <a href="sarkari-kaam.html#other">Other Services</a>
+        </div>
+    </div>
+
+    <div class="footer-middle">
+        <div class="footer-middle-card">
+            <h3>Popular Searches</h3>
+
+            <div class="footer-tags">
+                <button type="button" data-search="SSC CHSL">SSC CHSL</button>
+                <button type="button" data-search="SSC CGL">SSC CGL</button>
+                <button type="button" data-search="Railway Jobs">Railway Jobs</button>
+                <button type="button" data-search="GDS">GDS</button>
+                <button type="button" data-search="UP Police">UP Police</button>
+                <button type="button" data-search="Army">Army</button>
+                <button type="button" data-search="Scholarship">Scholarship</button>
+                <button type="button" data-search="Results">Results</button>
+            </div>
+        </div>
     </div>
 
     <div class="footer-links">
-
-      <a href="index.html">Home</a>
-      <a href="jobs.html">Government Jobs</a>
-      <a href="results.html">Results</a>
-      <a href="admit-card.html">Admit Card</a>
-      <a href="admission.html">Admission</a>
-      <a href="syllabus.html">Syllabus</a>
-
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms & Conditions</a>
+        <a href="disclaimer.html">Disclaimer</a>
+        <a href="report-error.html">Report Error</a>
+        <a href="important-links.html">Important Links</a>
     </div>
 
     <div class="footer-bottom">
-      <p>© 2026 Sarkariiichij. All Rights Reserved.</p>
-      <p>Information is provided for educational and informational purposes.</p>
+        <p>
+            © <span id="currentYear"></span> Sarkariiichij. All Rights Reserved.
+        </p>
+
+        <p>
+            Information should be verified from the official source before taking
+            any action.
+        </p>
+    </div>
+</footer>
+
+<div
+    class="mobile-bottom-nav"
+    id="mobileBottomNav"
+    aria-label="Mobile Navigation"
+>
+    <a href="index.html" class="bottom-nav-item active">
+        <span>⌂</span>
+        <small>Home</small>
+    </a>
+
+    <a href="jobs.html" class="bottom-nav-item">
+        <span>💼</span>
+        <small>Jobs</small>
+    </a>
+
+    <a href="results.html" class="bottom-nav-item">
+        <span>📜</span>
+        <small>Results</small>
+    </a>
+
+    <a href="admit-card.html" class="bottom-nav-item">
+        <span>🎫</span>
+        <small>Admit</small>
+    </a>
+
+    <button
+        type="button"
+        class="bottom-nav-item"
+        id="bottomMenuButton"
+        aria-label="Open Menu"
+    >
+        <span>☰</span>
+        <small>Menu</small>
+    </button>
+</div>
+
+<div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+<aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-header">
+        <a href="index.html" class="mobile-menu-logo">
+            <span class="logo-mark">S</span>
+            <span>Sarkariiichij</span>
+        </a>
+
+        <button
+            type="button"
+            id="mobileMenuClose"
+            class="menu-close"
+            aria-label="Close Menu"
+        >
+            ×
+        </button>
     </div>
 
-  </footer>
-  </body>
+    <nav class="mobile-menu-nav">
+        <a href="index.html">🏠 Home</a>
+        <a href="jobs.html">💼 Government Jobs</a>
+        <a href="results.html">📜 Results</a>
+        <a href="admit-card.html">🎫 Admit Card</a>
+        <a href="admission.html">🎓 Admission</a>
+        <a href="syllabus.html">📚 Syllabus</a>
+        <a href="papers.html">📄 Previous Papers</a>
+        <a href="cutoff.html">📊 Cut Off</a>
+        <a href="scholarship.html">💰 Scholarship</a>
+        <a href="eligibility.html">✅ Eligibility</a>
+        <a href="sarkari-kaam.html">🏛️ Sarkari Kaam</a>
+        <a href="career-tools.html">🧮 Career Tools</a>
+        <a href="mock-test.html">📝 Mock Test</a>
+    </nav>
+
+    <div class="mobile-menu-footer">
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy</a>
+    </div>
+</aside>
+
+<div
+    class="site-modal"
+    id="siteModal"
+    aria-hidden="true"
+    role="dialog"
+    aria-modal="true"
+>
+    <div class="modal-backdrop" data-modal-close></div>
+
+    <div class="modal-box">
+        <button
+            type="button"
+            class="modal-close"
+            id="modalClose"
+            aria-label="Close"
+        >
+            ×
+        </button>
+
+        <div class="modal-icon" id="modalIcon">ℹ️</div>
+
+        <h2 id="modalTitle">Information</h2>
+
+        <p id="modalMessage">
+            Sarkariiichij information portal.
+        </p>
+
+        <div class="modal-actions" id="modalActions">
+            <button type="button" class="primary-button" data-modal-close>
+                OK
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="back-to-top" id="backToTop" aria-label="Back to top">
+    ↑
+</div>
+
+<script>
+    window.SarkariiichijHome = {
+        siteName: "Sarkariiichij",
+        version: "1.0",
+        page: "home"
+    };
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+        const currentYear = document.getElementById("currentYear");
+
+        if (currentYear) {
+            currentYear.textContent = new Date().getFullYear();
+        }
+
+        const menuButton = document.getElementById("menuButton");
+        const bottomMenuButton = document.getElementById("bottomMenuButton");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const mobileMenuOverlay = document.getElementById("mobileMenuOverlay");
+        const mobileMenuClose = document.getElementById("mobileMenuClose");
+
+        function openMobileMenu() {
+            if (!mobileMenu) {
+                return;
+            }
+
+            mobileMenu.classList.add("open");
+            mobileMenuOverlay?.classList.add("show");
+            mobileMenu.setAttribute("aria-hidden", "false");
+            document.body.classList.add("menu-open");
+        }
+
+        function closeMobileMenu() {
+            if (!mobileMenu) {
+                return;
+            }
+
+            mobileMenu.classList.remove("open");
+            mobileMenuOverlay?.classList.remove("show");
+            mobileMenu.setAttribute("aria-hidden", "true");
+            document.body.classList.remove("menu-open");
+        }
+
+        menuButton?.addEventListener("click", openMobileMenu);
+        bottomMenuButton?.addEventListener("click", openMobileMenu);
+        mobileMenuClose?.addEventListener("click", closeMobileMenu);
+        mobileMenuOverlay?.addEventListener("click", closeMobileMenu);
+
+        document.querySelectorAll(".mobile-menu-nav a").forEach(function (link) {
+            link.addEventListener("click", closeMobileMenu);
+        });
+
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape") {
+                closeMobileMenu();
+            }
+        });
+
+        const backToTop = document.getElementById("backToTop");
+
+        function updateBackToTop() {
+            if (!backToTop) {
+                return;
+            }
+
+            if (window.scrollY > 500) {
+                backToTop.classList.add("show");
+            } else {
+                backToTop.classList.remove("show");
+            }
+        }
+
+        window.addEventListener("scroll", updateBackToTop);
+
+        backToTop?.addEventListener("click", function () {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+
+        updateBackToTop();
+
+        const siteModal = document.getElementById("siteModal");
+        const modalTitle = document.getElementById("modalTitle");
+        const modalMessage = document.getElementById("modalMessage");
+        const modalIcon = document.getElementById("modalIcon");
+        const modalClose = document.getElementById("modalClose");
+
+        function openModal(title, message, icon = "ℹ️") {
+            if (!siteModal) {
+                return;
+            }
+
+            if (modalTitle) {
+                modalTitle.textContent = title;
+            }
+
+            if (modalMessage) {
+                modalMessage.textContent = message;
+            }
+
+            if (modalIcon) {
+                modalIcon.textContent = icon;
+            }
+
+            siteModal.classList.add("show");
+            siteModal.setAttribute("aria-hidden", "false");
+            document.body.classList.add("modal-open");
+        }
+
+        function closeModal() {
+            if (!siteModal) {
+                return;
+            }
+
+            siteModal.classList.remove("show");
+            siteModal.setAttribute("aria-hidden", "true");
+            document.body.classList.remove("modal-open");
+        }
+
+        modalClose?.addEventListener("click", closeModal);
+
+        document.querySelectorAll("[data-modal-close]").forEach(function (element) {
+            element.addEventListener("click", closeModal);
+        });
+
+        const actionMessages = {
+            "current-affairs": [
+                "Current Affairs",
+                "Daily Current Affairs section को जल्द dedicated content और updates के साथ connect किया जाएगा।",
+                "📰"
+            ],
+            "gk": [
+                "Daily GK",
+                "Daily GK content section preparation system के साथ connect किया जाएगा।",
+                "🌍"
+            ],
+            "quiz": [
+                "GK Quiz",
+                "Quiz system को Mock Test module के साथ integrate किया जाएगा।",
+                "❓"
+            ],
+            "job-comparison": [
+                "Job Comparison",
+                "Job comparison feature में अलग-अलग posts की details compare की जा सकेंगी।",
+                "⚖️"
+            ],
+            "post-comparison": [
+                "Post Comparison",
+                "Post comparison module में qualification, salary और selection details compare होंगी।",
+                "👮"
+            ],
+            "course-comparison": [
+                "Course Comparison",
+                "Course comparison feature education section के साथ connect किया जाएगा।",
+                "🎓"
+            ],
+            "college-comparison": [
+                "College Comparison",
+                "College comparison module future education tools में available होगा।",
+                "🏫"
+            ],
+            "documents": [
+                "Documents",
+                "Job/application के अनुसार required documents को check करना जरूरी है।",
+                "📑"
+            ],
+            "how-to-apply": [
+                "How to Apply",
+                "Application करते समय हमेशा official notification और official website के instructions follow करें।",
+                "📝"
+            ],
+            "application-fee": [
+                "Application Fee",
+                "हर recruitment की fee अलग हो सकती है। Official notification में fee verify करें।",
+                "💳"
+            ],
+            "form-check": [
+                "Form Verification",
+                "Final submit से पहले नाम, DOB, category, qualification और uploaded documents verify करें।",
+                "🔍"
+            ],
+            "report-error": [
+                "Report Error",
+                "Broken link या incorrect information मिलने पर Report Error page का उपयोग करें।",
+                "⚠️"
+            ],
+            "contact": [
+                "Contact",
+                "Contact page के माध्यम से website team तक message भेजा जा सकेगा।",
+                "📩"
+            ]
+        };
+
+        document.querySelectorAll("[data-action]").forEach(function (button) {
+            button.addEventListener("click", function () {
+                const action = button.getAttribute("data-action");
+                const data = actionMessages[action];
+
+                if (!data) {
+                    return;
+                }
+
+                openModal(data[0], data[1], data[2]);
+            });
+        });
+      /* ===============================
+   SEARCH DATABASE
+   =============================== */
+
+const searchIndex = [
+  {
+    title: "Government Jobs",
+    keywords: "job jobs sarkari naukri government vacancy भर्ती सरकारी नौकरी",
+    description: "Latest Government Jobs और भर्ती की जानकारी",
+    url: "jobs.html"
+  },
+
+  {
+    title: "SSC Jobs",
+    keywords: "ssc cgl chsl mts gd cpo ssc recruitment",
+    description: "SSC की सभी प्रमुख भर्ती और परीक्षा जानकारी",
+    url: "jobs.html?department=SSC"
+  },
+
+  {
+    title: "Railway Jobs",
+    keywords: "railway rrb rrc ntpc group d technician alp",
+    description: "Railway और RRB/RRC की भर्ती",
+    url: "jobs.html?department=Railway"
+  },
+
+  {
+    title: "Banking Jobs",
+    keywords: "bank ibps sbi rbi nabard sebi clerk po",
+    description: "Banking Sector की सरकारी भर्ती",
+    url: "jobs.html?department=Banking"
+  },
+
+  {
+    title: "Defence Jobs",
+    keywords: "army navy air force defence agniveer nda cds",
+    description: "Army, Navy, Air Force और Defence भर्ती",
+    url: "jobs.html?department=Defence"
+  },
+
+  {
+    title: "Police Jobs",
+    keywords: "police crpf bsf cisf itbp ssb capf gd",
+    description: "Police और CAPF भर्ती",
+    url: "jobs.html?department=Police"
+  },
+
+  {
+    title: "India Post Jobs",
+    keywords: "post office india post gds dak sevak postal",
+    description: "India Post और GDS भर्ती",
+    url: "jobs.html?department=India%20Post"
+  },
+
+  {
+    title: "Teaching Jobs",
+    keywords: "teacher teaching ctet tet kvs nvs dsssb",
+    description: "Teaching और Education Sector की भर्ती",
+    url: "jobs.html?department=Teaching"
+  },
+
+  {
+    title: "10th Pass Jobs",
+    keywords: "10th tenth matric high school 10 pass",
+    description: "10वीं पास उम्मीदवारों के लिए Jobs",
+    url: "jobs.html?qualification=10th"
+  },
+
+  {
+    title: "12th Pass Jobs",
+    keywords: "12th intermediate inter 12 pass",
+    description: "12वीं पास उम्मीदवारों के लिए Jobs",
+    url: "jobs.html?qualification=12th"
+  },
+
+  {
+    title: "Graduate Jobs",
+    keywords: "graduate graduation degree ba bsc bcom",
+    description: "Graduation के बाद सरकारी Jobs",
+    url: "jobs.html?qualification=Graduate"
+  },
+
+  {
+    title: "Results",
+    keywords: "result results exam result university result",
+    description: "Government Exam और University Results",
+    url: "results.html"
+  },
+
+  {
+    title: "Admit Card",
+    keywords: "admit card hall ticket exam download",
+    description: "Latest Admit Cards",
+    url: "admit-card.html"
+  },
+
+  {
+    title: "Admission",
+    keywords: "admission college university course form",
+    description: "College और University Admission",
+    url: "admission.html"
+  },
+
+  {
+    title: "Syllabus",
+    keywords: "syllabus exam syllabus पाठ्यक्रम pattern",
+    description: "Government Exams का Syllabus",
+    url: "syllabus.html"
+  },
+
+  {
+    title: "Cut Off",
+    keywords: "cutoff cut off expected previous cutoff",
+    description: "Exam Cut Off की जानकारी",
+    url: "cutoff.html"
+  },
+
+  {
+    title: "Previous Year Papers",
+    keywords: "previous paper pyq question paper old paper",
+    description: "Previous Year Question Papers",
+    url: "papers.html"
+  },
+
+  {
+    title: "Scholarship",
+    keywords: "scholarship छात्रवृत्ति renewal scholarship form",
+    description: "Scholarship और Renewal की जानकारी",
+    url: "scholarship.html"
+  },
+
+  {
+    title: "Eligibility Checker",
+    keywords: "eligibility age qualification eligible पात्रता",
+    description: "अपनी Eligibility Check करें",
+    url: "eligibility.html"
+  },
+
+  {
+    title: "Career Tools",
+    keywords: "calculator age percentage cgpa height salary date",
+    description: "Career और Exam के Useful Tools",
+    url: "career-tools.html"
+  },
+
+  {
+    title: "Mock Test",
+    keywords: "mock test quiz practice online test",
+    description: "Mock Test और Exam Practice",
+    url: "mock-test.html"
+  },
+
+  {
+    title: "Sarkari Kaam",
+    keywords: "sarkari kaam certificate income caste domicile pension",
+    description: "सरकारी सेवाओं और Documents की जानकारी",
+    url: "sarkari-kaam.html"
+  },
+
+  {
+    title: "Sarkari Yojana",
+    keywords: "yojana scheme government scheme pm scheme",
+    description: "सरकारी योजनाओं की जानकारी",
+    url: "yojana.html"
+  }
+];
+      /* ===============================
+   SEARCH FUNCTIONS
+   =============================== */
+
+function normalizeSearchText(value) {
+
+  return String(value || "")
+    .toLowerCase()
+    .trim()
+    .replace(/\s+/g, " ");
+
+}
+
+
+function escapeHTML(value) {
+
+  return String(value || "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+
+}
+
+
+function searchSarkariiichij(query) {
+
+  const q =
+    normalizeSearchText(query);
+
+  if (!q) {
+    return [];
+  }
+
+  return searchIndex
+    .map(function(item) {
+
+      const title =
+        normalizeSearchText(item.title);
+
+      const keywords =
+        normalizeSearchText(item.keywords);
+
+      const description =
+        normalizeSearchText(item.description);
+
+      let score = 0;
+
+      if (title === q) {
+        score += 100;
+      }
+
+      if (title.includes(q)) {
+        score += 60;
+      }
+
+      if (keywords.includes(q)) {
+        score += 40;
+      }
+
+      if (description.includes(q)) {
+        score += 20;
+      }
+
+      q.split(" ").forEach(function(word) {
+
+        if (!word) {
+          return;
+        }
+
+        if (title.includes(word)) {
+          score += 15;
+        }
+
+        if (keywords.includes(word)) {
+          score += 10;
+        }
+
+        if (description.includes(word)) {
+          score += 5;
+        }
+
+      });
+
+      return {
+        item: item,
+        score: score
+      };
+
+    })
+    .filter(function(result) {
+
+      return result.score > 0;
+
+    })
+    .sort(function(a, b) {
+
+      return b.score - a.score;
+
+    })
+    .slice(0, 10);
+
+}
+
+
+/* ===============================
+   SEARCH RESULT DISPLAY
+   =============================== */
+
+function showSearchResults(query) {
+
+  const resultBox =
+    document.getElementById(
+      "searchResults"
+    );
+
+  if (!resultBox) {
+    return;
+  }
+
+  const cleanQuery =
+    normalizeSearchText(query);
+
+  if (!cleanQuery) {
+
+    resultBox.innerHTML = `
+      <div class="search-empty">
+        <strong>कुछ search करें</strong>
+        <p>
+          जैसे SSC CGL, Railway, GDS,
+          Result, Admit Card या Scholarship।
+        </p>
+      </div>
+    `;
+
+    return;
+  }
+
+  const results =
+    searchSarkariiichij(cleanQuery);
+
+  if (!results.length) {
+
+    resultBox.innerHTML = `
+      <div class="search-empty">
+        <strong>कोई result नहीं मिला</strong>
+        <p>
+          "${escapeHTML(cleanQuery)}"
+          के लिए कोई matching page नहीं मिला।
+        </p>
+      </div>
+    `;
+
+    return;
+  }
+
+  resultBox.innerHTML = `
+    <div class="search-result-heading">
+      <strong>Search Results</strong>
+      <span>
+        ${results.length} result मिले
+      </span>
+    </div>
+
+    <div class="search-result-list">
+
+      ${results.map(function(result) {
+
+        const item =
+          result.item;
+
+        return `
+          <a
+            href="${item.url}"
+            class="search-result-card"
+          >
+
+            <div class="search-result-icon">
+              🔎
+            </div>
+
+            <div class="search-result-content">
+
+              <h3>
+                ${escapeHTML(item.title)}
+              </h3>
+
+              <p>
+                ${escapeHTML(item.description)}
+              </p>
+
+            </div>
+
+            <div class="search-result-arrow">
+              →
+            </div>
+
+          </a>
+        `;
+
+      }).join("")}
+
+    </div>
+  `;
+
+        }
+      /* ===============================
+   MAIN SEARCH BUTTON
+   =============================== */
+
+const globalSearch =
+  document.getElementById(
+    "globalSearch"
+  );
+
+const globalSearchButton =
+  document.getElementById(
+    "globalSearchButton"
+  );
+
+
+if (globalSearchButton) {
+
+  globalSearchButton.addEventListener(
+    "click",
+    function() {
+
+      showSearchResults(
+        globalSearch
+          ? globalSearch.value
+          : ""
+      );
+
+    }
+  );
+
+}
+
+
+if (globalSearch) {
+
+  globalSearch.addEventListener(
+    "keydown",
+    function(event) {
+
+      if (event.key === "Enter") {
+
+        event.preventDefault();
+
+        showSearchResults(
+          globalSearch.value
+        );
+
+      }
+
+    }
+  );
+
+}
+
+
+/* ===============================
+   FOOTER SEARCH
+   =============================== */
+
+const footerSearchInput =
+  document.getElementById(
+    "footerSearchInput"
+  );
+
+const footerSearchButton =
+  document.getElementById(
+    "footerSearchButton"
+  );
+
+const footerSearchResults =
+  document.getElementById(
+    "footerSearchResults"
+  );
+
+
+function showFooterSearch(query) {
+
+  if (!footerSearchResults) {
+    return;
+  }
+
+  const cleanQuery =
+    normalizeSearchText(query);
+
+  if (!cleanQuery) {
+
+    footerSearchResults.innerHTML = `
+      <div class="search-empty">
+        कोई keyword लिखकर search करें।
+      </div>
+    `;
+
+    return;
+  }
+
+  const results =
+    searchSarkariiichij(
+      cleanQuery
+    );
+
+  if (!results.length) {
+
+    footerSearchResults.innerHTML = `
+      <div class="search-empty">
+        <strong>कोई result नहीं मिला</strong>
+        <p>
+          "${escapeHTML(cleanQuery)}"
+          के लिए कोई page नहीं मिला।
+        </p>
+      </div>
+    `;
+
+    return;
+  }
+
+  footerSearchResults.innerHTML = `
+    <div class="search-result-list">
+
+      ${results.map(function(result) {
+
+        const item =
+          result.item;
+
+        return `
+          <a
+            href="${item.url}"
+            class="search-result-card"
+          >
+
+            <div class="search-result-icon">
+              🔎
+            </div>
+
+            <div class="search-result-content">
+
+              <h3>
+                ${escapeHTML(item.title)}
+              </h3>
+
+              <p>
+                ${escapeHTML(item.description)}
+              </p>
+
+            </div>
+
+            <div class="search-result-arrow">
+              →
+            </div>
+
+          </a>
+        `;
+
+      }).join("")}
+
+    </div>
+  `;
+
+}
+
+
+if (footerSearchButton) {
+
+  footerSearchButton.addEventListener(
+    "click",
+    function() {
+
+      showFooterSearch(
+        footerSearchInput
+          ? footerSearchInput.value
+          : ""
+      );
+
+    }
+  );
+
+}
+
+
+if (footerSearchInput) {
+
+  footerSearchInput.addEventListener(
+    "keydown",
+    function(event) {
+
+      if (event.key === "Enter") {
+
+        event.preventDefault();
+
+        showFooterSearch(
+          footerSearchInput.value
+        );
+
+      }
+
+    }
+  );
+
+}
+      /* ===============================
+   TRENDING SEARCH
+   =============================== */
+
+document
+  .querySelectorAll("[data-search]")
+  .forEach(function(button) {
+
+    button.addEventListener(
+      "click",
+      function() {
+
+        const query =
+          button.getAttribute(
+            "data-search"
+          ) || "";
+
+        if (globalSearch) {
+
+          globalSearch.value =
+            query;
+
+        }
+
+        showSearchResults(query);
+
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+
+      }
+    );
+
+  });
+
+
+/* ===============================
+   STATE PORTAL DATA
+   =============================== */
+
+const statePortalData = {
+
+  UttarPradesh: {
+    name: "Uttar Pradesh",
+    jobs: "jobs.html?state=Uttar%20Pradesh",
+    services: "sarkari-kaam.html?state=Uttar%20Pradesh"
+  },
+
+  Bihar: {
+    name: "Bihar",
+    jobs: "jobs.html?state=Bihar",
+    services: "sarkari-kaam.html?state=Bihar"
+  },
+
+  Jharkhand: {
+    name: "Jharkhand",
+    jobs: "jobs.html?state=Jharkhand",
+    services: "sarkari-kaam.html?state=Jharkhand"
+  },
+
+  Rajasthan: {
+    name: "Rajasthan",
+    jobs: "jobs.html?state=Rajasthan",
+    services: "sarkari-kaam.html?state=Rajasthan"
+  },
+
+  MadhyaPradesh: {
+    name: "Madhya Pradesh",
+    jobs: "jobs.html?state=Madhya%20Pradesh",
+    services: "sarkari-kaam.html?state=Madhya%20Pradesh"
+  },
+
+  Delhi: {
+    name: "Delhi",
+    jobs: "jobs.html?state=Delhi",
+    services: "sarkari-kaam.html?state=Delhi"
+  },
+
+  Maharashtra: {
+    name: "Maharashtra",
+    jobs: "jobs.html?state=Maharashtra",
+    services: "sarkari-kaam.html?state=Maharashtra"
+  },
+
+  WestBengal: {
+    name: "West Bengal",
+    jobs: "jobs.html?state=West%20Bengal",
+    services: "sarkari-kaam.html?state=West%20Bengal"
+  },
+
+  Gujarat: {
+    name: "Gujarat",
+    jobs: "jobs.html?state=Gujarat",
+    services: "sarkari-kaam.html?state=Gujarat"
+  },
+
+  Haryana: {
+    name: "Haryana",
+    jobs: "jobs.html?state=Haryana",
+    services: "sarkari-kaam.html?state=Haryana"
+  },
+
+  Punjab: {
+    name: "Punjab",
+    jobs: "jobs.html?state=Punjab",
+    services: "sarkari-kaam.html?state=Punjab"
+  },
+
+  Uttarakhand: {
+    name: "Uttarakhand",
+    jobs: "jobs.html?state=Uttarakhand",
+    services: "sarkari-kaam.html?state=Uttarakhand"
+  }
+
+};
+
+
+/* ===============================
+   STATE SEARCH
+   =============================== */
+
+const stateSelect =
+  document.getElementById(
+    "stateSelect"
+  );
+
+const stateSearchButton =
+  document.getElementById(
+    "stateSearchButton"
+  );
+
+const stateResults =
+  document.getElementById(
+    "stateResults"
+  );
+
+
+function showStatePortal() {
+
+  if (!stateSelect || !stateResults) {
+    return;
+  }
+
+  const selected =
+    stateSelect.value;
+
+  if (!selected) {
+
+    stateResults.innerHTML = `
+      <div class="state-empty">
+        पहले अपना State select करें।
+      </div>
+    `;
+
+    return;
+  }
+
+  const state =
+    statePortalData[selected];
+
+  if (!state) {
+
+    stateResults.innerHTML = `
+      <div class="state-empty">
+        इस State की जानकारी अभी उपलब्ध नहीं है।
+      </div>
+    `;
+
+    return;
+  }
+
+  stateResults.innerHTML = `
+    <div class="state-result-card">
+
+      <div class="state-result-icon">
+        🇮🇳
+      </div>
+
+      <div class="state-result-content">
+
+        <h3>
+          ${escapeHTML(state.name)}
+        </h3>
+
+        <p>
+          ${escapeHTML(state.name)}
+          की Government Jobs और
+          सरकारी सेवाओं की जानकारी।
+        </p>
+
+        <div class="state-result-actions">
+
+          <a
+            href="${state.jobs}"
+            class="btn-primary"
+          >
+            Jobs देखें
+          </a>
+
+          <a
+            href="${state.services}"
+            class="btn-secondary"
+          >
+            Sarkari Kaam देखें
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+  `;
+
+}
+
+
+if (stateSearchButton) {
+
+  stateSearchButton.addEventListener(
+    "click",
+    showStatePortal
+  );
+
+}
+
+
+if (stateSelect) {
+
+  stateSelect.addEventListener(
+    "change",
+    showStatePortal
+  );
+
+}
+      /* ===============================
+   SAVE USER INTEREST
+   =============================== */
+
+const interestInput =
+  document.getElementById(
+    "updateInterest"
+  );
+
+const interestButton =
+  document.getElementById(
+    "saveInterestButton"
+  );
+
+const interestMessage =
+  document.getElementById(
+    "interestMessage"
+  );
+
+
+function saveUserInterest() {
+
+  if (!interestInput) {
+    return;
+  }
+
+  const value =
+    interestInput.value.trim();
+
+  if (!value) {
+
+    if (interestMessage) {
+
+      interestMessage.textContent =
+        "कृपया अपनी रुचि या परीक्षा का नाम लिखें।";
+
+    }
+
+    return;
+  }
+
+  try {
+
+    localStorage.setItem(
+      "sarkariiichij_interest",
+      value
+    );
+
+    if (interestMessage) {
+
+      interestMessage.textContent =
+        "आपकी preference save हो गई है।";
+
+    }
+
+  } catch (error) {
+
+    console.warn(
+      "Interest save failed:",
+      error
+    );
+
+  }
+
+}
+
+
+if (interestButton) {
+
+  interestButton.addEventListener(
+    "click",
+    saveUserInterest
+  );
+
+}
+
+
+/* ===============================
+   LOAD SAVED INTEREST
+   =============================== */
+
+if (interestInput) {
+
+  try {
+
+    const savedInterest =
+      localStorage.getItem(
+        "sarkariiichij_interest"
+      );
+
+    if (savedInterest) {
+
+      interestInput.value =
+        savedInterest;
+
+    }
+
+  } catch (error) {
+
+    console.warn(
+      "Interest load failed:",
+      error
+    );
+
+  }
+
+}
+
+
+/* ===============================
+   REMINDER STORAGE
+   =============================== */
+
+function getReminders() {
+
+  try {
+
+    return JSON.parse(
+      localStorage.getItem(
+        "sarkariiichij_reminders"
+      )
+    ) || [];
+
+  } catch (error) {
+
+    return [];
+
+  }
+
+}
+
+
+function createReminder(title, date) {
+
+  if (!title || !date) {
+    return false;
+  }
+
+  const reminders =
+    getReminders();
+
+  reminders.push({
+
+    id: Date.now(),
+
+    title: title,
+
+    date: date,
+
+    createdAt:
+      new Date().toISOString()
+
+  });
+
+  try {
+
+    localStorage.setItem(
+      "sarkariiichij_reminders",
+      JSON.stringify(reminders)
+    );
+
+    return true;
+
+  } catch (error) {
+
+    console.warn(
+      "Reminder save failed:",
+      error
+    );
+
+    return false;
+
+  }
+
+}
+
+
+/* ===============================
+   REMINDER BUTTONS
+   =============================== */
+
+document
+  .querySelectorAll(
+    "[data-reminder]"
+  )
+  .forEach(function(button) {
+
+    button.addEventListener(
+      "click",
+      function() {
+
+        const title =
+          button.getAttribute(
+            "data-reminder-title"
+          ) ||
+          "Government Job Reminder";
+
+        const date =
+          button.getAttribute(
+            "data-reminder-date"
+          );
+
+        if (!date) {
+
+          alert(
+            "इस reminder की date अभी उपलब्ध नहीं है।"
+          );
+
+          return;
+
+        }
+
+        const saved =
+          createReminder(
+            title,
+            date
+          );
+
+        if (saved) {
+
+          alert(
+            "Reminder successfully save हो गया।"
+          );
+
+        }
+
+      }
+    );
+
+  });
+      /* ===============================
+   SAVED JOBS
+   =============================== */
+
+function getSavedJobs() {
+
+  try {
+
+    return JSON.parse(
+      localStorage.getItem(
+        "sarkariiichij_saved_jobs"
+      )
+    ) || [];
+
+  } catch (error) {
+
+    return [];
+
+  }
+
+}
+
+
+function saveJob(job) {
+
+  if (!job || !job.id) {
+    return false;
+  }
+
+  const jobs =
+    getSavedJobs();
+
+  const exists =
+    jobs.some(function(item) {
+
+      return item.id === job.id;
+
+    });
+
+  if (exists) {
+    return false;
+  }
+
+  jobs.push(job);
+
+  try {
+
+    localStorage.setItem(
+      "sarkariiichij_saved_jobs",
+      JSON.stringify(jobs)
+    );
+
+    return true;
+
+  } catch (error) {
+
+    console.warn(
+      "Job save failed:",
+      error
+    );
+
+    return false;
+
+  }
+
+}
+
+
+/* ===============================
+   SAVE JOB BUTTONS
+   =============================== */
+
+document
+  .querySelectorAll(
+    "[data-save-job]"
+  )
+  .forEach(function(button) {
+
+    button.addEventListener(
+      "click",
+      function() {
+
+        const job = {
+
+          id:
+            button.getAttribute(
+              "data-job-id"
+            ),
+
+          title:
+            button.getAttribute(
+              "data-job-title"
+            ) ||
+            "Government Job",
+
+          url:
+            button.getAttribute(
+              "data-job-url"
+            ) ||
+            "jobs.html",
+
+          savedAt:
+            new Date().toISOString()
+
+        };
+
+        const saved =
+          saveJob(job);
+
+        if (saved) {
+
+          button.classList.add(
+            "saved"
+          );
+
+          button.textContent =
+            "✓ Saved";
+
+        } else {
+
+          button.textContent =
+            "✓ Already Saved";
+
+        }
+
+      }
+    );
+
+  });
+
+
+/* ===============================
+   APPLICATION TRACKER
+   =============================== */
+
+function getApplicationTracker() {
+
+  try {
+
+    return JSON.parse(
+      localStorage.getItem(
+        "sarkariiichij_application_tracker"
+      )
+    ) || [];
+
+  } catch (error) {
+
+    return [];
+
+  }
+
+}
+
+
+function addApplicationTracker(item) {
+
+  if (!item || !item.id) {
+    return false;
+  }
+
+  const tracker =
+    getApplicationTracker();
+
+  const exists =
+    tracker.some(function(entry) {
+
+      return entry.id === item.id;
+
+    });
+
+  if (exists) {
+    return false;
+  }
+
+  tracker.push(item);
+
+  try {
+
+    localStorage.setItem(
+      "sarkariiichij_application_tracker",
+      JSON.stringify(tracker)
+    );
+
+    return true;
+
+  } catch (error) {
+
+    console.warn(
+      "Application tracker save failed:",
+      error
+    );
+
+    return false;
+
+  }
+
+}
+
+
+/* ===============================
+   APPLICATION TRACKER BUTTONS
+   =============================== */
+
+document
+  .querySelectorAll(
+    "[data-track-application]"
+  )
+  .forEach(function(button) {
+
+    button.addEventListener(
+      "click",
+      function() {
+
+        const item = {
+
+          id:
+            button.getAttribute(
+              "data-application-id"
+            ),
+
+          title:
+            button.getAttribute(
+              "data-application-title"
+            ) ||
+            "Government Job Application",
+
+          status:
+            "Applied",
+
+          updatedAt:
+            new Date().toISOString()
+
+        };
+
+        const added =
+          addApplicationTracker(item);
+
+        if (added) {
+
+          button.textContent =
+            "✓ Added to Tracker";
+
+        } else {
+
+          button.textContent =
+            "✓ Already Added";
+
+        }
+
+      }
+    );
+
+  });
+      /* ===============================
+   URL SEARCH SUPPORT
+   =============================== */
+
+function handleURLSearch() {
+
+  const params =
+    new URLSearchParams(
+      window.location.search
+    );
+
+  const query =
+    params.get("search");
+
+  if (!query) {
+    return;
+  }
+
+  if (globalSearch) {
+
+    globalSearch.value =
+      query;
+
+  }
+
+  showSearchResults(query);
+
+}
+
+
+handleURLSearch();
+
+
+/* ===============================
+   HASH NAVIGATION
+   =============================== */
+
+function handleHashNavigation() {
+
+  const hash =
+    window.location.hash;
+
+  if (!hash) {
+    return;
+  }
+
+  const target =
+    document.querySelector(hash);
+
+  if (!target) {
+    return;
+  }
+
+  setTimeout(function() {
+
+    target.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+
+  }, 300);
+
+}
+
+
+handleHashNavigation();
+
+
+/* ===============================
+   INTERNAL ANCHOR LINKS
+   =============================== */
+
+document
+  .querySelectorAll(
+    'a[href^="#"]'
+  )
+  .forEach(function(link) {
+
+    link.addEventListener(
+      "click",
+      function(event) {
+
+        const href =
+          link.getAttribute("href");
+
+        if (
+          !href ||
+          href === "#"
+        ) {
+          return;
+        }
+
+        const target =
+          document.querySelector(href);
+
+        if (!target) {
+          return;
+        }
+
+        event.preventDefault();
+
+        target.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+
+        history.replaceState(
+          null,
+          "",
+          href
+        );
+
+      }
+    );
+
+  });
+
+
+/* ===============================
+   PAGE READY CLASS
+   =============================== */
+
+if (document.body) {
+
+  document.body.classList.add(
+    "sarkariiichij-page-loaded"
+  );
+
+}
+
+
+/* ===============================
+   PUBLIC FUNCTIONS
+   =============================== */
+
+window.Sarkariiichij =
+  window.Sarkariiichij || {};
+
+window.Sarkariiichij.search =
+  showSearchResults;
+
+window.Sarkariiichij.saveJob =
+  saveJob;
+
+window.Sarkariiichij.getSavedJobs =
+  getSavedJobs;
+
+window.Sarkariiichij.createReminder =
+  createReminder;
+
+window.Sarkariiichij.getReminders =
+  getReminders;
+
+window.Sarkariiichij.getApplicationTracker =
+  getApplicationTracker;
+
+window.Sarkariiichij.addApplicationTracker =
+  addApplicationTracker;
+
+window.Sarkariiichij.showStatePortal =
+  showStatePortal;
+      /* ===============================
+   FINAL PAGE SAFETY
+   =============================== */
+
+window.addEventListener(
+  "error",
+  function(event) {
+
+    console.warn(
+      "Sarkariiichij page error:",
+      event.message
+    );
+
+  }
+);
+
+
+/* ===============================
+   HOMEPAGE INITIALIZATION
+   =============================== */
+
+document.addEventListener(
+  "DOMContentLoaded",
+  function() {
+
+    console.log(
+      "Sarkariiichij Home loaded successfully."
+    );
+
+    /* Current year */
+    const yearElements =
+      document.querySelectorAll(
+        "[data-current-year]"
+      );
+
+    yearElements.forEach(
+      function(element) {
+
+        element.textContent =
+          new Date().getFullYear();
+
+      }
+    );
+
+  }
+);
+
+
+/* ===============================
+   END OF HOMEPAGE SCRIPT
+   =============================== */
+
+</script>
+
+</body>
+
 </html>
