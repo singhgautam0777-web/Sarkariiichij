@@ -1,1220 +1,2007 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="hi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Sarkari Yojana – Sarkariiichij</title>
+    <title>Job Details | Sarkariiichij</title>
 
-  <meta
-    name="description"
-    content="Central and State Government Sarkari Yojana, Eligibility, Documents, Application, Status and Important Information."
-  >
+    <meta name="description"
+          content="Government Job की पूरी जानकारी — Qualification, Age Limit, Salary, Vacancy, Important Dates, Selection Process, Official Website और Apply Details.">
 
-  <link rel="stylesheet" href="style.css">
+    <meta name="keywords"
+          content="government jobs, sarkari naukri, job details, sarkariiichij, सरकारी नौकरी">
+
+    <meta name="theme-color" content="#0f172a">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* =========================================================
+           JOB DETAIL PAGE - LOCAL PAGE STYLES
+           ========================================================= */
+
+        .job-detail-page {
+            min-height: 100vh;
+            background: #f8fafc;
+        }
+
+        .job-detail-hero {
+            padding: 34px 0 28px;
+            background: linear-gradient(135deg, #0f172a, #1e3a8a);
+            color: #ffffff;
+        }
+
+        .job-detail-hero .container {
+            position: relative;
+        }
+
+        .job-detail-breadcrumb {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 18px;
+            font-size: 14px;
+        }
+
+        .job-detail-breadcrumb a {
+            color: #dbeafe;
+            text-decoration: none;
+        }
+
+        .job-detail-breadcrumb span {
+            color: #bfdbfe;
+        }
+
+        .job-detail-title {
+            margin: 0;
+            font-size: 32px;
+            line-height: 1.25;
+            font-weight: 800;
+        }
+
+        .job-detail-subtitle {
+            margin: 10px 0 0;
+            color: #dbeafe;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .job-detail-main {
+            padding: 30px 0 60px;
+        }
+
+        .job-detail-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 320px;
+            gap: 24px;
+            align-items: start;
+        }
+
+        .job-detail-content {
+            min-width: 0;
+        }
+
+        .job-detail-sidebar {
+            position: sticky;
+            top: 20px;
+        }
+
+        .job-detail-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 22px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 20px rgba(15, 23, 42, 0.05);
+        }
+
+        .job-detail-card h2 {
+            margin: 0 0 18px;
+            font-size: 21px;
+            color: #0f172a;
+        }
+
+        .job-detail-card h3 {
+            margin: 20px 0 10px;
+            font-size: 17px;
+            color: #1e293b;
+        }
+
+        .job-detail-card p {
+            color: #475569;
+            line-height: 1.7;
+        }
+
+        .job-basic-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+        }
+
+        .job-basic-item {
+            padding: 14px;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+        }
+
+        .job-basic-label {
+            display: block;
+            margin-bottom: 5px;
+            color: #64748b;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .job-basic-value {
+            display: block;
+            color: #0f172a;
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .job-action-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .job-action-stack .btn {
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .job-link-box {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .job-link-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 12px 14px;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            background: #ffffff;
+        }
+
+        .job-link-item span {
+            font-size: 14px;
+            font-weight: 600;
+            color: #334155;
+        }
+
+        .job-link-item a {
+            font-size: 13px;
+            font-weight: 700;
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        .job-status-box {
+            padding: 14px;
+            border-radius: 10px;
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            color: #1e40af;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .job-official-note {
+            margin-top: 12px;
+            padding: 12px;
+            border-radius: 10px;
+            background: #fff7ed;
+            border: 1px solid #fed7aa;
+            color: #9a3412;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 900px) {
+            .job-detail-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .job-detail-sidebar {
+                position: static;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .job-detail-hero {
+                padding: 25px 0 22px;
+            }
+
+            .job-detail-title {
+                font-size: 24px;
+            }
+
+            .job-basic-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .job-detail-card {
+                padding: 17px;
+                border-radius: 12px;
+            }
+        }
+    </style>
 </head>
 
-<body>
+<body class="job-detail-page">
 
-  <!-- HEADER -->
-  <header class="site-header">
+    <!-- =========================================================
+         HEADER
+         ========================================================= -->
 
-    <div class="logo">
-      <a href="index.html">Sarkariiichij</a>
+    <header class="site-header" id="site-header">
+
+        <div class="container header-inner">
+
+            <a href="index.html" class="brand" aria-label="Sarkariiichij Home">
+
+                <div class="brand-logo">
+                    S
+                </div>
+
+                <div class="brand-text">
+                    <strong>Sarkariiichij</strong>
+                    <span>Government & Career Portal</span>
+                </div>
+
+            </a>
+
+            <nav class="main-nav" id="main-nav">
+
+                <a href="index.html">Home</a>
+                <a href="jobs.html">Government Jobs</a>
+                <a href="results.html">Results</a>
+                <a href="admit-card.html">Admit Card</a>
+                <a href="syllabus.html">Syllabus</a>
+                <a href="admission.html">Admission</a>
+                <a href="scholarship.html">Scholarship</a>
+
+            </nav>
+
+            <button
+                type="button"
+                class="menu-toggle"
+                id="menu-toggle"
+                aria-label="Open Menu"
+                aria-expanded="false">
+                ☰
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================================
+         PAGE HERO
+         ========================================================= -->
+
+    <section class="job-detail-hero">
+
+        <div class="container">
+
+            <div class="job-detail-breadcrumb">
+
+                <a href="index.html">Home</a>
+
+                <span>›</span>
+
+                <a href="jobs.html">Government Jobs</a>
+
+                <span>›</span>
+
+                <span>Job Details</span>
+
+            </div>
+
+            <!-- JavaScript Part 33 will update this area -->
+
+            <h1
+                class="job-detail-title"
+                id="job-detail-title">
+                Government Job Details
+            </h1>
+
+            <p
+                class="job-detail-subtitle"
+                id="job-detail-subtitle">
+                पूरी नौकरी की जानकारी यहाँ दिखाई जाएगी।
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         MAIN JOB DETAIL AREA
+         ========================================================= -->
+
+    <main class="job-detail-main">
+
+        <div class="container">
+
+            <div class="job-detail-layout">
+
+
+                <!-- =================================================
+                     LEFT CONTENT
+                     ================================================= -->
+
+                <section
+                    class="job-detail-content"
+                    id="job-detail-content"
+                    data-job-detail="true">
+
+
+                    <!-- BASIC INFORMATION -->
+
+                    <div class="job-detail-card">
+
+                        <h2>Job Overview</h2>
+
+                        <div
+                            class="job-basic-grid"
+                            id="job-basic-info">
+
+                            <div class="job-basic-item">
+
+                                <span class="job-basic-label">
+                                    Post Name
+                                </span>
+
+                                <span
+                                    class="job-basic-value"
+                                    id="job-post-name">
+                                    —
+                                </span>
+
+                            </div>
+
+
+                            <div class="job-basic-item">
+
+                                <span class="job-basic-label">
+                                    Department
+                                </span>
+
+                                <span
+                                    class="job-basic-value"
+                                    id="job-department-name">
+                                    —
+                                </span>
+
+                            </div>
+
+
+                            <div class="job-basic-item">
+
+                                <span class="job-basic-label">
+                                    Qualification
+                                </span>
+
+                                <span
+                                    class="job-basic-value"
+                                    id="job-qualification-info">
+                                    —
+                                </span>
+
+                            </div>
+
+
+                            <div class="job-basic-item">
+
+                                <span class="job-basic-label">
+                                    Job Type
+                                </span>
+
+                                <span
+                                    class="job-basic-value"
+                                    id="job-type-info">
+                                    Government
+                                </span>
+
+                            </div>
+
+
+                            <div class="job-basic-item">
+
+                                <span class="job-basic-label">
+                                    Total Vacancy
+                                </span>
+
+                                <span
+                                    class="job-basic-value"
+                                    id="job-vacancy-info">
+                                    —
+                                </span>
+
+                            </div>
+
+
+                            <div class="job-basic-item">
+
+                                <span class="job-basic-label">
+                                    Application Fee
+                                </span>
+
+                                <span
+                                    class="job-basic-value"
+                                    id="job-fee-info">
+                                    —
+                                </span>
+
+                            </div>
+
+
+                            <div class="job-basic-item">
+
+                                <span class="job-basic-label">
+                                    Age Limit
+                                </span>
+
+                                <span
+                                    class="job-basic-value"
+                                    id="job-age-info">
+                                    —
+                                </span>
+
+                            </div>
+
+
+                            <div class="job-basic-item">
+
+                                <span class="job-basic-label">
+                                    Job State
+                                </span>
+
+                                <span
+                                    class="job-basic-value"
+                                    id="job-state-info">
+                                    —
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- IMPORTANT DATES -->
+
+                    <div class="job-detail-card">
+
+                        <h2>Important Dates</h2>
+
+                        <div
+                            class="job-basic-grid"
+                            id="job-important-dates">
+
+                            <div class="job-basic-item">
+
+                                <span class="job-basic-label">
+                                    Application Start Date
+                                </span>
+
+                                <span
+                                    class="job-basic-value"
+                                    id="job-start-date">
+                                    —
+                                </span>
+
+                            </div>
+
+
+                            <div class="job-basic-item">
+
+                                <span class="job-basic-label">
+                                    Last Date
+                                </span>
+
+                                <span
+                                    class="job-basic-value"
+                                    id="job-last-date">
+                                    —
+                                </span>
+
+                            </div>
+
+
+                            <div class="job-basic-item">
+
+                                <span class="job-basic-label">
+                                    Exam Date
+                                </span>
+
+                                <span
+                                    class="job-basic-value"
+                                    id="job-exam-date">
+                                    —
+                                </span>
+
+                            </div>
+
+
+                            <div class="job-basic-item">
+
+                                <span class="job-basic-label">
+                                    Admit Card
+                                </span>
+
+                                <span
+                                    class="job-basic-value"
+                                    id="job-admit-date">
+                                    —
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- DYNAMIC JOB INFORMATION -->
+
+                    <div
+                        class="job-detail-card"
+                        id="job-full-information">
+
+                        <h2>Complete Job Information</h2>
+
+                        <div id="job-full-information-content">
+
+                            <p>
+                                Job की पूरी जानकारी load होने के बाद
+                                यहाँ दिखाई जाएगी।
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ELIGIBILITY -->
+
+                    <div
+                        class="job-detail-card"
+                        id="job-eligibility-section">
+
+                        <h2>Eligibility</h2>
+
+                        <div id="job-eligibility-content">
+
+                            <p>
+                                Eligibility details यहाँ दिखाई जाएंगी।
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         PART 1 ENDS HERE
+                         ================================================= -->
+                                      <!-- =================================================
+                         SELECTION PROCESS
+                         ================================================= -->
+
+                    <div
+                        class="job-detail-card"
+                        id="job-selection-section">
+
+                        <h2>Selection Process</h2>
+
+                        <div id="job-selection-content">
+
+                            <p>
+                                Selection process की पूरी जानकारी
+                                यहाँ दिखाई जाएगी।
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         EXAM PATTERN
+                         ================================================= -->
+
+                    <div
+                        class="job-detail-card"
+                        id="job-exam-pattern-section">
+
+                        <h2>Exam Pattern</h2>
+
+                        <div id="job-exam-pattern-content">
+
+                            <p>
+                                Exam pattern की जानकारी यहाँ दिखाई जाएगी।
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         SALARY & PAY SCALE
+                         ================================================= -->
+
+                    <div
+                        class="job-detail-card"
+                        id="job-salary-section">
+
+                        <h2>Salary & Pay Scale</h2>
+
+                        <div
+                            class="job-basic-grid"
+                            id="job-salary-content">
+
+                            <div class="job-basic-item">
+
+                                <span class="job-basic-label">
+                                    Pay Scale
+                                </span>
+
+                                <span
+                                    class="job-basic-value"
+                                    id="job-pay-scale">
+                                    —
+                                </span>
+
+                            </div>
+
+
+                            <div class="job-basic-item">
+
+                                <span class="job-basic-label">
+                                    Basic Salary
+                                </span>
+
+                                <span
+                                    class="job-basic-value"
+                                    id="job-basic-salary">
+                                    —
+                                </span>
+
+                            </div>
+
+
+                            <div class="job-basic-item">
+
+                                <span class="job-basic-label">
+                                    Salary Range
+                                </span>
+
+                                <span
+                                    class="job-basic-value"
+                                    id="job-salary-range">
+                                    —
+                                </span>
+
+                            </div>
+
+
+                            <div class="job-basic-item">
+
+                                <span class="job-basic-label">
+                                    Allowances
+                                </span>
+
+                                <span
+                                    class="job-basic-value"
+                                    id="job-allowances">
+                                    —
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         REQUIRED DOCUMENTS
+                         ================================================= -->
+
+                    <div
+                        class="job-detail-card"
+                        id="job-documents-section">
+
+                        <h2>Documents Required</h2>
+
+                        <div id="job-documents-content">
+
+                            <ul>
+                                <li>Valid Photo ID</li>
+                                <li>Educational Qualification Certificate</li>
+                                <li>Recent Passport Size Photograph</li>
+                                <li>Signature</li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         SYLLABUS
+                         ================================================= -->
+
+                    <div
+                        class="job-detail-card"
+                        id="job-syllabus-section">
+
+                        <h2>Syllabus</h2>
+
+                        <div id="job-syllabus-content">
+
+                            <p>
+                                इस भर्ती का syllabus उपलब्ध होने पर
+                                यहाँ official information दिखाई जाएगी।
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         RELATED EXAM RESOURCES
+                         ================================================= -->
+
+                    <div
+                        class="job-detail-card"
+                        id="job-related-resources-section">
+
+                        <h2>Exam Resources</h2>
+
+                        <div
+                            class="job-link-box"
+                            id="job-related-resources">
+
+                            <div class="job-link-item">
+
+                                <span>Admit Card</span>
+
+                                <a
+                                    href="admit-card.html"
+                                    id="job-admit-card-link">
+                                    View
+                                </a>
+
+                            </div>
+
+
+                            <div class="job-link-item">
+
+                                <span>Result</span>
+
+                                <a
+                                    href="results.html"
+                                    id="job-result-link">
+                                    View
+                                </a>
+
+                            </div>
+
+
+                            <div class="job-link-item">
+
+                                <span>Cut Off</span>
+
+                                <a
+                                    href="cutoff.html"
+                                    id="job-cutoff-link">
+                                    View
+                                </a>
+
+                            </div>
+
+
+                            <div class="job-link-item">
+
+                                <span>Previous Year Papers</span>
+
+                                <a
+                                    href="papers.html"
+                                    id="job-papers-link">
+                                    View
+                                </a>
+
+                            </div>
+
+
+                            <div class="job-link-item">
+
+                                <span>Syllabus</span>
+
+                                <a
+                                    href="syllabus.html"
+                                    id="job-syllabus-link">
+                                    View
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         OFFICIAL LINKS
+                         ================================================= -->
+
+                    <div
+                        class="job-detail-card"
+                        id="job-official-links-section">
+
+                        <h2>Official Links</h2>
+
+                        <div
+                            class="job-link-box"
+                            id="job-official-links">
+
+                            <!-- JavaScript will insert
+                                 only verified official links -->
+
+                            <div class="job-link-item">
+
+                                <span>
+                                    Official Website
+                                </span>
+
+                                <span
+                                    id="job-official-website">
+                                    Link Not Verified
+                                </span>
+
+                            </div>
+
+
+                            <div class="job-link-item">
+
+                                <span>
+                                    Apply Online
+                                </span>
+
+                                <span
+                                    id="job-apply-online">
+                                    Link Not Verified
+                                </span>
+
+                            </div>
+
+
+                            <div class="job-link-item">
+
+                                <span>
+                                    Official Notification
+                                </span>
+
+                                <span
+                                    id="job-notification-link">
+                                    Link Not Verified
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="job-official-note">
+
+                            केवल verified official website,
+                            official notification और verified
+                            application link ही यहाँ दिखाया जाएगा।
+                            अनुमानित या fake Apply link नहीं दिखाया जाएगा।
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         IMPORTANT INSTRUCTIONS
+                         ================================================= -->
+
+                    <div
+                        class="job-detail-card"
+                        id="job-instructions-section">
+
+                        <h2>Important Instructions</h2>
+
+                        <div id="job-instructions-content">
+
+                            <ul>
+
+                                <li>
+                                    आवेदन करने से पहले official notification
+                                    ध्यान से पढ़ें।
+                                </li>
+
+                                <li>
+                                    Qualification और age limit
+                                    official notification से verify करें।
+                                </li>
+
+                                <li>
+                                    Application form में सभी details
+                                    सही भरें।
+                                </li>
+
+                                <li>
+                                    Submit करने के बाद application form
+                                    की copy सुरक्षित रखें।
+                                </li>
+
+                                <li>
+                                    परीक्षा और admit card की तारीख
+                                    official website से verify करें।
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         FAQ
+                         ================================================= -->
+
+                    <div
+                        class="job-detail-card"
+                        id="job-faq-section">
+
+                        <h2>Frequently Asked Questions</h2>
+
+                        <div id="job-faq-content">
+
+                            <details>
+
+                                <summary>
+                                    इस नौकरी के लिए कौन apply कर सकता है?
+                                </summary>
+
+                                <p>
+                                    Eligibility भर्ती की official notification
+                                    के अनुसार होगी।
+                                </p>
+
+                            </details>
+
+
+                            <details>
+
+                                <summary>
+                                    आवेदन कहाँ से करना है?
+                                </summary>
+
+                                <p>
+                                    आवेदन केवल verified official recruitment
+                                    portal से करें।
+                                </p>
+
+                            </details>
+
+
+                            <details>
+
+                                <summary>
+                                    Official notification कहाँ मिलेगी?
+                                </summary>
+
+                                <p>
+                                    यदि verified notification link उपलब्ध है,
+                                    तो उसे Official Links section में दिखाया जाएगा।
+                                </p>
+
+                            </details>
+
+
+                            <details>
+
+                                <summary>
+                                    Selection process क्या है?
+                                </summary>
+
+                                <p>
+                                    Selection process भर्ती के अनुसार अलग-अलग
+                                    हो सकता है।
+                                </p>
+
+                            </details>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         PART 2 ENDS HERE
+                         ================================================= -->
+                                      <!-- =================================================
+                         RELATED JOBS
+                         ================================================= -->
+
+                    <div
+                        class="job-detail-card"
+                        id="related-jobs-section">
+
+                        <h2>Related Government Jobs</h2>
+
+                        <div
+                            class="job-grid"
+                            id="related-jobs">
+
+                            <div class="empty-box">
+
+                                <p>
+                                    Related jobs यहाँ दिखाई जाएंगी।
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         RELATED RESOURCES
+                         ================================================= -->
+
+                    <div
+                        class="job-detail-card"
+                        id="related-resources-section">
+
+                        <h2>Related Resources</h2>
+
+                        <div
+                            class="resource-grid"
+                            id="related-job-resources">
+
+                            <a
+                                href="results.html"
+                                class="resource-card">
+
+                                <strong>Results</strong>
+
+                                <span>
+                                    Latest examination results
+                                </span>
+
+                            </a>
+
+
+                            <a
+                                href="admit-card.html"
+                                class="resource-card">
+
+                                <strong>Admit Card</strong>
+
+                                <span>
+                                    Check admit card updates
+                                </span>
+
+                            </a>
+
+
+                            <a
+                                href="syllabus.html"
+                                class="resource-card">
+
+                                <strong>Syllabus</strong>
+
+                                <span>
+                                    Exam syllabus and pattern
+                                </span>
+
+                            </a>
+
+
+                            <a
+                                href="papers.html"
+                                class="resource-card">
+
+                                <strong>Previous Papers</strong>
+
+                                <span>
+                                    Previous year question papers
+                                </span>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                </section>
+
+
+                <!-- =====================================================
+                     RIGHT SIDEBAR
+                     ===================================================== -->
+
+                <aside class="job-detail-sidebar">
+
+
+                    <!-- =================================================
+                         ACTIONS
+                         ================================================= -->
+
+                    <div class="job-detail-card">
+
+                        <h2>Job Actions</h2>
+
+                        <div
+                            class="job-action-stack"
+                            id="job-personal-actions">
+
+                            <button
+                                type="button"
+                                class="btn btn-primary"
+                                id="save-job-btn"
+                                onclick="saveCurrentJobFromDetail()">
+
+                                ☆ Save Job
+
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="btn btn-secondary"
+                                id="reminder-job-btn"
+                                onclick="setReminderCurrentJobFromDetail()">
+
+                                🔔 Set Reminder
+
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="btn btn-success"
+                                id="tracker-job-btn"
+                                onclick="addCurrentJobToTrackerFromDetail()">
+
+                                ✓ Add to Application Tracker
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         QUICK LINKS
+                         ================================================= -->
+
+                    <div class="job-detail-card">
+
+                        <h2>Quick Links</h2>
+
+                        <div class="job-action-stack">
+
+                            <a
+                                href="jobs.html"
+                                class="btn btn-secondary">
+
+                                ← All Government Jobs
+
+                            </a>
+
+
+                            <a
+                                href="index.html"
+                                class="btn btn-secondary">
+
+                                🏠 Home
+
+                            </a>
+
+
+                            <a
+                                href="career-tools.html"
+                                class="btn btn-secondary">
+
+                                🧮 Career Tools
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         JOB STATUS
+                         ================================================= -->
+
+                    <div class="job-detail-card">
+
+                        <h2>Job Status</h2>
+
+                        <div
+                            class="job-status-box"
+                            id="job-status-box">
+
+                            <strong id="job-status-label">
+                                Checking...
+                            </strong>
+
+                            <br>
+
+                            <span id="job-status-text">
+                                Job status will be updated automatically.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         APPLICATION TRACKER
+                         ================================================= -->
+
+                    <div
+                        class="job-detail-card"
+                        id="job-tracker-card">
+
+                        <h2>Application Tracker</h2>
+
+                        <div id="job-tracker-status">
+
+                            <p>
+                                इस job को tracker में add करने के बाद
+                                उसका application status यहाँ manage कर सकते हैं।
+                            </p>
+
+                        </div>
+
+                        <div class="job-action-stack">
+
+                            <button
+                                type="button"
+                                class="btn btn-success"
+                                onclick="addCurrentJobToTrackerFromDetail()">
+
+                                Add to Tracker
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         REMINDER
+                         ================================================= -->
+
+                    <div
+                        class="job-detail-card"
+                        id="job-reminder-card">
+
+                        <h2>Reminder</h2>
+
+                        <div id="job-reminder-status">
+
+                            <p>
+                                Last Date के लिए reminder सेट करें ताकि
+                                application deadline miss न हो।
+                            </p>
+
+                        </div>
+
+                        <div class="job-action-stack">
+
+                            <button
+                                type="button"
+                                class="btn btn-secondary"
+                                onclick="setReminderCurrentJobFromDetail()">
+
+                                🔔 Set Reminder
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         SHARE JOB
+                         ================================================= -->
+
+                    <div class="job-detail-card">
+
+                        <h2>Share Job</h2>
+
+                        <div class="job-action-stack">
+
+                            <button
+                                type="button"
+                                class="btn btn-secondary"
+                                id="share-job-btn"
+                                onclick="shareCurrentJobFromDetail()">
+
+                                📤 Share Job
+
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="btn btn-secondary"
+                                id="copy-job-link-btn"
+                                onclick="copyCurrentJobLinkFromDetail()">
+
+                                🔗 Copy Job Link
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                </aside>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================================================
+         GLOBAL MODAL
+         ========================================================= -->
+
+    <div
+        class="modal"
+        id="global-modal"
+        aria-hidden="true">
+
+        <div class="modal-overlay" data-modal-close></div>
+
+        <div
+            class="modal-content"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modal-title">
+
+            <button
+                type="button"
+                class="modal-close"
+                data-modal-close
+                aria-label="Close">
+
+                ×
+
+            </button>
+
+            <h2 id="modal-title">
+                Sarkariiichij
+            </h2>
+
+            <div id="modal-body">
+
+                <p>
+                    Information will appear here.
+                </p>
+
+            </div>
+
+        </div>
+
     </div>
 
-    <nav class="main-nav">
-      <a href="index.html">Home</a>
-      <a href="jobs.html">Jobs</a>
-      <a href="results.html">Results</a>
-      <a href="admit-card.html">Admit Card</a>
-      <a href="admission.html">Admission</a>
-      <a href="syllabus.html">Syllabus</a>
-      <a href="cutoff.html">Cut Off</a>
-      <a href="papers.html">Papers</a>
-      <a href="scholarship.html">Scholarship</a>
-      <a href="yojana.html">Yojana</a>
+
+    <!-- =========================================================
+         TOAST
+         ========================================================= -->
+
+    <div
+        class="toast"
+        id="toast"
+        role="status"
+        aria-live="polite">
+
+        <span id="toast-message">
+            Done
+        </span>
+
+    </div>
+
+
+    <!-- =========================================================
+         LOADING
+         ========================================================= -->
+
+    <div
+        class="loading-overlay"
+        id="loading-overlay"
+        aria-hidden="true">
+
+        <div class="loading-box">
+
+            <div class="spinner"></div>
+
+            <p>
+                Loading...
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================================
+         PART 3 ENDS HERE
+         ========================================================= -->
+      <!-- =========================================================
+         FOOTER
+         ========================================================= -->
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div class="footer-column">
+
+                    <a href="index.html" class="brand">
+
+                        <div class="brand-logo">
+                            S
+                        </div>
+
+                        <div class="brand-text">
+
+                            <strong>Sarkariiichij</strong>
+
+                            <span>
+                                Government & Career Portal
+                            </span>
+
+                        </div>
+
+                    </a>
+
+                    <p>
+                        Sarkariiichij एक mobile-first Government,
+                        Education और Career information portal है।
+                    </p>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Government Jobs</h3>
+
+                    <a href="jobs.html">Latest Jobs</a>
+                    <a href="admit-card.html">Admit Card</a>
+                    <a href="results.html">Results</a>
+                    <a href="syllabus.html">Syllabus</a>
+                    <a href="cutoff.html">Cut Off</a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Education</h3>
+
+                    <a href="admission.html">Admission</a>
+                    <a href="scholarship.html">Scholarship</a>
+                    <a href="papers.html">Previous Papers</a>
+                    <a href="mock-test.html">Mock Test</a>
+                    <a href="career-tools.html">Career Tools</a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Important</h3>
+
+                    <a href="sarkari-kaam.html">
+                        Sarkari Kaam
+                    </a>
+
+                    <a href="yojana.html">
+                        Sarkari Yojana
+                    </a>
+
+                    <a href="index.html#faq">
+                        FAQ
+                    </a>
+
+                    <a href="index.html#about">
+                        About
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    ©
+                    <span id="current-year"></span>
+                    Sarkariiichij. All Rights Reserved.
+                </p>
+
+                <div>
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <span> | </span>
+
+                    <a href="index.html">
+                        Privacy
+                    </a>
+
+                    <span> | </span>
+
+                    <a href="index.html">
+                        Disclaimer
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================================================
+         MOBILE BOTTOM NAVIGATION
+         ========================================================= -->
+
+    <nav
+        class="mobile-bottom-nav"
+        id="mobile-bottom-nav"
+        aria-label="Mobile Navigation">
+
+        <a href="index.html">
+
+            <span>⌂</span>
+
+            <small>Home</small>
+
+        </a>
+
+
+        <a href="jobs.html">
+
+            <span>💼</span>
+
+            <small>Jobs</small>
+
+        </a>
+
+
+        <a href="results.html">
+
+            <span>📄</span>
+
+            <small>Results</small>
+
+        </a>
+
+
+        <a href="admit-card.html">
+
+            <span>🎫</span>
+
+            <small>Admit</small>
+
+        </a>
+
+
+        <a href="career-tools.html">
+
+            <span>🧮</span>
+
+            <small>Tools</small>
+
+        </a>
+
     </nav>
 
-  </header>
 
+    <!-- =========================================================
+         BACK TO TOP
+         ========================================================= -->
 
-  <!-- HERO -->
-  <section class="hero-section">
+    <button
+        type="button"
+        class="back-to-top"
+        id="back-to-top"
+        aria-label="Back to top">
 
-    <div class="hero-content">
+        ↑
 
-      <span class="hero-badge">
-        Government Schemes & Yojana
-      </span>
+    </button>
 
-      <h1>
-        Sarkari Yojana Information
-      </h1>
 
-      <p>
-        Central और State Government की
-        Sarkari Yojana, eligibility, documents,
-        application और important information
-        एक जगह।
-      </p>
-
-      <div class="search-box">
-
-        <input
-          type="search"
-          id="yojanaSearch"
-          placeholder="Search Yojana, Scheme, State..."
-        >
-
-        <button type="button">
-          Search
-        </button>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- INTRO -->
-  <section class="section">
-
-    <div class="section-heading">
-
-      <h2>
-        Find Sarkari Yojana
-      </h2>
-
-      <p>
-        अपनी जरूरत, category, state और eligibility
-        के अनुसार Government Scheme की जानकारी खोजें।
-      </p>
-
-    </div>
-
-  </section>
-  <!-- LATEST SARKARI YOJANA -->
-<section class="section">
-
-  <div class="section-heading">
-    <h2>Latest Sarkari Yojana</h2>
-    <p>
-      नई और महत्वपूर्ण Government Schemes की
-      जानकारी एक जगह।
-    </p>
-  </div>
-
-  <div class="card-grid">
-
-    <div class="info-card">
-      <h3>PM Kisan</h3>
-      <p>किसानों से जुड़ी Government Scheme की जानकारी।</p>
-      <a href="#">View Yojana</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Ayushman Bharat</h3>
-      <p>Health और medical assistance से जुड़ी योजना।</p>
-      <a href="#">View Yojana</a>
-    </div>
-
-    <div class="info-card">
-      <h3>PM Awas Yojana</h3>
-      <p>Housing और आवास सहायता से जुड़ी योजना।</p>
-      <a href="#">View Yojana</a>
-    </div>
-
-    <div class="info-card">
-      <h3>PM Ujjwala Yojana</h3>
-      <p>Eligible households के लिए LPG connection scheme।</p>
-      <a href="#">View Yojana</a>
-    </div>
-
-    <div class="info-card">
-      <h3>PM Jan Dhan Yojana</h3>
-      <p>Banking और financial inclusion से जुड़ी योजना।</p>
-      <a href="#">View Yojana</a>
-    </div>
-
-    <div class="info-card">
-      <h3>PM SVANidhi</h3>
-      <p>Street vendors से जुड़ी Government scheme।</p>
-      <a href="#">View Yojana</a>
-    </div>
-
-    <div class="info-card">
-      <h3>PM Vishwakarma</h3>
-      <p>Traditional artisans और craftspeople से जुड़ी योजना।</p>
-      <a href="#">View Yojana</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Beti Bachao Beti Padhao</h3>
-      <p>बालिकाओं से संबंधित Government initiative की जानकारी।</p>
-      <a href="#">View Yojana</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Sukanya Samriddhi</h3>
-      <p>बालिकाओं के लिए savings scheme की जानकारी।</p>
-      <a href="#">View Yojana</a>
-    </div>
-
-    <div class="info-card">
-      <h3>National Scholarship Schemes</h3>
-      <p>Students के लिए scholarship और education support।</p>
-      <a href="scholarship.html">View Details</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Atal Pension Yojana</h3>
-      <p>Pension और social security से जुड़ी योजना।</p>
-      <a href="#">View Yojana</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Digital India</h3>
-      <p>Digital services और technology से जुड़े Government initiatives।</p>
-      <a href="#">View Yojana</a>
-    </div>
-
-  </div>
-
-</section>
-  <!-- CENTRAL GOVERNMENT SCHEMES -->
-<section class="section">
-
-  <div class="section-heading">
-    <h2>Central Government Schemes</h2>
-    <p>
-      भारत सरकार की प्रमुख योजनाओं और
-      Government Schemes की जानकारी।
-    </p>
-  </div>
-
-  <div class="card-grid">
-
-    <div class="info-card">
-      <h3>Farmer Schemes</h3>
-      <p>
-        किसानों और कृषि क्षेत्र से जुड़ी
-        Central Government Schemes।
-      </p>
-      <a href="#">View Schemes</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Women & Girls Schemes</h3>
-      <p>
-        महिलाओं और बालिकाओं से संबंधित
-        Government Schemes।
-      </p>
-      <a href="#">View Schemes</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Student Schemes</h3>
-      <p>
-        Students और education से जुड़ी
-        Government Schemes।
-      </p>
-      <a href="scholarship.html">View Details</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Health Schemes</h3>
-      <p>
-        Health, treatment और medical support
-        से जुड़ी योजनाएँ।
-      </p>
-      <a href="#">View Schemes</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Employment Schemes</h3>
-      <p>
-        रोजगार, skill development और
-        employment support से जुड़ी योजनाएँ।
-      </p>
-      <a href="#">View Schemes</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Housing Schemes</h3>
-      <p>
-        घर और housing assistance से संबंधित
-        Government Schemes।
-      </p>
-      <a href="#">View Schemes</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Financial Schemes</h3>
-      <p>
-        Banking, savings, financial inclusion
-        और आर्थिक सहायता से जुड़ी योजनाएँ।
-      </p>
-      <a href="#">View Schemes</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Social Security Schemes</h3>
-      <p>
-        Pension, insurance और social security
-        से संबंधित योजनाएँ।
-      </p>
-      <a href="#">View Schemes</a>
-    </div>
-
-  </div>
-
-</section>
-  <!-- STATE-WISE SARKARI YOJANA -->
-<section class="section">
-
-  <div class="section-heading">
-    <h2>State-wise Sarkari Yojana</h2>
-    <p>
-      अलग-अलग राज्यों की Government Schemes
-      और Yojana की जानकारी एक जगह।
-    </p>
-  </div>
-
-  <div class="card-grid">
-
-    <div class="info-card">
-      <h3>Uttar Pradesh</h3>
-      <p>
-        उत्तर प्रदेश सरकार की प्रमुख योजनाएँ
-        और citizen schemes।
-      </p>
-      <a href="#">View Yojana</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Bihar</h3>
-      <p>
-        बिहार सरकार की प्रमुख योजनाएँ
-        और welfare schemes।
-      </p>
-      <a href="#">View Yojana</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Rajasthan</h3>
-      <p>
-        राजस्थान की Government Schemes
-        और citizen services।
-      </p>
-      <a href="#">View Yojana</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Madhya Pradesh</h3>
-      <p>
-        मध्य प्रदेश की प्रमुख Sarkari Yojana
-        और welfare schemes।
-      </p>
-      <a href="#">View Yojana</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Jharkhand</h3>
-      <p>
-        झारखंड सरकार की योजनाओं और
-        welfare programs की जानकारी।
-      </p>
-      <a href="#">View Yojana</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Maharashtra</h3>
-      <p>
-        महाराष्ट्र की Government Schemes
-        और citizen welfare programs।
-      </p>
-      <a href="#">View Yojana</a>
-    </div>
-
-    <div class="info-card">
-      <h3>West Bengal</h3>
-      <p>
-        पश्चिम बंगाल की प्रमुख योजनाएँ
-        और Government benefits।
-      </p>
-      <a href="#">View Yojana</a>
-    </div>
-
-    <div class="info-card">
-      <h3>All States</h3>
-      <p>
-        सभी राज्यों और केंद्र शासित प्रदेशों
-        की Government Schemes।
-      </p>
-      <a href="#">View All States</a>
-    </div>
-
-  </div>
-
-</section>
-  <!-- CATEGORY-WISE SCHEMES -->
-<section class="section">
-
-  <div class="section-heading">
-    <h2>Category-wise Sarkari Yojana</h2>
-    <p>
-      अलग-अलग नागरिक categories के अनुसार
-      Government Schemes खोजें।
-    </p>
-  </div>
-
-  <div class="card-grid">
-
-    <div class="info-card">
-      <h3>General Category</h3>
-      <p>
-        General category के लिए उपलब्ध
-        Government Schemes और benefits।
-      </p>
-      <a href="#">View Schemes</a>
-    </div>
-
-    <div class="info-card">
-      <h3>EWS</h3>
-      <p>
-        Economically Weaker Sections से जुड़ी
-        योजनाओं की जानकारी।
-      </p>
-      <a href="#">View Schemes</a>
-    </div>
-
-    <div class="info-card">
-      <h3>OBC</h3>
-      <p>
-        OBC category के लिए उपलब्ध
-        welfare schemes और benefits।
-      </p>
-      <a href="#">View Schemes</a>
-    </div>
-
-    <div class="info-card">
-      <h3>SC</h3>
-      <p>
-        Scheduled Caste communities के लिए
-        Government welfare schemes।
-      </p>
-      <a href="#">View Schemes</a>
-    </div>
-
-    <div class="info-card">
-      <h3>ST</h3>
-      <p>
-        Scheduled Tribe communities से जुड़ी
-        Government Schemes।
-      </p>
-      <a href="#">View Schemes</a>
-    </div>
-
-    <div class="info-card">
-      <h3>PwD</h3>
-      <p>
-        Persons with Disabilities के लिए
-        उपलब्ध Government benefits।
-      </p>
-      <a href="#">View Schemes</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Minority</h3>
-      <p>
-        Minority communities के लिए
-        Government welfare schemes।
-      </p>
-      <a href="#">View Schemes</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Senior Citizens</h3>
-      <p>
-        वरिष्ठ नागरिकों से संबंधित
-        welfare और social security schemes।
-      </p>
-      <a href="#">View Schemes</a>
-    </div>
-
-  </div>
-
-</section>
-  <!-- STUDENT SCHEMES -->
-<section class="section">
-
-  <div class="section-heading">
-    <h2>Student Schemes</h2>
-    <p>
-      Students के लिए education, scholarship,
-      skill और financial support से जुड़ी schemes।
-    </p>
-  </div>
-
-  <div class="card-grid">
-
-    <div class="info-card">
-      <h3>Scholarship Schemes</h3>
-      <p>
-        Students के लिए विभिन्न Central और
-        State scholarship schemes।
-      </p>
-      <a href="scholarship.html">View Scholarships</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Education Support</h3>
-      <p>
-        पढ़ाई और education expenses से जुड़ी
-        Government assistance की जानकारी।
-      </p>
-      <a href="#">View Schemes</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Skill Development</h3>
-      <p>
-        Students और युवाओं के लिए skill
-        development programs।
-      </p>
-      <a href="#">View Schemes</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Student Loans</h3>
-      <p>
-        Higher education और study finance से
-        संबंधित Government-supported options।
-      </p>
-      <a href="#">View Details</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Free Education Support</h3>
-      <p>
-        Eligible students के लिए education
-        support और assistance programs।
-      </p>
-      <a href="#">View Schemes</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Girls Education</h3>
-      <p>
-        बालिकाओं की education और development
-        से जुड़ी Government initiatives।
-      </p>
-      <a href="#">View Schemes</a>
-    </div>
-
-    <div class="info-card">
-      <h3>ITI & Polytechnic</h3>
-      <p>
-        Technical education और vocational
-        training से जुड़ी schemes।
-      </p>
-      <a href="admission.html">View Admission</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Competitive Exam Support</h3>
-      <p>
-        Competitive exam preparation और
-        youth support से जुड़ी योजनाएँ।
-      </p>
-      <a href="#">View Schemes</a>
-    </div>
-
-  </div>
-
-</section>
-  <!-- FARMER SCHEMES -->
-<section class="section">
-
-  <div class="section-heading">
-    <h2>Farmer Schemes</h2>
-    <p>
-      किसानों, खेती, कृषि सहायता और ग्रामीण
-      विकास से जुड़ी Government Schemes।
-    </p>
-  </div>
-
-  <div class="card-grid">
-
-    <div class="info-card">
-      <h3>Farmer Financial Support</h3>
-      <p>
-        किसानों के लिए financial assistance
-        और income support से जुड़ी योजनाएँ।
-      </p>
-      <a href="#">View Schemes</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Agriculture Schemes</h3>
-      <p>
-        खेती, फसल और agricultural development
-        से संबंधित Government Schemes।
-      </p>
-      <a href="#">View Schemes</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Crop Insurance</h3>
-      <p>
-        फसल नुकसान और crop insurance से
-        संबंधित Government information।
-      </p>
-      <a href="#">View Schemes</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Kisan Credit Support</h3>
-      <p>
-        किसानों के लिए credit और कृषि finance
-        से जुड़ी Government facilities।
-      </p>
-      <a href="#">View Details</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Fertilizer & Seeds</h3>
-      <p>
-        बीज, fertilizer और agricultural inputs
-        से जुड़ी सहायता योजनाएँ।
-      </p>
-      <a href="#">View Schemes</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Irrigation Schemes</h3>
-      <p>
-        सिंचाई और water management से जुड़ी
-        Government Schemes।
-      </p>
-      <a href="#">View Schemes</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Animal Husbandry</h3>
-      <p>
-        पशुपालन, dairy और livestock से जुड़ी
-        Government Schemes।
-      </p>
-      <a href="#">View Schemes</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Farmer Pension & Welfare</h3>
-      <p>
-        किसानों और ग्रामीण परिवारों के लिए
-        welfare और social security schemes।
-      </p>
-      <a href="#">View Schemes</a>
-    </div>
-
-  </div>
-
-</section>
-  <!-- WOMEN & GIRLS SCHEMES -->
-<section class="section">
-
-  <div class="section-heading">
-    <h2>Women & Girls Schemes</h2>
-    <p>
-      महिलाओं और बालिकाओं के लिए education,
-      welfare, safety और financial support से
-      जुड़ी Government Schemes।
-    </p>
-  </div>
-
-  <div class="card-grid">
-
-    <div class="info-card">
-      <h3>Women Welfare Schemes</h3>
-      <p>
-        महिलाओं के welfare और social support
-        से जुड़ी Government Schemes।
-      </p>
-      <a href="#">View Schemes</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Girls Education</h3>
-      <p>
-        बालिकाओं की education और पढ़ाई से
-        जुड़ी Government initiatives।
-      </p>
-      <a href="#">View Schemes</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Women Financial Support</h3>
-      <p>
-        महिलाओं के लिए financial assistance
-        और economic support programs।
-      </p>
-      <a href="#">View Schemes</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Girl Child Schemes</h3>
-      <p>
-        Girl child के welfare और development
-        से संबंधित योजनाएँ।
-      </p>
-      <a href="#">View Schemes</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Women Skill Development</h3>
-      <p>
-        महिलाओं के skill development,
-        training और employment programs।
-      </p>
-      <a href="#">View Schemes</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Women Entrepreneurship</h3>
-      <p>
-        महिलाओं के business और entrepreneurship
-        support से जुड़ी योजनाएँ।
-      </p>
-      <a href="#">View Schemes</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Women Health Schemes</h3>
-      <p>
-        महिलाओं और मातृत्व से संबंधित
-        health support schemes।
-      </p>
-      <a href="#">View Schemes</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Women Safety & Support</h3>
-      <p>
-        महिलाओं की safety, protection और
-        सहायता से जुड़े Government programs।
-      </p>
-      <a href="#">View Schemes</a>
-    </div>
-
-  </div>
-
-</section>
-  <!-- PENSION & WELFARE SCHEMES -->
-<section class="section">
-
-  <div class="section-heading">
-    <h2>Pension & Welfare Schemes</h2>
-    <p>
-      Pension, social security और जरूरतमंद
-      नागरिकों के welfare से जुड़ी योजनाएँ।
-    </p>
-  </div>
-
-  <div class="card-grid">
-
-    <div class="info-card">
-      <h3>Old Age Pension</h3>
-      <p>
-        वरिष्ठ नागरिकों के लिए उपलब्ध
-        pension schemes की जानकारी।
-      </p>
-      <a href="#">View Schemes</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Widow Pension</h3>
-      <p>
-        पात्र विधवा महिलाओं के लिए
-        pension और welfare schemes।
-      </p>
-      <a href="#">View Schemes</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Disability Pension</h3>
-      <p>
-        दिव्यांग नागरिकों के लिए pension
-        और social security schemes।
-      </p>
-      <a href="#">View Schemes</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Social Security</h3>
-      <p>
-        नागरिकों के लिए insurance, pension
-        और social security programs।
-      </p>
-      <a href="#">View Schemes</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Family Welfare</h3>
-      <p>
-        परिवारों और जरूरतमंद नागरिकों के
-        welfare support से जुड़ी योजनाएँ।
-      </p>
-      <a href="#">View Schemes</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Worker Welfare</h3>
-      <p>
-        श्रमिकों और workers के लिए
-        welfare और social security schemes।
-      </p>
-      <a href="#">View Schemes</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Unorganised Workers</h3>
-      <p>
-        असंगठित क्षेत्र के workers के लिए
-        Government welfare programs।
-      </p>
-      <a href="#">View Schemes</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Senior Citizen Benefits</h3>
-      <p>
-        वरिष्ठ नागरिकों के लिए welfare,
-        pension और अन्य benefits।
-      </p>
-      <a href="#">View Schemes</a>
-    </div>
-
-  </div>
-
-</section>
-  <!-- YOJANA ELIGIBILITY & DOCUMENTS -->
-<section class="section">
-
-  <div class="section-heading">
-    <h2>Yojana Eligibility & Documents</h2>
-    <p>
-      किसी Government Scheme के लिए eligibility,
-      documents और basic requirements की जानकारी।
-    </p>
-  </div>
-
-  <div class="card-grid">
-
-    <div class="info-card">
-      <h3>Eligibility Check</h3>
-      <p>
-        योजना के लिए कौन eligible है और
-        eligibility कैसे check करें।
-      </p>
-      <a href="#">Check Eligibility</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Age Criteria</h3>
-      <p>
-        अलग-अलग schemes में लागू age
-        requirements की जानकारी।
-      </p>
-      <a href="#">View Details</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Income Criteria</h3>
-      <p>
-        Income limit और आर्थिक eligibility
-        से जुड़ी जानकारी।
-      </p>
-      <a href="#">View Details</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Category & Certificate</h3>
-      <p>
-        Category और आवश्यक certificates
-        से संबंधित requirements।
-      </p>
-      <a href="#">View Details</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Documents Required</h3>
-      <p>
-        Application के लिए आवश्यक documents
-        और certificates की जानकारी।
-      </p>
-      <a href="#">View Documents</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Aadhaar & Identity</h3>
-      <p>
-        Identity verification और Aadhaar से
-        संबंधित basic requirements।
-      </p>
-      <a href="#">View Details</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Bank Account</h3>
-      <p>
-        Payment और benefit transfer के लिए
-        bank account requirements।
-      </p>
-      <a href="#">View Details</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Residence & Domicile</h3>
-      <p>
-        State-specific schemes में residence
-        और domicile requirements की जानकारी।
-      </p>
-      <a href="#">View Details</a>
-    </div>
-
-  </div>
-
-</section>
-  <!-- YOJANA APPLICATION HELP -->
-<section class="section">
-
-  <div class="section-heading">
-    <h2>Yojana Application Help</h2>
-    <p>
-      Government Scheme का form भरने से लेकर
-      application status तक जरूरी जानकारी।
-    </p>
-  </div>
-
-  <div class="card-grid">
-
-    <div class="info-card">
-      <h3>How to Apply</h3>
-      <p>
-        Government Scheme के लिए online या
-        offline application कैसे करें।
-      </p>
-      <a href="#">View Guide</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Registration Guide</h3>
-      <p>
-        New registration और account बनाने
-        की step-by-step जानकारी।
-      </p>
-      <a href="#">View Guide</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Form Filling Guide</h3>
-      <p>
-        Application form सही तरीके से
-        भरने की जरूरी जानकारी।
-      </p>
-      <a href="#">View Guide</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Document Upload</h3>
-      <p>
-        Documents, photograph और certificates
-        upload करने की जानकारी।
-      </p>
-      <a href="#">View Guide</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Application Correction</h3>
-      <p>
-        Application में गलती होने पर correction
-        process की जानकारी।
-      </p>
-      <a href="#">View Guide</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Application Status</h3>
-      <p>
-        Submitted application का status
-        online कैसे check करें।
-      </p>
-      <a href="#">Check Status</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Benefit Status</h3>
-      <p>
-        Scheme का benefit या payment मिला है
-        या नहीं, इसकी जानकारी।
-      </p>
-      <a href="#">Check Status</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Application Rejected</h3>
-      <p>
-        Application reject होने के सामान्य
-        कारण और आगे की प्रक्रिया।
-      </p>
-      <a href="#">View Help</a>
-    </div>
-
-  </div>
-
-</section>
-  <!-- YOJANA STATUS & VERIFICATION -->
-<section class="section">
-
-  <div class="section-heading">
-    <h2>Yojana Status & Verification</h2>
-    <p>
-      Application, beneficiary status, payment और
-      Government Scheme verification से जुड़ी जानकारी।
-    </p>
-  </div>
-
-  <div class="card-grid">
-
-    <div class="info-card">
-      <h3>Application Status</h3>
-      <p>
-        अपने submitted application का
-        current status check करें।
-      </p>
-      <a href="#">Check Status</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Beneficiary Status</h3>
-      <p>
-        Beneficiary list या beneficiary
-        status की जानकारी प्राप्त करें।
-      </p>
-      <a href="#">Check Status</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Payment Status</h3>
-      <p>
-        Government Scheme payment या
-        benefit transfer का status देखें।
-      </p>
-      <a href="#">Check Payment</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Verification Status</h3>
-      <p>
-        Application और documents की
-        verification स्थिति समझें।
-      </p>
-      <a href="#">View Details</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Beneficiary List</h3>
-      <p>
-        उपलब्ध beneficiary list और
-        संबंधित information खोजें।
-      </p>
-      <a href="#">View List</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Track Application</h3>
-      <p>
-        Registration number या अन्य
-        details से application track करें।
-      </p>
-      <a href="#">Track Now</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Grievance & Complaint</h3>
-      <p>
-        Scheme से जुड़ी समस्या या complaint
-        दर्ज करने की जानकारी।
-      </p>
-      <a href="#">View Help</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Verification Help</h3>
-      <p>
-        Official information और genuine
-        Government Scheme की पहचान करें।
-      </p>
-      <a href="#">View Guide</a>
-    </div>
-
-  </div>
-
-</section>
-  <!-- TRUST & OFFICIAL SOURCES -->
-<section class="section">
-
-  <div class="section-heading">
-    <h2>Trust & Official Sources</h2>
-    <p>
-      Sarkari Yojana की जानकारी को समझने और
-      official source से verify करने के लिए जरूरी resources।
-    </p>
-  </div>
-
-  <div class="card-grid">
-
-    <div class="info-card">
-      <h3>Official Source</h3>
-      <p>
-        किसी भी योजना की जानकारी के लिए
-        संबंधित official Government source देखें।
-      </p>
-      <a href="#">View Source</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Last Updated</h3>
-      <p>
-        योजना की information कब update हुई,
-        इसकी जानकारी यहाँ दिखाई जाएगी।
-      </p>
-      <a href="#">View Details</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Eligibility Verification</h3>
-      <p>
-        Scheme की eligibility को official
-        information से verify करें।
-      </p>
-      <a href="#">Verify Eligibility</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Documents Verification</h3>
-      <p>
-        Application से पहले required documents
-        की official requirements check करें।
-      </p>
-      <a href="#">Check Documents</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Application Verification</h3>
-      <p>
-        Application link और process को
-        official source से verify करें।
-      </p>
-      <a href="#">Verify Application</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Important Notice</h3>
-      <p>
-        Scheme से जुड़े important notices,
-        changes और updates यहाँ मिलेंगे।
-      </p>
-      <a href="#">View Notice</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Yojana FAQ</h3>
-      <p>
-        Government Schemes से जुड़े
-        सामान्य सवालों के answers।
-      </p>
-      <a href="#">View FAQ</a>
-    </div>
-
-    <div class="info-card">
-      <h3>Report an Error</h3>
-      <p>
-        किसी information में गलती मिले तो
-        Sarkariiichij को report करें।
-      </p>
-      <a href="#">Report Error</a>
-    </div>
-
-  </div>
-
-</section>
-  <!-- FOOTER -->
-<footer class="site-footer">
-
-  <div class="footer-brand">
-    <h2>Sarkariiichij</h2>
-    <p>
-      Government Jobs, Yojana, Scholarships,
-      Results, Admission और Career Information
-      का सरल platform.
-    </p>
-  </div>
-
-  <div class="footer-links">
-    <a href="index.html">Home</a>
-    <a href="jobs.html">Government Jobs</a>
-    <a href="results.html">Results</a>
-    <a href="admit-card.html">Admit Card</a>
-    <a href="admission.html">Admission</a>
-    <a href="syllabus.html">Syllabus</a>
-    <a href="cutoff.html">Cut Off</a>
-    <a href="papers.html">Previous Papers</a>
-    <a href="scholarship.html">Scholarship</a>
-    <a href="yojana.html">Sarkari Yojana</a>
-  </div>
-
-  <div class="footer-info">
-    <a href="#">About Sarkariiichij</a>
-    <a href="#">Privacy Policy</a>
-    <a href="#">Terms & Conditions</a>
-    <a href="#">Disclaimer</a>
-    <a href="#">Contact Us</a>
-    <a href="#">Report Error</a>
-  </div>
-
-  <div class="footer-bottom">
-    <p>
-      © 2026 Sarkariiichij. All Rights Reserved.
-    </p>
-
-    <p>
-      Information is provided for educational
-      and informational purposes.
-    </p>
-  </div>
-
-</footer>
-
-
-<!-- MOBILE NAV -->
-<nav class="mobile-nav">
-
-  <a href="index.html">Home</a>
-
-  <a href="jobs.html">Jobs</a>
-
-  <a href="results.html">Results</a>
-
-  <a href="admit-card.html">Admit Card</a>
-
-  <a href="yojana.html">Yojana</a>
-
-</nav>
+    <!-- =========================================================
+         SCRIPT
+         ========================================================= -->
+
+    <script src="script.js" defer></script>
+
+
+    <script>
+
+        /*
+         * Page-specific safety helpers.
+         * Main job-detail functionality is handled by script.js.
+         */
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const yearElement =
+                document.getElementById("current-year");
+
+            if (yearElement) {
+
+                yearElement.textContent =
+                    new Date().getFullYear();
+
+            }
+
+
+            /*
+             * Mobile menu fallback.
+             * Main navigation functionality is also handled
+             * by script.js where available.
+             */
+
+            const menuToggle =
+                document.getElementById("menu-toggle");
+
+            const mainNav =
+                document.getElementById("main-nav");
+
+            if (menuToggle && mainNav) {
+
+                menuToggle.addEventListener(
+                    "click",
+                    function () {
+
+                        mainNav.classList.toggle("mobile-open");
+
+                        const isOpen =
+                            mainNav.classList.contains(
+                                "mobile-open"
+                            );
+
+                        menuToggle.setAttribute(
+                            "aria-expanded",
+                            String(isOpen)
+                        );
+
+                    }
+                );
+
+            }
+
+
+            /*
+             * Official links should never be fabricated.
+             * script.js controls verified links.
+             */
+
+            const officialLink =
+                document.getElementById(
+                    "job-official-website"
+                );
+
+            if (officialLink) {
+
+                officialLink.setAttribute(
+                    "data-verified-only",
+                    "true"
+                );
+
+            }
+
+
+            /*
+             * Prevent accidental fake application links.
+             */
+
+            const applyLink =
+                document.getElementById(
+                    "job-apply-online"
+                );
+
+            if (applyLink) {
+
+                applyLink.setAttribute(
+                    "data-verified-only",
+                    "true"
+                );
+
+            }
+
+
+            /*
+             * Highlight current page navigation.
+             */
+
+            document
+                .querySelectorAll(".main-nav a")
+                .forEach(function (link) {
+
+                    const href =
+                        link.getAttribute("href");
+
+                    if (
+                        href === "job-detail.html" ||
+                        href === window.location.pathname.split("/").pop()
+                    ) {
+
+                        link.classList.add("active");
+
+                    }
+
+                });
+
+        });
+
+
+        /*
+         * Safe wrapper for job detail actions.
+         * These functions are used by the buttons above.
+         */
+
+        function saveCurrentJobFromDetail() {
+
+            if (
+                typeof window.saveCurrentJob ===
+                "function"
+            ) {
+
+                window.saveCurrentJob();
+
+                return;
+
+            }
+
+
+            if (
+                typeof window.saveJobFromDetail ===
+                "function"
+            ) {
+
+                window.saveJobFromDetail();
+
+                return;
+
+            }
+
+
+            if (
+                typeof window.showToast ===
+                "function"
+            ) {
+
+                window.showToast(
+                    "Job save system loading..."
+                );
+
+            }
+
+        }
+
+
+        function setReminderCurrentJobFromDetail() {
+
+            if (
+                typeof window.setJobReminder ===
+                "function"
+            ) {
+
+                window.setJobReminder();
+
+                return;
+
+            }
+
+
+            if (
+                typeof window.setReminderForCurrentJob ===
+                "function"
+            ) {
+
+                window.setReminderForCurrentJob();
+
+                return;
+
+            }
+
+
+            if (
+                typeof window.showToast ===
+                "function"
+            ) {
+
+                window.showToast(
+                    "Reminder system loading..."
+                );
+
+            }
+
+        }
+
+
+        function addCurrentJobToTrackerFromDetail() {
+
+            if (
+                typeof window.addJobToApplicationTracker ===
+                "function"
+            ) {
+
+                window.addJobToApplicationTracker();
+
+                return;
+
+            }
+
+
+            if (
+                typeof window.addCurrentJobToTracker ===
+                "function"
+            ) {
+
+                window.addCurrentJobToTracker();
+
+                return;
+
+            }
+
+
+            if (
+                typeof window.showToast ===
+                "function"
+            ) {
+
+                window.showToast(
+                    "Application tracker loading..."
+                );
+
+            }
+
+        }
+
+
+        function shareCurrentJobFromDetail() {
+
+            if (
+                navigator.share
+            ) {
+
+                navigator.share({
+
+                    title:
+                        document.title,
+
+                    text:
+                        "Government Job Details - Sarkariiichij",
+
+                    url:
+                        window.location.href
+
+                }).catch(function () {});
+
+                return;
+
+            }
+
+
+            copyCurrentJobLinkFromDetail();
+
+        }
+
+
+        function copyCurrentJobLinkFromDetail() {
+
+            const url =
+                window.location.href;
+
+
+            if (
+                navigator.clipboard &&
+                navigator.clipboard.writeText
+            ) {
+
+                navigator.clipboard
+                    .writeText(url)
+                    .then(function () {
+
+                        if (
+                            typeof window.showToast ===
+                            "function"
+                        ) {
+
+                            window.showToast(
+                                "Job link copied"
+                            );
+
+                        }
+
+                    })
+                    .catch(function () {});
+
+                return;
+
+            }
+
+
+            const temporaryInput =
+                document.createElement("input");
+
+            temporaryInput.value = url;
+
+            document.body.appendChild(
+                temporaryInput
+            );
+
+            temporaryInput.select();
+
+            try {
+
+                document.execCommand("copy");
+
+            } catch (error) {
+
+                /* Ignore clipboard fallback errors */
+
+            }
+
+            temporaryInput.remove();
+
+        }
+
+    </script>
 
 
 </body>
