@@ -17542,3 +17542,4598 @@ window.SarkariiChijFinal = {
 /* =========================================================
    FINAL SCRIPT.JS COMPLETE
    ========================================================= */
+/* =========================================================
+   SARKARIIICHIJ — SCRIPT.JS
+   PART 29 — VERIFIED OFFICIAL JOB LINKS
+   ========================================================= */
+
+
+/*
+ * IMPORTANT:
+ * Only official government/recruitment portals are used here.
+ *
+ * No third-party application links.
+ * No invented Apply Online URLs.
+ */
+
+
+/* ---------- Verified Official Portals ---------- */
+
+const SarkariiChijOfficialPortals = {
+
+    SSC: {
+        name: "Staff Selection Commission",
+        website: "https://ssc.gov.in/",
+        recruitment: "https://ssc.gov.in/"
+    },
+
+
+    UPSC: {
+        name: "Union Public Service Commission",
+        website: "https://www.upsc.gov.in/",
+        recruitment: "https://upsconline.nic.in/"
+    },
+
+
+    UPPSC: {
+        name: "Uttar Pradesh Public Service Commission",
+        website: "https://uppsc.up.nic.in/",
+        recruitment:
+            "https://uppsc.up.nic.in/CandidatePages/Notifications.aspx/UPPSC"
+    },
+
+
+    UPSSSC: {
+        name:
+            "Uttar Pradesh Subordinate Services Selection Commission",
+        website:
+            "http://upsssc.gov.in/",
+        recruitment:
+            "http://upsssc.gov.in/"
+    },
+
+
+    INDIA_POST_GDS: {
+        name:
+            "India Post Gramin Dak Sevak",
+        website:
+            "https://indiapostgdsonline.gov.in/",
+        recruitment:
+            "https://indiapostgdsonline.gov.in/"
+    },
+
+
+    RRB: {
+        name:
+            "Railway Recruitment Boards",
+        website:
+            "https://indianrailways.gov.in/",
+        recruitment:
+            "https://indianrailways.gov.in/"
+    },
+
+
+    RRB_PRAYAGRAJ: {
+        name:
+            "Railway Recruitment Board Prayagraj",
+        website:
+            "https://www.rrbald.gov.in/",
+        recruitment:
+            "https://www.rrbald.gov.in/"
+    },
+
+
+    RRB_GORAKHPUR: {
+        name:
+            "Railway Recruitment Board Gorakhpur",
+        website:
+            "https://www.rrbgkp.gov.in/",
+        recruitment:
+            "https://www.rrbgkp.gov.in/"
+    },
+
+
+    IBPS: {
+        name:
+            "Institute of Banking Personnel Selection",
+        website:
+            "https://www.ibps.in/",
+        recruitment:
+            "https://www.ibps.in/"
+    },
+
+
+    SBI: {
+        name:
+            "State Bank of India",
+        website:
+            "https://sbi.co.in/",
+        recruitment:
+            "https://sbi.co.in/web/careers"
+    },
+
+
+    RBI: {
+        name:
+            "Reserve Bank of India",
+        website:
+            "https://www.rbi.org.in/",
+        recruitment:
+            "https://opportunities.rbi.org.in/"
+    },
+
+
+    SEBI: {
+        name:
+            "Securities and Exchange Board of India",
+        website:
+            "https://www.sebi.gov.in/",
+        recruitment:
+            "https://www.sebi.gov.in/"
+    },
+
+
+    DEFENCE: {
+        name:
+            "Ministry of Defence",
+        website:
+            "https://mod.gov.in/",
+        recruitment:
+            "https://mod.gov.in/"
+    },
+
+
+    DRDO: {
+        name:
+            "Defence Research and Development Organisation",
+        website:
+            "https://www.drdo.gov.in/",
+        recruitment:
+            "https://www.drdo.gov.in/careers"
+    },
+
+
+    ISRO: {
+        name:
+            "Indian Space Research Organisation",
+        website:
+            "https://www.isro.gov.in/",
+        recruitment:
+            "https://www.isro.gov.in/Careers.html"
+    },
+
+
+    INDIAN_COAST_GUARD: {
+        name:
+            "Indian Coast Guard",
+        website:
+            "https://indiancoastguard.gov.in/",
+        recruitment:
+            "https://joinindiancoastguard.cdac.in/"
+    },
+
+
+    CRPF: {
+        name:
+            "Central Reserve Police Force",
+        website:
+            "https://crpf.gov.in/",
+        recruitment:
+            "https://rect.crpf.gov.in/"
+    },
+
+
+    CISF: {
+        name:
+            "Central Industrial Security Force",
+        website:
+            "https://www.cisf.gov.in/",
+        recruitment:
+            "https://www.cisf.gov.in/recruitment/"
+    },
+
+
+    BSF: {
+        name:
+            "Border Security Force",
+        website:
+            "https://rectt.bsf.gov.in/",
+        recruitment:
+            "https://rectt.bsf.gov.in/"
+    },
+
+
+    ITBP: {
+        name:
+            "Indo-Tibetan Border Police",
+        website:
+            "https://itbpolice.nic.in/",
+        recruitment:
+            "https://recruitment.itbpolice.nic.in/"
+    },
+
+
+    SSB: {
+        name:
+            "Sashastra Seema Bal",
+        website:
+            "https://ssbrectt.gov.in/",
+        recruitment:
+            "https://ssbrectt.gov.in/"
+    },
+
+
+    UP_POLICE: {
+        name:
+            "Uttar Pradesh Police Recruitment and Promotion Board",
+        website:
+            "https://uppbpb.gov.in/",
+        recruitment:
+            "https://uppbpb.gov.in/"
+    },
+
+
+    ROJGAR_SANGAM_UP: {
+        name:
+            "Rojgaar Sangam — Government of Uttar Pradesh",
+        website:
+            "https://rojgaarsangam.up.gov.in/",
+        recruitment:
+            "https://rojgaarsangam.up.gov.in/"
+    }
+
+};
+
+
+/* ---------- URL Safety ---------- */
+
+function isVerifiedOfficialJobURL(
+    url
+) {
+
+    if (!url) {
+        return false;
+    }
+
+
+    try {
+
+        const parsed =
+            new URL(url);
+
+
+        if (
+            parsed.protocol !==
+            "https:"
+            &&
+            parsed.protocol !==
+            "http:"
+        ) {
+
+            return false;
+
+        }
+
+
+        const host =
+            parsed.hostname
+                .toLowerCase();
+
+
+        const officialDomains = [
+
+            "ssc.gov.in",
+
+            "upsc.gov.in",
+
+            "upsconline.nic.in",
+
+            "uppsc.up.nic.in",
+
+            "upsssc.gov.in",
+
+            "indiapostgdsonline.gov.in",
+
+            "indianrailways.gov.in",
+
+            "rrbald.gov.in",
+
+            "rrbgkp.gov.in",
+
+            "ibps.in",
+
+            "ibpsreg.ibps.in",
+
+            "sbi.co.in",
+
+            "rbi.org.in",
+
+            "sebi.gov.in",
+
+            "mod.gov.in",
+
+            "drdo.gov.in",
+
+            "isro.gov.in",
+
+            "indiancoastguard.gov.in",
+
+            "cdac.in",
+
+            "crpf.gov.in",
+
+            "rect.crpf.gov.in",
+
+            "cisf.gov.in",
+
+            "bsf.gov.in",
+
+            "rectt.bsf.gov.in",
+
+            "itbpolice.nic.in",
+
+            "recruitment.itbpolice.nic.in",
+
+            "ssbrectt.gov.in",
+
+            "uppbpb.gov.in",
+
+            "rojgaarsangam.up.gov.in"
+
+        ];
+
+
+        return officialDomains.some(
+            function(domain) {
+
+                return (
+                    host === domain
+                    ||
+                    host.endsWith(
+                        "." + domain
+                    )
+                );
+
+            }
+        );
+
+    } catch (error) {
+
+        return false;
+
+    }
+
+}
+
+
+/* ---------- Get Official Portal ---------- */
+
+function getVerifiedOfficialPortal(
+    portalKey
+) {
+
+    if (
+        !portalKey
+        ||
+        !SarkariiChijOfficialPortals[
+            portalKey
+        ]
+    ) {
+
+        return null;
+
+    }
+
+
+    return SarkariiChijOfficialPortals[
+        portalKey
+    ];
+
+}
+
+
+/* ---------- Attach Official Portal ---------- */
+
+function attachVerifiedOfficialPortal(
+    job,
+    portalKey
+) {
+
+    if (!job) {
+        return job;
+    }
+
+
+    const portal =
+        getVerifiedOfficialPortal(
+            portalKey
+        );
+
+
+    if (!portal) {
+        return job;
+    }
+
+
+    job.officialPortal =
+        portalKey;
+
+
+    job.officialWebsite =
+        portal.website;
+
+
+    /*
+     * Do NOT automatically use the portal
+     * homepage as a fake Apply Online link.
+     *
+     * Apply Online will remain unavailable
+     * until the specific official application
+     * URL is verified.
+     */
+
+    if (
+        !job.applyOnline
+        ||
+        !isVerifiedOfficialJobURL(
+            job.applyOnline
+        )
+    ) {
+
+        job.applyOnline =
+            "";
+
+    }
+
+
+    if (
+        !job.notification
+        ||
+        !isVerifiedOfficialJobURL(
+            job.notification
+        )
+    ) {
+
+        job.notification =
+            "";
+
+    }
+
+
+    return job;
+
+}
+
+
+/* ---------- Verified Portal Labels ---------- */
+
+function getOfficialPortalLabel(
+    portalKey
+) {
+
+    const portal =
+        getVerifiedOfficialPortal(
+            portalKey
+        );
+
+
+    if (!portal) {
+
+        return "Official Website";
+
+    }
+
+
+    return (
+        portal.name
+        +
+        " Official Website"
+    );
+
+}
+
+
+/* ---------- Apply Button Safety ---------- */
+
+function getVerifiedApplyURL(
+    job
+) {
+
+    if (!job) {
+        return "";
+    }
+
+
+    if (
+        !job.applyOnline
+    ) {
+
+        return "";
+
+    }
+
+
+    if (
+        !isVerifiedOfficialJobURL(
+            job.applyOnline
+        )
+    ) {
+
+        return "";
+
+    }
+
+
+    return job.applyOnline;
+
+}
+
+
+/* ---------- Notification Button Safety ---------- */
+
+function getVerifiedNotificationURL(
+    job
+) {
+
+    if (!job) {
+        return "";
+    }
+
+
+    if (
+        !job.notification
+    ) {
+
+        return "";
+
+    }
+
+
+    if (
+        !isVerifiedOfficialJobURL(
+            job.notification
+        )
+    ) {
+
+        return "";
+
+    }
+
+
+    return job.notification;
+
+}
+
+
+/* ---------- Official Website Button ---------- */
+
+function createVerifiedOfficialWebsiteButton(
+    job
+) {
+
+    if (!job) {
+        return "";
+    }
+
+
+    const url =
+        job.officialWebsite || "";
+
+
+    if (
+        !isVerifiedOfficialJobURL(
+            url
+        )
+    ) {
+
+        return "";
+
+    }
+
+
+    const portalName =
+        job.officialPortal
+            ? getOfficialPortalLabel(
+                job.officialPortal
+            )
+            : "Official Website";
+
+
+    return `
+
+        <a
+            href="${escapeHTML(url)}"
+            class="btn btn-secondary"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            🌐 ${escapeHTML(portalName)}
+        </a>
+
+    `;
+
+}
+
+
+/* ---------- Verified Apply Button ---------- */
+
+function createVerifiedApplyButton(
+    job
+) {
+
+    const url =
+        getVerifiedApplyURL(
+            job
+        );
+
+
+    if (!url) {
+
+        return `
+
+            <button
+                type="button"
+                class="btn btn-secondary"
+                disabled
+                title="Specific official application link has not been verified."
+            >
+                Apply Online — Link Not Verified
+            </button>
+
+        `;
+
+    }
+
+
+    return `
+
+        <a
+            href="${escapeHTML(url)}"
+            class="btn btn-success"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            🟢 Apply Online
+        </a>
+
+    `;
+
+}
+
+
+/* ---------- Verified Notification Button ---------- */
+
+function createVerifiedNotificationButton(
+    job
+) {
+
+    const url =
+        getVerifiedNotificationURL(
+            job
+        );
+
+
+    if (!url) {
+
+        return `
+
+            <button
+                type="button"
+                class="btn btn-secondary"
+                disabled
+                title="Specific official notification link has not been verified."
+            >
+                📄 Notification — Not Verified
+            </button>
+
+        `;
+
+    }
+
+
+    return `
+
+        <a
+            href="${escapeHTML(url)}"
+            class="btn btn-primary"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            📄 Official Notification
+        </a>
+
+    `;
+
+}
+
+
+/* ---------- Add Verified Links to Jobs ---------- */
+
+function applyVerifiedOfficialPortalsToJobs() {
+
+    if (
+        !Array.isArray(
+            window.SarkariiChijJobs
+        )
+    ) {
+
+        return;
+
+    }
+
+
+    window.SarkariiChijJobs.forEach(
+        function(job) {
+
+            if (!job) {
+                return;
+            }
+
+
+            const department =
+                String(
+                    job.department ||
+                    job.category ||
+                    ""
+                )
+                .toLowerCase();
+
+
+            if (
+                department.includes("ssc")
+            ) {
+
+                attachVerifiedOfficialPortal(
+                    job,
+                    "SSC"
+                );
+
+            }
+
+
+            else if (
+                department.includes("uppsc")
+                ||
+                department.includes("up psc")
+            ) {
+
+                attachVerifiedOfficialPortal(
+                    job,
+                    "UPPSC"
+                );
+
+            }
+
+
+            else if (
+                department.includes("up police")
+                ||
+                department.includes("police")
+                &&
+                department.includes("up")
+            ) {
+
+                attachVerifiedOfficialPortal(
+                    job,
+                    "UP_POLICE"
+                );
+
+            }
+
+
+            else if (
+                department.includes("gds")
+                ||
+                department.includes("india post")
+            ) {
+
+                attachVerifiedOfficialPortal(
+                    job,
+                    "INDIA_POST_GDS"
+                );
+
+            }
+
+
+            else if (
+                department.includes("railway")
+                ||
+                department.includes("rrb")
+            ) {
+
+                attachVerifiedOfficialPortal(
+                    job,
+                    "RRB"
+                );
+
+            }
+
+
+            else if (
+                department.includes("ibps")
+                ||
+                department.includes("bank")
+            ) {
+
+                attachVerifiedOfficialPortal(
+                    job,
+                    "IBPS"
+                );
+
+            }
+
+
+            else if (
+                department.includes("sbi")
+            ) {
+
+                attachVerifiedOfficialPortal(
+                    job,
+                    "SBI"
+                );
+
+            }
+
+
+            else if (
+                department.includes("drdo")
+            ) {
+
+                attachVerifiedOfficialPortal(
+                    job,
+                    "DRDO"
+                );
+
+            }
+
+
+            else if (
+                department.includes("isro")
+            ) {
+
+                attachVerifiedOfficialPortal(
+                    job,
+                    "ISRO"
+                );
+
+            }
+
+        }
+    );
+
+}
+
+
+/* ---------- Final Official Link System ---------- */
+
+function initializeVerifiedOfficialJobLinks() {
+
+    applyVerifiedOfficialPortalsToJobs();
+
+}
+
+
+/* ---------- Initialize ---------- */
+
+runSarkariiChijSafe(
+    "initializeVerifiedOfficialJobLinks",
+    initializeVerifiedOfficialJobLinks
+);
+
+
+/* ---------- Global API ---------- */
+
+window.SarkariiChijOfficialJobLinks = {
+
+    portals:
+        SarkariiChijOfficialPortals,
+
+    isVerifiedURL:
+        isVerifiedOfficialJobURL,
+
+    getPortal:
+        getVerifiedOfficialPortal,
+
+    attachPortal:
+        attachVerifiedOfficialPortal,
+
+    getApplyURL:
+        getVerifiedApplyURL,
+
+    getNotificationURL:
+        getVerifiedNotificationURL,
+
+    createWebsiteButton:
+        createVerifiedOfficialWebsiteButton,
+
+    createApplyButton:
+        createVerifiedApplyButton,
+
+    createNotificationButton:
+        createVerifiedNotificationButton,
+
+    initialize:
+        initializeVerifiedOfficialJobLinks
+
+};
+
+
+/* ---------- END PART 29 ---------- */
+/* =========================================================
+   SARKARIIICHIJ — SCRIPT.JS PART 30
+   JOBS PAGE LIVE RENDERING + FILTER + SORT + STATS
+   ========================================================= */
+
+(function () {
+  "use strict";
+
+  /* ---------- JOBS PAGE ELEMENTS ---------- */
+
+  function getJobsPageElement(id) {
+    return document.getElementById(id);
+  }
+
+  function isJobsPage() {
+    return !!(
+      getJobsPageElement("jobs-grid") ||
+      getJobsPageElement("jobs-list") ||
+      getJobsPageElement("job-search")
+    );
+  }
+
+  /* ---------- JOB DATA ---------- */
+
+  function getLiveJobDatabase() {
+    if (
+      typeof SarkariiChijJobs !== "undefined" &&
+      Array.isArray(SarkariiChijJobs)
+    ) {
+      return SarkariiChijJobs.slice();
+    }
+
+    if (
+      window.SarkariiChijJobs &&
+      Array.isArray(window.SarkariiChijJobs)
+    ) {
+      return window.SarkariiChijJobs.slice();
+    }
+
+    return [];
+  }
+
+  /* ---------- VALUE HELPERS ---------- */
+
+  function jobText(value) {
+    if (value === null || value === undefined) {
+      return "";
+    }
+
+    if (typeof value === "object") {
+      return Object.values(value).join(" ");
+    }
+
+    return String(value);
+  }
+
+  function getJobField(job, fields) {
+    if (!job || !Array.isArray(fields)) {
+      return "";
+    }
+
+    for (const field of fields) {
+      if (
+        job[field] !== undefined &&
+        job[field] !== null &&
+        job[field] !== ""
+      ) {
+        return job[field];
+      }
+    }
+
+    return "";
+  }
+
+  function getJobTitle(job) {
+    return jobText(
+      getJobField(job, [
+        "post",
+        "title",
+        "name",
+        "postName",
+        "jobTitle"
+      ])
+    );
+  }
+
+  function getJobDepartment(job) {
+    return jobText(
+      getJobField(job, [
+        "department",
+        "organization",
+        "organisation",
+        "departmentName"
+      ])
+    );
+  }
+
+  function getJobQualification(job) {
+    return jobText(
+      getJobField(job, [
+        "qualification",
+        "education",
+        "eligibility",
+        "educationalQualification"
+      ])
+    );
+  }
+
+  function getJobState(job) {
+    return jobText(
+      getJobField(job, [
+        "state",
+        "stateName",
+        "location"
+      ])
+    );
+  }
+
+  function getJobCategory(job) {
+    return jobText(
+      getJobField(job, [
+        "category",
+        "jobCategory",
+        "type"
+      ])
+    );
+  }
+
+  function getJobLastDate(job) {
+    return jobText(
+      getJobField(job, [
+        "lastDate",
+        "last_date",
+        "applicationLastDate",
+        "closingDate"
+      ])
+    );
+  }
+
+  function getJobStartDate(job) {
+    return jobText(
+      getJobField(job, [
+        "startDate",
+        "start_date",
+        "applicationStartDate"
+      ])
+    );
+  }
+
+  function getJobVacancy(job) {
+    return getJobField(job, [
+      "vacancy",
+      "vacancies",
+      "totalVacancy",
+      "totalPosts",
+      "posts"
+    ]);
+  }
+
+  function getJobSalary(job) {
+    return jobText(
+      getJobField(job, [
+        "salary",
+        "payScale",
+        "pay"
+      ])
+    );
+  }
+
+  /* ---------- JOB STATUS ---------- */
+
+  function getJobStatus(job) {
+    const status = jobText(
+      getJobField(job, [
+        "status",
+        "applicationStatus"
+      ])
+    ).toLowerCase();
+
+    if (status) {
+      return status;
+    }
+
+    const lastDate = getJobLastDate(job);
+
+    if (!lastDate) {
+      return "available";
+    }
+
+    const date = new Date(lastDate);
+
+    if (!Number.isNaN(date.getTime())) {
+      if (date.getTime() < Date.now()) {
+        return "closed";
+      }
+    }
+
+    return "open";
+  }
+
+  function getJobStatusLabel(job) {
+    const status = getJobStatus(job);
+
+    if (
+      status.includes("closed") ||
+      status.includes("expired")
+    ) {
+      return "Closed";
+    }
+
+    if (
+      status.includes("upcoming") ||
+      status.includes("soon")
+    ) {
+      return "Upcoming";
+    }
+
+    return "Open";
+  }
+
+  /* ---------- SEARCH ---------- */
+
+  function jobMatchesSearch(job, query) {
+    if (!query) {
+      return true;
+    }
+
+    const searchable = [
+      getJobTitle(job),
+      getJobDepartment(job),
+      getJobQualification(job),
+      getJobState(job),
+      getJobCategory(job),
+      getJobSalary(job),
+      getJobLastDate(job)
+    ]
+      .join(" ")
+      .toLowerCase();
+
+    return searchable.includes(query.toLowerCase());
+  }
+
+  /* ---------- FILTER ---------- */
+
+  function filterJobsDatabase(jobs, filters) {
+    const safeFilters = filters || {};
+
+    return jobs.filter(function (job) {
+      const title = getJobTitle(job).toLowerCase();
+      const department = getJobDepartment(job).toLowerCase();
+      const qualification = getJobQualification(job).toLowerCase();
+      const state = getJobState(job).toLowerCase();
+      const category = getJobCategory(job).toLowerCase();
+      const status = getJobStatus(job).toLowerCase();
+
+      if (
+        safeFilters.search &&
+        !jobMatchesSearch(job, safeFilters.search)
+      ) {
+        return false;
+      }
+
+      if (
+        safeFilters.qualification &&
+        !qualification.includes(
+          safeFilters.qualification.toLowerCase()
+        )
+      ) {
+        return false;
+      }
+
+      if (
+        safeFilters.department &&
+        !department.includes(
+          safeFilters.department.toLowerCase()
+        )
+      ) {
+        return false;
+      }
+
+      if (
+        safeFilters.state &&
+        !state.includes(
+          safeFilters.state.toLowerCase()
+        )
+      ) {
+        return false;
+      }
+
+      if (
+        safeFilters.category &&
+        !(
+          category.includes(
+            safeFilters.category.toLowerCase()
+          ) ||
+          title.includes(
+            safeFilters.category.toLowerCase()
+          )
+        )
+      ) {
+        return false;
+      }
+
+      if (
+        safeFilters.status &&
+        safeFilters.status !== "all" &&
+        !status.includes(
+          safeFilters.status.toLowerCase()
+        )
+      ) {
+        return false;
+      }
+
+      return true;
+    });
+  }
+
+  /* ---------- SORT ---------- */
+
+  function sortJobsDatabase(jobs, sortValue) {
+    const list = jobs.slice();
+
+    if (!sortValue || sortValue === "default") {
+      return list;
+    }
+
+    if (sortValue === "title") {
+      return list.sort(function (a, b) {
+        return getJobTitle(a).localeCompare(
+          getJobTitle(b)
+        );
+      });
+    }
+
+    if (sortValue === "department") {
+      return list.sort(function (a, b) {
+        return getJobDepartment(a).localeCompare(
+          getJobDepartment(b)
+        );
+      });
+    }
+
+    if (sortValue === "last-date") {
+      return list.sort(function (a, b) {
+        const da = new Date(getJobLastDate(a));
+        const db = new Date(getJobLastDate(b));
+
+        return da - db;
+      });
+    }
+
+    if (sortValue === "newest") {
+      return list.sort(function (a, b) {
+        const da = new Date(getJobStartDate(a));
+        const db = new Date(getJobStartDate(b));
+
+        return db - da;
+      });
+    }
+
+    if (sortValue === "vacancy") {
+      return list.sort(function (a, b) {
+        const va = Number(getJobVacancy(a)) || 0;
+        const vb = Number(getJobVacancy(b)) || 0;
+
+        return vb - va;
+      });
+    }
+
+    return list;
+  }
+
+  /* ---------- SAFE OFFICIAL URL ---------- */
+
+  function jobOfficialURL(job) {
+    if (
+      typeof getVerifiedOfficialPortal === "function"
+    ) {
+      const portal =
+        getVerifiedOfficialPortal(job);
+
+      if (portal && portal.url) {
+        return portal.url;
+      }
+    }
+
+    return "";
+  }
+
+  /* ---------- JOB CARD ---------- */
+
+  function createLiveJobCard(job) {
+    const card = document.createElement("article");
+
+    card.className = "job-card";
+
+    const title = getJobTitle(job) || "Government Job";
+
+    const department =
+      getJobDepartment(job) ||
+      "Department information unavailable";
+
+    const qualification =
+      getJobQualification(job) ||
+      "Qualification information unavailable";
+
+    const state =
+      getJobState(job) ||
+      "All India";
+
+    const category =
+      getJobCategory(job) ||
+      "Government Job";
+
+    const lastDate =
+      getJobLastDate(job) ||
+      "Not available";
+
+    const vacancy =
+      getJobVacancy(job);
+
+    const salary =
+      getJobSalary(job);
+
+    const status =
+      getJobStatusLabel(job);
+
+    const jobId =
+      job.id ||
+      job.jobId ||
+      title.toLowerCase().replace(/\s+/g, "-");
+
+    const detailURL =
+      typeof getJobDetailURL === "function"
+        ? getJobDetailURL(jobId)
+        : "jobs.html?job=" +
+          encodeURIComponent(jobId);
+
+    const officialURL =
+      jobOfficialURL(job);
+
+    const statusClass =
+      status.toLowerCase() === "closed"
+        ? "badge-danger"
+        : status.toLowerCase() === "upcoming"
+        ? "badge-warning"
+        : "badge-success";
+
+    card.setAttribute(
+      "data-job-id",
+      jobId
+    );
+
+    card.innerHTML = `
+      <div class="job-badge ${statusClass}">
+        ${escapeHTML(status)}
+      </div>
+
+      <h3 class="job-title">
+        ${escapeHTML(title)}
+      </h3>
+
+      <p class="job-department">
+        ${escapeHTML(department)}
+      </p>
+
+      <div class="job-meta">
+        <span>
+          <strong>Qualification:</strong>
+          ${escapeHTML(qualification)}
+        </span>
+
+        <span>
+          <strong>State:</strong>
+          ${escapeHTML(state)}
+        </span>
+
+        <span>
+          <strong>Category:</strong>
+          ${escapeHTML(category)}
+        </span>
+
+        ${
+          vacancy !== ""
+            ? `<span>
+                <strong>Vacancy:</strong>
+                ${escapeHTML(jobText(vacancy))}
+              </span>`
+            : ""
+        }
+
+        ${
+          salary
+            ? `<span>
+                <strong>Salary:</strong>
+                ${escapeHTML(salary)}
+              </span>`
+            : ""
+        }
+
+        <span>
+          <strong>Last Date:</strong>
+          ${escapeHTML(lastDate)}
+        </span>
+      </div>
+
+      <div class="job-actions">
+        <a
+          class="btn btn-primary"
+          href="${escapeHTML(detailURL)}"
+        >
+          Full Details
+        </a>
+
+        ${
+          officialURL
+            ? `<a
+                class="btn btn-secondary"
+                href="${escapeHTML(officialURL)}"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Official Website
+              </a>`
+            : `<button
+                type="button"
+                class="btn btn-secondary"
+                disabled
+              >
+                Official Link Not Verified
+              </button>`
+        }
+
+        <button
+          type="button"
+          class="btn btn-success job-save-btn"
+          data-job-id="${escapeHTML(jobId)}"
+        >
+          Save Job
+        </button>
+      </div>
+    `;
+
+    return card;
+  }
+
+  /* ---------- RENDER ---------- */
+
+  function renderLiveJobs(jobs) {
+    const container =
+      getJobsPageElement("jobs-grid") ||
+      getJobsPageElement("jobs-list");
+
+    if (!container) {
+      return;
+    }
+
+    container.innerHTML = "";
+
+    if (!jobs.length) {
+      const empty =
+        getJobsPageElement("no-job-results") ||
+        getJobsPageElement("jobs-empty");
+
+      if (empty) {
+        empty.style.display = "block";
+      }
+
+      return;
+    }
+
+    const empty =
+      getJobsPageElement("no-job-results") ||
+      getJobsPageElement("jobs-empty");
+
+    if (empty) {
+      empty.style.display = "none";
+    }
+
+    jobs.forEach(function (job) {
+      container.appendChild(
+        createLiveJobCard(job)
+      );
+    });
+
+    if (
+      typeof setupSavedJobEvents === "function"
+    ) {
+      setupSavedJobEvents();
+    }
+  }
+
+  /* ---------- STATS ---------- */
+
+  function updateJobsPageStats(allJobs, filteredJobs) {
+    const total =
+      getJobsPageElement("jobs-total-count");
+
+    const newest =
+      getJobsPageElement("jobs-new-count");
+
+    const lastDate =
+      getJobsPageElement("jobs-last-date-count");
+
+    if (total) {
+      total.textContent =
+        String(allJobs.length);
+    }
+
+    if (newest) {
+      newest.textContent =
+        String(
+          allJobs.filter(function (job) {
+            return getJobStatus(job) === "open";
+          }).length
+        );
+    }
+
+    if (lastDate) {
+      lastDate.textContent =
+        String(filteredJobs.length);
+    }
+
+    if (
+      typeof updateSavedJobCount === "function"
+    ) {
+      updateSavedJobCount();
+    }
+  }
+
+  /* ---------- READ FILTER UI ---------- */
+
+  function getJobsPageFilters() {
+    const search =
+      getJobsPageElement("job-search");
+
+    const qualification =
+      getJobsPageElement("job-qualification");
+
+    const department =
+      getJobsPageElement("job-department");
+
+    const state =
+      getJobsPageElement("job-state");
+
+    const category =
+      getJobsPageElement("job-category");
+
+    const status =
+      getJobsPageElement("job-status-filter");
+
+    return {
+      search: search ? search.value.trim() : "",
+      qualification: qualification
+        ? qualification.value
+        : "",
+      department: department
+        ? department.value
+        : "",
+      state: state
+        ? state.value
+        : "",
+      category: category
+        ? category.value
+        : "",
+      status: status
+        ? status.value
+        : "all"
+    };
+  }
+
+  /* ---------- SORT UI ---------- */
+
+  function getJobsSortValue() {
+    const sort =
+      getJobsPageElement("job-sort");
+
+    return sort
+      ? sort.value
+      : "default";
+  }
+
+  /* ---------- APPLY FILTERS ---------- */
+
+  function refreshJobsPage() {
+    if (!isJobsPage()) {
+      return;
+    }
+
+    const allJobs =
+      getLiveJobDatabase();
+
+    const filters =
+      getJobsPageFilters();
+
+    let filtered =
+      filterJobsDatabase(
+        allJobs,
+        filters
+      );
+
+    filtered =
+      sortJobsDatabase(
+        filtered,
+        getJobsSortValue()
+      );
+
+    renderLiveJobs(filtered);
+
+    updateJobsPageStats(
+      allJobs,
+      filtered
+    );
+  }
+
+  /* ---------- FILTER EVENTS ---------- */
+
+  function setupJobsPageFilters() {
+    const ids = [
+      "job-search",
+      "job-qualification",
+      "job-department",
+      "job-state",
+      "job-category",
+      "job-status-filter",
+      "job-sort"
+    ];
+
+    ids.forEach(function (id) {
+      const element =
+        getJobsPageElement(id);
+
+      if (!element) {
+        return;
+      }
+
+      element.addEventListener(
+        "change",
+        refreshJobsPage
+      );
+
+      if (
+        id === "job-search"
+      ) {
+        element.addEventListener(
+          "input",
+          function () {
+            clearTimeout(
+              element._searchTimer
+            );
+
+            element._searchTimer =
+              setTimeout(
+                refreshJobsPage,
+                250
+              );
+          }
+        );
+      }
+    });
+  }
+
+  /* ---------- APPLY BUTTON ---------- */
+
+  function setupJobsApplyButton() {
+    const button =
+      document.querySelector(
+        "#job-filter-apply, #apply-job-filters, [data-job-filter-apply]"
+      );
+
+    if (!button) {
+      return;
+    }
+
+    button.addEventListener(
+      "click",
+      function (event) {
+        event.preventDefault();
+        refreshJobsPage();
+      }
+    );
+  }
+
+  /* ---------- RESET BUTTON ---------- */
+
+  function resetJobsPageFilters() {
+    [
+      "job-search",
+      "job-qualification",
+      "job-department",
+      "job-state",
+      "job-category"
+    ].forEach(function (id) {
+      const element =
+        getJobsPageElement(id);
+
+      if (element) {
+        element.value = "";
+      }
+    });
+
+    const status =
+      getJobsPageElement(
+        "job-status-filter"
+      );
+
+    if (status) {
+      status.value = "all";
+    }
+
+    const sort =
+      getJobsPageElement("job-sort");
+
+    if (sort) {
+      sort.value = "default";
+    }
+
+    refreshJobsPage();
+  }
+
+  function setupJobsResetButton() {
+    const button =
+      document.querySelector(
+        "#job-filter-reset, #reset-job-filters, #clear-job-filters, [data-job-filter-reset]"
+      );
+
+    if (!button) {
+      return;
+    }
+
+    button.addEventListener(
+      "click",
+      function (event) {
+        event.preventDefault();
+        resetJobsPageFilters();
+      }
+    );
+  }
+
+  /* ---------- INITIALIZE ---------- */
+
+  function initializeJobsPageLiveSystem() {
+    if (!isJobsPage()) {
+      return;
+    }
+
+    setupJobsPageFilters();
+    setupJobsApplyButton();
+    setupJobsResetButton();
+
+    refreshJobsPage();
+  }
+
+  /* ---------- GLOBAL API ---------- */
+
+  window.SarkariiChijJobsPage =
+    window.SarkariiChijJobsPage || {};
+
+  window.SarkariiChijJobsPage.refresh =
+    refreshJobsPage;
+
+  window.SarkariiChijJobsPage.reset =
+    resetJobsPageFilters;
+
+  window.SarkariiChijJobsPage.getJobs =
+    getLiveJobDatabase;
+
+  window.SarkariiChijJobsPage.filter =
+    filterJobsDatabase;
+
+  window.SarkariiChijJobsPage.sort =
+    sortJobsDatabase;
+
+  /* ---------- DOM READY ---------- */
+
+  if (
+    document.readyState === "loading"
+  ) {
+    document.addEventListener(
+      "DOMContentLoaded",
+      initializeJobsPageLiveSystem
+    );
+  } else {
+    initializeJobsPageLiveSystem();
+  }
+
+})();
+
+/* =========================================================
+   END SCRIPT.JS PART 30
+   ========================================================= */
+/* =========================================================
+   SARKARIIICHIJ — SCRIPT.JS PART 31
+   LAST DATE + SAVED JOBS + APPLICATION TRACKER + REMINDERS
+   ========================================================= */
+
+(function () {
+  "use strict";
+
+  /* ---------- PAGE CHECK ---------- */
+
+  function isJobsPage31() {
+    return !!(
+      document.getElementById("jobs-grid") ||
+      document.getElementById("saved-jobs-section") ||
+      document.getElementById("application-tracker-section") ||
+      document.getElementById("job-reminders-section")
+    );
+  }
+
+  function getJobs31() {
+    if (
+      typeof SarkariiChijJobs !== "undefined" &&
+      Array.isArray(SarkariiChijJobs)
+    ) {
+      return SarkariiChijJobs.slice();
+    }
+
+    if (
+      window.SarkariiChijJobs &&
+      Array.isArray(window.SarkariiChijJobs)
+    ) {
+      return window.SarkariiChijJobs.slice();
+    }
+
+    return [];
+  }
+
+  function field31(job, names) {
+    if (!job) {
+      return "";
+    }
+
+    for (const name of names) {
+      if (
+        job[name] !== undefined &&
+        job[name] !== null &&
+        job[name] !== ""
+      ) {
+        return job[name];
+      }
+    }
+
+    return "";
+  }
+
+  function text31(value) {
+    if (
+      value === null ||
+      value === undefined
+    ) {
+      return "";
+    }
+
+    if (typeof value === "object") {
+      return Object.values(value).join(" ");
+    }
+
+    return String(value);
+  }
+
+  function jobId31(job) {
+    return String(
+      field31(job, [
+        "id",
+        "jobId",
+        "slug"
+      ]) ||
+      field31(job, [
+        "post",
+        "title",
+        "name"
+      ])
+    )
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-|-$/g, "");
+  }
+
+  function jobTitle31(job) {
+    return text31(
+      field31(job, [
+        "post",
+        "title",
+        "name",
+        "postName",
+        "jobTitle"
+      ])
+    ) || "Government Job";
+  }
+
+  function lastDate31(job) {
+    return text31(
+      field31(job, [
+        "lastDate",
+        "last_date",
+        "applicationLastDate",
+        "closingDate"
+      ])
+    );
+  }
+
+  function department31(job) {
+    return text31(
+      field31(job, [
+        "department",
+        "organization",
+        "organisation"
+      ])
+    ) || "Department not available";
+  }
+
+  /* ---------- DATE PARSER ---------- */
+
+  function parseDate31(value) {
+    if (!value) {
+      return null;
+    }
+
+    const direct =
+      new Date(value);
+
+    if (!Number.isNaN(
+      direct.getTime()
+    )) {
+      return direct;
+    }
+
+    const match =
+      String(value).match(
+        /^(\d{1,2})[-/](\d{1,2})[-/](\d{4})$/
+      );
+
+    if (match) {
+      return new Date(
+        Number(match[3]),
+        Number(match[2]) - 1,
+        Number(match[1])
+      );
+    }
+
+    return null;
+  }
+
+  function daysLeft31(dateValue) {
+    const date =
+      parseDate31(dateValue);
+
+    if (!date) {
+      return null;
+    }
+
+    const today =
+      new Date();
+
+    today.setHours(
+      0, 0, 0, 0
+    );
+
+    date.setHours(
+      23, 59, 59, 999
+    );
+
+    return Math.ceil(
+      (
+        date.getTime() -
+        today.getTime()
+      ) /
+      86400000
+    );
+  }
+
+  function formatDate31(value) {
+    const date =
+      parseDate31(value);
+
+    if (!date) {
+      return value || "Not available";
+    }
+
+    return date.toLocaleDateString(
+      "en-IN",
+      {
+        day: "2-digit",
+        month: "short",
+        year: "numeric"
+      }
+    );
+  }
+
+  /* ---------- LAST DATE ALERT ---------- */
+
+  function renderLastDateAlerts31() {
+    const container =
+      document.getElementById(
+        "job-last-date-list"
+      );
+
+    if (!container) {
+      return;
+    }
+
+    const jobs =
+      getJobs31();
+
+    const validJobs =
+      jobs
+        .map(function (job) {
+          return {
+            job: job,
+            days: daysLeft31(
+              lastDate31(job)
+            )
+          };
+        })
+        .filter(function (item) {
+          return (
+            item.days !== null &&
+            item.days >= 0
+          );
+        })
+        .sort(function (a, b) {
+          return a.days - b.days;
+        })
+        .slice(0, 10);
+
+    container.innerHTML = "";
+
+    if (!validJobs.length) {
+      container.innerHTML = `
+        <div class="empty-box">
+          Last-date information is not available.
+        </div>
+      `;
+      return;
+    }
+
+    validJobs.forEach(function (item) {
+      const job =
+        item.job;
+
+      const id =
+        jobId31(job);
+
+      const title =
+        jobTitle31(job);
+
+      let urgency =
+        "Upcoming";
+
+      if (item.days === 0) {
+        urgency =
+          "Last Date Today";
+      } else if (item.days <= 3) {
+        urgency =
+          "Urgent";
+      } else if (item.days <= 7) {
+        urgency =
+          "Closing Soon";
+      }
+
+      const detailURL =
+        typeof getJobDetailURL === "function"
+          ? getJobDetailURL(id)
+          : "jobs.html?job=" +
+            encodeURIComponent(id);
+
+      const itemElement =
+        document.createElement("div");
+
+      itemElement.className =
+        "last-date-item";
+
+      itemElement.innerHTML = `
+        <div>
+          <strong>
+            ${escapeHTML(title)}
+          </strong>
+
+          <small>
+            ${escapeHTML(
+              department31(job)
+            )}
+          </small>
+        </div>
+
+        <div>
+          <span class="badge">
+            ${escapeHTML(urgency)}
+          </span>
+
+          <small>
+            Last Date:
+            ${escapeHTML(
+              formatDate31(
+                lastDate31(job)
+              )
+            )}
+          </small>
+
+          <a
+            href="${escapeHTML(
+              detailURL
+            )}"
+            class="btn btn-primary"
+          >
+            Details
+          </a>
+        </div>
+      `;
+
+      container.appendChild(
+        itemElement
+      );
+    });
+  }
+
+  /* ---------- SAVED JOBS ---------- */
+
+  function getSaved31() {
+    if (
+      typeof getSavedJobs === "function"
+    ) {
+      return getSavedJobs();
+    }
+
+    return [];
+  }
+
+  function savedId31(item) {
+    if (
+      typeof item === "string"
+    ) {
+      return item;
+    }
+
+    if (
+      item &&
+      typeof item === "object"
+    ) {
+      return String(
+        item.id ||
+        item.jobId ||
+        item
+          .job_id ||
+        ""
+      );
+    }
+
+    return "";
+  }
+
+  function renderSavedJobs31() {
+    const container =
+      document.getElementById(
+        "saved-jobs-list"
+      );
+
+    if (!container) {
+      return;
+    }
+
+    const saved =
+      getSaved31();
+
+    const jobs =
+      getJobs31();
+
+    const savedIds =
+      saved
+        .map(savedId31)
+        .filter(Boolean);
+
+    const matched =
+      jobs.filter(function (job) {
+        return savedIds.includes(
+          jobId31(job)
+        );
+      });
+
+    container.innerHTML = "";
+
+    if (!matched.length) {
+      container.innerHTML = `
+        <div class="empty-box">
+          <h3>No saved jobs</h3>
+          <p>
+            Save a job to see it here.
+          </p>
+        </div>
+      `;
+      return;
+    }
+
+    matched.forEach(function (job) {
+      const id =
+        jobId31(job);
+
+      const url =
+        typeof getJobDetailURL === "function"
+          ? getJobDetailURL(id)
+          : "jobs.html?job=" +
+            encodeURIComponent(id);
+
+      const card =
+        document.createElement("div");
+
+      card.className =
+        "tracker-item";
+
+      card.innerHTML = `
+        <div class="tracker-info">
+          <strong>
+            ${escapeHTML(
+              jobTitle31(job)
+            )}
+          </strong>
+
+          <span>
+            ${escapeHTML(
+              department31(job)
+            )}
+          </span>
+
+          <span>
+            Last Date:
+            ${escapeHTML(
+              formatDate31(
+                lastDate31(job)
+              )
+            )}
+          </span>
+        </div>
+
+        <div class="tracker-status">
+          <a
+            class="btn btn-primary"
+            href="${escapeHTML(url)}"
+          >
+            View
+          </a>
+
+          <button
+            type="button"
+            class="btn btn-danger"
+            data-remove-saved-job="${escapeHTML(id)}"
+          >
+            Remove
+          </button>
+        </div>
+      `;
+
+      container.appendChild(card);
+    });
+
+    container
+      .querySelectorAll(
+        "[data-remove-saved-job]"
+      )
+      .forEach(function (button) {
+        button.addEventListener(
+          "click",
+          function () {
+            const id =
+              button.getAttribute(
+                "data-remove-saved-job"
+              );
+
+            if (
+              typeof removeSavedJob ===
+              "function"
+            ) {
+              removeSavedJob(id);
+            }
+
+            renderSavedJobs31();
+
+            if (
+              typeof updateDashboardCounts ===
+              "function"
+            ) {
+              updateDashboardCounts();
+            }
+
+            if (
+              typeof showToast ===
+              "function"
+            ) {
+              showToast(
+                "Saved job removed.",
+                "success"
+              );
+            }
+          }
+        );
+      });
+  }
+
+  /* ---------- APPLICATION TRACKER ---------- */
+
+  function renderApplicationTracker31() {
+    const container =
+      document.getElementById(
+        "application-tracker-list"
+      );
+
+    if (!container) {
+      return;
+    }
+
+    const applications =
+      typeof getApplications ===
+      "function"
+        ? getApplications()
+        : [];
+
+    const jobs =
+      getJobs31();
+
+    container.innerHTML = "";
+
+    if (!applications.length) {
+      container.innerHTML = `
+        <div class="empty-box">
+          <h3>No applications tracked</h3>
+          <p>
+            Track your job applications from
+            the job details page.
+          </p>
+        </div>
+      `;
+      return;
+    }
+
+    applications.forEach(function (
+      application
+    ) {
+      const id =
+        String(
+          application.id ||
+          application.jobId ||
+          ""
+        );
+
+      const job =
+        jobs.find(function (item) {
+          return (
+            jobId31(item) === id
+          );
+        });
+
+      const title =
+        job
+          ? jobTitle31(job)
+          : (
+              application.title ||
+              "Government Job"
+            );
+
+      const status =
+        application.status ||
+        "Applied";
+
+      const row =
+        document.createElement("div");
+
+      row.className =
+        "tracker-item";
+
+      row.innerHTML = `
+        <div class="tracker-info">
+          <strong>
+            ${escapeHTML(title)}
+          </strong>
+
+          <span>
+            Status:
+            ${escapeHTML(
+              String(status)
+            )}
+          </span>
+
+          ${
+            application.date
+              ? `<span>
+                  Date:
+                  ${escapeHTML(
+                    formatDate31(
+                      application.date
+                    )
+                  )}
+                </span>`
+              : ""
+          }
+        </div>
+
+        <div class="tracker-status">
+          <select
+            class="application-status-select"
+            data-application-id="${escapeHTML(id)}"
+          >
+            <option value="Applied"
+              ${
+                status === "Applied"
+                  ? "selected"
+                  : ""
+              }>
+              Applied
+            </option>
+
+            <option value="Admit Card"
+              ${
+                status === "Admit Card"
+                  ? "selected"
+                  : ""
+              }>
+              Admit Card
+            </option>
+
+            <option value="Exam"
+              ${
+                status === "Exam"
+                  ? "selected"
+                  : ""
+              }>
+              Exam
+            </option>
+
+            <option value="Result"
+              ${
+                status === "Result"
+                  ? "selected"
+                  : ""
+              }>
+              Result
+            </option>
+
+            <option value="Selected"
+              ${
+                status === "Selected"
+                  ? "selected"
+                  : ""
+              }>
+              Selected
+            </option>
+
+            <option value="Rejected"
+              ${
+                status === "Rejected"
+                  ? "selected"
+                  : ""
+              }>
+              Rejected
+            </option>
+          </select>
+
+          <button
+            type="button"
+            class="btn btn-danger"
+            data-remove-application="${escapeHTML(id)}"
+          >
+            Remove
+          </button>
+        </div>
+      `;
+
+      container.appendChild(row);
+    });
+
+    container
+      .querySelectorAll(
+        ".application-status-select"
+      )
+      .forEach(function (select) {
+        select.addEventListener(
+          "change",
+          function () {
+            const id =
+              select.getAttribute(
+                "data-application-id"
+              );
+
+            if (
+              typeof updateApplicationStatus ===
+              "function"
+            ) {
+              updateApplicationStatus(
+                id,
+                select.value
+              );
+            }
+
+            if (
+              typeof showToast ===
+              "function"
+            ) {
+              showToast(
+                "Application status updated.",
+                "success"
+              );
+            }
+          }
+        );
+      });
+
+    container
+      .querySelectorAll(
+        "[data-remove-application]"
+      )
+      .forEach(function (button) {
+        button.addEventListener(
+          "click",
+          function () {
+            const id =
+              button.getAttribute(
+                "data-remove-application"
+              );
+
+            if (
+              typeof removeApplication ===
+              "function"
+            ) {
+              removeApplication(id);
+            }
+
+            renderApplicationTracker31();
+
+            if (
+              typeof updateDashboardCounts ===
+              "function"
+            ) {
+              updateDashboardCounts();
+            }
+          }
+        );
+      });
+  }
+
+  /* ---------- REMINDERS ---------- */
+
+  function renderJobReminders31() {
+    const container =
+      document.getElementById(
+        "job-reminders-list"
+      );
+
+    if (!container) {
+      return;
+    }
+
+    const reminders =
+      typeof getReminders ===
+      "function"
+        ? getReminders()
+        : [];
+
+    const jobs =
+      getJobs31();
+
+    container.innerHTML = "";
+
+    if (!reminders.length) {
+      container.innerHTML = `
+        <div class="empty-box">
+          <h3>No reminders</h3>
+          <p>
+            Set a reminder for important jobs.
+          </p>
+        </div>
+      `;
+      return;
+    }
+
+    reminders.forEach(function (
+      reminder
+    ) {
+      const id =
+        String(
+          reminder.jobId ||
+          reminder.id ||
+          ""
+        );
+
+      const job =
+        jobs.find(function (item) {
+          return (
+            jobId31(item) === id
+          );
+        });
+
+      const title =
+        job
+          ? jobTitle31(job)
+          : (
+              reminder.title ||
+              "Government Job"
+            );
+
+      const reminderDate =
+        reminder.date ||
+        reminder.reminderDate;
+
+      const row =
+        document.createElement("div");
+
+      row.className =
+        "reminder-item";
+
+      row.innerHTML = `
+        <div>
+          <strong>
+            ${escapeHTML(title)}
+          </strong>
+
+          <span>
+            Reminder:
+            ${escapeHTML(
+              formatDate31(
+                reminderDate
+              )
+            )}
+          </span>
+        </div>
+
+        <button
+          type="button"
+          class="btn btn-danger"
+          data-remove-reminder="${escapeHTML(
+            String(
+              reminder.id ||
+              reminder.jobId ||
+              ""
+            )
+          )}"
+        >
+          Remove
+        </button>
+      `;
+
+      container.appendChild(row);
+    });
+
+    container
+      .querySelectorAll(
+        "[data-remove-reminder]"
+      )
+      .forEach(function (button) {
+        button.addEventListener(
+          "click",
+          function () {
+            const id =
+              button.getAttribute(
+                "data-remove-reminder"
+              );
+
+            if (
+              typeof removeReminder ===
+              "function"
+            ) {
+              removeReminder(id);
+            }
+
+            renderJobReminders31();
+
+            if (
+              typeof updateDashboardCounts ===
+              "function"
+            ) {
+              updateDashboardCounts();
+            }
+          }
+        );
+      });
+  }
+
+  /* ---------- ALL JOB MANAGEMENT ---------- */
+
+  function refreshAllJobManagement31() {
+    if (!isJobsPage31()) {
+      return;
+    }
+
+    renderLastDateAlerts31();
+    renderSavedJobs31();
+    renderApplicationTracker31();
+    renderJobReminders31();
+
+    if (
+      typeof updateDashboardCounts ===
+      "function"
+    ) {
+      updateDashboardCounts();
+    }
+  }
+
+  /* ---------- AUTO REFRESH ---------- */
+
+  function setupJobManagementRefresh31() {
+    window.addEventListener(
+      "storage",
+      function () {
+        refreshAllJobManagement31();
+      }
+    );
+
+    window.addEventListener(
+      "sarkariiichij:data-updated",
+      function () {
+        refreshAllJobManagement31();
+      }
+    );
+  }
+
+  /* ---------- GLOBAL API ---------- */
+
+  window.SarkariiChijJobsManagement =
+    window.SarkariiChijJobsManagement ||
+    {};
+
+  window.SarkariiChijJobsManagement.refresh =
+    refreshAllJobManagement31;
+
+  window.SarkariiChijJobsManagement.lastDates =
+    renderLastDateAlerts31;
+
+  window.SarkariiChijJobsManagement.saved =
+    renderSavedJobs31;
+
+  window.SarkariiChijJobsManagement.applications =
+    renderApplicationTracker31;
+
+  window.SarkariiChijJobsManagement.reminders =
+    renderJobReminders31;
+
+  /* ---------- INITIALIZATION ---------- */
+
+  function initializePart31() {
+    if (!isJobsPage31()) {
+      return;
+    }
+
+    setupJobManagementRefresh31();
+    refreshAllJobManagement31();
+  }
+
+  if (
+    document.readyState === "loading"
+  ) {
+    document.addEventListener(
+      "DOMContentLoaded",
+      initializePart31
+    );
+  } else {
+    initializePart31();
+  }
+
+})();
+
+/* =========================================================
+   END SCRIPT.JS PART 31
+   ========================================================= */
+/* =========================================================
+   SARKARIIICHIJ — SCRIPT.JS PART 32
+   JOB PAGINATION + QUICK FILTERS + RESULT COUNT
+   ========================================================= */
+
+(function () {
+  "use strict";
+
+  /* ---------- SETTINGS ---------- */
+
+  const JOBS_PER_PAGE = 10;
+
+  let jobsPage32State = {
+    currentPage: 1,
+    totalPages: 1,
+    filteredJobs: []
+  };
+
+  /* ---------- PAGE CHECK ---------- */
+
+  function isJobsPage32() {
+    return !!(
+      document.getElementById("jobs-grid") ||
+      document.getElementById("jobs-pagination")
+    );
+  }
+
+  /* ---------- DATABASE ---------- */
+
+  function getJobs32() {
+    if (
+      typeof SarkariiChijJobs !== "undefined" &&
+      Array.isArray(SarkariiChijJobs)
+    ) {
+      return SarkariiChijJobs.slice();
+    }
+
+    if (
+      window.SarkariiChijJobs &&
+      Array.isArray(window.SarkariiChijJobs)
+    ) {
+      return window.SarkariiChijJobs.slice();
+    }
+
+    return [];
+  }
+
+  /* ---------- HELPERS ---------- */
+
+  function jobId32(job) {
+    const raw =
+      job.id ||
+      job.jobId ||
+      job.slug ||
+      job.post ||
+      job.title ||
+      job.name ||
+      "";
+
+    return String(raw)
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-|-$/g, "");
+  }
+
+  function jobTitle32(job) {
+    return String(
+      job.post ||
+      job.title ||
+      job.name ||
+      job.postName ||
+      job.jobTitle ||
+      "Government Job"
+    );
+  }
+
+  function jobQualification32(job) {
+    return String(
+      job.qualification ||
+      job.education ||
+      job.eligibility ||
+      ""
+    );
+  }
+
+  function jobDepartment32(job) {
+    return String(
+      job.department ||
+      job.organization ||
+      job.organisation ||
+      ""
+    );
+  }
+
+  function jobState32(job) {
+    return String(
+      job.state ||
+      job.stateName ||
+      job.location ||
+      ""
+    );
+  }
+
+  function jobCategory32(job) {
+    return String(
+      job.category ||
+      job.jobCategory ||
+      job.type ||
+      ""
+    );
+  }
+
+  /* ---------- FILTER DATABASE ---------- */
+
+  function getCurrentFilteredJobs32() {
+    let jobs = getJobs32();
+
+    if (
+      typeof filterJobsDatabase ===
+      "function"
+    ) {
+      const filters =
+        typeof getJobsPageFilters ===
+        "function"
+          ? getJobsPageFilters()
+          : {
+              search: "",
+              qualification: "",
+              department: "",
+              state: "",
+              category: "",
+              status: "all"
+            };
+
+      jobs =
+        filterJobsDatabase(
+          jobs,
+          filters
+        );
+    }
+
+    if (
+      typeof sortJobsDatabase ===
+      "function"
+    ) {
+      const sortElement =
+        document.getElementById(
+          "job-sort"
+        );
+
+      const sortValue =
+        sortElement
+          ? sortElement.value
+          : "default";
+
+      jobs =
+        sortJobsDatabase(
+          jobs,
+          sortValue
+        );
+    }
+
+    return jobs;
+  }
+
+  /* ---------- RESULT COUNT ---------- */
+
+  function renderResultCount32(
+    total,
+    start,
+    end
+  ) {
+    const possibleIds = [
+      "job-result-count",
+      "jobs-result-count",
+      "jobs-showing-count",
+      "jobs-total-visible"
+    ];
+
+    let element = null;
+
+    for (
+      const id of possibleIds
+    ) {
+      const found =
+        document.getElementById(id);
+
+      if (found) {
+        element = found;
+        break;
+      }
+    }
+
+    if (!element) {
+      return;
+    }
+
+    if (!total) {
+      element.textContent =
+        "0 jobs found";
+      return;
+    }
+
+    element.textContent =
+      `Showing ${start}-${end} of ${total} jobs`;
+  }
+
+  /* ---------- NO RESULTS ---------- */
+
+  function renderNoResults32(
+    show
+  ) {
+    const elements = [
+      document.getElementById(
+        "no-job-results"
+      ),
+      document.getElementById(
+        "jobs-empty"
+      )
+    ].filter(Boolean);
+
+    elements.forEach(
+      function (element) {
+        element.style.display =
+          show ? "block" : "none";
+      }
+    );
+
+    const grid =
+      document.getElementById(
+        "jobs-grid"
+      );
+
+    if (show && grid) {
+      grid.innerHTML = "";
+    }
+  }
+
+  /* ---------- PAGINATION UI ---------- */
+
+  function renderPagination32(
+    totalPages,
+    currentPage
+  ) {
+    const container =
+      document.getElementById(
+        "jobs-pagination"
+      );
+
+    if (!container) {
+      return;
+    }
+
+    container.innerHTML = "";
+
+    if (totalPages <= 1) {
+      return;
+    }
+
+    const wrapper =
+      document.createElement("div");
+
+    wrapper.className =
+      "pagination";
+
+    /* Previous */
+
+    const previous =
+      document.createElement("button");
+
+    previous.type =
+      "button";
+
+    previous.className =
+      "btn btn-secondary";
+
+    previous.textContent =
+      "← Previous";
+
+    previous.disabled =
+      currentPage <= 1;
+
+    previous.addEventListener(
+      "click",
+      function () {
+        if (
+          jobsPage32State.currentPage >
+          1
+        ) {
+          jobsPage32State.currentPage--;
+          renderCurrentPage32();
+          scrollToJobsTop32();
+        }
+      }
+    );
+
+    wrapper.appendChild(
+      previous
+    );
+
+    /* Page numbers */
+
+    const maxButtons = 7;
+
+    let startPage =
+      Math.max(
+        1,
+        currentPage -
+          Math.floor(
+            maxButtons / 2
+          )
+      );
+
+    let endPage =
+      Math.min(
+        totalPages,
+        startPage +
+          maxButtons -
+          1
+      );
+
+    if (
+      endPage - startPage + 1 <
+      maxButtons
+    ) {
+      startPage =
+        Math.max(
+          1,
+          endPage -
+            maxButtons +
+            1
+        );
+    }
+
+    for (
+      let page = startPage;
+      page <= endPage;
+      page++
+    ) {
+      const button =
+        document.createElement(
+          "button"
+        );
+
+      button.type =
+        "button";
+
+      button.className =
+        "question-number-btn";
+
+      if (
+        page === currentPage
+      ) {
+        button.classList.add(
+          "active"
+        );
+      }
+
+      button.textContent =
+        String(page);
+
+      button.addEventListener(
+        "click",
+        function () {
+          jobsPage32State.currentPage =
+            page;
+
+          renderCurrentPage32();
+          scrollToJobsTop32();
+        }
+      );
+
+      wrapper.appendChild(
+        button
+      );
+    }
+
+    /* Next */
+
+    const next =
+      document.createElement("button");
+
+    next.type =
+      "button";
+
+    next.className =
+      "btn btn-secondary";
+
+    next.textContent =
+      "Next →";
+
+    next.disabled =
+      currentPage >= totalPages;
+
+    next.addEventListener(
+      "click",
+      function () {
+        if (
+          jobsPage32State.currentPage <
+          jobsPage32State.totalPages
+        ) {
+          jobsPage32State.currentPage++;
+
+          renderCurrentPage32();
+
+          scrollToJobsTop32();
+        }
+      }
+    );
+
+    wrapper.appendChild(
+      next
+    );
+
+    container.appendChild(
+      wrapper
+    );
+  }
+
+  /* ---------- SCROLL ---------- */
+
+  function scrollToJobsTop32() {
+    const target =
+      document.getElementById(
+        "jobs-grid"
+      ) ||
+      document.getElementById(
+        "jobs-list"
+      );
+
+    if (!target) {
+      return;
+    }
+
+    const position =
+      target.getBoundingClientRect()
+        .top +
+      window.scrollY -
+      100;
+
+    window.scrollTo({
+      top: position,
+      behavior: "smooth"
+    });
+  }
+
+  /* ---------- RENDER CURRENT PAGE ---------- */
+
+  function renderCurrentPage32() {
+    if (!isJobsPage32()) {
+      return;
+    }
+
+    const allFiltered =
+      jobsPage32State.filteredJobs;
+
+    const total =
+      allFiltered.length;
+
+    jobsPage32State.totalPages =
+      Math.max(
+        1,
+        Math.ceil(
+          total /
+          JOBS_PER_PAGE
+        )
+      );
+
+    if (
+      jobsPage32State.currentPage >
+      jobsPage32State.totalPages
+    ) {
+      jobsPage32State.currentPage =
+        jobsPage32State.totalPages;
+    }
+
+    const startIndex =
+      (
+        jobsPage32State.currentPage -
+        1
+      ) *
+      JOBS_PER_PAGE;
+
+    const endIndex =
+      Math.min(
+        startIndex +
+          JOBS_PER_PAGE,
+        total
+      );
+
+    const pageJobs =
+      allFiltered.slice(
+        startIndex,
+        endIndex
+      );
+
+    const grid =
+      document.getElementById(
+        "jobs-grid"
+      );
+
+    const list =
+      document.getElementById(
+        "jobs-list"
+      );
+
+    const container =
+      grid || list;
+
+    if (!container) {
+      return;
+    }
+
+    container.innerHTML = "";
+
+    if (!pageJobs.length) {
+      renderNoResults32(true);
+      renderPagination32(
+        1,
+        1
+      );
+      renderResultCount32(
+        0,
+        0,
+        0
+      );
+      return;
+    }
+
+    renderNoResults32(false);
+
+    pageJobs.forEach(
+      function (job) {
+        if (
+          typeof createLiveJobCard ===
+          "function"
+        ) {
+          container.appendChild(
+            createLiveJobCard(job)
+          );
+        }
+      }
+    );
+
+    renderResultCount32(
+      total,
+      startIndex + 1,
+      endIndex
+    );
+
+    renderPagination32(
+      jobsPage32State.totalPages,
+      jobsPage32State.currentPage
+    );
+
+    if (
+      typeof setupSavedJobEvents ===
+      "function"
+    ) {
+      setupSavedJobEvents();
+    }
+  }
+
+  /* ---------- REFRESH PAGINATION ---------- */
+
+  function refreshPagination32() {
+    if (!isJobsPage32()) {
+      return;
+    }
+
+    jobsPage32State.filteredJobs =
+      getCurrentFilteredJobs32();
+
+    jobsPage32State.currentPage =
+      1;
+
+    renderCurrentPage32();
+  }
+
+  /* ---------- QUICK FILTER ---------- */
+
+  function applyQuickJobFilter32(
+    type,
+    value
+  ) {
+    if (!value) {
+      return;
+    }
+
+    const map = {
+      qualification:
+        "job-qualification",
+
+      department:
+        "job-department",
+
+      state:
+        "job-state",
+
+      category:
+        "job-category"
+    };
+
+    const elementId =
+      map[type];
+
+    if (!elementId) {
+      return;
+    }
+
+    const element =
+      document.getElementById(
+        elementId
+      );
+
+    if (!element) {
+      return;
+    }
+
+    let matched = false;
+
+    Array.from(
+      element.options
+    ).forEach(
+      function (option) {
+        if (
+          option.value
+            .toLowerCase() ===
+          String(value)
+            .toLowerCase()
+        ) {
+          option.selected =
+            true;
+
+          matched = true;
+        }
+      }
+    );
+
+    if (!matched) {
+      element.value =
+        value;
+    }
+
+    refreshPagination32();
+
+    scrollToJobsTop32();
+  }
+
+  /* ---------- QUICK FILTER CARDS ---------- */
+
+  function setupQuickFilters32() {
+    document
+      .querySelectorAll(
+        "[data-job-quick-filter]"
+      )
+      .forEach(
+        function (element) {
+          element.addEventListener(
+            "click",
+            function (event) {
+              event.preventDefault();
+
+              const type =
+                element.getAttribute(
+                  "data-job-quick-filter"
+                );
+
+              const value =
+                element.getAttribute(
+                  "data-filter-value"
+                ) ||
+                element.textContent.trim();
+
+              applyQuickJobFilter32(
+                type,
+                value
+              );
+            }
+          );
+        }
+      );
+  }
+
+  /* ---------- CATEGORY LINKS ---------- */
+
+  function setupCategoryCards32() {
+    document
+      .querySelectorAll(
+        ".job-category-card, [data-job-category]"
+      )
+      .forEach(
+        function (card) {
+          card.addEventListener(
+            "click",
+            function () {
+              const category =
+                card.getAttribute(
+                  "data-job-category"
+                );
+
+              if (category) {
+                applyQuickJobFilter32(
+                  "category",
+                  category
+                );
+              }
+            }
+          );
+        }
+      );
+  }
+
+  /* ---------- QUALIFICATION LINKS ---------- */
+
+  function setupQualificationCards32() {
+    document
+      .querySelectorAll(
+        ".qualification-card, [data-job-qualification]"
+      )
+      .forEach(
+        function (card) {
+          card.addEventListener(
+            "click",
+            function () {
+              const qualification =
+                card.getAttribute(
+                  "data-job-qualification"
+                );
+
+              if (qualification) {
+                applyQuickJobFilter32(
+                  "qualification",
+                  qualification
+                );
+              }
+            }
+          );
+        }
+      );
+  }
+
+  /* ---------- SEARCH ENTER ---------- */
+
+  function setupSearchEnter32() {
+    const search =
+      document.getElementById(
+        "job-search"
+      );
+
+    if (!search) {
+      return;
+    }
+
+    search.addEventListener(
+      "keydown",
+      function (event) {
+        if (
+          event.key === "Enter"
+        ) {
+          event.preventDefault();
+
+          refreshPagination32();
+
+          scrollToJobsTop32();
+        }
+      }
+    );
+  }
+
+  /* ---------- HOOK INTO PART 30 ---------- */
+
+  function setupPart30Hook32() {
+    const original =
+      window.SarkariiChijJobsPage &&
+      window.SarkariiChijJobsPage.refresh;
+
+    if (
+      typeof original !==
+      "function"
+    ) {
+      return;
+    }
+
+    if (
+      original._part32Wrapped
+    ) {
+      return;
+    }
+
+    function wrappedRefresh() {
+      original();
+
+      setTimeout(
+        refreshPagination32,
+        0
+      );
+    }
+
+    wrappedRefresh._part32Wrapped =
+      true;
+
+    window.SarkariiChijJobsPage.refresh =
+      wrappedRefresh;
+  }
+
+  /* ---------- INITIALIZATION ---------- */
+
+  function initializePart32() {
+    if (!isJobsPage32()) {
+      return;
+    }
+
+    setupQuickFilters32();
+    setupCategoryCards32();
+    setupQualificationCards32();
+    setupSearchEnter32();
+
+    setupPart30Hook32();
+
+    setTimeout(
+      refreshPagination32,
+      100
+    );
+  }
+
+  /* ---------- GLOBAL API ---------- */
+
+  window.SarkariiChijJobsPagination =
+    window.SarkariiChijJobsPagination ||
+    {};
+
+  window.SarkariiChijJobsPagination.refresh =
+    refreshPagination32;
+
+  window.SarkariiChijJobsPagination.next =
+    function () {
+      if (
+        jobsPage32State.currentPage <
+        jobsPage32State.totalPages
+      ) {
+        jobsPage32State.currentPage++;
+        renderCurrentPage32();
+      }
+    };
+
+  window.SarkariiChijJobsPagination.previous =
+    function () {
+      if (
+        jobsPage32State.currentPage >
+        1
+      ) {
+        jobsPage32State.currentPage--;
+        renderCurrentPage32();
+      }
+    };
+
+  window.SarkariiChijJobsPagination.goTo =
+    function (page) {
+      const number =
+        Number(page);
+
+      if (
+        Number.isInteger(number) &&
+        number >= 1 &&
+        number <=
+          jobsPage32State.totalPages
+      ) {
+        jobsPage32State.currentPage =
+          number;
+
+        renderCurrentPage32();
+      }
+    };
+
+  window.SarkariiChijJobsPagination.state =
+    jobsPage32State;
+
+  /* ---------- DOM READY ---------- */
+
+  if (
+    document.readyState ===
+    "loading"
+  ) {
+    document.addEventListener(
+      "DOMContentLoaded",
+      initializePart32
+    );
+  } else {
+    initializePart32();
+  }
+
+})();
+
+/* =========================================================
+   END SCRIPT.JS PART 32
+   ========================================================= */
+/* =========================================================
+   SARKARIIICHIJ — SCRIPT.JS PART 33
+   COMPLETE JOB DETAIL PAGE CONTROLLER
+   ========================================================= */
+
+(function () {
+  "use strict";
+
+  /* ---------- PAGE CHECK ---------- */
+
+  function isJobDetailPage33() {
+    return !!(
+      document.getElementById("job-detail-content") ||
+      document.querySelector("[data-job-detail]")
+    );
+  }
+
+  /* ---------- GET JOB ID ---------- */
+
+  function getJobId33() {
+    const params =
+      new URLSearchParams(
+        window.location.search
+      );
+
+    return (
+      params.get("job") ||
+      params.get("jobId") ||
+      params.get("id") ||
+      ""
+    );
+  }
+
+  /* ---------- JOB DATABASE ---------- */
+
+  function getJobs33() {
+    if (
+      typeof SarkariiChijJobs !== "undefined" &&
+      Array.isArray(SarkariiChijJobs)
+    ) {
+      return SarkariiChijJobs;
+    }
+
+    if (
+      window.SarkariiChijJobs &&
+      Array.isArray(
+        window.SarkariiChijJobs
+      )
+    ) {
+      return window.SarkariiChijJobs;
+    }
+
+    return [];
+  }
+
+  /* ---------- NORMALIZE ID ---------- */
+
+  function normalizeJobId33(value) {
+    return String(value || "")
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-|-$/g, "");
+  }
+
+  /* ---------- FIND JOB ---------- */
+
+  function findJob33(id) {
+    const normalized =
+      normalizeJobId33(id);
+
+    return getJobs33().find(
+      function (job) {
+        const possibleIds = [
+          job.id,
+          job.jobId,
+          job.slug,
+          job.post,
+          job.title,
+          job.name
+        ];
+
+        return possibleIds.some(
+          function (value) {
+            return (
+              normalizeJobId33(
+                value
+              ) === normalized
+            );
+          }
+        );
+      }
+    );
+  }
+
+  /* ---------- SAFE VALUE ---------- */
+
+  function value33(
+    job,
+    fields,
+    fallback
+  ) {
+    if (!job) {
+      return fallback || "";
+    }
+
+    for (
+      const field of fields
+    ) {
+      if (
+        job[field] !== undefined &&
+        job[field] !== null &&
+        job[field] !== ""
+      ) {
+        return job[field];
+      }
+    }
+
+    return fallback || "";
+  }
+
+  function text33(value) {
+    if (
+      value === null ||
+      value === undefined
+    ) {
+      return "";
+    }
+
+    if (
+      typeof value === "object"
+    ) {
+      return Object.values(value)
+        .join(", ");
+    }
+
+    return String(value);
+  }
+
+  /* ---------- GET JOB INFORMATION ---------- */
+
+  function getJobInfo33(job) {
+    return {
+      id:
+        value33(
+          job,
+          [
+            "id",
+            "jobId",
+            "slug"
+          ],
+          ""
+        ),
+
+      title:
+        text33(
+          value33(
+            job,
+            [
+              "post",
+              "title",
+              "name",
+              "postName",
+              "jobTitle"
+            ],
+            "Government Job"
+          )
+        ),
+
+      department:
+        text33(
+          value33(
+            job,
+            [
+              "department",
+              "organization",
+              "organisation",
+              "departmentName"
+            ],
+            "Information not available"
+          )
+        ),
+
+      qualification:
+        text33(
+          value33(
+            job,
+            [
+              "qualification",
+              "education",
+              "eligibility",
+              "educationalQualification"
+            ],
+            "Information not available"
+          )
+        ),
+
+      age:
+        text33(
+          value33(
+            job,
+            [
+              "age",
+              "ageLimit",
+              "age_limit"
+            ],
+            "Information not available"
+          )
+        ),
+
+      salary:
+        text33(
+          value33(
+            job,
+            [
+              "salary",
+              "payScale",
+              "pay",
+              "salaryDetails"
+            ],
+            "Information not available"
+          )
+        ),
+
+      vacancy:
+        text33(
+          value33(
+            job,
+            [
+              "vacancy",
+              "vacancies",
+              "totalVacancy",
+              "totalPosts",
+              "posts"
+            ],
+            "Information not available"
+          )
+        ),
+
+      fee:
+        text33(
+          value33(
+            job,
+            [
+              "fee",
+              "applicationFee",
+              "formFee"
+            ],
+            "Information not available"
+          )
+        ),
+
+      state:
+        text33(
+          value33(
+            job,
+            [
+              "state",
+              "stateName",
+              "location"
+            ],
+            "All India"
+          )
+        ),
+
+      category:
+        text33(
+          value33(
+            job,
+            [
+              "category",
+              "jobCategory",
+              "type"
+            ],
+            "Government Job"
+          )
+        ),
+
+      startDate:
+        text33(
+          value33(
+            job,
+            [
+              "startDate",
+              "start_date",
+              "applicationStartDate"
+            ],
+            "Information not available"
+          )
+        ),
+
+      lastDate:
+        text33(
+          value33(
+            job,
+            [
+              "lastDate",
+              "last_date",
+              "applicationLastDate",
+              "closingDate"
+            ],
+            "Information not available"
+          )
+        ),
+
+      examDate:
+        text33(
+          value33(
+            job,
+            [
+              "examDate",
+              "exam_date",
+              "examinationDate"
+            ],
+            "Information not available"
+          )
+        ),
+
+      selection:
+        text33(
+          value33(
+            job,
+            [
+              "selectionProcess",
+              "selection",
+              "selectionStages"
+            ],
+            "Information not available"
+          )
+        ),
+
+      documents:
+        text33(
+          value33(
+            job,
+            [
+              "documents",
+              "requiredDocuments"
+            ],
+            "Information not available"
+          )
+        )
+    };
+  }
+
+  /* ---------- PAGE TITLE ---------- */
+
+  function updateJobDetailTitle33(
+    info
+  ) {
+    document.title =
+      `${info.title} — Sarkariiichij`;
+  }
+
+  /* ---------- BREADCRUMB ---------- */
+
+  function renderBreadcrumb33(
+    info
+  ) {
+    const breadcrumb =
+      document.querySelector(
+        ".breadcrumb"
+      );
+
+    if (!breadcrumb) {
+      return;
+    }
+
+    breadcrumb.innerHTML = `
+      <a href="index.html">
+        Home
+      </a>
+
+      <span>›</span>
+
+      <a href="jobs.html">
+        Government Jobs
+      </a>
+
+      <span>›</span>
+
+      <span>
+        ${escapeHTML(info.title)}
+      </span>
+    `;
+  }
+
+  /* ---------- HEADER ---------- */
+
+  function renderJobHeader33(
+    info
+  ) {
+    const selectors = [
+      "#job-detail-title",
+      "#job-title",
+      "[data-job-title]"
+    ];
+
+    let titleElement = null;
+
+    for (
+      const selector of selectors
+    ) {
+      const element =
+        document.querySelector(
+          selector
+        );
+
+      if (element) {
+        titleElement = element;
+        break;
+      }
+    }
+
+    if (titleElement) {
+      titleElement.textContent =
+        info.title;
+    }
+
+    const department =
+      document.querySelector(
+        "#job-detail-department, [data-job-department]"
+      );
+
+    if (department) {
+      department.textContent =
+        info.department;
+    }
+  }
+
+  /* ---------- INFORMATION TABLE ---------- */
+
+  function renderBasicInformation33(
+    info
+  ) {
+    const container =
+      document.querySelector(
+        "#job-detail-basic-info"
+      );
+
+    if (!container) {
+      return;
+    }
+
+    const rows = [
+      [
+        "Post",
+        info.title
+      ],
+      [
+        "Department",
+        info.department
+      ],
+      [
+        "Qualification",
+        info.qualification
+      ],
+      [
+        "Age Limit",
+        info.age
+      ],
+      [
+        "Salary",
+        info.salary
+      ],
+      [
+        "Total Vacancy",
+        info.vacancy
+      ],
+      [
+        "Application Fee",
+        info.fee
+      ],
+      [
+        "State",
+        info.state
+      ],
+      [
+        "Job Type",
+        info.category
+      ]
+    ];
+
+    container.innerHTML = `
+      <div class="table-wrap">
+        <table class="data-table">
+          <tbody>
+            ${rows
+              .map(
+                function (row) {
+                  return `
+                    <tr>
+                      <th>
+                        ${escapeHTML(
+                          row[0]
+                        )}
+                      </th>
+                      <td>
+                        ${escapeHTML(
+                          row[1] ||
+                          "Information not available"
+                        )}
+                      </td>
+                    </tr>
+                  `;
+                }
+              )
+              .join("")}
+          </tbody>
+        </table>
+      </div>
+    `;
+  }
+
+  /* ---------- IMPORTANT DATES ---------- */
+
+  function renderDates33(info) {
+    const container =
+      document.querySelector(
+        "#job-detail-dates"
+      );
+
+    if (!container) {
+      return;
+    }
+
+    const rows = [
+      [
+        "Application Start Date",
+        info.startDate
+      ],
+      [
+        "Last Date",
+        info.lastDate
+      ],
+      [
+        "Exam Date",
+        info.examDate
+      ]
+    ];
+
+    container.innerHTML = `
+      <div class="info-grid">
+        ${rows
+          .map(
+            function (row) {
+              return `
+                <div class="info-card">
+                  <strong>
+                    ${escapeHTML(
+                      row[0]
+                    )}
+                  </strong>
+
+                  <p>
+                    ${escapeHTML(
+                      row[1] ||
+                      "Information not available"
+                    )}
+                  </p>
+                </div>
+              `;
+            }
+          )
+          .join("")}
+      </div>
+    `;
+  }
+
+  /* ---------- OFFICIAL LINKS ---------- */
+
+  function renderOfficialLinks33(
+    job
+  ) {
+    const container =
+      document.querySelector(
+        "#job-detail-official-links"
+      );
+
+    if (!container) {
+      return;
+    }
+
+    container.innerHTML = "";
+
+    /*
+      IMPORTANT:
+      Do not invent Apply/Notification URLs.
+      Use the verified official-link system
+      created earlier.
+    */
+
+    if (
+      typeof createCompleteJobActions ===
+      "function"
+    ) {
+      const actions =
+        createCompleteJobActions(
+          job
+        );
+
+      if (actions) {
+        container.appendChild(
+          actions
+        );
+      }
+
+      return;
+    }
+
+    if (
+      typeof createVerifiedOfficialWebsiteButton ===
+      "function"
+    ) {
+      const officialButton =
+        createVerifiedOfficialWebsiteButton(
+          job
+        );
+
+      if (officialButton) {
+        container.appendChild(
+          officialButton
+        );
+      }
+    }
+  }
+
+  /* ---------- PERSONAL ACTIONS ---------- */
+
+  function renderPersonalActions33(
+    job
+  ) {
+    const container =
+      document.querySelector(
+        "#job-personal-actions-container"
+      );
+
+    if (!container) {
+      return;
+    }
+
+    if (
+      typeof renderJobPersonalActions ===
+      "function"
+    ) {
+      const result =
+        renderJobPersonalActions(
+          job
+        );
+
+      if (result) {
+        container.innerHTML = "";
+        container.appendChild(
+          result
+        );
+      }
+    }
+  }
+
+  /* ---------- RELATED JOBS ---------- */
+
+  function renderRelatedJobs33(
+    job
+  ) {
+    const container =
+      document.querySelector(
+        "#job-related-jobs"
+      );
+
+    if (!container) {
+      return;
+    }
+
+    if (
+      typeof renderRelatedJobs ===
+      "function"
+    ) {
+      renderRelatedJobs(
+        job,
+        container
+      );
+    }
+  }
+
+  /* ---------- RELATED RESOURCES ---------- */
+
+  function renderRelatedResources33(
+    job
+  ) {
+    const container =
+      document.querySelector(
+        "#job-related-resources"
+      );
+
+    if (!container) {
+      return;
+    }
+
+    if (
+      typeof renderJobRelatedResources ===
+      "function"
+    ) {
+      renderJobRelatedResources(
+        job,
+        container
+      );
+    }
+  }
+
+  /* ---------- FULL DETAIL RENDER ---------- */
+
+  function renderJobDetailPage33(
+    job
+  ) {
+    if (!job) {
+      renderJobNotFound33();
+      return;
+    }
+
+    const info =
+      getJobInfo33(job);
+
+    updateJobDetailTitle33(
+      info
+    );
+
+    renderBreadcrumb33(
+      info
+    );
+
+    renderJobHeader33(
+      info
+    );
+
+    renderBasicInformation33(
+      info
+    );
+
+    renderDates33(
+      info
+    );
+
+    renderOfficialLinks33(
+      job
+    );
+
+    renderPersonalActions33(
+      job
+    );
+
+    renderRelatedJobs33(
+      job
+    );
+
+    renderRelatedResources33(
+      job
+    );
+
+    /*
+      Existing complete-information
+      systems are also called if present.
+    */
+
+    if (
+      typeof renderCompleteJobInformation ===
+      "function"
+    ) {
+      const target =
+        document.querySelector(
+          "#job-detail-content"
+        );
+
+      if (
+        target &&
+        target.children.length === 0
+      ) {
+        renderCompleteJobInformation(
+          job
+        );
+      }
+    }
+
+    if (
+      typeof initializeJobPart23 ===
+      "function"
+    ) {
+      initializeJobPart23();
+    }
+
+    if (
+      typeof initializeJobPart24 ===
+      "function"
+    ) {
+      initializeJobPart24();
+    }
+
+    if (
+      typeof initializeJobPart25 ===
+      "function"
+    ) {
+      initializeJobPart25();
+    }
+
+    if (
+      typeof initializeJobPart26 ===
+      "function"
+    ) {
+      initializeJobPart26();
+    }
+
+    if (
+      typeof initializeJobPart27 ===
+      "function"
+    ) {
+      initializeJobPart27();
+    }
+
+    if (
+      typeof setupFAQ ===
+      "function"
+    ) {
+      setupFAQ();
+    }
+  }
+
+  /* ---------- NOT FOUND ---------- */
+
+  function renderJobNotFound33() {
+    const container =
+      document.querySelector(
+        "#job-detail-content"
+      ) ||
+      document.querySelector(
+        "[data-job-detail]"
+      );
+
+    if (!container) {
+      return;
+    }
+
+    container.innerHTML = `
+      <div class="empty-box">
+        <h2>
+          Job Not Found
+        </h2>
+
+        <p>
+          This job could not be found
+          in the Sarkariiichij database.
+        </p>
+
+        <a
+          href="jobs.html"
+          class="btn btn-primary"
+        >
+          View All Government Jobs
+        </a>
+      </div>
+    `;
+  }
+
+  /* ---------- INITIALIZE ---------- */
+
+  function initializePart33() {
+    if (!isJobDetailPage33()) {
+      return;
+    }
+
+    const id =
+      getJobId33();
+
+    if (!id) {
+      renderJobNotFound33();
+      return;
+    }
+
+    const job =
+      findJob33(id);
+
+    renderJobDetailPage33(
+      job
+    );
+  }
+
+  /* ---------- GLOBAL API ---------- */
+
+  window.SarkariiChijJobDetail =
+    window.SarkariiChijJobDetail ||
+    {};
+
+  window.SarkariiChijJobDetail.getId =
+    getJobId33;
+
+  window.SarkariiChijJobDetail.find =
+    findJob33;
+
+  window.SarkariiChijJobDetail.render =
+    renderJobDetailPage33;
+
+  window.SarkariiChijJobDetail.refresh =
+    initializePart33;
+
+  /* ---------- DOM READY ---------- */
+
+  if (
+    document.readyState ===
+    "loading"
+  ) {
+    document.addEventListener(
+      "DOMContentLoaded",
+      initializePart33
+    );
+  } else {
+    initializePart33();
+  }
+
+})();
+
+/* =========================================================
+   END SCRIPT.JS PART 33
+   ========================================================= */
