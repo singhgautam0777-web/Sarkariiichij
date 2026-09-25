@@ -2,561 +2,3852 @@
 <html lang="hi">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Admission - Sarkariiichij</title>
+    <meta charset="UTF-8">
 
-  <meta name="description"
-    content="Sarkariiichij पर College, University, ITI, Polytechnic और Entrance Exam Admissions की जानकारी देखें।">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="style.css">
+    <title>
+        Admission | Sarkariiichij
+    </title>
+
+    <meta
+        name="description"
+        content="College, University और Course Admission की जानकारी — Eligibility, Important Dates, Fees, Official Website और Application Details.">
+
+    <meta
+        name="keywords"
+        content="admission, college admission, university admission, Sarkariiichij, admission form">
+
+    <meta
+        name="theme-color"
+        content="#0f172a">
+
+    <link
+        rel="stylesheet"
+        href="style.css">
+
+
+    <style>
+
+        /* =========================================================
+           ADMISSION PAGE LOCAL STYLES
+           ========================================================= */
+
+        .admission-page {
+            min-height: 100vh;
+            background: #f8fafc;
+        }
+
+
+        .admission-hero {
+            padding: 34px 0 32px;
+            color: #ffffff;
+            background:
+                linear-gradient(
+                    135deg,
+                    #0f172a,
+                    #1e3a8a
+                );
+        }
+
+
+        .admission-breadcrumb {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 18px;
+            font-size: 14px;
+        }
+
+
+        .admission-breadcrumb a {
+            color: #dbeafe;
+            text-decoration: none;
+        }
+
+
+        .admission-breadcrumb span {
+            color: #bfdbfe;
+        }
+
+
+        .admission-hero h1 {
+            margin: 0;
+            font-size: 34px;
+            line-height: 1.25;
+            font-weight: 800;
+        }
+
+
+        .admission-hero p {
+            max-width: 760px;
+            margin: 10px 0 0;
+            color: #dbeafe;
+            line-height: 1.7;
+        }
+
+
+        .admission-main {
+            padding: 30px 0 60px;
+        }
+
+
+        .admission-search-card {
+            margin-bottom: 24px;
+            padding: 22px;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            box-shadow:
+                0 5px 20px
+                rgba(15, 23, 42, 0.05);
+        }
+
+
+        .admission-search-card h2 {
+            margin: 0 0 18px;
+            font-size: 21px;
+            color: #0f172a;
+        }
+
+
+        .admission-filter-grid {
+            display: grid;
+            grid-template-columns:
+                repeat(4, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+
+        .admission-filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }
+
+
+        .admission-filter-group label {
+            color: #334155;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+
+        .admission-filter-group input,
+        .admission-filter-group select {
+            width: 100%;
+            min-height: 44px;
+            padding: 9px 11px;
+            border: 1px solid #cbd5e1;
+            border-radius: 9px;
+            background: #ffffff;
+            color: #0f172a;
+            outline: none;
+        }
+
+
+        .admission-filter-group input:focus,
+        .admission-filter-group select:focus {
+            border-color: #2563eb;
+            box-shadow:
+                0 0 0 3px
+                rgba(37, 99, 235, 0.10);
+        }
+
+
+        .admission-filter-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 16px;
+        }
+
+
+        .admission-stats {
+            display: grid;
+            grid-template-columns:
+                repeat(4, minmax(0, 1fr));
+            gap: 14px;
+            margin-bottom: 26px;
+        }
+
+
+        .admission-stat {
+            padding: 18px;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            text-align: center;
+        }
+
+
+        .admission-stat strong {
+            display: block;
+            color: #0f172a;
+            font-size: 26px;
+            line-height: 1.2;
+        }
+
+
+        .admission-stat span {
+            display: block;
+            margin-top: 5px;
+            color: #64748b;
+            font-size: 13px;
+        }
+
+
+        .admission-section-title {
+            margin: 28px 0 16px;
+            color: #0f172a;
+            font-size: 23px;
+        }
+
+
+        .admission-grid {
+            display: grid;
+            grid-template-columns:
+                repeat(3, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+
+        .admission-card {
+            padding: 20px;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 15px;
+            box-shadow:
+                0 4px 16px
+                rgba(15, 23, 42, 0.04);
+        }
+
+
+        .admission-card h3 {
+            margin: 0 0 9px;
+            color: #0f172a;
+            font-size: 18px;
+            line-height: 1.4;
+        }
+
+
+        .admission-card p {
+            margin: 7px 0;
+            color: #64748b;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+
+        .admission-card-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin: 13px 0;
+        }
+
+
+        .admission-tag {
+            display: inline-flex;
+            align-items: center;
+            padding: 5px 9px;
+            border-radius: 999px;
+            background: #eff6ff;
+            color: #1d4ed8;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+
+        .admission-card-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+
+        .admission-card-actions .btn {
+            flex: 1;
+            min-width: 110px;
+            text-align: center;
+        }
+
+
+        .admission-empty {
+            grid-column: 1 / -1;
+            padding: 35px 20px;
+            border: 1px dashed #cbd5e1;
+            border-radius: 14px;
+            background: #ffffff;
+            text-align: center;
+        }
+
+
+        .admission-empty h3 {
+            margin: 0 0 8px;
+            color: #334155;
+        }
+
+
+        .admission-empty p {
+            margin: 0;
+            color: #64748b;
+        }
+
+
+        @media (max-width: 950px) {
+
+            .admission-filter-grid {
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+            }
+
+
+            .admission-stats {
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+            }
+
+
+            .admission-grid {
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .admission-hero {
+                padding: 25px 0;
+            }
+
+
+            .admission-hero h1 {
+                font-size: 25px;
+            }
+
+
+            .admission-main {
+                padding-top: 20px;
+            }
+
+
+            .admission-search-card {
+                padding: 17px;
+                border-radius: 12px;
+            }
+
+
+            .admission-filter-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .admission-stats {
+                grid-template-columns: 1fr 1fr;
+            }
+
+
+            .admission-stat {
+                padding: 14px 8px;
+            }
+
+
+            .admission-stat strong {
+                font-size: 22px;
+            }
+
+
+            .admission-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .admission-card {
+                padding: 17px;
+            }
+
+        }
+
+    </style>
+
 </head>
 
-<body>
 
-  <!-- HEADER -->
-  <header class="site-header">
+<body class="admission-page">
 
-    <div class="logo">
-      <a href="index.html">Sarkariiichij</a>
+
+    <!-- =========================================================
+         HEADER
+         ========================================================= -->
+
+    <header
+        class="site-header"
+        id="site-header">
+
+        <div class="container header-inner">
+
+
+            <a
+                href="index.html"
+                class="brand"
+                aria-label="Sarkariiichij Home">
+
+                <div class="brand-logo">
+                    S
+                </div>
+
+                <div class="brand-text">
+
+                    <strong>
+                        Sarkariiichij
+                    </strong>
+
+                    <span>
+                        Government & Career Portal
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <nav
+                class="main-nav"
+                id="main-nav">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="jobs.html">
+                    Government Jobs
+                </a>
+
+                <a href="admission.html"
+                   class="active">
+                    Admission
+                </a>
+
+                <a href="results.html">
+                    Results
+                </a>
+
+                <a href="admit-card.html">
+                    Admit Card
+                </a>
+
+                <a href="syllabus.html">
+                    Syllabus
+                </a>
+
+                <a href="scholarship.html">
+                    Scholarship
+                </a>
+
+            </nav>
+
+
+            <button
+                type="button"
+                class="menu-toggle"
+                id="menu-toggle"
+                aria-label="Open Menu"
+                aria-expanded="false">
+
+                ☰
+
+            </button>
+
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================================
+         HERO
+         ========================================================= -->
+
+    <section class="admission-hero">
+
+        <div class="container">
+
+
+            <div class="admission-breadcrumb">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <span>›</span>
+
+                <span>
+                    Admission
+                </span>
+
+            </div>
+
+
+            <h1>
+                College & University Admission
+            </h1>
+
+
+            <p>
+                College, University, Course और Entrance Admission
+                की जानकारी एक जगह खोजें। Eligibility, Important
+                Dates, Fees और verified official links देखें।
+            </p>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         MAIN
+         ========================================================= -->
+
+    <main class="admission-main">
+
+        <div class="container">
+
+
+            <!-- =====================================================
+                 SEARCH & FILTER
+                 ===================================================== -->
+
+            <section
+                class="admission-search-card">
+
+                <h2>
+                    Admission Search
+                </h2>
+
+
+                <div
+                    class="admission-filter-grid">
+
+
+                    <!-- Search -->
+
+                    <div
+                        class="admission-filter-group">
+
+                        <label
+                            for="admission-search">
+
+                            Search Admission
+
+                        </label>
+
+                        <input
+                            type="search"
+                            id="admission-search"
+                            placeholder="College, University, Course...">
+
+                    </div>
+
+
+                    <!-- Qualification -->
+
+                    <div
+                        class="admission-filter-group">
+
+                        <label
+                            for="admission-qualification">
+
+                            Qualification
+
+                        </label>
+
+                        <select
+                            id="admission-qualification">
+
+                            <option value="">
+                                All Qualification
+                            </option>
+
+                            <option value="10th">
+                                10th
+                            </option>
+
+                            <option value="12th">
+                                12th
+                            </option>
+
+                            <option value="graduate">
+                                Graduate
+                            </option>
+
+                            <option value="postgraduate">
+                                Post Graduate
+                            </option>
+
+                            <option value="diploma">
+                                Diploma
+                            </option>
+
+                            <option value="iti">
+                                ITI
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Course -->
+
+                    <div
+                        class="admission-filter-group">
+
+                        <label
+                            for="admission-course">
+
+                            Course
+
+                        </label>
+
+                        <select
+                            id="admission-course">
+
+                            <option value="">
+                                All Courses
+                            </option>
+
+                            <option value="ba">
+                                BA
+                            </option>
+
+                            <option value="bsc">
+                                B.Sc
+                            </option>
+
+                            <option value="bcom">
+                                B.Com
+                            </option>
+
+                            <option value="btech">
+                                B.Tech
+                            </option>
+
+                            <option value="bed">
+                                B.Ed
+                            </option>
+
+                            <option value="ma">
+                                MA
+                            </option>
+
+                            <option value="msc">
+                                M.Sc
+                            </option>
+
+                            <option value="mba">
+                                MBA
+                            </option>
+
+                            <option value="diploma">
+                                Diploma
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- State -->
+
+                    <div
+                        class="admission-filter-group">
+
+                        <label
+                            for="admission-state">
+
+                            State
+
+                        </label>
+
+                        <select
+                            id="admission-state">
+
+                            <option value="">
+                                All States
+                            </option>
+
+                            <option value="uttar-pradesh">
+                                Uttar Pradesh
+                            </option>
+
+                            <option value="bihar">
+                                Bihar
+                            </option>
+
+                            <option value="delhi">
+                                Delhi
+                            </option>
+
+                            <option value="madhya-pradesh">
+                                Madhya Pradesh
+                            </option>
+
+                            <option value="rajasthan">
+                                Rajasthan
+                            </option>
+
+                            <option value="jharkhand">
+                                Jharkhand
+                            </option>
+
+                            <option value="national">
+                                National
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                </div>
+
+
+                <div
+                    class="admission-filter-actions">
+
+                    <button
+                        type="button"
+                        class="btn btn-primary"
+                        id="admission-search-btn">
+
+                        Search Admission
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="btn btn-secondary"
+                        id="admission-reset-btn">
+
+                        Reset Filters
+
+                    </button>
+
+                </div>
+
+
+            </section>
+
+
+            <!-- =====================================================
+                 STATS
+                 ===================================================== -->
+
+            <section
+                class="admission-stats">
+
+
+                <div class="admission-stat">
+
+                    <strong
+                        id="admission-total-count">
+                        0
+                    </strong>
+
+                    <span>
+                        Total Admissions
+                    </span>
+
+                </div>
+
+
+                <div class="admission-stat">
+
+                    <strong
+                        id="admission-open-count">
+                        0
+                    </strong>
+
+                    <span>
+                        Open Admissions
+                    </span>
+
+                </div>
+
+
+                <div class="admission-stat">
+
+                    <strong
+                        id="admission-last-date-count">
+                        0
+                    </strong>
+
+                    <span>
+                        Last Date Alerts
+                    </span>
+
+                </div>
+
+
+                <div class="admission-stat">
+
+                    <strong
+                        id="admission-university-count">
+                        0
+                    </strong>
+
+                    <span>
+                        Universities
+                    </span>
+
+                </div>
+
+
+            </section>
+
+
+            <!-- =====================================================
+                 ADMISSION LIST
+                 ===================================================== -->
+
+            <h2
+                class="admission-section-title">
+
+                Latest Admissions
+
+            </h2>
+
+
+            <section
+                class="admission-grid"
+                id="admission-list">
+
+
+                <!-- JavaScript will render
+                     admission cards here -->
+
+
+                <div
+                    class="admission-empty"
+                    id="admission-loading">
+
+                    <h3>
+                        Loading Admissions...
+                    </h3>
+
+                    <p>
+                        Admission information load हो रही है।
+                    </p>
+
+                </div>
+
+
+            </section>
+
+
+            <!-- =====================================================
+                 NO RESULTS
+                 ===================================================== -->
+
+            <section
+                class="admission-empty"
+                id="admission-no-results"
+                style="display:none;">
+
+                <h3>
+                    No Admission Found
+                </h3>
+
+                <p>
+                    आपके search/filter के अनुसार कोई admission
+                    नहीं मिला।
+                </p>
+
+
+                <button
+                    type="button"
+                    class="btn btn-secondary"
+                    id="admission-no-results-reset">
+
+                    Reset Search
+
+                </button>
+
+            </section>
+
+
+            <!-- =====================================================
+                    <!-- =====================================================
+                 ADMISSION DETAILS / INFORMATION
+                 ===================================================== -->
+
+            <section
+                class="job-detail-card"
+                id="admission-detail-section"
+                style="display:none;">
+
+                <h2 id="admission-detail-title">
+                    Admission Details
+                </h2>
+
+                <div
+                    class="job-basic-grid"
+                    id="admission-basic-info">
+
+                    <div class="job-basic-item">
+
+                        <span class="job-basic-label">
+                            University / College
+                        </span>
+
+                        <span
+                            class="job-basic-value"
+                            id="admission-university">
+                            —
+                        </span>
+
+                    </div>
+
+
+                    <div class="job-basic-item">
+
+                        <span class="job-basic-label">
+                            Course
+                        </span>
+
+                        <span
+                            class="job-basic-value"
+                            id="admission-course-info">
+                            —
+                        </span>
+
+                    </div>
+
+
+                    <div class="job-basic-item">
+
+                        <span class="job-basic-label">
+                            Qualification
+                        </span>
+
+                        <span
+                            class="job-basic-value"
+                            id="admission-qualification-info">
+                            —
+                        </span>
+
+                    </div>
+
+
+                    <div class="job-basic-item">
+
+                        <span class="job-basic-label">
+                            State
+                        </span>
+
+                        <span
+                            class="job-basic-value"
+                            id="admission-state-info">
+                            —
+                        </span>
+
+                    </div>
+
+
+                    <div class="job-basic-item">
+
+                        <span class="job-basic-label">
+                            Admission Type
+                        </span>
+
+                        <span
+                            class="job-basic-value"
+                            id="admission-type-info">
+                            —
+                        </span>
+
+                    </div>
+
+
+                    <div class="job-basic-item">
+
+                        <span class="job-basic-label">
+                            Application Fee
+                        </span>
+
+                        <span
+                            class="job-basic-value"
+                            id="admission-fee-info">
+                            —
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================================
+                 IMPORTANT DATES
+                 ===================================================== -->
+
+            <section
+                class="job-detail-card"
+                id="admission-dates-section"
+                style="display:none;">
+
+                <h2>
+                    Important Dates
+                </h2>
+
+
+                <div class="job-basic-grid">
+
+                    <div class="job-basic-item">
+
+                        <span class="job-basic-label">
+                            Application Start
+                        </span>
+
+                        <span
+                            class="job-basic-value"
+                            id="admission-start-date">
+                            —
+                        </span>
+
+                    </div>
+
+
+                    <div class="job-basic-item">
+
+                        <span class="job-basic-label">
+                            Last Date
+                        </span>
+
+                        <span
+                            class="job-basic-value"
+                            id="admission-last-date">
+                            —
+                        </span>
+
+                    </div>
+
+
+                    <div class="job-basic-item">
+
+                        <span class="job-basic-label">
+                            Entrance Exam
+                        </span>
+
+                        <span
+                            class="job-basic-value"
+                            id="admission-exam-date">
+                            —
+                        </span>
+
+                    </div>
+
+
+                    <div class="job-basic-item">
+
+                        <span class="job-basic-label">
+                            Counselling
+                        </span>
+
+                        <span
+                            class="job-basic-value"
+                            id="admission-counselling-date">
+                            —
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================================
+                 ELIGIBILITY
+                 ===================================================== -->
+
+            <section
+                class="job-detail-card"
+                id="admission-eligibility-section"
+                style="display:none;">
+
+                <h2>
+                    Admission Eligibility
+                </h2>
+
+
+                <div id="admission-eligibility-content">
+
+                    <p>
+                        Eligibility information यहाँ दिखाई जाएगी।
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================================
+                 COURSE INFORMATION
+                 ===================================================== -->
+
+            <section
+                class="job-detail-card"
+                id="admission-course-section"
+                style="display:none;">
+
+                <h2>
+                    Course Information
+                </h2>
+
+
+                <div id="admission-course-content">
+
+                    <p>
+                        Course की duration, subjects और अन्य
+                        जानकारी यहाँ दिखाई जाएगी।
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================================
+                 APPLICATION PROCESS
+                 ===================================================== -->
+
+            <section
+                class="job-detail-card"
+                id="admission-process-section"
+                style="display:none;">
+
+                <h2>
+                    How to Apply
+                </h2>
+
+
+                <div id="admission-process-content">
+
+                    <ol>
+
+                        <li>
+                            Official admission notification पढ़ें।
+                        </li>
+
+                        <li>
+                            Eligibility और required documents verify करें।
+                        </li>
+
+                        <li>
+                            केवल official website से application करें।
+                        </li>
+
+                        <li>
+                            Application form में सही information भरें।
+                        </li>
+
+                        <li>
+                            Application fee लागू होने पर payment करें।
+                        </li>
+
+                        <li>
+                            Final submitted form की copy सुरक्षित रखें।
+                        </li>
+
+                    </ol>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================================
+                 DOCUMENTS
+                 ===================================================== -->
+
+            <section
+                class="job-detail-card"
+                id="admission-documents-section"
+                style="display:none;">
+
+                <h2>
+                    Documents Required
+                </h2>
+
+
+                <div id="admission-documents-content">
+
+                    <ul>
+
+                        <li>
+                            Marksheet / Certificate
+                        </li>
+
+                        <li>
+                            Photograph
+                        </li>
+
+                        <li>
+                            Signature
+                        </li>
+
+                        <li>
+                            Valid ID Proof
+                        </li>
+
+                        <li>
+                            Category Certificate,
+                            if applicable
+                        </li>
+
+                        <li>
+                            Domicile / Residence Certificate,
+                            if applicable
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================================
+                 OFFICIAL LINKS
+                 ===================================================== -->
+
+            <section
+                class="job-detail-card"
+                id="admission-official-section"
+                style="display:none;">
+
+                <h2>
+                    Official Links
+                </h2>
+
+
+                <div
+                    class="job-link-box"
+                    id="admission-official-links">
+
+
+                    <div class="job-link-item">
+
+                        <span>
+                            Official Website
+                        </span>
+
+                        <span
+                            id="admission-official-website">
+                            Link Not Verified
+                        </span>
+
+                    </div>
+
+
+                    <div class="job-link-item">
+
+                        <span>
+                            Apply Online
+                        </span>
+
+                        <span
+                            id="admission-apply-link">
+                            Link Not Verified
+                        </span>
+
+                    </div>
+
+
+                    <div class="job-link-item">
+
+                        <span>
+                            Official Notification
+                        </span>
+
+                        <span
+                            id="admission-notification-link">
+                            Link Not Verified
+                        </span>
+
+                    </div>
+
+
+                    <div class="job-link-item">
+
+                        <span>
+                            Counselling / Portal
+                        </span>
+
+                        <span
+                            id="admission-counselling-link">
+                            Link Not Verified
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="job-official-note">
+
+                    केवल verified official admission portal,
+                    notification और application links दिखाए जाएंगे।
+                    कोई अनुमानित या fake link नहीं लगाया जाएगा।
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================================
+                 RELATED ADMISSIONS
+                 ===================================================== -->
+
+            <section
+                class="job-detail-card"
+                id="related-admission-section"
+                style="display:none;">
+
+                <h2>
+                    Related Admissions
+                </h2>
+
+
+                <div
+                    class="admission-grid"
+                    id="related-admissions">
+
+                    <!-- JavaScript will render related
+                         admissions here -->
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================================
+                 FAQ
+                 ===================================================== -->
+
+            <section
+                class="job-detail-card"
+                id="admission-faq-section">
+
+                <h2>
+                    Admission FAQ
+                </h2>
+
+
+                <div id="admission-faq-content">
+
+
+                    <details>
+
+                        <summary>
+                            Admission की eligibility कैसे check करें?
+                        </summary>
+
+                        <p>
+                            प्रत्येक course और university की eligibility
+                            अलग हो सकती है। Official notification और
+                            prospectus से verify करें।
+                        </p>
+
+                    </details>
+
+
+                    <details>
+
+                        <summary>
+                            Admission form कहाँ से भरना चाहिए?
+                        </summary>
+
+                        <p>
+                            Application केवल verified official university,
+                            counselling या admission portal से करें।
+                        </p>
+
+                    </details>
+
+
+                    <details>
+
+                        <summary>
+                            Admission की last date कहाँ मिलेगी?
+                        </summary>
+
+                        <p>
+                            Admission card और official notification में
+                            उपलब्ध verified date दिखाई जाएगी।
+                        </p>
+
+                    </details>
+
+
+                    <details>
+
+                        <summary>
+                            क्या सभी admissions में entrance exam होता है?
+                        </summary>
+
+                        <p>
+                            नहीं। कुछ courses में merit-based admission
+                            हो सकता है और कुछ में entrance examination
+                            या counselling प्रक्रिया हो सकती है।
+                        </p>
+
+                    </details>
+
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================================
+                 PART 2 ENDS HERE
+                 ===================================================== -->
+                      <!-- =====================================================
+                 ADMISSION ACTIONS / MANAGEMENT
+                 ===================================================== -->
+
+            <section
+                class="job-detail-card"
+                id="admission-management-section">
+
+                <h2>
+                    Admission Management
+                </h2>
+
+
+                <div
+                    class="job-action-stack"
+                    id="admission-management-actions">
+
+                    <button
+                        type="button"
+                        class="btn btn-primary"
+                        id="save-admission-btn">
+
+                        ☆ Save Admission
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="btn btn-secondary"
+                        id="admission-reminder-btn">
+
+                        🔔 Set Last Date Reminder
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="btn btn-success"
+                        id="admission-tracker-btn">
+
+                        ✓ Add to Application Tracker
+
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================================
+                 LAST DATE ALERTS
+                 ===================================================== -->
+
+            <section
+                class="job-detail-card"
+                id="admission-last-date-section">
+
+                <h2>
+                    Admission Last Date Alerts
+                </h2>
+
+
+                <div
+                    class="last-date-list"
+                    id="admission-last-date-list">
+
+                    <div class="last-date-item">
+
+                        <div>
+
+                            <strong>
+                                Admission deadlines
+                            </strong>
+
+                            <p>
+                                Important admission last dates
+                                यहाँ दिखाई जाएंगी।
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================================
+                 SAVED ADMISSIONS
+                 ===================================================== -->
+
+            <section
+                class="job-detail-card"
+                id="saved-admissions-section">
+
+                <h2>
+                    My Saved Admissions
+                </h2>
+
+
+                <div
+                    id="saved-admissions-list">
+
+                    <div class="empty-box">
+
+                        <p>
+                            अभी कोई admission save नहीं किया गया है।
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================================
+                 APPLICATION TRACKER
+                 ===================================================== -->
+
+            <section
+                class="job-detail-card"
+                id="admission-application-tracker">
+
+                <h2>
+                    My Admission Application Tracker
+                </h2>
+
+
+                <div
+                    class="tracker-list"
+                    id="admission-tracker-list">
+
+                    <div class="tracker-item">
+
+                        <div class="tracker-info">
+
+                            <strong>
+                                No applications added
+                            </strong>
+
+                            <span>
+                                Admission application को tracker में
+                                add करने पर यहाँ status दिखाई देगा।
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================================
+                 POPULAR COURSES
+                 ===================================================== -->
+
+            <section>
+
+                <h2 class="admission-section-title">
+                    Popular Courses
+                </h2>
+
+
+                <div class="admission-grid">
+
+
+                    <article class="admission-card">
+
+                        <h3>
+                            B.A.
+                        </h3>
+
+                        <p>
+                            Arts और Humanities के undergraduate
+                            courses की admission information.
+                        </p>
+
+                        <div class="admission-card-meta">
+
+                            <span class="admission-tag">
+                                12th Pass
+                            </span>
+
+                            <span class="admission-tag">
+                                Undergraduate
+                            </span>
+
+                        </div>
+
+                        <div class="admission-card-actions">
+
+                            <button
+                                type="button"
+                                class="btn btn-secondary"
+                                data-course-filter="ba">
+
+                                View Admissions
+
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="admission-card">
+
+                        <h3>
+                            B.Sc.
+                        </h3>
+
+                        <p>
+                            Science stream के undergraduate
+                            courses और admission updates.
+                        </p>
+
+                        <div class="admission-card-meta">
+
+                            <span class="admission-tag">
+                                12th PCM/PCB
+                            </span>
+
+                            <span class="admission-tag">
+                                Undergraduate
+                            </span>
+
+                        </div>
+
+                        <div class="admission-card-actions">
+
+                            <button
+                                type="button"
+                                class="btn btn-secondary"
+                                data-course-filter="bsc">
+
+                                View Admissions
+
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="admission-card">
+
+                        <h3>
+                            B.Com.
+                        </h3>
+
+                        <p>
+                            Commerce और related undergraduate
+                            courses की admission information.
+                        </p>
+
+                        <div class="admission-card-meta">
+
+                            <span class="admission-tag">
+                                12th Pass
+                            </span>
+
+                            <span class="admission-tag">
+                                Undergraduate
+                            </span>
+
+                        </div>
+
+                        <div class="admission-card-actions">
+
+                            <button
+                                type="button"
+                                class="btn btn-secondary"
+                                data-course-filter="bcom">
+
+                                View Admissions
+
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="admission-card">
+
+                        <h3>
+                            B.Tech
+                        </h3>
+
+                        <p>
+                            Engineering और technology courses
+                            के admission updates.
+                        </p>
+
+                        <div class="admission-card-meta">
+
+                            <span class="admission-tag">
+                                12th PCM
+                            </span>
+
+                            <span class="admission-tag">
+                                Engineering
+                            </span>
+
+                        </div>
+
+                        <div class="admission-card-actions">
+
+                            <button
+                                type="button"
+                                class="btn btn-secondary"
+                                data-course-filter="btech">
+
+                                View Admissions
+
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="admission-card">
+
+                        <h3>
+                            B.Ed.
+                        </h3>
+
+                        <p>
+                            Teacher education और B.Ed admission
+                            information.
+                        </p>
+
+                        <div class="admission-card-meta">
+
+                            <span class="admission-tag">
+                                Graduate
+                            </span>
+
+                            <span class="admission-tag">
+                                Education
+                            </span>
+
+                        </div>
+
+                        <div class="admission-card-actions">
+
+                            <button
+                                type="button"
+                                class="btn btn-secondary"
+                                data-course-filter="bed">
+
+                                View Admissions
+
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="admission-card">
+
+                        <h3>
+                            MBA
+                        </h3>
+
+                        <p>
+                            Management और postgraduate admission
+                            updates.
+                        </p>
+
+                        <div class="admission-card-meta">
+
+                            <span class="admission-tag">
+                                Graduate
+                            </span>
+
+                            <span class="admission-tag">
+                                Postgraduate
+                            </span>
+
+                        </div>
+
+                        <div class="admission-card-actions">
+
+                            <button
+                                type="button"
+                                class="btn btn-secondary"
+                                data-course-filter="mba">
+
+                                View Admissions
+
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================================
+                 ADMISSION TYPES
+                 ===================================================== -->
+
+            <section>
+
+                <h2 class="admission-section-title">
+                    Admission Types
+                </h2>
+
+
+                <div class="admission-grid">
+
+
+                    <article class="admission-card">
+
+                        <h3>
+                            University Admission
+                        </h3>
+
+                        <p>
+                            Central और State Universities में
+                            undergraduate और postgraduate admission.
+                        </p>
+
+                    </article>
+
+
+                    <article class="admission-card">
+
+                        <h3>
+                            Entrance Admission
+                        </h3>
+
+                        <p>
+                            Entrance examination के माध्यम से होने वाले
+                            professional और academic admissions.
+                        </p>
+
+                    </article>
+
+
+                    <article class="admission-card">
+
+                        <h3>
+                            Merit Based Admission
+                        </h3>
+
+                        <p>
+                            Previous qualification के marks के आधार पर
+                            होने वाले admission.
+                        </p>
+
+                    </article>
+
+
+                    <article class="admission-card">
+
+                        <h3>
+                            Counselling Admission
+                        </h3>
+
+                        <p>
+                            Counselling और seat allocation के माध्यम से
+                            होने वाले admissions.
+                        </p>
+
+                    </article>
+
+
+                    <article class="admission-card">
+
+                        <h3>
+                            Diploma Admission
+                        </h3>
+
+                        <p>
+                            Polytechnic और अन्य diploma courses की
+                            admission information.
+                        </p>
+
+                    </article>
+
+
+                    <article class="admission-card">
+
+                        <h3>
+                            Distance / Online Admission
+                        </h3>
+
+                        <p>
+                            Recognized distance और online education
+                            programmes की जानकारी.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================================
+                 IMPORTANT INFORMATION
+                 ===================================================== -->
+
+            <section
+                class="job-detail-card">
+
+                <h2>
+                    Important Admission Information
+                </h2>
+
+
+                <div>
+
+                    <ul>
+
+                        <li>
+                            Admission की eligibility हमेशा
+                            official prospectus से verify करें।
+                        </li>
+
+                        <li>
+                            Last date बदल सकती है; payment से पहले
+                            official portal पर current date check करें।
+                        </li>
+
+                        <li>
+                            University के नाम से मिलते-जुलते
+                            unofficial websites से सावधान रहें।
+                        </li>
+
+                        <li>
+                            Application form submit करने के बाद
+                            registration number सुरक्षित रखें।
+                        </li>
+
+                        <li>
+                            Counselling या document verification के
+                            लिए original documents की आवश्यकता हो सकती है।
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================================
+                 PAGINATION
+                 ===================================================== -->
+
+            <nav
+                class="pagination"
+                id="admission-pagination"
+                aria-label="Admission Pagination">
+
+                <!-- JavaScript will render pagination -->
+
+            </nav>
+
+
+            <!-- =====================================================
+                 PART 3 ENDS HERE
+                 ===================================================== -->
+          <!-- =========================================================
+     ADMISSION PART 4A
+     Help + Footer + Mobile Navigation + Menu
+========================================================= -->
+
+<section class="section" id="admission-help">
+    <div class="container">
+
+        <div class="section-header">
+            <div>
+                <h2 class="section-title">Admission Help</h2>
+                <p class="section-subtitle">
+                    Admission form, eligibility, documents और official
+                    website की जानकारी
+                </p>
+            </div>
+        </div>
+
+        <div class="info-grid">
+
+            <div class="info-card">
+                <h3>How to Apply</h3>
+                <p>
+                    पहले official notification पढ़ें, eligibility check
+                    करें और फिर official portal से आवेदन करें।
+                </p>
+            </div>
+
+            <div class="info-card">
+                <h3>Documents</h3>
+                <p>
+                    Marksheet, ID proof, photo, signature, category
+                    certificate और अन्य required documents तैयार रखें।
+                </p>
+            </div>
+
+            <div class="info-card">
+                <h3>Official Link</h3>
+                <p>
+                    केवल उपलब्ध और verified official links का उपयोग करें।
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="site-footer">
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div class="footer-column">
+
+                <h3>Sarkariiichij</h3>
+
+                <p>
+                    Government Jobs, Admission, Results, Admit Card,
+                    Scholarship और Career information के लिए एक ही जगह।
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Quick Links</h3>
+
+                <a href="index.html">Home</a>
+
+                <a href="jobs.html">
+                    Government Jobs
+                </a>
+
+                <a href="admission.html">
+                    Admission
+                </a>
+
+                <a href="results.html">
+                    Results
+                </a>
+
+                <a href="admit-card.html">
+                    Admit Card
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Exam Resources</h3>
+
+                <a href="syllabus.html">
+                    Syllabus
+                </a>
+
+                <a href="cutoff.html">
+                    Cut Off
+                </a>
+
+                <a href="papers.html">
+                    Previous Papers
+                </a>
+
+                <a href="mock-test.html">
+                    Mock Test
+                </a>
+
+                <a href="career-tools.html">
+                    Career Tools
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Important</h3>
+
+                <a href="scholarship.html">
+                    Scholarship
+                </a>
+
+                <a href="yojana.html">
+                    Sarkari Yojana
+                </a>
+
+                <a href="sarkari-kaam.html">
+                    Sarkari Kaam
+                </a>
+
+                <a href="eligibility.html">
+                    Eligibility
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © <span id="current-year"></span>
+                Sarkariiichij. All Rights Reserved.
+            </p>
+
+            <p>
+                Information should always be verified from
+                the official department website.
+            </p>
+
+        </div>
+
     </div>
 
-    <nav class="main-nav">
-      <a href="index.html">Home</a>
-      <a href="jobs.html">Jobs</a>
-      <a href="results.html">Results</a>
-      <a href="admit-card.html">Admit Card</a>
-      <a href="admission.html" class="active">Admission</a>
-      <a href="syllabus.html">Syllabus</a>
-    </nav>
-
-  </header>
+</footer>
 
 
-  <!-- ADMISSION HERO -->
-  <section class="hero-section">
+<!-- =========================================================
+     MOBILE BOTTOM NAVIGATION
+========================================================= -->
 
-    <div class="hero-content">
+<nav
+    class="mobile-bottom-nav"
+    aria-label="Mobile navigation">
 
-      <p class="hero-tag">Admission</p>
+    <a href="index.html">
 
-      <h1>Latest College & University Admissions</h1>
+        <span>⌂</span>
 
-      <p>
-        College, University, ITI, Polytechnic और
-        Entrance Exam Admissions की जानकारी एक जगह देखें।
-      </p>
+        <small>Home</small>
 
-    </div>
-
-  </section>
+    </a>
 
 
-  <!-- ADMISSION SEARCH -->
-  <section class="section">
+    <a href="jobs.html">
 
-    <div class="section-heading">
-      <h2>Search Admission</h2>
-      <p>अपना College, University या Course खोजें</p>
-    </div>
+        <span>💼</span>
 
-    <div class="search-box">
+        <small>Jobs</small>
 
-      <input
-        type="search"
-        id="admissionSearch"
-        placeholder="Search College, University, ITI, Polytechnic..."
-      >
+    </a>
 
-      <button type="button">
-        Search
-      </button>
 
-    </div>
+    <a
+        href="admission.html"
+        class="active">
 
-  </section>
-    <!-- LATEST ADMISSIONS -->
-  <section class="section">
+        <span>🎓</span>
 
-    <div class="section-heading">
-      <h2>Latest Admissions</h2>
-      <p>हाल में शुरू हुए प्रमुख Admission</p>
-    </div>
+        <small>Admission</small>
 
-    <div class="quick-grid">
+    </a>
 
-      <div class="quick-card">
-        <h3>CUET UG Admission</h3>
-        <p>Central Universities में Undergraduate Admission</p>
-        <span class="status-badge">Latest</span>
-        <a href="#">View Admission</a>
-      </div>
 
-      <div class="quick-card">
-        <h3>CUET PG Admission</h3>
-        <p>Postgraduate Courses में Admission</p>
-        <span class="status-badge">Latest</span>
-        <a href="#">View Admission</a>
-      </div>
+    <a href="results.html">
 
-      <div class="quick-card">
-        <h3>UP University Admission</h3>
-        <p>उत्तर प्रदेश की Universities के UG और PG Admissions</p>
-        <span class="status-badge">Latest</span>
-        <a href="#">View Admission</a>
-      </div>
+        <span>📄</span>
 
-      <div class="quick-card">
-        <h3>Bihar University Admission</h3>
-        <p>बिहार की Universities के विभिन्न Courses</p>
-        <span class="status-badge">Latest</span>
-        <a href="#">View Admission</a>
-      </div>
+        <small>Results</small>
 
-      <div class="quick-card">
-        <h3>ITI Admission</h3>
-        <p>Government और Private ITI Courses</p>
-        <span class="status-badge">Latest</span>
-        <a href="#">View Admission</a>
-      </div>
+    </a>
 
-      <div class="quick-card">
-        <h3>Polytechnic Admission</h3>
-        <p>Diploma और Polytechnic Courses में Admission</p>
-        <span class="status-badge">Latest</span>
-        <a href="#">View Admission</a>
-      </div>
 
-    </div>
+    <button
+        type="button"
+        onclick="openAdmissionMenuV1()">
 
-  </section>
-    <!-- COLLEGE & UNIVERSITY ADMISSIONS -->
-  <section class="section">
+        <span>☰</span>
 
-    <div class="section-heading">
-      <h2>College & University Admissions</h2>
-      <p>UG, PG और अन्य Higher Education Admissions</p>
-    </div>
+        <small>Menu</small>
 
-    <div class="quick-grid">
+    </button>
 
-      <div class="quick-card">
-        <h3>UG Admission</h3>
-        <p>BA, BSc, BCom और अन्य Undergraduate Courses</p>
-        <a href="#">Explore UG</a>
-      </div>
+</nav>
 
-      <div class="quick-card">
-        <h3>PG Admission</h3>
-        <p>MA, MSc, MCom और अन्य Postgraduate Courses</p>
-        <a href="#">Explore PG</a>
-      </div>
 
-      <div class="quick-card">
-        <h3>Central Universities</h3>
-        <p>Central Universities के Admission और Entrance</p>
-        <a href="#">View Admissions</a>
-      </div>
+<!-- =========================================================
+     MOBILE MENU MODAL
+========================================================= -->
 
-      <div class="quick-card">
-        <h3>State Universities</h3>
-        <p>State Universities के UG और PG Admissions</p>
-        <a href="#">View Admissions</a>
-      </div>
+<div
+    class="modal-overlay"
+    id="admission-menu-modal"
+    hidden>
 
-      <div class="quick-card">
-        <h3>Private Universities</h3>
-        <p>Private Universities और Colleges के Courses</p>
-        <a href="#">Explore</a>
-      </div>
+    <div class="modal-box">
 
-      <div class="quick-card">
-        <h3>Medical Admission</h3>
-        <p>MBBS, BDS, Nursing और Medical Courses</p>
-        <a href="#">Explore</a>
-      </div>
+        <button
+            type="button"
+            class="modal-close"
+            onclick="closeAdmissionMenuV1()"
+            aria-label="Close">
 
-      <div class="quick-card">
-        <h3>Engineering Admission</h3>
-        <p>BTech, BE और Engineering Courses</p>
-        <a href="#">Explore</a>
-      </div>
+            ×
 
-      <div class="quick-card">
-        <h3>Law Admission</h3>
-        <p>LLB, LLM और अन्य Law Courses</p>
-        <a href="#">Explore</a>
-      </div>
+        </button>
+
+
+        <h3>Sarkariiichij Menu</h3>
+
+
+        <div class="card-grid">
+
+            <a
+                class="card"
+                href="jobs.html">
+
+                Government Jobs
+
+            </a>
+
+
+            <a
+                class="card"
+                href="results.html">
+
+                Results
+
+            </a>
+
+
+            <a
+                class="card"
+                href="admit-card.html">
+
+                Admit Card
+
+            </a>
+
+
+            <a
+                class="card"
+                href="syllabus.html">
+
+                Syllabus
+
+            </a>
+
+
+            <a
+                class="card"
+                href="scholarship.html">
+
+                Scholarship
+
+            </a>
+
+
+            <a
+                class="card"
+                href="career-tools.html">
+
+                Career Tools
+
+            </a>
+
+        </div>
 
     </div>
 
-  </section>
-    <!-- ENTRANCE & PROFESSIONAL ADMISSIONS -->
-  <section class="section">
+</div>
 
-    <div class="section-heading">
-      <h2>Entrance & Professional Admissions</h2>
-      <p>प्रमुख Entrance और Professional Courses की जानकारी</p>
-    </div>
 
-    <div class="quick-grid">
+<!-- =========================================================
+     TOAST + LOADING
+========================================================= -->
 
-      <div class="quick-card">
-        <h3>JEE Admission</h3>
-        <p>Engineering और BTech Admission के लिए JEE</p>
-        <a href="#">View Details</a>
-      </div>
+<div
+    id="admission-toast"
+    class="toast"
+    role="status"
+    aria-live="polite">
+</div>
 
-      <div class="quick-card">
-        <h3>NEET Admission</h3>
-        <p>Medical और Dental Courses में Admission</p>
-        <a href="#">View Details</a>
-      </div>
 
-      <div class="quick-card">
-        <h3>CUET Admission</h3>
-        <p>Central और अन्य Universities में Admission</p>
-        <a href="#">View Details</a>
-      </div>
+<div
+    id="admission-page-loading"
+    class="loading-overlay"
+    hidden>
 
-      <div class="quick-card">
-        <h3>CLAT Admission</h3>
-        <p>Law और National Law Universities में Admission</p>
-        <a href="#">View Details</a>
-      </div>
+    <div class="loading-box">
 
-      <div class="quick-card">
-        <h3>Nursing Admission</h3>
-        <p>BSc Nursing और अन्य Nursing Courses</p>
-        <a href="#">View Details</a>
-      </div>
+        <div class="spinner"></div>
 
-      <div class="quick-card">
-        <h3>ITI Admission</h3>
-        <p>ITI Trades और Skill-based Courses</p>
-        <a href="#">View Details</a>
-      </div>
-
-      <div class="quick-card">
-        <h3>Polytechnic Admission</h3>
-        <p>Diploma और Technical Courses</p>
-        <a href="#">View Details</a>
-      </div>
-
-      <div class="quick-card">
-        <h3>Other Entrance Exams</h3>
-        <p>अन्य National और State Entrance Exams</p>
-        <a href="#">View All</a>
-      </div>
+        <p>
+            Loading admission information...
+        </p>
 
     </div>
 
-  </section>
-    <!-- COURSE-WISE ADMISSION -->
-  <section class="section">
-
-    <div class="section-heading">
-      <h2>Course-wise Admission</h2>
-      <p>अपने पसंदीदा Course के अनुसार Admission खोजें</p>
-    </div>
-
-    <div class="quick-grid">
-
-      <div class="quick-card">
-        <h3>BA Admission</h3>
-        <p>Arts और Humanities के Undergraduate Courses</p>
-        <a href="#">Explore</a>
-      </div>
-
-      <div class="quick-card">
-        <h3>BSc Admission</h3>
-        <p>Science और संबंधित Undergraduate Courses</p>
-        <a href="#">Explore</a>
-      </div>
-
-      <div class="quick-card">
-        <h3>BCom Admission</h3>
-        <p>Commerce और Finance से जुड़े Courses</p>
-        <a href="#">Explore</a>
-      </div>
-
-      <div class="quick-card">
-        <h3>BTech / BE Admission</h3>
-        <p>Engineering और Technical Courses</p>
-        <a href="#">Explore</a>
-      </div>
-
-      <div class="quick-card">
-        <h3>MA / MSc / MCom</h3>
-        <p>Postgraduate Degree Courses</p>
-        <a href="#">Explore</a>
-      </div>
-
-      <div class="quick-card">
-        <h3>Diploma Courses</h3>
-        <p>Polytechnic और अन्य Diploma Programs</p>
-        <a href="#">Explore</a>
-      </div>
-
-      <div class="quick-card">
-        <h3>ITI Courses</h3>
-        <p>Technical और Skill-based ITI Trades</p>
-        <a href="#">Explore</a>
-      </div>
-
-      <div class="quick-card">
-        <h3>Professional Courses</h3>
-        <p>Medical, Law, Management और अन्य Courses</p>
-        <a href="#">View All</a>
-      </div>
-
-    </div>
-
-  </section>
-    <!-- STATE-WISE ADMISSIONS -->
-  <section class="section">
-
-    <div class="section-heading">
-      <h2>State-wise Admissions</h2>
-      <p>राज्य के अनुसार College, University और Entrance Admissions</p>
-    </div>
-
-    <div class="quick-grid">
-
-      <div class="quick-card">
-        <h3>Uttar Pradesh</h3>
-        <p>UP Universities, Colleges, ITI और Polytechnic</p>
-        <a href="#">View Admissions</a>
-      </div>
-
-      <div class="quick-card">
-        <h3>Bihar</h3>
-        <p>Bihar Universities, Colleges और Technical Courses</p>
-        <a href="#">View Admissions</a>
-      </div>
-
-      <div class="quick-card">
-        <h3>Rajasthan</h3>
-        <p>Universities, Colleges और State Entrance Exams</p>
-        <a href="#">View Admissions</a>
-      </div>
-
-      <div class="quick-card">
-        <h3>Madhya Pradesh</h3>
-        <p>UG, PG और Professional Course Admissions</p>
-        <a href="#">View Admissions</a>
-      </div>
-
-      <div class="quick-card">
-        <h3>Jharkhand</h3>
-        <p>Universities, Colleges और Technical Admissions</p>
-        <a href="#">View Admissions</a>
-      </div>
-
-      <div class="quick-card">
-        <h3>Maharashtra</h3>
-        <p>UG, PG और Professional Course Admissions</p>
-        <a href="#">View Admissions</a>
-      </div>
-
-      <div class="quick-card">
-        <h3>West Bengal</h3>
-        <p>University और College Admissions</p>
-        <a href="#">View Admissions</a>
-      </div>
-
-      <div class="quick-card">
-        <h3>All States</h3>
-        <p>भारत के सभी राज्यों के Admission Updates</p>
-        <a href="#">View All</a>
-      </div>
-
-    </div>
-
-  </section>
-    <!-- IMPORTANT ADMISSION INFORMATION -->
-  <section class="section">
-
-    <div class="section-heading">
-      <h2>Important Admission Information</h2>
-      <p>Admission से पहले जरूरी dates और application help</p>
-    </div>
-
-    <div class="quick-grid">
-
-      <div class="quick-card">
-        <h3>Admission Dates</h3>
-        <p>Application Start और Last Date की जानकारी</p>
-        <a href="#">View Dates</a>
-      </div>
-
-      <div class="quick-card">
-        <h3>Entrance Exam Dates</h3>
-        <p>Entrance Exams की महत्वपूर्ण dates</p>
-        <a href="#">View Calendar</a>
-      </div>
-
-      <div class="quick-card">
-        <h3>How to Apply</h3>
-        <p>Online Admission Form भरने की step-by-step जानकारी</p>
-        <a href="#">Read Guide</a>
-      </div>
-
-      <div class="quick-card">
-        <h3>Documents Required</h3>
-        <p>Admission के लिए जरूरी documents की जानकारी</p>
-        <a href="#">View Documents</a>
-      </div>
-
-      <div class="quick-card">
-        <h3>Application Fee</h3>
-        <p>Application और Entrance Fee से जुड़ी जानकारी</p>
-        <a href="#">View Details</a>
-      </div>
-
-      <div class="quick-card">
-        <h3>Eligibility</h3>
-        <p>Course और College की eligibility requirements</p>
-        <a href="#">Check Eligibility</a>
-      </div>
-
-      <div class="quick-card">
-        <h3>Application Correction</h3>
-        <p>Form में गलती होने पर correction की जानकारी</p>
-        <a href="#">Read Guide</a>
-      </div>
-
-      <div class="quick-card">
-        <h3>Admission FAQ</h3>
-        <p>Admission से जुड़े सामान्य सवालों के जवाब</p>
-        <a href="#">View FAQ</a>
-      </div>
-
-    </div>
-
-  </section>
-    <!-- TRUST & VERIFICATION -->
-  <section class="section">
-
-    <div class="section-heading">
-      <h2>Trust & Verification</h2>
-      <p>Admission information को verify करने में मदद</p>
-    </div>
-
-    <div class="quick-grid">
-
-      <div class="quick-card">
-        <h3>Official Source</h3>
-        <p>Admission की final information के लिए official website देखें।</p>
-        <a href="#">Verify Official Link</a>
-      </div>
-
-      <div class="quick-card">
-        <h3>Last Updated</h3>
-        <p>Admission information की latest update date देखें।</p>
-        <a href="#">View Updates</a>
-      </div>
-
-      <div class="quick-card">
-        <h3>Eligibility</h3>
-        <p>Course की eligibility और required qualification check करें।</p>
-        <a href="#">Check Eligibility</a>
-      </div>
-
-      <div class="quick-card">
-        <h3>Important Dates</h3>
-        <p>Application Start और Last Date carefully check करें।</p>
-        <a href="#">View Dates</a>
-      </div>
-
-      <div class="quick-card">
-        <h3>Documents</h3>
-        <p>Application से पहले सभी जरूरी documents तैयार रखें।</p>
-        <a href="#">View Documents</a>
-      </div>
-
-      <div class="quick-card">
-        <h3>Application Process</h3>
-        <p>Online Form और Admission Process की जानकारी देखें।</p>
-        <a href="#">Read Guide</a>
-      </div>
-
-      <div class="quick-card">
-        <h3>FAQ</h3>
-        <p>Admission से जुड़े सामान्य सवालों के जवाब।</p>
-        <a href="#">View FAQ</a>
-      </div>
-
-      <div class="quick-card">
-        <h3>Report Error</h3>
-        <p>किसी information में गलती मिले तो हमें बताएं।</p>
-        <a href="#">Report Error</a>
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- FOOTER -->
-  <footer class="site-footer">
-
-    <div class="footer-brand">
-      <h2>Sarkariiichij</h2>
-      <p>
-        Government Jobs, Results, Admission और Career
-        Information का सरल platform.
-      </p>
-    </div>
-
-    <div class="footer-links">
-
-      <a href="index.html">Home</a>
-      <a href="jobs.html">Government Jobs</a>
-      <a href="results.html">Results</a>
-      <a href="admit-card.html">Admit Card</a>
-      <a href="admission.html">Admission</a>
-      <a href="syllabus.html">Syllabus</a>
-
-    </div>
-
-    <div class="footer-info">
-
-      <a href="#">About Sarkariiichij</a>
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms & Conditions</a>
-      <a href="#">Disclaimer</a>
-      <a href="#">Contact Us</a>
-      <a href="#">Report Error</a>
-
-    </div>
-
-    <div class="footer-bottom">
-
-      <p>© 2026 Sarkariiichij. All Rights Reserved.</p>
-
-      <p>
-        Information is provided for educational and
-        informational purposes.
-      </p>
-
-    </div>
-
-  </footer>
-
-
-  <!-- MOBILE NAV -->
-  <nav class="mobile-nav">
-
-    <a href="index.html">Home</a>
-    <a href="jobs.html">Jobs</a>
-    <a href="results.html">Results</a>
-    <a href="admit-card.html">Admit Card</a>
-    <a href="admission.html">Admission</a>
-
-  </nav>
+</div>
 
+
+<!-- =========================================================
+     ADMISSION PAGE JAVASCRIPT — PART 4A
+========================================================= -->
+
+<script>
+
+(function () {
+
+    "use strict";
+
+
+    /* ---------- BASIC HELPERS ---------- */
+
+    const $ = function (selector, parent) {
+
+        return (
+            parent || document
+        ).querySelector(selector);
+
+    };
+
+
+    const safeText = function (
+        value,
+        fallback
+    ) {
+
+        if (
+            value === undefined ||
+            value === null ||
+            String(value).trim() === ""
+        ) {
+
+            return (
+                fallback ||
+                "Not Available"
+            );
+
+        }
+
+        return String(value);
+
+    };
+
+
+    const escapeHTML = function (value) {
+
+        return safeText(value)
+            .replace(
+                /&/g,
+                "&amp;"
+            )
+            .replace(
+                /</g,
+                "&lt;"
+            )
+            .replace(
+                />/g,
+                "&gt;"
+            )
+            .replace(
+                /"/g,
+                "&quot;"
+            )
+            .replace(
+                /'/g,
+                "&#039;"
+            );
+
+    };
+
+
+    /* ---------- TOAST ---------- */
+
+    window.showAdmissionToastV1 =
+        function (message) {
+
+            const toast =
+                $("#admission-toast");
+
+            if (!toast) {
+                return;
+            }
+
+            toast.textContent =
+                message;
+
+            toast.classList.add(
+                "show"
+            );
+
+            clearTimeout(
+                window.__admissionToastTimer
+            );
+
+            window.__admissionToastTimer =
+                setTimeout(
+                    function () {
+
+                        toast.classList.remove(
+                            "show"
+                        );
+
+                    },
+                    2600
+                );
+
+        };
+
+
+    /* ---------- LOADING ---------- */
+
+    window.showAdmissionLoadingV1 =
+        function (show) {
+
+            const loading =
+                $("#admission-page-loading");
+
+            if (!loading) {
+                return;
+            }
+
+            loading.hidden =
+                !show;
+
+        };
+
+
+    /* ---------- MENU ---------- */
+
+    window.openAdmissionMenuV1 =
+        function () {
+
+            const modal =
+                $("#admission-menu-modal");
+
+            if (!modal) {
+                return;
+            }
+
+            modal.hidden =
+                false;
+
+            modal.classList.add(
+                "show"
+            );
+
+        };
+
+
+    window.closeAdmissionMenuV1 =
+        function () {
+
+            const modal =
+                $("#admission-menu-modal");
+
+            if (!modal) {
+                return;
+            }
+
+            modal.classList.remove(
+                "show"
+            );
+
+            modal.hidden =
+                true;
+
+        };
+
+
+    /* ---------- CLOSE MENU ON BACKDROP ---------- */
+
+    document.addEventListener(
+        "click",
+        function (event) {
+
+            const modal =
+                $("#admission-menu-modal");
+
+            if (
+                modal &&
+                event.target === modal
+            ) {
+
+                window.closeAdmissionMenuV1();
+
+            }
+
+        }
+    );
+
+
+    /* ---------- ESC KEY ---------- */
+
+    document.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (
+                event.key === "Escape"
+            ) {
+
+                window.closeAdmissionMenuV1();
+
+            }
+
+        }
+    );
+
+
+    /* ---------- CURRENT YEAR ---------- */
+
+    document.addEventListener(
+        "DOMContentLoaded",
+        function () {
+
+            const year =
+                $("#current-year");
+
+            if (year) {
+
+                year.textContent =
+                    new Date()
+                    .getFullYear();
+
+            }
+
+        }
+    );
+
+
+})();
+
+</script>
+<!-- =========================================================
+     ADMISSION PART 4B-1
+     Data + Filter + Cards + Stats
+========================================================= -->
+
+<script>
+(function () {
+
+    "use strict";
+
+    /* ---------- DATA SOURCE ---------- */
+
+    function getAdmissionSourceV3() {
+
+        if (
+            window.SarkariiChijServices &&
+            Array.isArray(
+                window.SarkariiChijServices.admission
+            )
+        ) {
+            return window.SarkariiChijServices.admission;
+        }
+
+        if (
+            Array.isArray(
+                window.SarkariiChijAdmissionData
+            )
+        ) {
+            return window.SarkariiChijAdmissionData;
+        }
+
+        return [];
+    }
+
+
+    /* ---------- NORMALIZE DATA ---------- */
+
+    function normalizeAdmissionV3(item, index) {
+
+        item = item || {};
+
+        return {
+
+            id:
+                item.id ||
+                item._id ||
+                item.slug ||
+                "admission-" + index,
+
+            title:
+                item.title ||
+                item.name ||
+                item.course ||
+                "Admission",
+
+            university:
+                item.university ||
+                item.institute ||
+                item.college ||
+                "Not Available",
+
+            course:
+                item.course ||
+                item.program ||
+                "Not Available",
+
+            qualification:
+                item.qualification ||
+                item.eligibility ||
+                "Not Available",
+
+            state:
+                item.state ||
+                item.location ||
+                "Not Available",
+
+            type:
+                item.type ||
+                item.admissionType ||
+                "Admission",
+
+            fee:
+                item.fee ||
+                item.applicationFee ||
+                "Not Available",
+
+            startDate:
+                item.startDate ||
+                item.applicationStart ||
+                "Not Available",
+
+            lastDate:
+                item.lastDate ||
+                item.applicationLastDate ||
+                "Not Available",
+
+            examDate:
+                item.examDate ||
+                "Not Available",
+
+            counsellingDate:
+                item.counsellingDate ||
+                "Not Available",
+
+            officialWebsite:
+                item.officialWebsite ||
+                item.website ||
+                item.officialURL ||
+                "",
+
+            applyLink:
+                item.applyLink ||
+                item.applyURL ||
+                item.applicationURL ||
+                "",
+
+            notificationLink:
+                item.notificationLink ||
+                item.notificationURL ||
+                "",
+
+            counsellingLink:
+                item.counsellingLink ||
+                item.counsellingURL ||
+                "",
+
+            description:
+                item.description ||
+                item.details ||
+                ""
+
+        };
+
+    }
+
+
+    /* ---------- GLOBAL DATA ---------- */
+
+    let admissionDataV3 = [];
+
+    let filteredAdmissionsV3 = [];
+
+    let selectedAdmissionV3 = null;
+
+
+    /* ---------- LOAD DATA ---------- */
+
+    function loadAdmissionDataV3() {
+
+        admissionDataV3 =
+            getAdmissionSourceV3()
+                .map(
+                    normalizeAdmissionV3
+                );
+
+        filteredAdmissionsV3 =
+            admissionDataV3.slice();
+
+    }
+
+
+    /* ---------- FILTER VALUES ---------- */
+
+    function getAdmissionFiltersV3() {
+
+        const search =
+            document.getElementById(
+                "admission-search"
+            );
+
+        const qualification =
+            document.getElementById(
+                "admission-qualification"
+            );
+
+        const course =
+            document.getElementById(
+                "admission-course"
+            );
+
+        const state =
+            document.getElementById(
+                "admission-state"
+            );
+
+
+        return {
+
+            search:
+                (search?.value || "")
+                    .trim()
+                    .toLowerCase(),
+
+            qualification:
+                qualification?.value || "",
+
+            course:
+                course?.value || "",
+
+            state:
+                state?.value || ""
+
+        };
+
+    }
+
+
+    /* ---------- APPLY FILTER ---------- */
+
+    function applyAdmissionFiltersV3() {
+
+        const filters =
+            getAdmissionFiltersV3();
+
+
+        filteredAdmissionsV3 =
+            admissionDataV3.filter(
+                function (item) {
+
+                    const searchableText = [
+
+                        item.title,
+                        item.university,
+                        item.course,
+                        item.qualification,
+                        item.state,
+                        item.type
+
+                    ]
+                        .join(" ")
+                        .toLowerCase();
+
+
+                    const searchMatch =
+                        !filters.search ||
+                        searchableText.includes(
+                            filters.search
+                        );
+
+
+                    const qualificationMatch =
+                        !filters.qualification ||
+                        item.qualification
+                            .toLowerCase()
+                            .includes(
+                                filters.qualification
+                                    .toLowerCase()
+                            );
+
+
+                    const courseMatch =
+                        !filters.course ||
+                        item.course
+                            .toLowerCase()
+                            .includes(
+                                filters.course
+                                    .toLowerCase()
+                            );
+
+
+                    const stateMatch =
+                        !filters.state ||
+                        item.state
+                            .toLowerCase()
+                            .includes(
+                                filters.state
+                                    .toLowerCase()
+                            );
+
+
+                    return (
+                        searchMatch &&
+                        qualificationMatch &&
+                        courseMatch &&
+                        stateMatch
+                    );
+
+                }
+            );
+
+
+        renderAdmissionListV3();
+
+        updateAdmissionStatsV3();
+
+    }
+
+
+    /* ---------- CREATE CARD ---------- */
+
+    function createAdmissionCardV3(item) {
+
+        return `
+
+            <article class="admission-card">
+
+                <div class="badge badge-primary">
+                    ${escapeHTML(
+                        item.type
+                    )}
+                </div>
+
+                <h3>
+                    ${escapeHTML(
+                        item.title
+                    )}
+                </h3>
+
+                <p>
+                    <strong>University:</strong>
+                    ${escapeHTML(
+                        item.university
+                    )}
+                </p>
+
+                <p>
+                    <strong>Course:</strong>
+                    ${escapeHTML(
+                        item.course
+                    )}
+                </p>
+
+                <p>
+                    <strong>Qualification:</strong>
+                    ${escapeHTML(
+                        item.qualification
+                    )}
+                </p>
+
+                <p>
+                    <strong>State:</strong>
+                    ${escapeHTML(
+                        item.state
+                    )}
+                </p>
+
+                <p>
+                    <strong>Last Date:</strong>
+                    ${escapeHTML(
+                        item.lastDate
+                    )}
+                </p>
+
+                <div class="admission-actions">
+
+                    <button
+                        type="button"
+                        class="btn btn-primary"
+                        onclick="
+                            openAdmissionDetailV3(
+                                '${escapeHTML(item.id)}'
+                            )
+                        ">
+
+                        Full Details
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="btn btn-secondary"
+                        onclick="
+                            saveAdmissionV3(
+                                '${escapeHTML(item.id)}'
+                            )
+                        ">
+
+                        Save
+
+                    </button>
+
+                </div>
+
+            </article>
+
+        `;
+
+    }
+
+
+    /* ---------- RENDER LIST ---------- */
+
+    function renderAdmissionListV3() {
+
+        const list =
+            document.getElementById(
+                "admission-list"
+            );
+
+        const empty =
+            document.getElementById(
+                "admission-no-results"
+            );
+
+
+        if (!list) {
+            return;
+        }
+
+
+        if (
+            filteredAdmissionsV3.length === 0
+        ) {
+
+            list.innerHTML = "";
+
+
+            if (empty) {
+                empty.hidden = false;
+            }
+
+            return;
+
+        }
+
+
+        if (empty) {
+            empty.hidden = true;
+        }
+
+
+        list.innerHTML =
+            filteredAdmissionsV3
+                .map(
+                    createAdmissionCardV3
+                )
+                .join("");
+
+    }
+
+
+    /* ---------- UPDATE STATS ---------- */
+
+    function updateAdmissionStatsV3() {
+
+        const total =
+            admissionDataV3.length;
+
+
+        const open =
+            admissionDataV3.filter(
+                function (item) {
+
+                    return (
+                        item.lastDate &&
+                        item.lastDate !==
+                        "Not Available"
+                    );
+
+                }
+            ).length;
+
+
+        const universities =
+            new Set(
+                admissionDataV3
+                    .map(
+                        function (item) {
+                            return item.university;
+                        }
+                    )
+                    .filter(Boolean)
+            );
+
+
+        const totalElement =
+            document.getElementById(
+                "admission-total-count"
+            );
+
+        const openElement =
+            document.getElementById(
+                "admission-open-count"
+            );
+
+        const lastDateElement =
+            document.getElementById(
+                "admission-last-date-count"
+            );
+
+        const universityElement =
+            document.getElementById(
+                "admission-university-count"
+            );
+
+
+        if (totalElement) {
+            totalElement.textContent =
+                total;
+        }
+
+
+        if (openElement) {
+            openElement.textContent =
+                open;
+        }
+
+
+        if (lastDateElement) {
+            lastDateElement.textContent =
+                open;
+        }
+
+
+        if (universityElement) {
+            universityElement.textContent =
+                universities.size;
+        }
+
+    }
+
+
+    /* ---------- EXPOSE CONTROLLER DATA ---------- */
+
+    window.SarkariiChijAdmissionDataV3 = {
+
+        getData: function () {
+            return admissionDataV3;
+        },
+
+        getFilteredData: function () {
+            return filteredAdmissionsV3;
+        },
+
+        filter: applyAdmissionFiltersV3,
+
+        render: renderAdmissionListV3
+
+    };
+
+
+    /* ---------- KEEP FUNCTIONS AVAILABLE ---------- */
+
+    window.__admissionV3 = {
+
+        getData:
+            function () {
+                return admissionDataV3;
+            },
+
+        getFiltered:
+            function () {
+                return filteredAdmissionsV3;
+            },
+
+        getSelected:
+            function () {
+                return selectedAdmissionV3;
+            },
+
+        setSelected:
+            function (item) {
+                selectedAdmissionV3 = item;
+            },
+
+        filter:
+            applyAdmissionFiltersV3,
+
+        render:
+            renderAdmissionListV3,
+
+        stats:
+            updateAdmissionStatsV3
+
+    };
+
+
+    /* ---------- INITIAL DATA LOAD ---------- */
+
+    loadAdmissionDataV3();
+
+    renderAdmissionListV3();
+
+    updateAdmissionStatsV3();
+
+})();
+</script>
+<script>
+(function () {
+
+    "use strict";
+
+    /* =====================================================
+       OFFICIAL URL CHECK
+    ===================================================== */
+
+    function isValidOfficialURLV4(url) {
+
+        if (!url) return false;
+
+        try {
+
+            const parsed = new URL(url);
+
+            return parsed.protocol === "https:";
+
+        } catch (error) {
+
+            return false;
+
+        }
+
+    }
+
+
+    function createOfficialButtonV4(
+        url,
+        label
+    ) {
+
+        if (
+            !isValidOfficialURLV4(url)
+        ) {
+
+            return `
+                <button
+                    type="button"
+                    class="btn btn-secondary"
+                    disabled>
+                    ${label} Not Verified
+                </button>
+            `;
+
+        }
+
+
+        return `
+            <a
+                href="${escapeHTML(url)}"
+                class="btn btn-primary"
+                target="_blank"
+                rel="noopener noreferrer">
+                ${label}
+            </a>
+        `;
+
+    }
+
+
+    /* =====================================================
+       ADMISSION DETAILS
+    ===================================================== */
+
+    window.openAdmissionDetailV3 =
+        function (id) {
+
+            const data =
+                window.SarkariiChijAdmissionDataV3
+                    ?.getData() || [];
+
+
+            const item =
+                data.find(
+                    function (admission) {
+
+                        return String(
+                            admission.id
+                        ) === String(id);
+
+                    }
+                );
+
+
+            if (!item) {
+
+                showAdmissionToastV1(
+                    "Admission details not found."
+                );
+
+                return;
+
+            }
+
+
+            if (window.__admissionV3) {
+
+                window.__admissionV3
+                    .setSelected(item);
+
+            }
+
+
+            const section =
+                document.getElementById(
+                    "admission-detail-section"
+                );
+
+
+            if (section) {
+
+                section.hidden = false;
+
+            }
+
+
+            function setValue(
+                id,
+                value
+            ) {
+
+                const element =
+                    document.getElementById(id);
+
+                if (element) {
+
+                    element.textContent =
+                        safeText(value);
+
+                }
+
+            }
+
+
+            setValue(
+                "admission-detail-title",
+                item.title
+            );
+
+            setValue(
+                "admission-university",
+                item.university
+            );
+
+            setValue(
+                "admission-course-info",
+                item.course
+            );
+
+            setValue(
+                "admission-qualification-info",
+                item.qualification
+            );
+
+            setValue(
+                "admission-state-info",
+                item.state
+            );
+
+            setValue(
+                "admission-type-info",
+                item.type
+            );
+
+            setValue(
+                "admission-fee-info",
+                item.fee
+            );
+
+            setValue(
+                "admission-start-date",
+                item.startDate
+            );
+
+            setValue(
+                "admission-last-date",
+                item.lastDate
+            );
+
+            setValue(
+                "admission-exam-date",
+                item.examDate
+            );
+
+            setValue(
+                "admission-counselling-date",
+                item.counsellingDate
+            );
+
+
+            const description =
+                document.getElementById(
+                    "admission-description"
+                );
+
+
+            if (description) {
+
+                description.textContent =
+                    item.description ||
+                    "Detailed information is not available. Please check the official notification.";
+
+            }
+
+
+            const official =
+                document.getElementById(
+                    "admission-official-website"
+                );
+
+            const apply =
+                document.getElementById(
+                    "admission-apply-link"
+                );
+
+            const notification =
+                document.getElementById(
+                    "admission-notification-link"
+                );
+
+            const counselling =
+                document.getElementById(
+                    "admission-counselling-link"
+                );
+
+
+            if (official) {
+
+                official.innerHTML =
+                    createOfficialButtonV4(
+                        item.officialWebsite,
+                        "Official Website"
+                    );
+
+            }
+
+
+            if (apply) {
+
+                apply.innerHTML =
+                    createOfficialButtonV4(
+                        item.applyLink,
+                        "Apply Online"
+                    );
+
+            }
+
+
+            if (notification) {
+
+                notification.innerHTML =
+                    createOfficialButtonV4(
+                        item.notificationLink,
+                        "Notification"
+                    );
+
+            }
+
+
+            if (counselling) {
+
+                counselling.innerHTML =
+                    createOfficialButtonV4(
+                        item.counsellingLink,
+                        "Counselling"
+                    );
+
+            }
+
+
+            section?.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+
+        };
+
+
+    /* =====================================================
+       SAVE ADMISSION
+    ===================================================== */
+
+    function getSavedAdmissionsV4() {
+
+        try {
+
+            return JSON.parse(
+                localStorage.getItem(
+                    "sarkariiichij_saved_admissions"
+                ) || "[]"
+            );
+
+        } catch (error) {
+
+            return [];
+
+        }
+
+    }
+
+
+    window.saveAdmissionV3 =
+        function (id) {
+
+            const saved =
+                getSavedAdmissionsV4();
+
+
+            if (
+                saved.includes(id)
+            ) {
+
+                showAdmissionToastV1(
+                    "Admission already saved."
+                );
+
+                return;
+
+            }
+
+
+            saved.push(id);
+
+
+            localStorage.setItem(
+                "sarkariiichij_saved_admissions",
+                JSON.stringify(saved)
+            );
+
+
+            showAdmissionToastV1(
+                "Admission saved successfully."
+            );
+
+        };
+
+
+    /* =====================================================
+       FILTER + RESET BUTTONS
+    ===================================================== */
+
+    function resetAdmissionV4() {
+
+        [
+            "admission-search",
+            "admission-qualification",
+            "admission-course",
+            "admission-state"
+        ]
+        .forEach(
+            function (id) {
+
+                const element =
+                    document.getElementById(id);
+
+                if (element) {
+
+                    element.value = "";
+
+                }
+
+            }
+        );
+
+
+        if (
+            window.SarkariiChijAdmissionDataV3
+        ) {
+
+            window.SarkariiChijAdmissionDataV3
+                .filter();
+
+        }
+
+
+        window.scrollTo({
+
+            top: 0,
+
+            behavior: "smooth"
+
+        });
+
+    }
+
+
+    /* =====================================================
+       EVENT BINDING
+    ===================================================== */
+
+    function bindAdmissionEventsV4() {
+
+        const searchButton =
+            document.getElementById(
+                "admission-search-btn"
+            );
+
+        const resetButton =
+            document.getElementById(
+                "admission-reset-btn"
+            );
+
+        const noResultReset =
+            document.getElementById(
+                "admission-no-results-reset"
+            );
+
+
+        if (searchButton) {
+
+            searchButton.addEventListener(
+                "click",
+                function () {
+
+                    window
+                        .SarkariiChijAdmissionDataV3
+                        ?.filter();
+
+                }
+            );
+
+        }
+
+
+        if (resetButton) {
+
+            resetButton.addEventListener(
+                "click",
+                resetAdmissionV4
+            );
+
+        }
+
+
+        if (noResultReset) {
+
+            noResultReset.addEventListener(
+                "click",
+                resetAdmissionV4
+            );
+
+        }
+
+
+        const searchInput =
+            document.getElementById(
+                "admission-search"
+            );
+
+
+        if (searchInput) {
+
+            searchInput.addEventListener(
+                "keydown",
+                function (event) {
+
+                    if (
+                        event.key === "Enter"
+                    ) {
+
+                        event.preventDefault();
+
+                        window
+                            .SarkariiChijAdmissionDataV3
+                            ?.filter();
+
+                    }
+
+                }
+            );
+
+        }
+
+
+        [
+            "admission-qualification",
+            "admission-course",
+            "admission-state"
+        ]
+        .forEach(
+            function (id) {
+
+                const element =
+                    document.getElementById(id);
+
+                if (element) {
+
+                    element.addEventListener(
+                        "change",
+                        function () {
+
+                            window
+                                .SarkariiChijAdmissionDataV3
+                                ?.filter();
+
+                        }
+                    );
+
+                }
+
+            }
+        );
+
+    }
+
+
+    /* =====================================================
+       PAGE INITIALIZATION
+    ===================================================== */
+
+    function initializeAdmissionV4() {
+
+        bindAdmissionEventsV4();
+
+
+        const year =
+            document.getElementById(
+                "current-year"
+            );
+
+
+        if (year) {
+
+            year.textContent =
+                new Date()
+                    .getFullYear();
+
+        }
+
+
+        const loading =
+            document.getElementById(
+                "admission-loading"
+            );
+
+
+        if (loading) {
+
+            loading.hidden = true;
+
+        }
+
+
+        if (
+            typeof showAdmissionLoadingV1 ===
+            "function"
+        ) {
+
+            showAdmissionLoadingV1(false);
+
+        }
+
+
+        window.SarkariiChijAdmissionPage =
+            window.SarkariiChijAdmissionPage ||
+            {};
+
+
+        window.SarkariiChijAdmissionPage
+            .initialized = true;
+
+
+        window.SarkariiChijAdmissionPage
+            .page = "admission";
+
+    }
+
+
+    /* =====================================================
+       KEYBOARD + PAGE START
+    ===================================================== */
+
+    document.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (
+                event.key === "Escape" &&
+                typeof closeAdmissionMenuV1 ===
+                "function"
+            ) {
+
+                closeAdmissionMenuV1();
+
+            }
+
+        }
+    );
+
+
+    if (
+        document.readyState ===
+        "loading"
+    ) {
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            initializeAdmissionV4
+        );
+
+    } else {
+
+        initializeAdmissionV4();
+
+    }
+
+
+})();
+</script>
+
+
+<!-- =====================================================
+     SITE SCRIPT
+===================================================== -->
+
+<script
+    src="script.js"
+    defer>
+</script>
+
+
+<!-- =====================================================
+     FINAL PAGE SETUP
+===================================================== -->
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        const year =
+            document.getElementById(
+                "current-year"
+            );
+
+
+        if (year) {
+
+            year.textContent =
+                new Date()
+                    .getFullYear();
+
+        }
+
+
+        window.SarkariiChijPage =
+            window.SarkariiChijPage ||
+            {};
+
+
+        window.SarkariiChijPage.page =
+            "admission";
+
+        window.SarkariiChijPage.type =
+            "admission";
+
+        window.SarkariiChijPage.initialized =
+            true;
+
+    }
+);
+
+</script>
+
+
+<!-- =====================================================
+     BACK TO TOP
+===================================================== -->
+
+<button
+    id="back-to-top"
+    class="back-to-top"
+    type="button"
+    aria-label="Back to top"
+    onclick="
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    ">
+
+    ↑
+
+</button>
+
+
+<!-- =====================================================
+     ADMISSION.HTML COMPLETE
+===================================================== -->
 
 </body>
-</html>
+        </html>
