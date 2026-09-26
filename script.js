@@ -1125,3 +1125,1032 @@
     };
 
 })(window.SarkariiChij);
+/* ==================== JOBS: DISPLAY + LOADING ==================== */
+
+(function (App) {
+    "use strict";
+
+    App.jobs = App.jobs || {};
+
+    App.jobs.showLoading = function (container) {
+        if (!container) return;
+
+        container.innerHTML = `
+            <div class="loading-state">
+                <div class="loading-spinner"></div>
+                <p>Verified jobs load हो रही हैं...</p>
+            </div>
+        `;
+    };
+
+    App.jobs.showEmpty = function (container, message) {
+        if (!container) return;
+
+        container.innerHTML = `
+            <div class="empty-state">
+                <h3>कोई verified job उपलब्ध नहीं है</h3>
+                <p>
+                    ${App.utils.escape(
+                        message ||
+                        "अभी verified recruitment data उपलब्ध नहीं है।"
+                    )}
+                </p>
+            </div>
+        `;
+    };
+
+    App.jobs.renderVerified = function (container, jobs) {
+        if (!container) return;
+
+        if (!Array.isArray(jobs) || !jobs.length) {
+            App.jobs.showEmpty(
+                container,
+                "अभी कोई verified vacancy उपलब्ध नहीं है।"
+            );
+            return;
+        }
+
+        var validJobs = jobs.filter(function (job) {
+            return job &&
+                job.title &&
+                App.jobs.isOfficialLink(job.officialUrl);
+        });
+
+        if (!validJobs.length) {
+            App.jobs.showEmpty(
+                container,
+                "Verified official recruitment link वाला job उपलब्ध नहीं है।"
+            );
+            return;
+        }
+
+        App.jobs.render(container, validJobs);
+        App.jobs.bindCards(container);
+    };
+
+    App.jobs.loadPage = function () {
+        var container = document.querySelector("#jobs-list");
+
+        if (!container) return;
+
+        App.jobs.showLoading(container);
+
+        setTimeout(function () {
+            var jobs = App.jobs.get();
+
+            App.jobs.renderVerified(container, jobs);
+            App.jobs.updateStats(jobs);
+        }, 100);
+    };
+
+    App.jobs.refreshPage = function () {
+        var container = document.querySelector("#jobs-list");
+
+        if (!container) return;
+
+        App.jobs.showLoading(container);
+
+        setTimeout(function () {
+            var jobs = App.jobs.get();
+
+            App.jobs.renderVerified(container, jobs);
+            App.jobs.updateStats(jobs);
+        }, 100);
+    };
+
+    App.jobs.initDisplay = function () {
+        var container = document.querySelector("#jobs-list");
+
+        if (!container) return;
+
+        App.jobs.loadPage();
+    };
+
+    document.addEventListener("DOMContentLoaded", function () {
+        App.jobs.initDisplay();
+    });
+
+})(window.SarkariiChij);
+/* ==================== JOBS: VERIFIED DATA CONTROL ==================== */
+
+(function (App) {
+    "use strict";
+
+    App.jobs = App.jobs || {};
+
+    App.jobs.cleanText = function (value) {
+        return String(value || "").trim();
+    };
+
+    App.jobs.makeId = function (job) {
+        if (!job) return "";
+
+        if (job.id) {
+            return App.jobs.cleanText(job.id);
+        }
+
+        var title = App.jobs.cleanText(job.title)
+            .toLowerCase()
+            .replace(/[^a-z0-9]+/g, "-")
+            .replace(/^-+|-+$/g, "");
+
+        var department = App.jobs.cleanText(job.department)
+            .toLowerCase()
+            .replace(/[^a-z0-9]+/g, "-");
+
+        return [title, department]
+            .filter(Boolean)
+            .join("-");
+    };
+
+    App.jobs.validate = function (job) {
+        if (!job || typeof job !== "object") {
+            return false;
+        }
+
+        if (!App.jobs.cleanText(job.title)) {
+            return false;
+        }
+
+        if (!App.jobs.cleanText(job.department)) {
+            return false;
+        }
+
+        if (!App.jobs.isOfficialLink(job.officialUrl)) {
+            return false;
+        }
+
+        return true;
+    };
+
+    App.jobs.findDuplicate = function (job) {
+        var id = App.jobs.makeId(job);
+
+        if (!id) return null;
+
+        return App.jobs.get().find(function (item) {
+            return App.jobs.makeId(item) === id;
+        }) || null;
+    };
+
+    App.jobs.addVerified = function (job) {
+        if (!App.jobs.validate(job)) {
+            return {
+                success: false,
+                message: "Job में valid official HTTPS link आवश्यक है।"
+            };
+        }
+
+        var existing = App.jobs.findDuplicate(job);
+
+        if (existing) {
+            return {
+                success: false,
+                message: "यह job पहले से मौजूद है।"
+            };
+        }
+
+        var newJob = App.jobs.normalize(job);
+
+        newJob.id = App.jobs.makeId(newJob);
+        newJob.verified = true;
+
+        App.jobs.data.push(newJob);
+
+        return {
+            success: true,
+            job: newJob
+        };
+    };
+
+    App.jobs.remove = function (id) {
+        var before = App.jobs.data.length;
+
+        App.jobs.data = App.jobs.data.filter(function (job) {
+            return job.id !== id;
+        });
+
+        return before !== App.jobs.data.length;
+    };
+
+    App.jobs.clear = function () {
+        App.jobs.data = [];
+        return true;
+    };
+
+    App.jobs.getVerified = function () {
+        return App.jobs.get().filter(function (job) {
+            return job.verified === true &&
+                App.jobs.isOfficialLink(job.officialUrl);
+        });
+    };
+
+})(window.SarkariiChij);
+/* ==================== JOBS: ADVANCED FILTER ==================== */
+
+(function (App) {
+    "use strict";
+
+    App.jobs = App.jobs || {};
+
+    App.jobs.matchValue = function (jobValue, filterValue) {
+        if (!filterValue) return true;
+
+        var job = String(jobValue || "").toLowerCase();
+        var filter = String(filterValue || "").toLowerCase();
+
+        if (!job) return false;
+
+        return job === filter || job.includes(filter);
+    };
+
+    App.jobs.filterVerified = function (filters) {
+        filters = filters || {};
+
+        var search = String(filters.search || "").trim().toLowerCase();
+        var qualification = String(filters.qualification || "").trim();
+        var department = String(filters.department || "").trim();
+        var state = String(filters.state || "").trim();
+        var category = String(filters.category || "").trim();
+
+        return App.jobs.getVerified().filter(function (job) {
+
+            var text = [
+                job.title,
+                job.department,
+                job.qualification,
+                job.state,
+                job.category,
+                job.post
+            ].join(" ").toLowerCase();
+
+            if (search && !text.includes(search)) {
+                return false;
+            }
+
+            if (
+                qualification &&
+                !App.jobs.matchValue(
+                    job.qualification,
+                    qualification
+                )
+            ) {
+                return false;
+            }
+
+            if (
+                department &&
+                !App.jobs.matchValue(
+                    job.department,
+                    department
+                )
+            ) {
+                return false;
+            }
+
+            if (
+                state &&
+                !App.jobs.matchValue(
+                    job.state,
+                    state
+                )
+            ) {
+                return false;
+            }
+
+            if (
+                category &&
+                !App.jobs.matchValue(
+                    job.category,
+                    category
+                )
+            ) {
+                return false;
+            }
+
+            return true;
+        });
+    };
+
+    App.jobs.applyVerifiedFilters = function () {
+        var container = document.querySelector("#jobs-list");
+
+        if (!container) return;
+
+        var filters = {
+            search: document.querySelector("#job-search")?.value || "",
+            qualification:
+                document.querySelector("#job-qualification")?.value || "",
+            department:
+                document.querySelector("#job-department")?.value || "",
+            state:
+                document.querySelector("#job-state")?.value || "",
+            category:
+                document.querySelector("#job-category")?.value || ""
+        };
+
+        var jobs = App.jobs.filterVerified(filters);
+
+        App.jobs.renderVerified(container, jobs);
+        App.jobs.updateStats(jobs);
+    };
+
+    App.jobs.bindVerifiedFilters = function () {
+        var button = document.querySelector("#apply-job-filters");
+        var reset = document.querySelector("#reset-job-filters");
+
+        if (button) {
+            button.addEventListener("click", function () {
+                App.jobs.applyVerifiedFilters();
+            });
+        }
+
+        if (reset) {
+            reset.addEventListener("click", function () {
+                App.jobs.resetPageFilters();
+                App.jobs.applyVerifiedFilters();
+            });
+        }
+    };
+
+})(window.SarkariiChij);
+/* ==================== JOBS: DATE + STATUS ==================== */
+
+(function (App) {
+    "use strict";
+
+    App.jobs = App.jobs || {};
+
+    App.jobs.parseDate = function (value) {
+        if (!value) return null;
+
+        var date = new Date(value);
+
+        if (isNaN(date.getTime())) {
+            return null;
+        }
+
+        return date;
+    };
+
+    App.jobs.formatDate = function (value) {
+        var date = App.jobs.parseDate(value);
+
+        if (!date) return "Not Verified";
+
+        return date.toLocaleDateString("en-IN", {
+            day: "2-digit",
+            month: "short",
+            year: "numeric"
+        });
+    };
+
+    App.jobs.getStatus = function (job) {
+        if (!job) return "unknown";
+
+        var lastDate = App.jobs.parseDate(job.lastDate);
+
+        if (!lastDate) {
+            return job.status || "unknown";
+        }
+
+        var now = new Date();
+
+        if (lastDate < now) {
+            return "closed";
+        }
+
+        return "open";
+    };
+
+    App.jobs.isOpen = function (job) {
+        return App.jobs.getStatus(job) === "open";
+    };
+
+    App.jobs.isClosed = function (job) {
+        return App.jobs.getStatus(job) === "closed";
+    };
+
+    App.jobs.getOpen = function () {
+        return App.jobs.getVerified().filter(function (job) {
+            return App.jobs.isOpen(job);
+        });
+    };
+
+    App.jobs.getClosed = function () {
+        return App.jobs.getVerified().filter(function (job) {
+            return App.jobs.isClosed(job);
+        });
+    };
+
+    App.jobs.getLastDateJobs = function () {
+        return App.jobs.getVerified().filter(function (job) {
+            return Boolean(
+                App.jobs.parseDate(job.lastDate)
+            );
+        });
+    };
+
+    App.jobs.getDateInfo = function (job) {
+        return {
+            startDate: App.jobs.formatDate(job.startDate),
+            lastDate: App.jobs.formatDate(job.lastDate),
+            examDate: App.jobs.formatDate(job.examDate),
+            status: App.jobs.getStatus(job)
+        };
+    };
+
+})(window.SarkariiChij);
+/* ==================== JOBS: CARD DETAILS ==================== */
+
+(function (App) {
+    "use strict";
+
+    App.jobs = App.jobs || {};
+
+    App.jobs.statusLabel = function (job) {
+        var status = App.jobs.getStatus(job);
+
+        if (status === "open") return "Application Open";
+        if (status === "closed") return "Application Closed";
+
+        return "Status Not Verified";
+    };
+
+    App.jobs.statusClass = function (job) {
+        var status = App.jobs.getStatus(job);
+
+        if (status === "open") return "status-open";
+        if (status === "closed") return "status-closed";
+
+        return "status-unknown";
+    };
+
+    App.jobs.cardDetails = function (job) {
+        var dateInfo = App.jobs.getDateInfo(job);
+
+        return `
+            <div class="job-meta">
+                <div class="job-meta-item">
+                    <span>Qualification</span>
+                    <strong>
+                        ${App.utils.escape(
+                            job.qualification || "Not Verified"
+                        )}
+                    </strong>
+                </div>
+
+                <div class="job-meta-item">
+                    <span>Department</span>
+                    <strong>
+                        ${App.utils.escape(
+                            job.department || "Not Verified"
+                        )}
+                    </strong>
+                </div>
+
+                <div class="job-meta-item">
+                    <span>State</span>
+                    <strong>
+                        ${App.utils.escape(
+                            job.state || "Not Verified"
+                        )}
+                    </strong>
+                </div>
+
+                <div class="job-meta-item">
+                    <span>Last Date</span>
+                    <strong>${dateInfo.lastDate}</strong>
+                </div>
+            </div>
+
+            <div class="job-status ${App.jobs.statusClass(job)}">
+                ${App.jobs.statusLabel(job)}
+            </div>
+        `;
+    };
+
+    App.jobs.officialButton = function (job) {
+        if (!App.jobs.isOfficialLink(job.officialUrl)) {
+            return `
+                <span class="btn btn-secondary">
+                    Official Link Not Verified
+                </span>
+            `;
+        }
+
+        return `
+            <a
+                class="btn btn-primary"
+                href="${App.utils.escape(job.officialUrl)}"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Official Website
+            </a>
+        `;
+    };
+
+    App.jobs.card = function (job) {
+        if (!App.jobs.validate(job)) return "";
+
+        var saved = App.isSavedJob
+            ? App.isSavedJob(job.id)
+            : false;
+
+        return `
+            <article class="job-card" data-job-id="${App.utils.escape(job.id)}">
+
+                <div class="job-card-content">
+
+                    <div class="job-card-top">
+                        <span class="job-badge">Verified</span>
+
+                        <button
+                            type="button"
+                            class="save-job-btn ${saved ? "saved" : ""}"
+                            data-save-job="${App.utils.escape(job.id)}"
+                        >
+                            ${saved ? "Saved" : "Save Job"}
+                        </button>
+                    </div>
+
+                    <h3>
+                        ${App.utils.escape(job.title)}
+                    </h3>
+
+                    <p>
+                        ${App.utils.escape(
+                            job.post || job.department || ""
+                        )}
+                    </p>
+
+                    ${App.jobs.cardDetails(job)}
+
+                    <div class="job-card-actions">
+
+                        <a
+                            class="btn btn-secondary"
+                            href="job-detail.html?job=${encodeURIComponent(job.id)}"
+                        >
+                            View Details
+                        </a>
+
+                        ${App.jobs.officialButton(job)}
+
+                    </div>
+
+                </div>
+
+            </article>
+        `;
+    };
+
+})(window.SarkariiChij);
+/* ==================== JOBS: SAVE SYSTEM ==================== */
+
+(function (App) {
+    "use strict";
+
+    App.jobs = App.jobs || {};
+
+    App.jobs.isSaved = function (id) {
+        if (!id) return false;
+
+        var saved = App.storage.get("savedJobs", []);
+
+        return Array.isArray(saved) &&
+            saved.indexOf(String(id)) !== -1;
+    };
+
+    App.jobs.save = function (id) {
+        if (!id) return false;
+
+        var saved = App.storage.get("savedJobs", []);
+
+        if (!Array.isArray(saved)) {
+            saved = [];
+        }
+
+        id = String(id);
+
+        if (saved.indexOf(id) === -1) {
+            saved.push(id);
+        }
+
+        App.storage.set("savedJobs", saved);
+
+        return true;
+    };
+
+    App.jobs.unsave = function (id) {
+        if (!id) return false;
+
+        var saved = App.storage.get("savedJobs", []);
+
+        if (!Array.isArray(saved)) {
+            return false;
+        }
+
+        id = String(id);
+
+        saved = saved.filter(function (item) {
+            return String(item) !== id;
+        });
+
+        App.storage.set("savedJobs", saved);
+
+        return true;
+    };
+
+    App.jobs.toggleSave = function (id) {
+        if (App.jobs.isSaved(id)) {
+            App.jobs.unsave(id);
+            return false;
+        }
+
+        App.jobs.save(id);
+        return true;
+    };
+
+    App.jobs.getSaved = function () {
+        var saved = App.storage.get("savedJobs", []);
+
+        if (!Array.isArray(saved)) {
+            return [];
+        }
+
+        return App.jobs.get().filter(function (job) {
+            return saved.indexOf(String(job.id)) !== -1;
+        });
+    };
+
+    App.jobs.updateSaveButtons = function () {
+        document.querySelectorAll("[data-save-job]")
+            .forEach(function (button) {
+
+                var id = button.getAttribute("data-save-job");
+
+                if (App.jobs.isSaved(id)) {
+                    button.textContent = "Saved";
+                    button.classList.add("saved");
+                } else {
+                    button.textContent = "Save Job";
+                    button.classList.remove("saved");
+                }
+            });
+    };
+
+    App.jobs.bindSaveButtons = function () {
+        document.querySelectorAll("[data-save-job]")
+            .forEach(function (button) {
+
+                if (button.dataset.saveBound === "true") {
+                    return;
+                }
+
+                button.dataset.saveBound = "true";
+
+                button.addEventListener("click", function () {
+                    var id = button.getAttribute("data-save-job");
+
+                    if (!id) return;
+
+                    var saved = App.jobs.toggleSave(id);
+
+                    App.jobs.updateSaveButtons();
+
+                    if (typeof App.toast === "function") {
+                        App.toast(
+                            saved
+                                ? "Job saved"
+                                : "Job removed from saved jobs"
+                        );
+                    }
+                });
+            });
+    };
+
+})(window.SarkariiChij);
+/* ==================== JOBS: DETAIL LOOKUP ==================== */
+
+(function (App) {
+    "use strict";
+
+    App.jobs = App.jobs || {};
+
+    App.jobs.getIdFromUrl = function () {
+        var params = new URLSearchParams(window.location.search);
+        return params.get("job") || "";
+    };
+
+    App.jobs.getCurrentJob = function () {
+        var id = App.jobs.getIdFromUrl();
+
+        if (!id) return null;
+
+        return App.jobs.find(id) || null;
+    };
+
+    App.jobs.renderDetail = function (job) {
+        if (!job) {
+            var empty = document.querySelector("#job-detail");
+
+            if (empty) {
+                empty.innerHTML = `
+                    <div class="empty-state">
+                        <h3>Job not found</h3>
+                        <p>
+                            यह job उपलब्ध नहीं है या verified नहीं है।
+                        </p>
+                    </div>
+                `;
+            }
+
+            return;
+        }
+
+        var title = document.querySelector("#job-title");
+        var department = document.querySelector("#job-department-name");
+        var qualification = document.querySelector("#job-qualification");
+        var state = document.querySelector("#job-state");
+        var lastDate = document.querySelector("#job-last-date");
+        var official = document.querySelector("#job-official-link");
+
+        if (title) {
+            title.textContent = job.title || "Not Verified";
+        }
+
+        if (department) {
+            department.textContent =
+                job.department || "Not Verified";
+        }
+
+        if (qualification) {
+            qualification.textContent =
+                job.qualification || "Not Verified";
+        }
+
+        if (state) {
+            state.textContent =
+                job.state || "Not Verified";
+        }
+
+        if (lastDate) {
+            lastDate.textContent =
+                App.jobs.formatDate(job.lastDate);
+        }
+
+        if (official) {
+            if (App.jobs.isOfficialLink(job.officialUrl)) {
+                official.href = job.officialUrl;
+                official.textContent = "Official Website";
+                official.style.display = "";
+            } else {
+                official.removeAttribute("href");
+                official.textContent = "Official Link Not Verified";
+            }
+        }
+    };
+
+    App.jobs.initDetail = function () {
+        if (!window.location.pathname.includes("job-detail")) {
+            return;
+        }
+
+        var job = App.jobs.getCurrentJob();
+
+        App.jobs.renderDetail(job);
+    };
+
+    document.addEventListener("DOMContentLoaded", function () {
+        App.jobs.initDetail();
+    });
+
+})(window.SarkariiChij);
+/* ==================== JOBS: OFFICIAL SOURCES PAGE ==================== */
+
+(function (App) {
+    "use strict";
+
+    App.jobs = App.jobs || {};
+
+    App.jobs.initOfficialSources = function () {
+        var list = document.querySelector("#official-sources-list");
+
+        if (!list) return;
+
+        var search = document.querySelector("#official-source-search");
+        var type = document.querySelector("#official-source-type");
+
+        function render() {
+            var query = search ? search.value : "";
+            var selectedType = type ? type.value : "";
+
+            var sources = App.jobs.getOfficialSources();
+
+            if (query) {
+                sources = sources.filter(function (source) {
+                    var text = [
+                        source.name,
+                        source.short,
+                        source.type
+                    ].join(" ").toLowerCase();
+
+                    return text.includes(
+                        query.toLowerCase().trim()
+                    );
+                });
+            }
+
+            if (selectedType) {
+                sources = sources.filter(function (source) {
+                    return source.type === selectedType;
+                });
+            }
+
+            if (!sources.length) {
+                list.innerHTML = `
+                    <div class="empty-state">
+                        <h3>No official source found</h3>
+                        <p>Verified recruitment source उपलब्ध नहीं है।</p>
+                    </div>
+                `;
+                return;
+            }
+
+            list.innerHTML = sources
+                .map(App.jobs.officialSourceCard)
+                .join("");
+        }
+
+        if (search) {
+            search.addEventListener("input", render);
+        }
+
+        if (type) {
+            type.innerHTML = `
+                <option value="">All Departments</option>
+                ${App.jobs.getSourceTypes()
+                    .map(function (item) {
+                        return `
+                            <option value="${App.utils.escape(item)}">
+                                ${App.utils.escape(item)}
+                            </option>
+                        `;
+                    })
+                    .join("")}
+            `;
+
+            type.addEventListener("change", render);
+        }
+
+        render();
+    };
+
+    document.addEventListener("DOMContentLoaded", function () {
+        App.jobs.initOfficialSources();
+    });
+
+})(window.SarkariiChij);
+/* ==================== JOBS: CENTRAL INITIALIZER ==================== */
+
+(function (App) {
+    "use strict";
+
+    App.jobs = App.jobs || {};
+
+    App.jobs.initialized = false;
+
+    App.jobs.init = function () {
+        if (App.jobs.initialized) {
+            return;
+        }
+
+        App.jobs.initialized = true;
+
+        var path = window.location.pathname.toLowerCase();
+
+        if (path.endsWith("/jobs.html") || path.endsWith("jobs.html")) {
+            App.jobs.bindPageFilters();
+            App.jobs.bindVerifiedFilters();
+            App.jobs.bindSaveButtons();
+            App.jobs.loadPage();
+        }
+
+        if (path.includes("job-detail")) {
+            App.jobs.initDetail();
+        }
+
+        if (
+            document.querySelector("#official-sources-list")
+        ) {
+            App.jobs.initOfficialSources();
+        }
+    };
+
+    App.jobs.rebind = function () {
+        App.jobs.bindSaveButtons();
+
+        var list = document.querySelector("#jobs-list");
+
+        if (list) {
+            App.jobs.bindCards(list);
+        }
+
+        App.jobs.updateSaveButtons();
+    };
+
+    document.addEventListener("DOMContentLoaded", function () {
+        App.jobs.init();
+    });
+
+})(window.SarkariiChij);
+/* ==================== JOBS: FINAL SAFETY ==================== */
+
+(function (App) {
+    "use strict";
+
+    App.jobs = App.jobs || {};
+
+    App.jobs.safeRender = function () {
+        try {
+            var list = document.querySelector("#jobs-list");
+
+            if (!list) return;
+
+            var jobs = App.jobs.getVerified();
+
+            if (!Array.isArray(jobs)) {
+                App.jobs.showEmpty(
+                    list,
+                    "Verified job data उपलब्ध नहीं है।"
+                );
+                return;
+            }
+
+            App.jobs.renderVerified(list, jobs);
+            App.jobs.bindSaveButtons();
+            App.jobs.updateSaveButtons();
+            App.jobs.updateStats(jobs);
+
+        } catch (error) {
+            console.error("Jobs render error:", error);
+
+            var list = document.querySelector("#jobs-list");
+
+            if (list) {
+                App.jobs.showEmpty(
+                    list,
+                    "Jobs load करते समय समस्या हुई। कृपया थोड़ी देर बाद दोबारा प्रयास करें।"
+                );
+            }
+        }
+    };
+
+    App.jobs.safeFilter = function () {
+        try {
+            App.jobs.applyVerifiedFilters();
+        } catch (error) {
+            console.error("Jobs filter error:", error);
+            App.jobs.safeRender();
+        }
+    };
+
+    App.jobs.verifyAll = function () {
+        var jobs = App.jobs.get();
+
+        if (!Array.isArray(jobs)) {
+            return [];
+        }
+
+        return jobs.filter(function (job) {
+            return App.jobs.validate(job);
+        });
+    };
+
+    App.jobs.getVerifiedCount = function () {
+        return App.jobs.verifyAll().length;
+    };
+
+    App.jobs.clearInvalid = function () {
+        var valid = App.jobs.verifyAll();
+
+        App.jobs.data = valid;
+
+        return valid.length;
+    };
+
+    App.jobs.healthCheck = function () {
+        return {
+            script: true,
+            jobsSystem: true,
+            verifiedJobs: App.jobs.getVerifiedCount(),
+            officialSources:
+                App.jobs.getOfficialSources().length
+        };
+    };
+
+    window.SarkariiChijJobsReady = true;
+
+})(window.SarkariiChij);
