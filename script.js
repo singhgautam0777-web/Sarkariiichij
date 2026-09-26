@@ -2060,10 +2060,9 @@
 
         App.jobs.updateSaveButtons();
     };
-
     document.addEventListener("DOMContentLoaded", function () {
-        App.jobs.init();
-    });
+    App.jobs.init();
+});
 
 })(window.SarkariiChij);
 /* ==================== JOBS: FINAL SAFETY ==================== */
