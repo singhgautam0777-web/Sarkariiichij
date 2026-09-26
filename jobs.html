@@ -2322,7 +2322,6 @@ aria-label="Back to top"
 </script>
 
 
-
 <!-- =====================================================
      MAIN JAVASCRIPT
      ===================================================== -->
@@ -2331,68 +2330,6 @@ aria-label="Back to top"
     src="script.js"
     defer
 ></script>
-
-
-
-<!-- =====================================================
-     JOB PAGE INITIALIZATION
-     ===================================================== -->
-
-<script>
-
-    document.addEventListener(
-        "DOMContentLoaded",
-        function() {
-
-            if (
-                window.SarkariiChijPage
-            ) {
-
-                window.SarkariiChijPage.initialized =
-                    true;
-
-            }
-
-
-            /*
-             * The main script.js automatically
-             * initializes the Sarkariiichij systems.
-             */
-
-            if (
-                typeof setCurrentYear ===
-                "function"
-            ) {
-
-                setCurrentYear();
-
-            }
-
-        },
-        {
-            once: true
-        }
-    );
-
-</script>
-    <script>
-document.addEventListener("DOMContentLoaded", function () {
-    setTimeout(function () {
-
-        if (
-            window.SarkariiChijJobsPage &&
-            typeof window.SarkariiChijJobsPage.refresh === "function"
-        ) {
-            window.SarkariiChijJobsPage.refresh();
-            console.log("Sarkariiichij Jobs: manual refresh started.");
-        } else {
-            console.error("Sarkariiichij Jobs renderer not available.");
-        }
-
-    }, 500);
-});
-    </script>
-
 
 </body>
   </html>
