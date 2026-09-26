@@ -1150,7 +1150,7 @@
             <div class="empty-state">
                 <h3>कोई verified job उपलब्ध नहीं है</h3>
                 <p>
-                    ${App.utils.escape(
+                    ${App.escape(
                         message ||
                         "अभी verified recruitment data उपलब्ध नहीं है।"
                     )}
