@@ -2375,6 +2375,23 @@ aria-label="Back to top"
     );
 
 </script>
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(function () {
+
+        if (
+            window.SarkariiChijJobsPage &&
+            typeof window.SarkariiChijJobsPage.refresh === "function"
+        ) {
+            window.SarkariiChijJobsPage.refresh();
+            console.log("Sarkariiichij Jobs: manual refresh started.");
+        } else {
+            console.error("Sarkariiichij Jobs renderer not available.");
+        }
+
+    }, 500);
+});
+    </script>
 
 
 </body>
